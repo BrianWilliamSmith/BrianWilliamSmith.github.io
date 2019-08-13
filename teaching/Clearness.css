@@ -15,7 +15,10 @@ body {
     line-height: 1.3em;
     color: black;
     background-color: white;
+    padding: 3%;
     counter-reset: section;
+    counter-reset: subsection;
+    counter-reset: tocsection;
 }
 
 img {
@@ -123,37 +126,63 @@ a img {
 p {
     margin-bottom: .5em;
     padding: .1em;
-    border: 1px solid red;
 }
 
-h2 ~ ul{
-    border: 1px solid yellow;
+
+ul {
     padding:0;
 }
 
-h2 ~ ul li {
-    list-style: none;
+ul li {
+    list-style-type: none;
     counter-increment: subsection;
     margin-top: .5em;
     margin-left: 3em;
-    border: 1px solid green;
 }
 
-h2 ~ ul li::before {
+ul li::before {
     font-weight: bold;
     content: counter(section) "." counter(subsection);
     position: absolute;
     margin-left: -3em;
-    border: 1px solid blue;
 }
 
-h2 ~ ul ul li {
+ul ul li {
+    list-style: disc;
+    counter-increment: none;
+    margin-left: 1em;
+}
+
+ul ul ul li {
     list-style: circle;
     counter-increment: none;
+    margin-left: 1em;
+
 }
 
-h2 ~ ul ul li::before{
+ul ul li::before{
     content:none;
+}
+
+.TOC ul{
+    padding: 0;
+}
+
+.TOC ul li {
+    margin-top: .5em;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+.TOC ul li::before{
+    content:none;
+}
+
+.TOC ul li a:before {
+    font-weight: bold;
+    content: "§" counter(tocsection) ": ";
+    counter-increment: tocsection;
 }
 
 h1,
@@ -167,27 +196,27 @@ h6 {
 }
 
 h1 {
-    margin-bottom: 3%;
-    font-size: 2em;
+    font-size: 3em;
 }
 
-h2 {
+h1 {
     font-size: 1.5em;
     margin-top: 3%;
     margin-bottom: 3%;
-}
-
-h2::before {
-    counter-increment: section;
-    content: counter(section) ". ";
+    margin-left: 0;
     counter-reset: subsection;
+    counter-increment: section;
 }
 
-h3 {
+h1::before {
+    content: counter(section) ". ";
+}
+
+h2 {
     font-size: 1.2em;
 }
 
-h3::before {
+h2::before {
     counter-increment: subsection;
     content: counter(section) "." counter(subsection);
 }
