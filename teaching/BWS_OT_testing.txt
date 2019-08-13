@@ -1,0 +1,546 @@
+Title: Introduction and Review
+Author: Brian W. Smith
+Date: 8/6/2019
+Comment:  For USC Ling 531A and Ling 401 Fall 2019
+CSS: Handout.css
+
+# Let’s test tableau fomatting
+
+{{TOC}}
+
+## A regular table in Clearness.css
+
+- Markdown code being rendered
+```
+|Lexicon 	| Grammar (simplified)				| Surface forms	|		
+| --- 		| --- 						| --- 		|
+/bræg/+/d/ 	| make /d/ voiceless after a voiceless segment	| [brægd]	|
+/hæk/+/d/  	| make /d/ voiceless after a voiceless segment	| [hækt]	|
+/su/+/d/  	| make /d/ voiceless after a voiceless segment	| [sud] 	|
+[Example of a derivation]
+```
+
+- Renders as
+
+|Lexicon  | Grammar (simplified) | Surface forms
+| ---		| --- 						| ---	 	|
+/bræg/+/d/ 	| make /d/ voiceless after a voiceless segment	| [brægd]	|
+/hæk/+/d/  	| make /d/ voiceless after a voiceless segment	| [hækt]	|
+/su/+/d/  	| make /d/ voiceless after a voiceless segment	| [sud] 	|
+[Example of a derivation]
+
+- Code blocks in markdown don't render tabs the same way as my word processor
+	- All of the columns are nicely lined up in my word processor
+	- Here's a pic so you can appreciate
+
+![It's all lined up][]
+
+[It's all lined up]: nicelylinedup.png "It's so nicely lined up" 
+width=500px 
+
+
+## A violation tableau using "tableau" class in Clearness.css
+
+
+- To format a table as a tableau, nest the table within div tags calling the "tableau" class 
+- Markdown code
+
+```
+	
+<div class="tableau">
+
+| Candidates 	||| 	*NoCoda* | *Max*| *Dep*	| *Onset* |			
+| --- 	| :--- |--: 	| :---: | :---:| :---:	| :---:	|
+|/CV/	| a. | ☞ CV	| 	| 	|	|	|
+|	| b. | CVC	| ✳︎	|	| ✳︎	|	|
+|	| c. | V	|	| ✳︎	|	| ✳︎	|
+|	| d. | VC	| ✳︎	| ✳︎	| ✳︎	| ✳︎	|
+
+|/CVC/	| a. | ☞ CV	| 	| ✳︎	| 	|	|
+|	| b. | CVC	| ✳︎	|	| 	|	|
+|	| c. | V	|	| ✳︎✳︎	|	| ✳︎	|
+|	| d. | VC	| ✳︎	| ✳︎	| 	| ✳︎	|
+[Example of a tableau]
+
+</div>
+```
+- The CSS class "tableau" is doing all of the work
+
+- Here's what it looks like
+	
+<div class="tableau">
+
+| Candidates 	||| 	*NoCoda* | *Max*| *Dep*	| *Onset* |			
+| --- 	| :--- |--: 	| :---: | :---:| :---:	| :---:	|
+|/CV/	| a. | ☞ CV	| 	| 	|	|	|
+|	| b. | CVC	| ✳︎	|	| ✳︎	|	|
+|	| c. | V	|	| ✳︎	|	| ✳︎	|
+|	| d. | VC	| ✳︎	| ✳︎	| ✳︎	| ✳︎	|
+
+|/CVC/	| a. | ☞ CV	| 	| ✳︎	| 	|	|
+|	| b. | CVC	| ✳︎	|	| 	|	|
+|	| c. | V	|	| ✳︎✳︎	|	| ✳︎	|
+|	| d. | VC	| ✳︎	| ✳︎	| 	| ✳︎	|
+[Example of a tableau]
+
+</div>
+
+- For comparison, here's the tableau with the default table settings. Not so different really
+
+| Candidates 	||| 	*NoCoda* | *Max*| *Dep*	| *Onset* |			
+| --- 	| :--- |--: 	| :---: | :---:| :---:	| :---:	|
+|/CV/	| a. | ☞ CV	| 	| 	|	|	|
+|	| b. | CVC	| ✳︎	|	| ✳︎	|	|
+|	| c. | V	|	| ✳︎	|	| ✳︎	|
+|	| d. | VC	| ✳︎	| ✳︎	| ✳︎	| ✳︎	|
+
+|/CVC/	| a. | ☞ CV	| 	| ✳︎	| 	|	|
+|	| b. | CVC	| ✳︎	|	| 	|	|
+|	| c. | V	|	| ✳︎✳︎	|	| ✳︎	|
+|	| d. | VC	| ✳︎	| ✳︎	| 	| ✳︎	|
+[Example of a tableau without tableau formatting]
+
+- Formatted automatically in CSS class "tableau"
+	- Emphasized text in the header is rendered as small caps
+	- First three columns have no vertical lines
+	- This means violations should start exactly in the fourth column
+- Need to include manually to get a nice tableau
+	- Blank line in the markdown code for tables renders as a horizontal line (creates a new "tbody" in html)
+	- Text alignment is specified in the markdown table code (e.g. ```:---``` is left-aligned)
+	- A better asterisk should be used, since * is reserved for some markdown stuff (and looks bad)
+		- Maybe a…
+			- heavy asterisk ✱
+			- open centre asterisk ✲
+			- eight spoked asterisk ✳︎
+	- Constraints need to be emphasized (e.g. ```*Constraint*```) to get small caps
+
+## A tableau using CSS class "shaded" from Clearness.css
+
+- Shading is a big pain
+	- The best approach is to 
+		- add note to the beginning of a cell that needs shading
+		- Moi, I add "sm" to beginning
+		- in the mmd renderer, take the html generated from the mmd code and copy-paste it
+		- find-replace 
+			- replace ```<td style="text-align:center;">sm```
+			- with ```<td class="shaded">``
+		- markdown will render the raw html
+- I rarely use shading, so this annoying process works for me
+	- This process can be extended to make any table that can be represented in html	
+	- Note: this needs "retain line breaks in paragraphs" turned off in the rendering preferences in my preferred markdown renderer (Marked), otherwise the raw html code's linebreaks are rendered as ```</ br>```, giving a ton of whitespace above the table
+
+- Here's the annotated table, written in mmd, whose html is ready for copy-pasting
+	
+<div class="tableau">
+
+| Candidates 	||| 	*NoCoda* | *Max*| *Dep*	| *Onset* |			
+| --- 	| :--- |--: 	| :---: | :---:| :---:	| :---:	|
+|/CV/	| a. | ☞ CV	| 	| 	| sm	| sm	|
+|	| b. | CVC	| ✳︎!	| sm	| sm ✳︎	| sm	|
+|	| c. | V	|	| ✳︎!	| sm	| sm ✳︎	|
+|	| d. | VC	| ✳︎!	| sm ✳︎ 	| sm ✳︎	| sm ✳︎	|
+
+|/CVC/	| a. | ☞ CV	| 	| ✳︎	| sm	| sm	|
+|	| b. | CVC	| ✳︎!	| sm	| sm	| sm	|
+|	| c. | V	|	| ✳︎!✳︎	| sm	| sm ✳︎	|
+|	| d. | VC	| ✳︎!	| sm ✳︎	| sm 	| sm ✳︎	|
+[Example of a tableau annotated for conversion to html with shading]
+
+</div>
+
+- After copy-pasting and find-replacing the raw html
+
+<div class="tableau">
+<table>
+<caption id="exampleofatableau">Example of a tableau with shading</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+<col style="text-align:right;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="3">Candidates</th>
+	<th style="text-align:center;"><em>NoCoda</em></th>
+	<th style="text-align:center;"><em>Max</em></th>
+	<th style="text-align:center;"><em>Dep</em></th>
+	<th style="text-align:center;"><em>Onset</em></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">/CV/</td>
+	<td style="text-align:left;">a.</td>
+	<td style="text-align:right;">☞ CV</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+	<td class="shaded"></td>
+	<td class="shaded"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">b.</td>
+	<td style="text-align:right;">CVC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded"></td>
+	<td class="shaded"> ✳︎</td>
+	<td class="shaded"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">c.</td>
+	<td style="text-align:right;">V</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded"></td>
+	<td class="shaded"> ✳︎</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">d.</td>
+	<td style="text-align:right;">VC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded"> ✳︎</td>
+	<td class="shaded"> ✳︎</td>
+	<td class="shaded"> ✳︎</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">/CVC/</td>
+	<td style="text-align:left;">a.</td>
+	<td style="text-align:right;">☞ CV</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✳︎</td>
+	<td class="shaded"></td>
+	<td class="shaded"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">b.</td>
+	<td style="text-align:right;">CVC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded"></td>
+	<td class="shaded"></td>
+	<td class="shaded"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">c.</td>
+	<td style="text-align:right;">V</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✳︎!✳︎</td>
+	<td class="shaded"></td>
+	<td class="shaded"> ✳︎</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">d.</td>
+	<td style="text-align:right;">VC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded"> ✳︎</td>
+	<td class="shaded"></td>
+	<td class="shaded"> ✳︎</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+- You can see what markdown is actually rendering for the tableau above by checking out the raw html below
+	- I like the "sm" hack because you don't have to figure out which cell is which or manually change anything in the raw html
+	- But it's really not so hard: ```<tr>``` marks a row and each ```<td>``` is a cell in that row
+
+```
+
+<div class="tableau">
+<table>
+<caption id="exampleofatableau">Example of a tableau with shading</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+<col style="text-align:right;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="3">Candidates</th>
+	<th style="text-align:center;"><em>NoCoda</em></th>
+	<th style="text-align:center;"><em>Max</em></th>
+	<th style="text-align:center;"><em>Dep</em></th>
+	<th style="text-align:center;"><em>Onset</em></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">/CV/</td>
+	<td style="text-align:left;">a.</td>
+	<td style="text-align:right;">☞ CV</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+	<td class="shaded"></td>
+	<td class="shaded"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">b.</td>
+	<td style="text-align:right;">CVC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded"></td>
+	<td class="shaded"> ✳︎</td>
+	<td class="shaded"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">c.</td>
+	<td style="text-align:right;">V</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded"></td>
+	<td class="shaded"> ✳︎</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">d.</td>
+	<td style="text-align:right;">VC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded"> ✳︎</td>
+	<td class="shaded"> ✳︎</td>
+	<td class="shaded"> ✳︎</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">/CVC/</td>
+	<td style="text-align:left;">a.</td>
+	<td style="text-align:right;">☞ CV</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✳︎</td>
+	<td class="shaded"></td>
+	<td class="shaded"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">b.</td>
+	<td style="text-align:right;">CVC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded"></td>
+	<td class="shaded"></td>
+	<td class="shaded"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">c.</td>
+	<td style="text-align:right;">V</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✳︎!✳︎</td>
+	<td class="shaded"></td>
+	<td class="shaded"> ✳︎</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">d.</td>
+	<td style="text-align:right;">VC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded"> ✳︎</td>
+	<td class="shaded"></td>
+	<td class="shaded"> ✳︎</td>
+</tr>
+</tbody>
+</table>
+</div>
+```
+- Here is a fancier version of shading, using CSS class "shaded2" from "Clearness.css"
+	- CSS class "shaded2" has some extra definitions using ```nth-child``` to ensure it properly overrides cell borders from CSS class "tableau"
+
+<div class="tableau">
+<table>
+<caption id="exampleofatableau">Example of a tableau using css class shaded2</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+<col style="text-align:right;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="3">Candidates</th>
+	<th style="text-align:center;"><em>NoCoda</em></th>
+	<th style="text-align:center;"><em>Max</em></th>
+	<th style="text-align:center;"><em>Dep</em></th>
+	<th style="text-align:center;"><em>Onset</em></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">/CV/</td>
+	<td style="text-align:left;">a.</td>
+	<td style="text-align:right;">☞ CV</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+	<td class="shaded2"></td>
+	<td class="shaded2"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">b.</td>
+	<td style="text-align:right;">CVC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded2"></td>
+	<td class="shaded2"> ✳︎</td>
+	<td class="shaded2"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">c.</td>
+	<td style="text-align:right;">V</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded2"></td>
+	<td class="shaded2"> ✳︎</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">d.</td>
+	<td style="text-align:right;">VC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded2"> ✳︎</td>
+	<td class="shaded2"> ✳︎</td>
+	<td class="shaded2"> ✳︎</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">/CVC/</td>
+	<td style="text-align:left;">a.</td>
+	<td style="text-align:right;">☞ CV</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✳︎</td>
+	<td class="shaded2"></td>
+	<td class="shaded2"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">b.</td>
+	<td style="text-align:right;">CVC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded2"></td>
+	<td class="shaded2"></td>
+	<td class="shaded2"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">c.</td>
+	<td style="text-align:right;">V</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✳︎!✳︎</td>
+	<td class="shaded2"></td>
+	<td class="shaded2"> ✳︎</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">d.</td>
+	<td style="text-align:right;">VC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded2"> ✳︎</td>
+	<td class="shaded2"></td>
+	<td class="shaded2"> ✳︎</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+## A comparative tableau using "tableau" class in Clearness.css
+
+- easiest way: make the first three columns letter, input, winner/loser
+
+```
+<div class="tableau">
+
+|| Input |Winner ~ Loser	|*NoCoda* | *Max*| *Dep*| *Onset* |			
+| ---:	| :---: |:---: 		| :---: | :---:| :---:	| :---:	|
+|a.	| /CV/ 	| CV ~ CVC	| W	| e	| W	| e	|
+|b.	| /CV/ 	| CV ~ V	| e	| W	| e	| W	|
+|c.	| /CVC/ | CV ~ CVC	| W	| L	| e	| W	|
+[Example of a comparative tableau]
+
+</div>
+```
+
+<div class="tableau">
+
+|| Input |Winner ~ Loser	|*NoCoda* | *Max*| *Dep*| *Onset* |			
+| ---: 	| :---: |:---: 		| :---: | :---:| :---:	| :---:	|
+|a.	| /CV/ 	| CV ~ CVC	| W	| e	| W	| e	|
+|b.	| /CV/ 	| CV ~ V	| e	| W	| e	| W 	|
+|c.	| /CVC/ | CV ~ CVC	| W	| L	| e	| W	|
+[Example of a comparative tableau]
+
+</div>
+
+## A hybrid tableau
+
+- Use ```X~Y``` to get subscript: X~Y
+	- ```*~Y``` renders as *~Y (or emphasis if you have two \*'s) so don't use \*
+		- Here's the line from above without the \*'s escaped: *~Y renders as *~Y (or emphasis if you have two *)'s so don't use *
+- `X~Y` does work with integers or non-\* special characters like ✳︎: ```✳︎~Y``` renders as ✳︎~Y 
+	- Predictably, ```~L``` and ```~e``` don't work (giving ~L ~e)
+	- Use a typographic space (option+space) for lone L or e: ` ~L` and ` ~e` render as  ~L and  ~e
+
+
+```
+
+<div class="tableau">
+
+|Candidates 	||| 		*NoCoda* | *Max*| *Dep*	| *Onset* |		
+| --- 	| :--- |--: 		| :---:  | :---:| :---:	| :---:	|
+|/CV/	| a. | ☞ CV		|  	|  	|	| 	|
+|	| b. | CVC		| 1~W	| ~e	| 1~W	| ~e	|
+|	| c. | V		| ~e	| 1~W	| ~e	| 1~W	|
+|	| d. | VC		| 1~W	| 1~W	| 1~W	| 1~W	|
+
+|/CVC/	| a. | ☞ CV		| 	| ✳︎	| 	|	|
+|	| b. | CVC		| ✳︎~W	|  ~L	| 	|	|
+|	| c. | V		|	| ✳︎✳︎~W	|	| ✳︎~W	|
+|	| d. | VC		| ✳︎~W	| ✳︎~W	| 	| ✳︎~W	|
+[Example of a hybrid tableau]
+
+
+</div>
+```
+
+<div class="tableau">
+
+|Candidates 	||| 		*NoCoda* | *Max* | *Dep* | *Onset* |		
+| --- 	| :--- |--: 		| :---:  | :---:| :---:	| :---:	|
+|/CV/	| a. | ☞ CV		|  	|  	| 	| 	|
+|	| b. | CVC		| 1~W	|  ~e	| 1~W	| ~e	|
+|	| c. | V		|  ~e	| 1~W	| ~e	| 1~W	|
+|	| d. | VC		| 1~W	| 1~W	| 1~W	| 1~W	|
+
+|/CVC/	| a. | ☞ CV		| 	| ✳︎	| 	|	|
+|	| b. | CVC		| ✳︎~W	|  ~L	| 	|	|
+|	| c. | V		|	| ✳︎✳︎~W	|	| ✳︎~W	|
+|	| d. | VC		| ✳︎~W	| ✳︎~W	| 	| ✳︎~W	|
+[Example of a hybrid tableau]
+
+
+</div>
