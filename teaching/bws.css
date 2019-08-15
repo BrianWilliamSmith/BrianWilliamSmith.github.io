@@ -21,6 +21,18 @@ body {
     counter-reset: tocsection;
 }
 
+p {
+    color:#0069d6;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+p~p {
+    color:initial;
+    font-size: initial;
+    font-weight: initial
+}
+
 img {
     display: block;
     margin: auto;
