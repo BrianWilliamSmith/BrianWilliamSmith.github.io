@@ -2,31 +2,31 @@ Title: Introduction and Review
 Author: Brian W. Smith
 Date: 8/6/2019
 Comment:  For USC Ling 531A and Ling 401 Fall 2019
-CSS: Handout.css
+CSS: bws.css
 
-# Let’s test tableau fomatting
+**Let’s test tableau formatting**
 
 {{TOC}}
 
-## A regular table in Clearness.css
+# A regular table in bws.css
 
 - Markdown code being rendered
 ```
-|Lexicon 	| Grammar (simplified)				| Surface forms	|		
-| --- 		| --- 						| --- 		|
-/bræg/+/d/ 	| make /d/ voiceless after a voiceless segment	| [brægd]	|
-/hæk/+/d/  	| make /d/ voiceless after a voiceless segment	| [hækt]	|
-/su/+/d/  	| make /d/ voiceless after a voiceless segment	| [sud] 	|
+|Lexicon 	|Grammar (simplified)				|Surface forms	|
+|--- 		|--- 						|--- 		|
+/bræg/+/d/ 	|make /d/ voiceless after a voiceless segment	|[brægd]	|
+/hæk/+/d/  	|make /d/ voiceless after a voiceless segment	|[hækt]	|
+/su/+/d/  	|make /d/ voiceless after a voiceless segment	|[sud] 	|
 [Example of a derivation]
 ```
 
-- Renders as
+- Renders as:
 
-|Lexicon  | Grammar (simplified) | Surface forms
-| ---		| --- 						| ---	 	|
-/bræg/+/d/ 	| make /d/ voiceless after a voiceless segment	| [brægd]	|
-/hæk/+/d/  	| make /d/ voiceless after a voiceless segment	| [hækt]	|
-/su/+/d/  	| make /d/ voiceless after a voiceless segment	| [sud] 	|
+|Lexicon  |Grammar (simplified) |Surface forms
+|---		|--- 						|---	 	|
+/bræg/+/d/ 	|make /d/ voiceless after a voiceless segment	|[brægd]	|
+/hæk/+/d/  	|make /d/ voiceless after a voiceless segment	|[hækt]	|
+/su/+/d/  	|make /d/ voiceless after a voiceless segment	|[sud] 	|
 [Example of a derivation]
 
 - Code blocks in markdown don't render tabs the same way as my word processor
@@ -39,27 +39,27 @@ CSS: Handout.css
 width=500px 
 
 
-## A violation tableau using "tableau" class in Clearness.css
+# A violation tableau using "tableau" class in bws.css
 
 
 - To format a table as a tableau, nest the table within div tags calling the "tableau" class 
 - Markdown code
 
 ```
-	
+
 <div class="tableau">
 
-| Candidates 	||| 	*NoCoda* | *Max*| *Dep*	| *Onset* |			
-| --- 	| :--- |--: 	| :---: | :---:| :---:	| :---:	|
-|/CV/	| a. | ☞ CV	| 	| 	|	|	|
-|	| b. | CVC	| ✳︎	|	| ✳︎	|	|
-|	| c. | V	|	| ✳︎	|	| ✳︎	|
-|	| d. | VC	| ✳︎	| ✳︎	| ✳︎	| ✳︎	|
+|Candidates 	||	|*NoCoda* |*Max*|*Dep*	|*Onset* |
+|--- 	|:--- |--: 	|:---: |:---:|:---:	|:---:	|
+|/CV/	|a. |☞ CV	|	|	|	|	|
+|	|b. |CVC	|✳︎	|	|✳︎	|	|
+|	|c. |V		|	|✳︎	|	|✳︎	|
+|	|d. |VC		|✳︎	|✳︎	|✳︎	|✳︎	|
 
-|/CVC/	| a. | ☞ CV	| 	| ✳︎	| 	|	|
-|	| b. | CVC	| ✳︎	|	| 	|	|
-|	| c. | V	|	| ✳︎✳︎	|	| ✳︎	|
-|	| d. | VC	| ✳︎	| ✳︎	| 	| ✳︎	|
+|/CVC/	|a. |☞ CV	|	|✳︎	|	|	|
+|	|b. |CVC	|✳︎	|	|	|	|
+|	|c. |V		|	|✳︎✳︎	|	|✳︎	|
+|	|d. |VC		|✳︎	|✳︎	|	|✳︎	|
 [Example of a tableau]
 
 </div>
@@ -67,37 +67,37 @@ width=500px
 - The CSS class "tableau" is doing all of the work
 
 - Here's what it looks like
-	
+
 <div class="tableau">
 
-| Candidates 	||| 	*NoCoda* | *Max*| *Dep*	| *Onset* |			
-| --- 	| :--- |--: 	| :---: | :---:| :---:	| :---:	|
-|/CV/	| a. | ☞ CV	| 	| 	|	|	|
-|	| b. | CVC	| ✳︎	|	| ✳︎	|	|
-|	| c. | V	|	| ✳︎	|	| ✳︎	|
-|	| d. | VC	| ✳︎	| ✳︎	| ✳︎	| ✳︎	|
+|Candidates 	||	|*NoCoda* |*Max*|*Dep*	|*Onset* |
+|--- 	|:--- |--: 	|:---: |:---:|:---:	|:---:	|
+|/CV/	|a. |☞ CV	|	|	|	|	|
+|	|b. |CVC	|✳︎	|	|✳︎	|	|
+|	|c. |V		|	|✳︎	|	|✳︎	|
+|	|d. |VC		|✳︎	|✳︎	|✳︎	|✳︎	|
 
-|/CVC/	| a. | ☞ CV	| 	| ✳︎	| 	|	|
-|	| b. | CVC	| ✳︎	|	| 	|	|
-|	| c. | V	|	| ✳︎✳︎	|	| ✳︎	|
-|	| d. | VC	| ✳︎	| ✳︎	| 	| ✳︎	|
+|/CVC/	|a. |☞ CV	|	|✳︎	|	|	|
+|	|b. |CVC	|✳︎	|	|	|	|
+|	|c. |V		|	|✳︎✳︎	|	|✳︎	|
+|	|d. |VC		|✳︎	|✳︎	|	|✳︎	|
 [Example of a tableau]
 
 </div>
 
 - For comparison, here's the tableau with the default table settings. Not so different really
 
-| Candidates 	||| 	*NoCoda* | *Max*| *Dep*	| *Onset* |			
-| --- 	| :--- |--: 	| :---: | :---:| :---:	| :---:	|
-|/CV/	| a. | ☞ CV	| 	| 	|	|	|
-|	| b. | CVC	| ✳︎	|	| ✳︎	|	|
-|	| c. | V	|	| ✳︎	|	| ✳︎	|
-|	| d. | VC	| ✳︎	| ✳︎	| ✳︎	| ✳︎	|
+|Candidates 	|||	*NoCoda* |*Max*|*Dep*	|*Onset* |
+|--- 	|:--- |--: 	|:---: |:---:|:---:	|:---:	|
+|/CV/	|a. |☞ CV	|	|	|	|	|
+|	|b. |CVC	|✳︎	|	|✳︎	|	|
+|	|c. |V		|	|✳︎	|	|✳︎	|
+|	|d. |VC		|✳︎	|✳︎	|✳︎	|✳︎	|
 
-|/CVC/	| a. | ☞ CV	| 	| ✳︎	| 	|	|
-|	| b. | CVC	| ✳︎	|	| 	|	|
-|	| c. | V	|	| ✳︎✳︎	|	| ✳︎	|
-|	| d. | VC	| ✳︎	| ✳︎	| 	| ✳︎	|
+|/CVC/	|a. |☞ CV	|	|✳︎	|	|	|
+|	|b. |CVC	|✳︎	|	|	|	|
+|	|c. |V	|	|✳︎✳︎	|	|✳︎	|
+|	|d. |VC	|✳︎	|✳︎	|	|✳︎	|
 [Example of a tableau without tableau formatting]
 
 - Formatted automatically in CSS class "tableau"
@@ -114,7 +114,28 @@ width=500px
 			- eight spoked asterisk ✳︎
 	- Constraints need to be emphasized (e.g. ```*Constraint*```) to get small caps
 
-## A tableau using CSS class "shaded" from Clearness.css
+# There's another table class too: fullrule
+
+- Like default table formatting, with extra lines added
+
+<div class="fullrule">
+
+|Candidates 	|||	*NoCoda* |*Max*|*Dep*	|*Onset* |
+|--- 	|:--- |--: 	|:---: |:---:|:---:	|:---:	|
+|/CV/	|a. |☞ CV	|	|	|	|	|
+|	|b. |CVC	|✳︎	|	|✳︎	|	|
+|	|c. |V		|	|✳︎	|	|✳︎	|
+|	|d. |VC		|✳︎	|✳︎	|✳︎	|✳︎	|
+
+|/CVC/	|a. |☞ CV	|	|✳︎	|	|	|
+|	|b. |CVC	|✳︎	|	|	|	|
+|	|c. |V	|	|✳︎✳︎	|	|✳︎	|
+|	|d. |VC	|✳︎	|✳︎	|	|✳︎	|
+[Example of a tableau with fullrule formatting]
+
+</div>
+
+# A tableau using CSS class "shaded" from bws.css
 
 - Shading is a big pain
 	- The best approach is to 
@@ -122,28 +143,27 @@ width=500px
 		- Moi, I add "sm" to beginning
 		- in the mmd renderer, take the html generated from the mmd code and copy-paste it
 		- find-replace 
-			- replace ```<td style="text-align:center;">sm```
-			- with ```<td class="shaded">``
+			- replace `<td style="text-align:center;">sm`
+			- with `<td class="shaded">`
 		- markdown will render the raw html
 - I rarely use shading, so this annoying process works for me
-	- This process can be extended to make any table that can be represented in html	
+	- This process can be extended to make any table that can be represented in html
 	- Note: this needs "retain line breaks in paragraphs" turned off in the rendering preferences in my preferred markdown renderer (Marked), otherwise the raw html code's linebreaks are rendered as ```</ br>```, giving a ton of whitespace above the table
-
 - Here's the annotated table, written in mmd, whose html is ready for copy-pasting
-	
+
 <div class="tableau">
 
-| Candidates 	||| 	*NoCoda* | *Max*| *Dep*	| *Onset* |			
-| --- 	| :--- |--: 	| :---: | :---:| :---:	| :---:	|
-|/CV/	| a. | ☞ CV	| 	| 	| sm	| sm	|
-|	| b. | CVC	| ✳︎!	| sm	| sm ✳︎	| sm	|
-|	| c. | V	|	| ✳︎!	| sm	| sm ✳︎	|
-|	| d. | VC	| ✳︎!	| sm ✳︎ 	| sm ✳︎	| sm ✳︎	|
+|Candidates 	|||	*NoCoda* |*Max*|*Dep*	|*Onset* |
+|--- 	|:--- |--: 	|:---: |:---:|:---:	|:---:	|
+|/CV/	|a. |☞ CV	|	|	|sm	|sm	|
+|	|b. |CVC	|✳︎!	|sm	|sm ✳︎	|sm	|
+|	|c. |V		|	|✳︎!	|sm	|sm ✳︎	|
+|	|d. |VC		|✳︎!	|sm ✳︎ 	|sm ✳︎	|sm ✳︎	|
 
-|/CVC/	| a. | ☞ CV	| 	| ✳︎	| sm	| sm	|
-|	| b. | CVC	| ✳︎!	| sm	| sm	| sm	|
-|	| c. | V	|	| ✳︎!✳︎	| sm	| sm ✳︎	|
-|	| d. | VC	| ✳︎!	| sm ✳︎	| sm 	| sm ✳︎	|
+|/CVC/	|a. |☞ CV	|	|✳︎	|sm	|sm	|
+|	|b. |CVC	|✳︎!	|sm	|sm	|sm	|
+|	|c. |V		|	|✳︎!✳︎	|sm	|sm ✳︎	|
+|	|d. |VC		|✳︎!	|sm ✳︎	|sm 	|sm ✳︎	|
 [Example of a tableau annotated for conversion to html with shading]
 
 </div>
@@ -362,7 +382,7 @@ width=500px
 </table>
 </div>
 ```
-- Here is a fancier version of shading, using CSS class "shaded2" from "Clearness.css"
+- Here is a fancier version of shading, using CSS class "shaded2" from "bws.css"
 	- CSS class "shaded2" has some extra definitions using ```nth-child``` to ensure it properly overrides cell borders from CSS class "tableau"
 
 <div class="tableau">
@@ -468,18 +488,18 @@ width=500px
 </table>
 </div>
 
-## A comparative tableau using "tableau" class in Clearness.css
+# A comparative tableau using "tableau" class in bws.css
 
 - easiest way: make the first three columns letter, input, winner/loser
 
 ```
 <div class="tableau">
 
-|| Input |Winner ~ Loser	|*NoCoda* | *Max*| *Dep*| *Onset* |			
-| ---:	| :---: |:---: 		| :---: | :---:| :---:	| :---:	|
-|a.	| /CV/ 	| CV ~ CVC	| W	| e	| W	| e	|
-|b.	| /CV/ 	| CV ~ V	| e	| W	| e	| W	|
-|c.	| /CVC/ | CV ~ CVC	| W	| L	| e	| W	|
+| 	|Input 	|Winner ~ Loser	|*NoCoda* |*Max*|*Dep*|*Onset* |
+|---:	|:---: 	|:---: 		|:---: |:---:|:---:	|:---:	|
+|a.	|/CV/ 	|CV ~ CVC	|W	|e	|W	|e	|
+|b.	|/CV/ 	|CV ~ V		|e	|W	|e	|W	|
+|c.	|/CVC/ 	|CV ~ CVC	|W	|L	|e	|W	|
 [Example of a comparative tableau]
 
 </div>
@@ -487,16 +507,16 @@ width=500px
 
 <div class="tableau">
 
-|| Input |Winner ~ Loser	|*NoCoda* | *Max*| *Dep*| *Onset* |			
-| ---: 	| :---: |:---: 		| :---: | :---:| :---:	| :---:	|
-|a.	| /CV/ 	| CV ~ CVC	| W	| e	| W	| e	|
-|b.	| /CV/ 	| CV ~ V	| e	| W	| e	| W 	|
-|c.	| /CVC/ | CV ~ CVC	| W	| L	| e	| W	|
+| |Input |Winner ~ Loser	|*NoCoda* |*Max*|*Dep*|*Onset* |
+|---: 	|:---: |:---: 		|:---: |:---:|:---:	|:---:	|
+|a.	|/CV/ 	|CV ~ CVC	|W	|e	|W	|e	|
+|b.	|/CV/ 	|CV ~ V	|e	|W	|e	|W 	|
+|c.	|/CVC/ |CV ~ CVC	|W	|L	|e	|W	|
 [Example of a comparative tableau]
 
 </div>
 
-## A hybrid tableau
+# A hybrid tableau
 
 - Use ```X~Y``` to get subscript: X~Y
 	- ```*~Y``` renders as *~Y (or emphasis if you have two \*'s) so don't use \*
@@ -510,17 +530,17 @@ width=500px
 
 <div class="tableau">
 
-|Candidates 	||| 		*NoCoda* | *Max*| *Dep*	| *Onset* |		
-| --- 	| :--- |--: 		| :---:  | :---:| :---:	| :---:	|
-|/CV/	| a. | ☞ CV		|  	|  	|	| 	|
-|	| b. | CVC		| 1~W	| ~e	| 1~W	| ~e	|
-|	| c. | V		| ~e	| 1~W	| ~e	| 1~W	|
-|	| d. | VC		| 1~W	| 1~W	| 1~W	| 1~W	|
+|Candidates 	||		|*NoCoda*|*Max*|*Dep*	|*Onset* |
+|--- 	|:--- |--: 		|:---:  |:---:|:---:	|:---:	|
+|/CV/	|a. |☞ CV		| 	| 	|	| 	|
+|	|b. |CVC		|1~W	| ~e	|1~W	| ~e	|
+|	|c. |V			| ~e	|1~W	| ~e	|1~W	|
+|	|d. |VC			|1~W	|1~W	|1~W	|1~W	|
 
-|/CVC/	| a. | ☞ CV		| 	| ✳︎	| 	|	|
-|	| b. | CVC		| ✳︎~W	|  ~L	| 	|	|
-|	| c. | V		|	| ✳︎✳︎~W	|	| ✳︎~W	|
-|	| d. | VC		| ✳︎~W	| ✳︎~W	| 	| ✳︎~W	|
+|/CVC/	|a. |☞ CV		|	|✳︎	|	|	|
+|	|b. |CVC		|✳︎~W	| ~L	|	|	|
+|	|c. |V			|	|✳︎✳︎~W	|	|✳︎~W	|
+|	|d. |VC			|✳︎~W	|✳︎~W	|	|✳︎~W	|
 [Example of a hybrid tableau]
 
 
@@ -529,17 +549,17 @@ width=500px
 
 <div class="tableau">
 
-|Candidates 	||| 		*NoCoda* | *Max* | *Dep* | *Onset* |		
-| --- 	| :--- |--: 		| :---:  | :---:| :---:	| :---:	|
-|/CV/	| a. | ☞ CV		|  	|  	| 	| 	|
-|	| b. | CVC		| 1~W	|  ~e	| 1~W	| ~e	|
-|	| c. | V		|  ~e	| 1~W	| ~e	| 1~W	|
-|	| d. | VC		| 1~W	| 1~W	| 1~W	| 1~W	|
+|Candidates 	|||		*NoCoda* |*Max* |*Dep* |*Onset* |
+|--- 	|:--- |--: 		|:---:  |:---:|:---:	|:---:	|
+|/CV/	|a. |☞ CV		| 	| 	| 	| 	|
+|	|b. |CVC		|1~W	| ~e	|1~W	| ~e	|
+|	|c. |V		| ~e	|1~W	| ~e	|1~W	|
+|	|d. |VC		|1~W	|1~W	|1~W	|1~W	|
 
-|/CVC/	| a. | ☞ CV		| 	| ✳︎	| 	|	|
-|	| b. | CVC		| ✳︎~W	|  ~L	| 	|	|
-|	| c. | V		|	| ✳︎✳︎~W	|	| ✳︎~W	|
-|	| d. | VC		| ✳︎~W	| ✳︎~W	| 	| ✳︎~W	|
+|/CVC/	|a. |☞ CV		|	|✳︎	|	|	|
+|	|b. |CVC		|✳︎~W	| ~L	|	|	|
+|	|c. |V		|	|✳︎✳︎~W	|	|✳︎~W	|
+|	|d. |VC		|✳︎~W	|✳︎~W	|	|✳︎~W	|
 [Example of a hybrid tableau]
 
 

@@ -4,28 +4,30 @@
 	<meta charset="utf-8"/>
 	<title>Introduction and Review</title>
 	<meta name="author" content="Brian W. Smith"/>
-	<meta name="date" content="8/6/2019"/>
+	<meta name="date" content="8/13/2019"/>
 	<meta name="comment" content="for USC Ling 531A and Ling 401 Fall 2019"/>
-	<link type="text/css" rel="stylesheet" href="Clearness.css"/>
+	<link type="text/css" rel="stylesheet" href="bws.css"/>
 </head>
 <body>
 
 <p><strong>Introduction and Review</strong></p>
 
-<p>Handout for USC Ling 401 and Ling 531A, Fall 2019 (Smith)</p>
+<p>Handout for USC Advanced Undergraduate Phonology</p>
+
+<p>Ling 401 – Fall 2019 – Smith</p>
 
 <div class="TOC">
 
 <ul>
-<li><a href="#courseoverview">Course overview</a></li>
+<li><a href="#courseoverviewandplan">Course overview and plan</a></li>
 <li><a href="#generativephonology">Generative phonology</a></li>
 <li><a href="#productivity">Productivity</a></li>
-<li><a href="#phonemesandallophones.">Phonemes and allophones.</a></li>
+<li><a href="#phonemesandallophones">Phonemes and allophones</a></li>
 <li><a href="#alternationsandphonotactics">Alternations and phonotactics</a></li>
 <li><a href="#distributionsandphonemicanalysis">Distributions and phonemic analysis</a></li>
 <li><a href="#minimalpairsandnear-minimalpairs">Minimal pairs and near-minimal pairs</a></li>
 <li><a href="#complementarydistribution">Complementary distribution</a></li>
-<li><a href="#morepractice">More practice</a></li>
+<li><a href="#practicingphonemicanalysis">Practicing phonemic analysis</a></li>
 <li><a href="#limitationsoftheflowchart">Limitations of the flowchart</a></li>
 <li><a href="#complementarydistributionrevisited">Complementary distribution, revisited</a></li>
 <li><a href="#positionalneutralizationcontextually-limitedcontrast">Positional neutralization / contextually-limited contrast</a></li>
@@ -35,26 +37,46 @@
 </ul>
 </div>
 
-<h1 id="courseoverview">Course overview</h1>
+<h1 id="courseoverviewandplan">Course overview and plan</h1>
 
 <ul>
-<li>This course is about phonological theories, especially evaluating, comparing, and applying them. We&#8217;re going to be focusing primarily on Optimality Theory, a framework that emerged in the early 1990s and replaced rules with constraints.</li>
-<li>Plan
+<li>This course
 
 <ul>
-<li>Syllabus, Slack, Google docs, and you.</li>
-<li>This handout.
+<li>The big idea in this course is <strong>phonological argumentation</strong>: how to evaluate, compare, and apply phonological models.</li>
+<li>We&#8217;ll practice <strong>iterative model development</strong>, building a model to accomplish some goals, testing it with new data, revising, and repeating.</li>
+<li>We&#8217;ll focus primarily on <strong>Optimality Theory</strong>, a framework that emerged in the early 1990s and replaced rules with constraints.</li>
+</ul></li>
+<li>Syllabus
 
 <ul>
-<li>Handouts will usually span multiple class meetings.</li>
+<li>Course overview, goals, requirements</li>
+<li>Handouts and schedule
+
+<ul>
+<li>The schedule is very flexible.</li>
+<li>Handouts usually span multiple class meetings.</li>
 <li>This handout is exceptionally long and detailed.</li>
 </ul></li>
-<li>Think of an answer to&#8230;
+<li>Laptops, Slack, and Google docs</li>
+</ul></li>
+<li>To print or not to print?
+
+<ul>
+<li>Handouts are viewable on electronic devices, and I&#8217;ll post the websites on Slack.</li>
+<li>Trivia: Handouts are typeset using <a href="https://guides.github.com/features/mastering-markdown/">Markdown syntax</a>.
+
+<ul>
+<li>I actually use <a href="https://fletcherpenney.net/multimarkdown/">MultiMarkdown</a>, which is basically Github-flavored Markdown with some nice extensions (especially headerless tables!).</li>
+<li>The raw code underlying every handout is available at a near-identical URL: replace <code>.html</code> with <code>.txt</code>.</li>
+<li>The arcane and hacky CSS is <a href="bws.css">viewable</a> if you&#8217;re a masochist and/or web development enthusiast.</li>
+</ul></li>
+</ul></li>
+<li>For next time, think of as many answers as possible to the questions below.
 
 <ul>
 <li>&#8220;What are other possible goals of phonological theory?&#8221;</li>
 <li>&#8220;What are phonological data?&#8221;</li>
-</ul></li>
 </ul></li>
 </ul>
 
@@ -62,16 +84,16 @@
 
 <ul>
 <li>The central premise of Generative Grammar is that linguistic knowledge consists of both a <strong>grammar</strong> and a <strong>lexicon</strong>.</li>
-<li>The lexicon contains all unpredictable information about words/morphemes, including their underlying representations (URs).
+<li>The <strong>lexicon</strong> contains all unpredictable information about words/morphemes, including their <strong>Underlying Representations</strong> (URs).
 
 <ul>
 <li>Working assumption #1: every morpheme has exactly one UR.</li>
 <li>Working assumption #2: URs are built solely of sounds from a language&#8217;s phoneme inventory.</li>
 </ul></li>
-<li>The grammar is a process or algorithm that takes URs and derives Surface Representations (SRs). The grammar captures all predictable information.
+<li>The <strong>grammar</strong> is a process or algorithm that takes URs and derives Surface Representations (SRs). The grammar captures all predictable information.
 
 <ul>
-<li>Entailment of working assumption #1: if a morpheme has different SRs, differences between those SRs are derived via the grammar.</li>
+<li>Consequence of assumption #1: if a morpheme has multiple SRs, differences between those SRs are derived via the grammar.</li>
 </ul></li>
 <li>The process of generating SRs from URs is a <strong>derivation</strong>.</li>
 </ul>
@@ -190,14 +212,20 @@
 </ul>
 
 <figure>
-<img src="401_Ricking.jpg" alt="Ricking from Berko Gleason's 1958 wug study" />
+<img src="ricking.jpg" alt="Ricking from Berko Gleason's 1958 wug study" />
 <figcaption>Ricking from Berko Gleason&#8217;s 1958 wug study</figcaption>
 </figure>
 
-<h1 id="phonemesandallophones.">Phonemes and allophones.</h1>
+<h1 id="phonemesandallophones">Phonemes and allophones</h1>
 
 <ul>
-<li>Every language has a limited set of <strong>phonemes</strong>. A phoneme is a label for a set of sounds that are basically the same (more on this below).</li>
+<li>Every language has a limited set of <strong>phonemes</strong>.
+
+<ul>
+<li>A phoneme is a label for a set of sounds that are basically the same (more on this below).</li>
+<li>We assume that every UR in a language consists solely of the phonemes of that language.</li>
+<li>This is why URs are also called <em>phonemic representations</em>.</li>
+</ul></li>
 <li>The variants of a phoneme are called <strong>allophones</strong>.</li>
 <li>Allophonic variation is often structured and predictable based on phonological context.
 
@@ -211,24 +239,43 @@
 <li>American English /t/
 
 <ul>
-<li>[tʰ] before V́ <em>(time)</em></li>
+<li>[tʰ] before stressed vowels <em>(time)</em></li>
 <li>[ʔt] in syllable codas <em>(cat)</em></li>
 <li>[ɾ] between vowels <em>(city)</em></li>
 <li>[ʧ] before [r] <em>(tree)</em></li>
 <li>[t] elsewhere <em>(sty)</em></li>
 </ul></li>
 </ul></li>
+<li>Labeled diagrams are often used to show the relationship between allophones and phonemes.</li>
+</ul>
+
+<figure>
+<img src="tallophones.svg" alt="Phonemicization diagram for /t/" />
+<figcaption>Phonemicization diagram for /t/</figcaption>
+</figure>
+
+<ul>
 <li>When there are multiple allophones of a phoneme, the form of the phoneme usually matches one of the allophones.
 
 <ul>
-<li> One of the forms is &#8220;basic.&#8221;</li>
-<li> The other forms are derived via the grammar.</li>
+<li>One of the allophones is &#8220;basic&#8221;, matching the form of the phoneme (e.g. [t] above). This is the allophone that emerges when the grammar doesn&#8217;t change anything.</li>
+<li>The other allophones are derived by the grammar.</li>
 </ul></li>
-<li>Notation
+</ul>
+
+<figure>
+<img src="tallophonesderived.svg" alt="Derived allophones for /t/" />
+<figcaption>Derived allophones for /t/</figcaption>
+</figure>
 
 <ul>
-<li> Phonemes get slashes (e.g. /t/).</li>
-<li> Allophones get square brackets (e.g. [t]).</li>
+<li>Notation and usage
+
+<ul>
+<li>Phonemes get slashes (e.g. /t/ above).</li>
+<li>Allophones and surface forms get square brackets (e.g. [ɾ] above).</li>
+<li>The term <em>allophone</em> is used only when are multiple variants of a phoneme. If there is just one surface form for a phoneme, that form isn&#8217;t an allophone.</li>
+<li>If you just want to talk about something in brackets generally, use a phrase like <em>surface form</em>, <em>surface realization</em>, or <em>phonetic form</em>.</li>
 </ul></li>
 <li>Contrast and predictability
 
@@ -236,15 +283,16 @@
 <li> Phonemes are contrastive and unpredictable.
 
 <ul>
-<li> Two sounds are contrastive/distinctive if the difference between them is meaningful: substitution of one for the other can lead to a new word.</li>
-<li> Unpredictable: &#8220;I have a new English word that rhymes with winter, does it begin with a t or l?&#8221;</li>
+<li>Two sounds are contrastive/distinctive if the difference between them is meaningful: substitution of one for the other can lead to a new word.</li>
+<li>Unpredictable: &#8220;I have a new English word that rhymes with winter, does it begin with a t or l?&#8221;</li>
 </ul></li>
-<li> Allophones are usually non-contrastive and predictable.
+<li> Allophones are non-contrastive and (usually) predictable.
 
 <ul>
 <li>Predictable: &#8220;I have a new English word that rhymes with winter, does it begin with [l] or [ɫ]?&#8221;</li>
 <li>If the allophones are unpredictable, that&#8217;s <strong>free variation</strong>.</li>
 </ul></li>
+<li>Warning: the two statements above about the relationship between allophones, phonemes, contrast and predictability are simplified. They&#8217;re revisited below.</li>
 </ul></li>
 <li>Phonemes and allophones are psychologically real to some degree.
 
@@ -253,20 +301,15 @@
 <li>Language users often have trouble distinguishing between allophones of the same phoneme, especially when learning a new language where the difference is contrastive.</li>
 <li>Writing systems and transcriptions in introductory linguistics courses are usually phonemic.</li>
 </ul></li>
-<li>We assume that every UR in a language consists solely of the phonemes of that language.
-
-<ul>
-<li>This is why URs are also called phonemic representations.</li>
-</ul></li>
 </ul>
 
 <h1 id="alternationsandphonotactics">Alternations and phonotactics</h1>
 
 <ul>
-<li>We can talk about <strong>morphemes</strong> and <strong>allomorphs</strong> just as we talk about phonemes and allophones.
+<li>We can talk about <strong>morphemes</strong> and <strong>allomorphs</strong> just as we talk about phonemes and allophones.</li>
+<li>When a morpheme has multiple surface variants (allomorphs), we call the pattern an <strong>alternation</strong>.
 
 <ul>
-<li> When a morpheme has multiple surface variants (allomorphs), we call the pattern an <strong>alternation</strong>.</li>
 <li> Terminology examples:
 
 <ul>
@@ -284,9 +327,9 @@
 <li>&#8220;English words cannot end in lax vowels, except [ə], [ɔ] and [ɑ]&#8221;</li>
 <li>&#8220;Lax vowels in English cannot be immediately followed by a vowel&#8221;</li>
 </ul></li>
+</ul></li>
 <li>Some (but not all) phonotactics result in alternations.</li>
 <li>Most (but not all) alternations are the result of phonotactics.</li>
-</ul></li>
 </ul>
 
 <h1 id="distributionsandphonemicanalysis">Distributions and phonemic analysis</h1>
@@ -306,8 +349,8 @@
 </ul>
 
 <figure>
-<img src="401_flowchart.png" alt="Flowchart reproduced from Language Files, </br> with some additions by me" />
-<figcaption>Flowchart reproduced from Language Files, </br> with some additions by me</figcaption>
+<img src="language_files_flowchart.png" alt="Flowchart reproduced from Language Files with some additions by me.</br> A more comprehensive flowchart is at the end of this document." />
+<figcaption>Flowchart reproduced from Language Files with some additions by me.</br> A more comprehensive flowchart is at the end of this document.</figcaption>
 </figure>
 
 <h1 id="minimalpairsandnear-minimalpairs">Minimal pairs and near-minimal pairs</h1>
@@ -336,43 +379,58 @@
 
 <tbody>
 <tr>
-	<td>[ˈsut]	</td>
+	<td>[sut]	</td>
 	<td>&#8216;suit&#8217;	</td>
-	<td>[ˈpʌt]	</td>
+	<td>[pʌt]	</td>
 	<td>&#8216;putt&#8217;	</td>
 </tr>
 <tr>
-	<td>[ˈʃɪn]	</td>
+	<td>[ʃɪn]	</td>
 	<td>&#8216;shin&#8217;	</td>
-	<td>[ˈʃɪp]	</td>
+	<td>[ʃɪp]	</td>
 	<td>&#8216;ship&#8217;	</td>
 </tr>
 <tr>
-	<td>[ˈʃɪp]	</td>
+	<td>[ʃɪp]	</td>
 	<td>&#8216;ship&#8217;	</td>
-	<td>[ˈbut]	</td>
+	<td>[but]	</td>
 	<td>&#8216;boot&#8217;	</td>
 </tr>
 <tr>
-	<td>[ˈpʊt]	</td>
+	<td>[pʊt]	</td>
 	<td>&#8216;put&#8217;	</td>
-	<td>[ˈʃin]	</td>
+	<td>[ʃin]	</td>
 	<td>&#8216;sheen&#8217;</td>
 </tr>
 <tr>
-	<td>[ˈsʊt]	</td>
+	<td>[sʊt]	</td>
 	<td>&#8216;soot&#8217; </td>
-	<td>[ˈbʌt]	</td>
+	<td>[bʌt]	</td>
 	<td>&#8216;butt&#8217;	</td>
+</tr>
+<tr>
+	<td>[luʒ]	</td>
+	<td>&#8216;luge&#8217;	</td>
+	<td>[wuʃ]	</td>
+	<td>&#8216;woosh&#8217;</td>
+</tr>
+<tr>
+	<td>[lus]	</td>
+	<td>&#8216;loose&#8217;</td>
+	<td>[lut]	</td>
+	<td>&#8216;loot&#8217;</td>
 </tr>
 </tbody>
 </table>
 
 <ul>
-<li>What if we can&#8217;t find minimal pairs for two sounds? (e.g. [ʃ] and [ʒ] in English)
+<li>Let&#8217;s look at consonants now.</li>
+<li>What if we can&#8217;t find minimal pairs for two sounds? (e.g. [ʃ] and [ʒ])
 
 <ul>
-<li>Answer: look for <strong>near-minimal pairs</strong></li>
+<li>Answer: look for <strong>near-minimal pairs</strong>.</li>
+<li>Near-minimal pairs show that prediction is impossible, and the two sounds are probably contrastive.</li>
+<li>This breaks down when there&#8217;s free variation. What would we expect to see if there was free variation between [ʃ] and [ʒ]?</li>
 </ul></li>
 </ul>
 
@@ -396,33 +454,33 @@
 
 <tbody>
 <tr>
-	<td>[ˈnoʊ]		</td>
+	<td>[noʊ]		</td>
 	<td>&#8216;know&#8217;		</td>
-	<td>[ˈtɛn̪θ]		</td>
+	<td>[tɛn̪θ]		</td>
 	<td>&#8216;tenth&#8217;		</td>
 </tr>
 <tr>
-	<td>[əˈnoɪ]	</td>
+	<td>[ənoɪ]	</td>
 	<td>&#8216;annoy&#8217;	</td>
-	<td>[ˈmʌn̪θ]		</td>
+	<td>[mʌn̪θ]		</td>
 	<td>&#8216;month&#8217;		</td>
 </tr>
 <tr>
-	<td>[ˈʌnjən]	</td>
+	<td>[ʌnjən]	</td>
 	<td>&#8216;onion&#8217;	</td>
-	<td>[ˈpæn̪θɚ]		</td>
+	<td>[pæn̪θɚ]		</td>
 	<td>&#8216;panther&#8217;		</td>
 </tr>
 <tr>
-	<td>[ˈnʌn]		</td>
+	<td>[nʌn]		</td>
 	<td>&#8216;nun&#8217;		</td>
-	<td>[krəˈsæn̪θəməm]	</td>
+	<td>[krəsæn̪θəməm]	</td>
 	<td>&#8216;chrysanthemum&#8217;	</td>
 </tr>
 </tbody>
 </table>
 
-<h1 id="morepractice">More practice</h1>
+<h1 id="practicingphonemicanalysis">Practicing phonemic analysis</h1>
 
 <ul>
 <li>In English, are [l] and [d] allophones of the same phoneme or realizations of different phonemes?</li>
@@ -516,7 +574,7 @@
 
 <ul>
 <li>If two sounds are in complementary distribution they may be allophones of the same phoneme, but they aren&#8217;t necessarily so.</li>
-<li><strong>Contextually-limited contrast</strong> is a case where different phonemes share an allophone. In that allophone&#8217;s environment, there&#8217;s no surface contrast between the phonemes. (see t/d above)</li>
+<li><strong>Contextually-limited contrast</strong> is a case where different phonemes share an allophone. In that allophone&#8217;s environment, there&#8217;s no surface contrast between the phonemes.</li>
 <li>If there is a minimal pair, we can only conclude that there&#8217;s some difference between the Urs of the two words. It&#8217;s not necessarily the case that the differing sound is what&#8217;s contrastive.</li>
 </ul></li>
 <li>Based on these, together with free variation, it becomes clearer why a perfectly predictable mapping between phonemes and allophones is unobtainable.</li>
@@ -543,33 +601,33 @@
 
 <tbody>
 <tr>
-	<td>[ˈlɪsən]	</td>
+	<td>[lɪsən]	</td>
 	<td>&#8216;listen&#8217;	</td>
-	<td>[ˈwɛɫ̪θ]	</td>
+	<td>[wɛɫ̪θ]	</td>
 	<td>&#8216;wealth&#8217;	</td>
 </tr>
 <tr>
-	<td>[ˈluz]		</td>
+	<td>[luz]		</td>
 	<td>&#8216;lose&#8217;		</td>
-	<td>[ˈhɛɫ̪θ]	</td>
+	<td>[hɛɫ̪θ]	</td>
 	<td>&#8216;health&#8217;	</td>
 </tr>
 <tr>
-	<td>[əˈlaʊ]	</td>
+	<td>[əlaʊ]		</td>
 	<td>&#8216;allow&#8217;	</td>
-	<td>[ˈfɪɫ̪θi]	</td>
+	<td>[fɪɫ̪θi]</td>
 	<td>&#8216;filthy&#8217;	</td>
 </tr>
 <tr>
-	<td>[əˈɡloʊ]	</td>
+	<td>[əɡloʊ]	</td>
 	<td>&#8216;aglow&#8217;	</td>
-	<td>[ˈtɪɫ̪θ]	</td>
+	<td>[tɪɫ̪θ]	</td>
 	<td>&#8216;tilth&#8217;	</td>
 </tr>
 <tr>
-	<td>[ˈblɛnd]	</td>
+	<td>[blɛnd]	</td>
 	<td>&#8216;blend&#8217;	</td>
-	<td>[ˈstɛɫ̪θ]	</td>
+	<td>[stɛɫ̪θ]</td>
 	<td>&#8216;stealth&#8217;	</td>
 </tr>
 </tbody>
@@ -593,27 +651,27 @@
 
 <tbody>
 <tr>
-	<td>[ˈnoʊ]		</td>
+	<td>[noʊ]		</td>
 	<td>&#8216;know&#8217;	</td>
-	<td>[ˈtɛn̪θ]	</td>
+	<td>[tɛn̪θ]	</td>
 	<td>&#8216;tenth&#8217;		</td>
 </tr>
 <tr>
-	<td>[əˈnoɪ]	</td>
+	<td>[ənoɪ]	</td>
 	<td>&#8216;annoy&#8217;</td>
-	<td>[ˈmʌn̪θ]	</td>
+	<td>[mʌn̪θ]	</td>
 	<td>&#8216;month&#8217;		</td>
 </tr>
 <tr>
-	<td>[ˈʌnjən]	</td>
+	<td>[ʌnjən]	</td>
 	<td>&#8216;onion&#8217;</td>
-	<td>[ˈpæn̪θɚ]	</td>
+	<td>[pæn̪θɚ]	</td>
 	<td>&#8216;panther&#8217;		</td>
 </tr>
 <tr>
-	<td>[ˈnʌn]		</td>
+	<td>[nʌn]		</td>
 	<td>&#8216;nun&#8217;	</td>
-	<td>[krəˈsæn̪θəməm]	</td>
+	<td>[krəsæn̪θəməm]	</td>
 	<td>&#8216;chrysanthemum&#8217;	</td>
 </tr>
 </tbody>
@@ -718,7 +776,7 @@
 <li>Another example: English nasals
 
 <ul>
-<li>/n/ optionally assimilates to the place of articulation of the following segment</li>
+<li>/n/ optionally assimilates to the place of articulation of the following segment.</li>
 <li>The prefix <em>in-</em>
 
 <ul>
@@ -741,9 +799,18 @@
 <li>[ŋ] not [n]: ringtone (≠ ri[n]tone)</li>
 <li>[ŋ] not [m]: songbook (≠ so[m]book)</li>
 </ul></li>
-<li>A relatively complicated phonemicization.</li>
 </ul></li>
 </ul>
+
+<figure>
+<img src="nmng.svg" alt="It's difficult to draw a single tree for this relatively complicated phonemicization." />
+<figcaption>It&#8217;s difficult to draw a single tree for this relatively complicated phonemicization.</figcaption>
+</figure>
+
+<figure>
+<img src="nmngenvironments.svg" alt="Sometimes it helps to have a tree for every environment." />
+<figcaption>Sometimes it helps to have a tree for every environment.</figcaption>
+</figure>
 
 <h1 id="minimalpairsrevisiteddisplacedcontrast">Minimal pairs, revisited (displaced contrast)</h1>
 
@@ -765,28 +832,28 @@
 
 <tbody>
 <tr>
-	<td>[ˈlʌɪk]	</td>
-	<td>[ˈʤaɪb]	</td>
-	<td>[ˈklaɪm] 	</td>
-	<td>[ˈraɪð]	</td>
+	<td>[lʌɪk]		</td>
+	<td>[ʤaɪb]		</td>
+	<td>[klaɪm] 	</td>
+	<td>[raɪð]		</td>
 </tr>
 <tr>
-	<td>[ˈflʌɪt]	</td>
-	<td>[ˈtɹʌɪp]	</td>
-	<td>[ˈʃaɪn]	</td>
-	<td>[ˈwaɪd]	</td>
+	<td>[flʌɪt]	</td>
+	<td>[tɹʌɪp]	</td>
+	<td>[ʃaɪn]		</td>
+	<td>[waɪd]		</td>
 </tr>
 <tr>
-	<td>[ˈsnʌɪp]	</td>
-	<td>[ˈlʌɪf]	</td>
-	<td>[ˈbaɪ]		</td>
-	<td>[əˈblaɪʤ]	</td>
+	<td>[snʌɪp]	</td>
+	<td>[lʌɪf]		</td>
+	<td>[baɪ]		</td>
+	<td>[əblaɪʤ]	</td>
 </tr>
 <tr>
-	<td>[ˈlaɪv]	</td>
-	<td>[ˈʌɪs]		</td>
-	<td>[ˈspaɪ]	</td>
-	<td>[ˈsaɪd]	</td>
+	<td>[laɪv]		</td>
+	<td>[ʌɪs]		</td>
+	<td>[spaɪ]		</td>
+	<td>[saɪd]		</td>
 </tr>
 </tbody>
 </table>
@@ -808,23 +875,23 @@
 
 <tbody>
 <tr>
-	<td>[ˈrʌɪt]	</td>
-	<td>[ˈrʌɪɾɚ]	</td>
+	<td>[rʌɪt]	</td>
+	<td>[rʌɪɾɚ]	</td>
 	<td>&#8216;writer&#8217;	</td>
 </tr>
 <tr>
-	<td>[ˈraɪd]	</td>
-	<td>[ˈraɪɾɚ]	</td>
+	<td>[raɪd]	</td>
+	<td>[raɪɾɚ]	</td>
 	<td>&#8216;rider&#8217;	</td>
 </tr>
 <tr>
-	<td>[ˈslaɪd]	</td>
-	<td>[ˈslaɪɾɪŋ]	</td>
+	<td>[slaɪd]</td>
+	<td>[slaɪɾɪŋ]	</td>
 	<td>&#8216;sliding&#8217;	</td>
 </tr>
 <tr>
-	<td>[ˈslʌɪt]	</td>
-	<td>[ˈslʌɪɾɪŋ]	</td>
+	<td>[slʌɪt]	</td>
+	<td>[slʌɪɾɪŋ]	</td>
 	<td>&#8216;slighting&#8217;	</td>
 </tr>
 </tbody>
@@ -832,11 +899,11 @@
 
 <ul>
 <li>Now looking at the second set of data, would you conclude that [aɪ] and [ʌɪ] are contrastive in this dialect?</li>
-<li>[ˈɹʌɪɾɚ] and [ˈɹaɪɾɚ] are pronounced differently, because their underlying forms are different.
+<li>[ɹʌɪɾɚ] and [ɹaɪɾɚ] are pronounced differently, because their underlying forms are different.
 
 <ul>
 <li>What is the contrast between their underlying forms?</li>
-<li>In one sense, the underlying contrast has been neutralized, but in another sense, the underlying contrast can still be seen, because of its effects on another rule.</li>
+<li>In one sense, the underlying contrast has been neutralized, but in another sense, the underlying contrast can still be seen, because of the effects of another phonological process (raising).</li>
 <li>So, we can say that the underlying contrast between the phonemes /t/ and /d/ has been <strong>displaced</strong> onto the allophones [aɪ] and [ʌɪ] of the phoneme /aɪ/.</li>
 </ul></li>
 <li>What does this mean for our algorithm of phonemic analysis?
@@ -900,7 +967,7 @@
 
 <tbody>
 <tr>
-	<td>Contrast </br>(that isn&#8217;t neutralization)</td>
+	<td>Contrast </br>(that isn&#8217;t neutralized)</td>
 	<td>multiple phonemes </td>
 	<td>unpredictable </td>
 	<td>contrastive</td>
@@ -916,7 +983,7 @@
 <tr>
 	<td>Positional</br>neutralization </td>
 	<td>multiple phonemes </br> that share an allophone </td>
-	<td>predictable (partially) </td>
+	<td>predictable</br>(but not totally predictable) </td>
 	<td>contrastive </br>(contextually-limited)</td>
 	<td>(near-)minimal pairs </br>&amp; alternations</td>
 </tr>
@@ -932,14 +999,20 @@
 
 </div>
 
+<figure>
+<img src="bws_flowchart.svg" alt="This is my attempt at making a comprehensive flowchart for the phonemic analysis of two sounds. This is a fun exercise, but ultimately, it shows that phonemic analysis is as much an art as it is a science." />
+<figcaption>This is my attempt at making a comprehensive flowchart for the phonemic analysis of two sounds. This is a fun exercise, but ultimately, it shows that phonemic analysis is as much an art as it is a science.</figcaption>
+</figure>
+
 <ul>
-<li>A final note: terminology can be confusing, making tables and flowcharts imperfect.
+<li><p>A final note: terminology can be confusing, making tables and flowcharts imperfect.</p>
 
 <ul>
 <li>Remember that contrast and allophony can co-occur (e.g. positional neutralization).</li>
 <li>Also, predictabiliy and allophony don&#8217;t always go together (e.g. free variation).</li>
 <li>In common usage, the term <em>allophony</em> usually implies that the pattern isn&#8217;t positional neutralization or free variation, but allophony is technically present in both.</li>
 </ul></li>
+<li><p>In the end, our generative model (rules or constraints) will guide our phonemic analysis. The guiding principles will be &#8220;account for predictable things using rules or constraints&#8221; and &#8220;come up with an analysis that works.&#8221;</p></li>
 </ul>
 
 <h1 id="whatarethegoalsanddata">What are the goals and data?</h1>
