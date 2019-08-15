@@ -4,7 +4,9 @@ Date: 8/13/2019
 Comment: for USC Ling 531A and Ling 401 Fall 2019
 CSS: bws.css
 
+<div class="title">
 Introduction and Review
+</div>
 
 Handout for USC Advanced Undergraduate Phonology 
 

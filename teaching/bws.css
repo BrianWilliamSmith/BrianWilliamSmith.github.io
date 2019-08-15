@@ -21,16 +21,11 @@ body {
     counter-reset: tocsection;
 }
 
-p {
+.title {
     color:#0069d6;
     font-size: 2em;
     font-weight: bold;
-}
-
-p~p {
-    color:initial;
-    font-size: initial;
-    font-weight: initial
+    margin-bottom: 3%;
 }
 
 img {
@@ -207,10 +202,6 @@ h5,
 h6 {
     color: #404040;
     line-height: 36px;
-}
-
-h1 {
-    font-size: 3em;
 }
 
 h1 {
