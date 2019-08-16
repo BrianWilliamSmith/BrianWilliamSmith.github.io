@@ -11,7 +11,7 @@ Handout for [USC Graduate Phonology](531_guide.html)
 
 Ling 531A – Fall 19 - Smith
 
-Handouts span multiple classes. See syllabus for full plan.
+Handouts span multiple classes. See [syllabus](531_syllabus.pdf) for full plan.
 
 <div class="syllabus">
 
