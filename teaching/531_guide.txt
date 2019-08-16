@@ -1,0 +1,93 @@
+Title: Introduction and Review
+Author: Brian W. Smith
+Date: 8-13 to present
+Comment: for USC Ling 531A
+CSS: bws.css
+
+<div class="title">
+Schedule for Ling 531A </div>
+
+Handout for [USC Graduate Phonology](531_guide.html) 
+
+Ling 531A – Fall 19 - Smith
+
+Handouts span multiple classes. See syllabus for full plan.
+
+<div class="syllabus">
+
+- Wed 8-28
+	- Handout 
+		- [Course overview and syllabus](531_0.html)
+		- [Generative phonology and phonemic analysis](531_1.html)
+	- Comments 
+	- To do 
+		- Assignment 1 due on 9/4
+- Wed 9-04
+	- Handout 
+	- Comments 
+	- To do 
+- Wed 9-11
+	- Handout 
+	- Comments 
+	- To do 
+		- Assignment 2 due on 9/18
+- Wed 9-18
+	- Handout 
+	- Comments 
+	- To do 
+		- Assignment 3 due on 9-25
+- Wed 9-25
+	- Handout 
+	- Comments 
+	- To do 
+		- Language data presentation on 10-02
+- Wed 10-02
+	- Language data presentations
+	- To do 
+		- Assignment 4 due on 10-09
+- Wed 10-09
+	- Handout 
+	- Comments 
+	- To do 
+		- Assignment 5 due on 10-16
+- Wed 10-16
+	- Handout 
+	- Comments 
+	- To do 
+		- Assignment 6 due on 10-23
+- Wed 10-23
+	- Handout 
+	- Comments 
+	- To do 
+		- Term paper topic deadline is 11-13
+- Wed 10-30
+	- Handout 
+	- Comments 
+	- To do 
+		- Assignment 7 due on 11-06
+		- Term paper topic deadline is 11-13
+- Wed 11-06
+	- Handout 
+	- Comments 
+	- To do 
+		- Term paper topic deadline is 11-13
+		- Paper proposal due on 11-20
+- Wed 11-13
+	- Handout 
+	- Comments 
+	- To do 
+		- Paper proposal due on 11-20
+- Wed 11-20
+	- Handout 
+	- Comments 
+	- To do 
+- Wed 11-27
+	- **No class**
+	- To do 
+		- Term paper due on 12/13
+- Wed 12-04
+	- Term paper presentations
+	- To do
+		- Term paper due on 12/13
+
+</div>

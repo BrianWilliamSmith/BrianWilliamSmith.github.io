@@ -156,12 +156,6 @@ ul li::before {
     margin-left: -3em;
 }
 
-ul ul li {
-    list-style: disc;
-    counter-increment: none;
-    margin-left: 1em;
-}
-
 ul ul ul li {
     list-style: circle;
     counter-increment: none;
@@ -169,9 +163,27 @@ ul ul ul li {
 
 }
 
-ul ul li::before{
+
+.syllabus ul li {
+    list-style-position: inside;
+    position: initial;
+}
+
+.syllabus ul li::before {
+    content: "Class " counter(subsection) ": ";
+    position: initial;
+}
+
+ul ul li, .syllabus ul li li {
+    list-style: disc;
+    counter-increment: none;
+    margin-left: 1em;
+}
+
+ul ul li::before, .syllabus ul ul li::before {
     content:none;
 }
+
 
 .TOC ul{
     padding: 0;

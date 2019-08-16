@@ -1,0 +1,37 @@
+Title: Introduction and Review
+Author: Brian W. Smith
+Date: 8/13/2019
+Comment: for USC Ling 531A and Ling 401 Fall 2019
+CSS: bws.css
+
+<div class="title">
+Course overview and syllabus
+</div>
+
+Handout for [USC Advanced Undergraduate Phonology](401_guide.html)
+
+Ling 401 – Fall 2019 – Smith
+
+{{TOC}}
+
+# Course overview
+- This course
+	- The big idea in this course is **phonological argumentation**: how to evaluate, compare, and apply phonological models.
+	- We'll practice **iterative model development**, building a model to accomplish some goals, testing it with new data, revising, and repeating.
+	- We'll focus primarily on **Optimality Theory**, a framework that emerged in the early 1990s and replaced rules with constraints.
+- Syllabus
+	- Course overview, goals, requirements
+	- Handouts and schedule
+		- The schedule is very flexible.
+		- Handouts usually span multiple class meetings.
+		- This handout is exceptionally long and detailed.
+	- Laptops, Slack, and Google docs
+- To print or not to print?
+	- Handouts are viewable on electronic devices, and I'll post the websites on Slack.
+	- Trivia: Handouts are typeset using [Markdown syntax](https://guides.github.com/features/mastering-markdown/). 
+		- I actually use [MultiMarkdown](https://fletcherpenney.net/multimarkdown/), which is basically Github-flavored Markdown with some nice extensions (especially headerless tables!).
+		- The raw code underlying every handout is available at a near-identical URL: replace `.html` with `.txt`.
+		- The arcane and hacky CSS is [viewable](bws.css) if you're a masochist and/or web development enthusiast.
+- For next time, think of as  many answers as possible to the questions below.
+	-   "What are other possible goals of phonological theory?"
+	-   "What are phonological data?"

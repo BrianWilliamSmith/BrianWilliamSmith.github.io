@@ -1,0 +1,141 @@
+Title: Introduction and Review
+Author: Brian W. Smith
+Date: 8-13-present
+Comment: for USC Ling 401
+CSS: bws.css
+
+<div class="title">
+Schedule for Ling 401 </div>
+
+Handout for [USC Advanced Undergraduate Phonology](401_guide.html) 
+
+Ling 401 – Fall 19 - Smith
+
+Handouts span multiple classes. See syllabus for full plan.
+
+<div class="syllabus">
+
+- Mon 8-26
+	- Handout 
+		- [Course overview and syllabus](401_0.html)
+		- [Generative phonology and phonemic analysis](401_1.html)
+	- Comments: We made it up to section…
+	- To do
+		- Reading (see syllabus)
+		- Think of as  many answers as possible to the questions below.
+			-   "What are other possible goals of phonological theory?"
+			-   "What are phonological data?"
+- Wed 8-28
+	- Handout 
+	- Comments 
+	- To do
+- Mon 9-02
+	- **No class**
+- Wed 9-04
+	- Handout 
+	- Comments 
+	- To do
+- Mon 9-09
+	- Handout 
+	- Comments 
+	- To do
+- Wed 9-11
+	- Handout 
+	- Comments 
+	- To do
+- Mon 9-16
+	- Handout 
+	- Comments 
+	- To do
+- Wed 9-18
+	- Handout 
+	- Comments 
+	- To do
+- Mon 9-23
+	- Handout 
+	- Comments 
+	- To do
+- Wed 9-25
+	- Handout 
+	- Comments 
+	- To do
+- Mon 9-30
+	- Handout 
+	- Comments 
+	- To do
+- Wed 10-02
+	- Handout 
+	- Comments 
+	- To do
+- Mon 10-07
+	- Handout 
+	- Comments 
+	- To do
+- Wed 10-09
+	- Handout 
+	- Comments 
+	- To do
+- Mon 10-14
+	- Handout 
+	- Comments 
+	- To do
+- Wed 10-16
+	- Handout 
+	- Comments 
+	- To do
+- Mon 10-21
+	- Handout 
+	- Comments 
+	- To do
+- Wed 10-23
+	- Handout 
+	- Comments 
+	- To do
+- Mon 10-28
+	- Handout 
+	- Comments 
+	- To do
+- Wed 10-30
+	- Handout 
+	- Comments 
+	- To do
+- Mon 11-04
+	- Handout 
+	- Comments 
+	- To do
+- Wed 11-06
+	- Handout 
+	- Comments 
+	- To do
+- Mon 11-11
+	- Handout 
+	- Comments 
+	- To do
+- Wed 11-13
+	- Handout 
+	- Comments 
+	- To do
+- Mon 11-18
+	- Handout 
+	- Comments 
+	- To do
+- Wed 11-20
+	- Handout 
+	- Comments 
+	- To do
+- Mon 11-25
+	- Handout 
+	- Comments 
+	- To do
+- Wed 11-27
+	- **No class**
+- Mon 12-02
+	- Handout 
+	- Comments 
+	- To do
+- Wed 12-04
+	- Handout 
+	- Comments 
+	- To do
+
+</div>
