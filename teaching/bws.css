@@ -18,7 +18,6 @@ body {
     padding: 3%;
     counter-reset: section;
     counter-reset: subsection;
-    counter-reset: tocsection;
 }
 
 .title {
@@ -26,6 +25,7 @@ body {
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 3%;
+    line-height: 1em;
 }
 
 img {
@@ -170,6 +170,7 @@ ul ul ul li {
 
 .syllabus ul li::before {
     content: "Class " counter(subsection) ": ";
+    margin-top: 0px;
     position: initial;
 }
 
@@ -203,6 +204,7 @@ ul ul li::before,
 
 
 .TOC ul{
+    counter-reset: tocsection;
     padding: 0;
 }
 
@@ -219,9 +221,8 @@ ul ul li::before,
 
 .TOC ul li a:before {
     font-weight: bold;
-    content: "§" counter(tocsection) ": ";
+    content: "§" counters(tocsection, ".") ": ";
     counter-increment: tocsection;
-    counter-reset: tocsubsection;
 }
 
 .TOC ul ul li {
@@ -229,12 +230,6 @@ ul ul li::before,
     padding: 0;
     list-style-type: none;
     list-style-position: inside;
-}
-
-.TOC ul ul li a:before {
-    font-weight: bold;
-    content: "§" counter(tocsection) "." counter(tocsubsection) ": ";
-    counter-increment: tocsubsection;
 }
 
 h1,
@@ -283,6 +278,10 @@ hr {
     margin: 0 0 19px;
     border: 0;
     border-bottom: 1px solid #ccc;
+}
+
+.old {
+    color: grey;
 }
 blockquote {
     padding: 13px 13px 21px 15px;
