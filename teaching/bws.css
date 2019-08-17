@@ -157,10 +157,9 @@ ul li::before {
 }
 
 ul ul ul li {
-    list-style: circle;
+    list-style-type: circle;
     counter-increment: none;
     margin-left: 1em;
-
 }
 
 
@@ -180,8 +179,26 @@ ul ul li, .syllabus ul li li {
     margin-left: 1em;
 }
 
-ul ul li::before, .syllabus ul ul li::before {
+ul ul li::before,
+.syllabus ul ul li::before,
+.boring ul li::before 
+{
     content:none;
+}
+
+.boring ul li {
+    list-style-position: outside;
+    list-style-type:disc;
+}
+
+.boring ul ul li {
+    list-style-position: outside;
+    list-style-type:circle;
+}
+
+.boring ul ul ul li {
+    list-style-position: outside;
+    list-style-type:square;
 }
 
 
@@ -204,6 +221,20 @@ ul ul li::before, .syllabus ul ul li::before {
     font-weight: bold;
     content: "§" counter(tocsection) ": ";
     counter-increment: tocsection;
+    counter-reset: tocsubsection;
+}
+
+.TOC ul ul li {
+    margin-top: .5em;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+.TOC ul ul li a:before {
+    font-weight: bold;
+    content: "§" counter(tocsection) "." counter(tocsubsection) ": ";
+    counter-increment: tocsubsection;
 }
 
 h1,
@@ -222,6 +253,7 @@ h1 {
     margin-bottom: 3%;
     margin-left: 0;
     counter-reset: subsection;
+    counter-reset: title-subsection;
     counter-increment: section;
 }
 
@@ -234,8 +266,8 @@ h2 {
 }
 
 h2::before {
-    counter-increment: subsection;
-    content: counter(section) "." counter(subsection);
+    counter-increment: title-subsection;
+    content: counter(section) "." counter(title-subsection) ". ";
 }
 
 h4 {

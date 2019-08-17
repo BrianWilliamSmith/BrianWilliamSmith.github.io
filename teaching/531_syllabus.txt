@@ -1,0 +1,230 @@
+Title: Syllabus
+Author: Brian W. Smith
+Date: 8-13-present
+Comment: for USC Ling 531
+CSS: bws.css
+
+<div class="title">
+Syllabus for for Graduate Phonology I (Ling 531A) </div>
+
+Handout for [USC Graduate Phonology](531_guide.html) 
+
+<div class="boring">
+
+- **Time:** W 9:30am–11:30am
+- **Place:** Linguistics Seminar room
+- **Instructor:** [Brian W. Smith](http://brianwilliamsmith.github.io/)
+- **Contact:** bsmith88@usc.edu
+- **Course forum:** [ling531a-fall2019.slack.com](http://ling531a-fall2019.slack.com)
+- **Updated schedule and handouts:** [531 schedule](531_guide.html)
+
+{{TOC}}
+
+# Course overview
+
+This course deals with central issues in segmental phonology, focusing on the mental representation of individual speech sounds and their interaction. The emphasis throughout is on theory development and argumentation: how formal models are evaluated and revised in order to meet empirical and conceptual goals. 
+
+We focus in particular on the constraint-based framework Optimality Theory (OT: Prince and Smolensky 1993/2004), an alternative to rule-based frameworks in the tradition of Chomsky and Halle’s (1968) Sound Pattern of English. We will survey the motivations for adopting OT, and become familiar with its formal architecture, some of its results, and some of its shortcomings. OT makes predictions about phonological typology, and we will discuss many cross-linguistic generalizations about patterns involving sets of segments, especially as they relate to assimilation, syllable structure, and licensing. The course concludes with discussion of current issues in constraint-based frameworks, including variation and weighted constraints.
+
+The sequel to this course, LING 531B, continues within constraint-based frameworks, focusing on prosodic phonology and phonology-morphology interactions.
+
+# Coarse goals
+By the course's conclusion, you will:
+
+- be able to find generalizations in a data set and describe phonological patterns in relatively theory-neutral terms,
+- be familiar with rule formalism and rule ordering,
+- be able to formulate analyses in OT and understand the predictions that they make,
+- be able to argue effectively for a given analysis (especially able to justify constraints),
+- be able to read and interpret original research in OT and segmental phonology, 
+- have begun to develop your own research project that makes use of the concepts discussed in class.
+
+# Textbook and handouts
+- There is one required textbook: *Doing Optimality Theory* by John J. McCarthy (2008).
+- Handouts are posted on my website for [USC Graduate Phonology](531_guide.html).
+- Readings are downloadable at a private link I've shared via Slack and e-mail. Please don't share this link. 
+
+# Electronic device policy
+- Please bring your charged laptop to class. Throughout the semester, we’ll collaborate using Google Docs and Slack.
+- However, I ask that outside of these activities, you minimize your electronic device usage, restricting it to accessing readings or taking notes.
+	- Use of electronic devices during class can serve as a distraction not only to you, but also to others.
+	- Please silence phones and stow them during class. Texts, emails, web browsing and so on, can wait until afterwards.
+	- Your respect for this policy is appreciated – it makes a real difference to the classroom environment as a whole. 
+- My personal advice is to take handwritten notes and focus on the handout. 
+	- Studies seem to agree that handwritten notes result in better recall and increased focus, relative to typed notes.  
+
+# Requirements
+
+## Class participation
+- This is the most important requirement.
+- Engagement is important for establishing your reputation as a serious, competent graduate student.
+- It also gives you practice for conferences, academic meetings, etc.
+- Our collective goal is to get everyone talking roughly the same amount.
+
+## Reading comments
+- You are required to post (on Slack) a short question or comment on every assigned reading.
+- The deadline is the night before class.
+- Two or three sentences is sufficient and ideal.
+
+## Opt-out office hours
+- Since the class is small, I’m going to schedule a weekly 20-minute meeting with each of you.
+- You can use this time to discuss the final paper, class material, additional readings, or whatever else you’d like to
+- You can always opt out: if you’d like to skip a meeting, just e-mail me the night before. 
+
+
+## In-class language data presentation
+- Your goal is to demonstrate the ability to objectively describe language data.
+- For your presentation, you will present a set of data supporting claims about the phoneme inventory of a language and demonstrating an allophonic alternation. 
+- Your presentation should be about 12-15 minutes long and must be accompanied by a handout or slides.
+- The presentations will be on October 2.
+
+## About seven homework assignments
+- These provide hands-on practice with analysis, argumentation, and applying, extending and revising theories.
+- Think of them as mini-papers.
+- You are encouraged to collaborate with others, but you must write up and submit your own solution, listing anyone with whom you collaborated.
+- Submit hard copies at the beginning of class on the assigned due date.
+- Assignments are returned in class within seven days of submission.
+- Submitted assignments should not contain text, figures, tables, and so on that have been copied electronically or otherwise from another student or any other source.
+	- Quotations or other forms of reference to other work are of course acceptable with the appropriate citations.
+	- USC takes academic integrity very seriously and enforces it strictly.
+	- To find out more, students should consult the guide to academic integrity for graduate students at https://sjacs.usc.edu/files/2015/03/GradIntegrity.pdf.
+	- If you have any questions about what constitutes plagiarism or cheating, please come and see me.
+
+
+## A term paper 
+- Your goal is to demonstrate all of the skills you’ve developed in class.
+- The aims of the paper are threefold:
+	1. To show your ability to describe and analyze a set of data.
+	2. To apply techniques of current theory.
+	3. To effectively argue for your proposed account.
+- In the paper, you will:
+	- Describe a phonological pattern from some language in theory-neutral terms, using data from a grammar, dissertation, or published paper (including proceedings papers).
+	- Write an original rule-based analysis of the pattern.
+Write a constraint-based analysis of the pattern.
+	- Compare the rule-based and constraint-based analysis, and argue for one over the other.
+- Paper timeline:
+	1. Select a proposed topic and meet with me for approval of the topic by November 13.
+	2. Submit a 1–2 page outline of your paper proposal by November 20. Your proposal should summarize the key aspects of the data/problem that you are interested in investigating. 
+	3. Present your paper in class on December 4 with a handout (and slides if you would like) outlining your analysis.
+	4. Submit a written version of the research paper that takes into account comments received during your presentation. The paper is due Wednesday December 11th at 1pm. The paper will probably be about 8–15 pages (double-spaced), including data and references. No late papers are accepted, barring a student taking an ‘incomplete’ for the class.
+
+# Grade breakdown
+
+|--- | --- |
+|Participation, readings, reading comments|15%|
+|Assignments				|50%|
+|In-class language data presentation (10/2)|10%|
+|Term paper (due 12/11)			|25%|
+
+
+# Important dates
+
+| --- | ---
+|9/2|Labor Day – no classes
+|10/2|In-class language data presentations
+|10/17–10/18|Fall recess
+|11/13|Deadline for in-person approval of paper topic
+|11/20|Deadline for submission of outline of paper proposal
+|11/27–12/1|Thanksgiving Holiday – no classes
+|12/4|In class presentations of term papers
+|12/13|Due date for final paper
+
+
+# Schedule
+
+
+- See [this page for an up-to-date schedule](531_guide.html)
+- The schedule will be updated depending on the pace of the class.
+- Changes to readings or due dates will be announced in class.
+- The readings with citations like (Year/2004) are from McCarthy’s (2004) book “Optimality Theory: A reader”, which republished excerpts of influential OT papers.
+
+|Date |Read before class|Topics	|Deadlines|
+|---  |---		|---	|---	|
+|8/28|Zsiga (2013) Ch 10–11|<ul><li>Phonemes, allophones, and contrast</li><li>Phonotactics and alternations</li><li>Contrastive distribution</li><li>Complementary distribution</li><li>Contextually-limited contrast (positional neutralization)</li></ul>| |
+
+|9/4|Zsiga (2013) Ch 12–13</br>Mielke (2011)|<ul><li>Natural classes, distinctive features, and rules</li><li>Why features?</li><li>Rule writing conventions</li><li>Rule ordering</li><li>Autosegmental representations</li></ul>|Assignment 1</br>(identifying distributions)|
+
+|9/11|Kisseberth (1970)</br>Doing OT Ch 1|<ul><li>Introducing constraints</li><li>The conspiracy problem</li><li>A conceptual crisis</li><li>Introducing OT: Gen, Con, Eval</li></ul>| |
+
+|9/18|Doing OT Ch 2–2.7|<ul><li>OT Mechanics</li><li>The selection problem and VTs</li><li>The ranking problem and CTs</li><li>Ranking arguments</li><li>Harmonic bounding</li></ul>|Assignment 2</br>(rules and constraints)|
+
+|9/25|Doing OT Ch 2.8</br>Steriade (2007)|<ul><li>Phonemes, allophones, and contrast in OT</li><li>Richness of the Base</li><li>Lexicon optimization</li><li>Typology of contrast in OT</li></ul>|Assignment 3</br>(OT practice)|
+
+|10/2|Doing OT Ch 3|<ul><li>Language data presentations</li></ul>| |
+
+|10/9|Doing OT Ch 2.10–2.12</br>Tesar & Smolensky (1998/2004)|<ul><li>Constraint ranking by algorithm and computer</li><li>RCD and EDCD</li><li>ERC Fusion</li><li>Using OT-Help</li></ul>|Assignment 4</br>(licensing)|
+
+|10/16|Doing OT Ch 4.6</br>Doing OT Ch 5</br>Lombardi (1999/2004)|<ul><li>Factorial typology and universals</li><li>Syllable structure typology</li><li>Correspondence theory</li><li>Positional faithfulness</li><li>Assimilation typology</li></ul>|Assignment 5</br>(RCD)|
+
+|10/23|Hayes (1999/2004)</br>Doing OT Ch 4|<ul><li>Justifying constraints</li><li>Functional grounding</li><li>Assimilation typology, revisited</li></ul>|Assignment 6</br>(typology)|
+
+|10/30|Pater (1999/2004)</br>Zuraw and Lu (2009)|<ul><li>Homogeneity of target / heterogeneity of process</li><li>*NC̥ effects</li><li>Dissimilation</li><li>The too-many-solutions problem</li></ul>| |
+
+|11/6|Bakovic (2011)</br>Doing OT Ch 6.4|<ul><li>Derivational opacity</li><li>The opacity problem</li><li>Output-output faithfulness|Assignment 7 </br>(HoT/HoP)</li></ul>|
+
+|11/13|Pater (2016)|<ul><li>Weighted constraints</li><li>Harmonic Grammar</li><li>Gang effects / ganging</li></ul>|Paper topic by now|
+
+|11/20|Doing OT Ch 6.2</br>Coetzee & Pater (2011)|<ul><li>Phonological variation</li><li>Types of variation</li><li>MaxEnt Harmonic Grammar</li></ul>|Paper proposal due|
+
+|11/27| No class - Thanksgiving holiday |||
+
+|12/4| Term paper presentations |||
+
+
+# Statement on Academic Conduct and Support Systems
+
+## Academic Conduct
+Plagiarism – presenting someone else’s ideas as your own, either verbatim or recast in your own words – is a serious academic offense with serious consequences. Please familiarize yourself with the discussion of plagiarism in SCampus in Part B, Section 11, “Behavior Violating University Standards” policy.usc.edu/scampus-part-b. Other forms of academic dishonesty are equally unacceptable.  See additional information in SCampus and university policies on scientific misconduct, http://policy.usc.edu/scientific-misconduct.
+ 
+## Support Systems
+
+**Student Counseling Services (SCS)**
+- (213) 740-7711 (24/7 on call)
+- Free and confidential mental health treatment for students, including short-term psychotherapy, group counseling, stress fitness workshops, and crisis intervention.
+- engemannshc.usc.edu/counseling
+
+**National Suicide Prevention Lifeline**
+- 1 (800) 273-8255
+- Provides free and confidential emotional support to people in suicidal crisis or emotional distress 24 hours a day, 7 days a week. 
+- www.suicidepreventionlifeline.org
+
+**Relationship and Sexual Violence Prevention Services (RSVP)** 
+- (213) 740-4900 (24/7 on call)
+- Free and confidential therapy services, workshops, and training for situations related to gender-based harm. 
+- engemannshc.usc.edu/rsvp
+
+**Sexual Assault Resource Center**
+- For more information about how to get help or help a survivor, rights, reporting options, and additional resources, visit the website. 
+- sarc.usc.edu
+
+**Office of Equity and Diversity (OED)/Title IX Compliance** 
+- (213) 740-5086
+- Works with faculty, staff, visitors, applicants, and students around issues of protected class.
+- equity.usc.edu 
+
+**Bias Assessment Response and Support**
+- Incidents of bias, hate crimes and microaggressions need to be reported allowing for appropriate investigation and response.
+- studentaffairs.usc.edu/bias-assessment-response-support
+
+**The Office of Disability Services and Programs**
+- Provides certification for students with disabilities and helps arrange relevant accommodations.
+- dsp.usc.edu
+
+**Student Support and Advocacy**
+- (213) 821-4710
+- Assists students and families in resolving complex issues adversely affecting their success as a student EX: personal, financial, and academic.
+- studentaffairs.usc.edu/ssa
+
+**Diversity at USC**
+- Information on events, programs and training, the Diversity Task Force (including representatives for each school), chronology, participation, and various resources for students.
+- diversity.usc.edu
+
+**USC Emergency Information**
+- Provides safety and other updates, including ways in which instruction will be continued if an officially declared emergency makes travel to campus infeasible.
+- emergency.usc.edu
+
+**USC Department of Public Safety**
+- UPC: (213) 740-4321
+- HSC: (323) 442-1000 (24-hour emergency or to report a crime)
+- Provides overall safety to USC community. dps.usc.edu
+
+</div>

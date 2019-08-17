@@ -11,7 +11,7 @@ Handout for [USC Advanced Undergraduate Phonology](401_guide.html)
 
 Ling 401 – Fall 19 - Smith
 
-Handouts span multiple classes. See [syllabus](401_syllabus.pdf) for full plan.
+Handouts span multiple classes. See [syllabus](401_syllabus.pdf) for scheduled readings.
 
 
 <div class="syllabus">
@@ -22,7 +22,8 @@ Handouts span multiple classes. See [syllabus](401_syllabus.pdf) for full plan.
 		- [Generative phonology and phonemic analysis](401_1.html)
 	- Comments: We made it up to section…
 	- To do
-		- Reading (see syllabus)
+		- Readings: Zsiga (2013) excerpts
+(Ch 10, 11.2, 13.1–13.3)
 		- Think of as  many answers as possible to the questions below.
 			-   "What are other possible goals of phonological theory?"
 			-   "What are phonological data?"

@@ -16,6 +16,7 @@ Ling 531A – Fall 19 - Smith
 {{TOC}}
 
 # Course overview
+- Let's look at [the syllabus](531_syllabus.html)
 - This course
 	- The big idea in this course is **phonological argumentation**: how to evaluate, compare, and apply phonological models.
 	- We'll practice **iterative model development**, building a model to accomplish some goals, testing it with new data, revising, and repeating.
