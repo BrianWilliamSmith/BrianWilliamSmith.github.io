@@ -8,11 +8,11 @@ CSS: bws.css
 ***
 
 <div class="title">
-Graduate Phonology I (Ling 531A) </div>
+Graduate Phonology (Ling 531A) </div>
 
 <div class="boring">
 
-- **Time:** W 9:30am–11:30am
+- **Time:** W 9:00am–11:30am
 - **Place:** Linguistics Seminar room
 - **Instructor:** [Brian W. Smith](http://brianwilliamsmith.github.io/)
 - **Contact:** bsmith88@usc.edu
@@ -110,7 +110,7 @@ The sequel to this course, LING 531B, continues within constraint-based framewor
 	- Submit a 1–2 page outline of your paper proposal by November 20. Your proposal should summarize the key aspects of the data/problem that you are interested in investigating. 
 	- Present your paper in class on December 4 with a handout (and slides if you would like) outlining your analysis.
 	- Submit a written version of the research paper that takes into account comments received during your presentation. The paper will probably be about 8–15 pages (double-spaced), including data and references.
-	- The paper is due Wednesday December 11th at 1pm. No late papers are accepted, barring a student taking an ‘incomplete’ for the class.
+	- The paper is due Wednesday December 11th at 1pm. No late papers are accepted, barring a student taking an "incomplete" for the class.
 
 # Grade breakdown
 

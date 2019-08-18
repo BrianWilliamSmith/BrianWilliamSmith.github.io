@@ -85,16 +85,17 @@ When this course is completed, you should:
 	- 5  (absolutely perfect in every way — no improvement possible)
 
 
-## Five or six homework assignments
+## Homework assignments
 - These provide hands-on practice with analysis, argumentation, and applying, extending and revising theories.
 - Think of them as mini-papers.
+- There will be about five or six of them.
 - You are encouraged to collaborate with others, but you must write up and submit your own solution, listing anyone with whom you collaborated.
 - Submit hard copies at the beginning of class on the due date.
 - Assignments are returned in class within seven days of submission.
 - Submitted assignments should not contain text, figures, tables, and so on that have been copied electronically or otherwise from another student or any other source.
 	- Quotations or other forms of reference to other work are of course acceptable with the appropriate citations.
 	- USC takes academic integrity very seriously and enforces it strictly.
-	- You can read more at [Academic Conduct][].
+	- You can read more at the [Academic Conduct][] section of the syllabus.
 	- If you have any questions about what constitutes plagiarism or cheating, please come and see me.
 
 
@@ -118,7 +119,7 @@ When this course is completed, you should:
 	- Submit a 1–2 page outline of your paper proposal by November 20. Your proposal should summarize the key aspects of the data/problem that you are interested in investigating. 
 	- Present your paper in class on December 4 with a handout (and slides if you would like) outlining your analysis.
 	- Submit a written version of the research paper that takes into account comments received during your presentation. The paper will probably be about 8–15 pages (double-spaced), including data and references.
-	- The paper is due Wednesday December 11th at 1pm. No late papers are accepted, barring a student taking an ‘incomplete’ for the class.
+	- The paper is due Wednesday December 11th at 1pm. No late papers are accepted, barring a student taking an "incomplete" for the class.
 
 # Grade breakdown
 
