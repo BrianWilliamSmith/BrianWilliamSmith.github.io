@@ -4,17 +4,19 @@ Date: 8/13-present
 Comment: for USC Ling 401
 CSS: bws.css
 
+[USC Advanced Undergraduate Phonology](401_guide.html) – Fall 2019 – Smith
+***
+
 <div class="title">
 Advanced Undergraduate Phonology (Ling 401) </div>
 
-Handout for [USC Advanced Undergraduate Phonology](401_guide.html) 
-
 <div class="boring">
 
-- **Time:** W 9:30am–11:30am
-- **Place:** Linguistics Seminar room
+- **Time:** MW 12:30–2pm
+- **Place:** GFS 210
 - **Instructor:** [Brian W. Smith](http://brianwilliamsmith.github.io/)
 - **Contact:** bsmith88@usc.edu
+- **Office hours:** Mondays 2-4pm in GFS 301C
 - **Course forum:** [ling401a-fall2019.slack.com](http://ling401a-fall2019.slack.com)
 - **Updated schedule and handouts:** [401 schedule](401_guide.html)
 

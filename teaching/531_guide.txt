@@ -4,22 +4,22 @@ Date: 8/13 to present
 Comment: for USC Ling 531A
 CSS: bws.css
 
+[USC Graduate Phonology](531_guide.html) – Fall 19 - Smith
+***
+
 <div class="title">
-Schedule for Ling 531A </div>
+Daily schedule for Ling 531A </div>
 
-Handout for [USC Graduate Phonology](531_guide.html) 
-
-Ling 531A – Fall 19 - Smith
-
-Handouts span multiple classes. See [syllabus](531_syllabus.html) for scheduled readings.
+See the [syllabus](531_syllabus.html) for scheduled readings.
 
 <div class="syllabus">
 <div class="old">
 </div>
 
 - Wed 8/28
-	- Handout 
-		- [Course overview and syllabus](531_0.html)
+	- Handouts
+		- [Syllabus](531_syllabus.html)
+		- [Course overview](531_0.html)
 		- [Generative phonology and phonemic analysis](531_1.html)
 	- Comments
 		- We made it up to section ... on the handout
