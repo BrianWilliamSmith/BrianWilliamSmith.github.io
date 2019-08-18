@@ -70,19 +70,20 @@ The sequel to this course, LING 531B, continues within constraint-based framewor
 
 ## Opt-out office hours
 - Since the class is small, I’m going to schedule a weekly 20-30 minute meeting with each of you.
-- You can use this time to discuss the final paper, class material, additional readings, or whatever else you’d like to
+- You can use this time to discuss the final paper, class material, additional readings, or whatever else you’d like to.
 - You can always opt out: if you’d like to skip a meeting, just e-mail me the night before. 
 
-## About seven homework assignments
+## Homework assignments
 - These provide hands-on practice with analysis, argumentation, and applying, extending and revising theories.
 - Think of them as mini-papers.
+- There will be about six or seven.
 - You are encouraged to collaborate with others, but you must write up and submit your own solution, listing anyone with whom you collaborated.
 - Submit hard copies at the beginning of class on the due date.
 - Assignments are returned in class within seven days of submission.
 - Submitted assignments should not contain text, figures, tables, and so on that have been copied electronically or otherwise from another student or any other source.
 	- Quotations or other forms of reference to other work are of course acceptable with the appropriate citations.
 	- USC takes academic integrity very seriously and enforces it strictly.
-	- To find out more, students should consult the guide to academic integrity for graduate students at https://sjacs.usc.edu/files/2015/03/GradIntegrity.pdf. Also see [Academic Conduct][].
+	- To find out more, students should consult [the guide to academic integrity for graduate students](http://sjacs.usc.edu/files/2015/03/GradIntegrity.pdf). Also see the [Academic Conduct][] section of the syllabus.
 	- If you have any questions about what constitutes plagiarism or cheating, please come and see me.
 
 
