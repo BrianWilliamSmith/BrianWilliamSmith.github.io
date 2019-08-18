@@ -4,7 +4,7 @@ Date: 8/13/2019
 Comment: for USC Ling 531A Fall 2019
 CSS: bws.css
 
-[USC Graduate Phonology](531_guide.html) – Fall 19 - Smith
+[USC Graduate Phonology](531_guide.html) ✳︎ Fall 19 ✳︎ Smith
 ***
 
 <div class="title">

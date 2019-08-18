@@ -4,7 +4,7 @@ Date: 8/13/2019
 Comment: for USC Ling 531A and Ling 401 Fall 2019
 CSS: bws.css
 
-[USC Advanced Undergraduate Phonology](401_guide.html) – Fall 2019 – Smith
+[USC Advanced Undergraduate Phonology](401_guide.html) ✳︎ Fall 2019 ✳︎ Smith
 ***
 
 <div class="title">
