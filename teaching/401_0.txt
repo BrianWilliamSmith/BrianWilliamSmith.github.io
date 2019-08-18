@@ -26,7 +26,7 @@ Course overview
 		- This handout is exceptionally long and detailed.
 	- Laptops, Slack, and Google docs
 - To print or not to print?
-	- Handouts are viewable on electronic devices, and I'll post the websites on Slack.
+	- Handouts are viewable on electronic devices, and you can see all of them at the daily schedule, accessible by clicking the link at the top of the page.
 	- Trivia: Handouts are typeset using [Markdown syntax](https://guides.github.com/features/mastering-markdown/). 
 		- I actually use [MultiMarkdown](https://fletcherpenney.net/multimarkdown/), which is basically Github-flavored Markdown with some nice extensions (especially headerless tables!).
 		- The raw code underlying every handout is available at a near-identical URL: replace `.html` with `.txt`.
