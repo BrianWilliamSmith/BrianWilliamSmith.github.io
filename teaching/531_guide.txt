@@ -10,7 +10,7 @@ CSS: bws.css
 <div class="title">
 Daily schedule for Ling 531A </div>
 
-See the [syllabus](531_syllabus.html) for scheduled readings.
+See the [syllabus](531_syllabus.html) for a full list of scheduled readings.
 
 <div class="syllabus">
 <div class="old">
@@ -25,7 +25,8 @@ See the [syllabus](531_syllabus.html) for scheduled readings.
 		- We made it up to section ... on the handout
 	- To do 
 		- Assignment 1 due on 9/4
-
+		- Read Zsiga (2013) Ch 10–11
+		- Read Zsiga (2013) Ch 12-13
 <div class="old">
 
 - Wed 9/4
