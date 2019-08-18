@@ -64,7 +64,7 @@ The sequel to this course, LING 531B, continues within constraint-based framewor
 - Our collective goal is to get everyone talking roughly the same amount.
 
 ## Reading comments
-- You are required to post (on Slack) a short question or comment on every assigned reading.
+- For every class (except the first), you are required to post (on Slack) a short question or comment on one of the assigned readings.
 - The deadline is the night before class.
 - Two or three sentences is sufficient and ideal.
 
