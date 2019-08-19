@@ -17,7 +17,7 @@ Advanced Undergraduate Phonology (Ling 401) </div>
 - **Instructor:** [Brian W. Smith](http://brianwilliamsmith.github.io/)
 - **Contact:** bsmith88@usc.edu
 - **Office hours:** Mondays 2-4pm in GFS 301C
-- **Course forum:** [ling401a-fall2019.slack.com](http://ling401a-fall2019.slack.com)
+- **Course forum:** [ling401-fall2019.slack.com](http://ling401-fall2019.slack.com)
 - **Updated schedule and handouts:** [401 schedule](401_guide.html)
 
 {{TOC}}
