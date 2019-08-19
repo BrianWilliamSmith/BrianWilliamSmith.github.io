@@ -102,9 +102,9 @@ When this course is completed, you should:
 ## A final paper 
 - Your goal is to demonstrate all of the skills you’ve developed in class.
 - The aims of the paper are threefold:
-	1. To show your ability to describe and analyze a set of data.
-	2. To apply techniques of current theory.
-	3. To effectively argue for your proposed account.
+	- To show your ability to describe and analyze a set of data.
+	- To apply techniques of current theory.
+	- To effectively argue for your proposed account.
 - In the paper, you will:
 	- Describe a phonological pattern from some language in theory-neutral terms, using data from a grammar, dissertation, or published paper (including proceedings papers).
 	- Write an original rule-based analysis of the pattern.
@@ -115,11 +115,10 @@ When this course is completed, you should:
 	- This means you might inadvertently replicate an existing analysis, which is okay.
 	- However, if you want to use this paper as a writing sample for graduate school, originality and thoroughness are important.
 - Paper timeline:
-	- Select a proposed topic and meet with me for approval of the topic by November 13.
-	- Submit a 1–2 page outline of your paper proposal by November 20. Your proposal should summarize the key aspects of the data/problem that you are interested in investigating. 
-	- Present your paper in class on December 4 with a handout (and slides if you would like) outlining your analysis.
-	- Submit a written version of the research paper that takes into account comments received during your presentation. The paper will probably be about 8–15 pages (double-spaced), including data and references.
-	- The paper is due Wednesday December 11th at 1pm. No late papers are accepted, barring a student taking an "incomplete" for the class.
+	- By November 13: select a proposed topic and meet with me for approval of the topic.
+	- By November 20: submit a 1–2 page outline of your paper proposal. Your proposal should summarize the key aspects of the data/problem that you are interested in investigating. 
+	- On December 4: present your paper in class with a handout (or slides) outlining your analysis.
+	- By December 11 at 1pm: submit a written version of the research paper that takes into account comments received during your presentation. The paper will probably be about 8–15 pages (double-spaced), including data and references. No late papers are accepted, barring a student taking an "incomplete" for the class.
 
 # Grade breakdown
 
