@@ -22,11 +22,12 @@ Generative phonology and phonemic analysis
 	-   Consequence of assumption #1: if a morpheme has multiple SRs, differences between those SRs are derived via the grammar.
 - The process of generating SRs from URs is a **derivation**.
 
-Lexicon  |Grammar (simplified) |Surface forms
-|- |- |- |
-/bræg/+/d/ 	|make /d/ voiceless after a voiceless segment	|[brægd]|
-/hæk/+/d/  	|make /d/ voiceless after a voiceless segment	|[hækt]|
-/su/+/d/  	|make /d/ voiceless after a voiceless segment	|[sud] |
+|---:|:---:|:---:|:---:|
+|**Lexicon**  			| /hæk/+/d/ 	|/su/+/d/ 	|/bræg/+/d/	|
+|				|↓		|↓		|↓		|
+|**Grammar (simplified)**	|make /d/ voiceless after a voiceless segment|||
+|				|↓		|↓		|↓		|
+|**Surface forms** 		|[hækt]		|[sud] 		|[brægd]	|
 [Example of a derivation]
 
 -	The grammar and lexicon together result in a set UR-SR mappings, a.k.a. input-output mappings:
@@ -45,11 +46,12 @@ Lexicon  |Grammar (simplified) |Surface forms
 
 - An important feature: we can apply the grammar to novel words, just like kids and adults do.
 
-|Lexicon |Grammar (simplified)|Surface forms|
-|-- |-- |--|
-|/tiʧ/+/d/	|make /d/ voiceless after a voiceless segment	|[tiʧt]|
-|/go/+/d/	|make /d/ voiceless after a voiceless segment 	|[god]|
-|/rɪk/+/d/	|make /d/ voiceless after a voiceless segment 	|[rɪkt]| 
+|---:|:---:|:---:|:---:|
+|**Lexicon**  			|/tiʧ/+/d/ 	|/go/+/d/ 	|/rɪk/+/d/	|
+|				|↓		|↓		|↓		|
+|**Grammar (simplified)**	|make /d/ voiceless after a voiceless segment	|||
+|				|↓		|↓		|↓		|
+|**Surface forms** 		|[tiʧt]		|[god] 		|	[rɪkt]	|
 [Applying devoicing to novel words]
 
 - A grammatical process's **productivity** in a particular language is a measure of…
