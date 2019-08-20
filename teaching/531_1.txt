@@ -16,10 +16,10 @@ Generative phonology and phonemic analysis
 # Generative phonology
 - The central premise of Generative Grammar is that linguistic knowledge consists of both a **grammar** and a **lexicon**.
 - The **lexicon** contains all unpredictable information about words/morphemes, including their **Underlying Representations** (URs).
-	-   Working assumption #1: every morpheme has exactly one UR.
-	-   Working assumption #2: URs are built solely of sounds from a language's phoneme inventory.
+	-   Hypothesis 1: every morpheme has exactly one UR.
+	-   Hypothesis 2: URs are built solely of sounds from a language's phoneme inventory.
 - The **grammar** is a process or algorithm that takes URs and derives Surface Representations (SRs). The grammar captures all predictable information.
-	-   Consequence of assumption #1: if a morpheme has multiple SRs, differences between those SRs are derived via the grammar.
+	-   Hypothesis 3: if a morpheme has multiple SRs, differences between those SRs are derived via the grammar.
 - The process of generating SRs from URs is a **derivation**.
 
 |---:|:---:|:---:|:---:|

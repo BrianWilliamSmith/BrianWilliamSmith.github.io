@@ -24,9 +24,15 @@ See the [syllabus](531_syllabus.html) for a full list of scheduled readings.
 	- Comments
 		- We made it up to section ... on the handout
 	- To do 
+		- This week there's a lot to do!
+		- Join Slack
+			- Post an introduction (as short as you'd like) in #introductions
+			- Post a short comment on question on one of the readings in #papercomments
 		- Assignment 1 due on 9/4
 		- Read Zsiga (2013) Ch 10–11
+			- Focus on: 10-10.3, 11.2
 		- Read Zsiga (2013) Ch 12-13
+			- Focus on 12-12.2.1, 12.3, 13.3
 <div class="old">
 
 - Wed 9/4
