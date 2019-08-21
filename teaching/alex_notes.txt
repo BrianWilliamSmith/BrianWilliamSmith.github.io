@@ -18,13 +18,17 @@ CSS: bws.css
 
 - Read about outlier detection
 	- ML outlier detection?
-	- Forward model selection?
-	- Stephanie Shih — backward model selection for exceptionality
-- Read up on outlier detection in ML
-	- point outliers -- speech error, error
-	- contextual outliers -- noise
-	- collective outliers -- unaccounted for variance
-- Use validation set
+	- Backward/forward model selection
+		- [helpful slides on model selection: BIC vs. AIC vs. LRT](http://sct.uab.cat/estadistica/sites/sct.uab.cat.estadistica/files/uab_june_2017.pdf)
+		- [overview of backward and forward selection](http://gerardnico.com/data_mining/stepwise_regression)
+		- Stephanie Shih — backward model selection for exceptionality
+	- Link: [towards data science article on outlier detection](http://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561)
+		- point outliers -- speech error, error
+		- contextual outliers -- noise
+		- collective outliers -- unaccounted for variance
+- How to fit hyper parameters?
+	- Use validation set to determine [hyper parameters](http://en.wikipedia.org/wiki/Hyperparameter_(machine_learning))?
+
 
 # Constraints and data specifically for French project
 
@@ -43,6 +47,6 @@ CSS: bws.css
 		- look at subset of data, controlling for influence of morphology
 - Data for French project (model input)
 	- Frequency calculation
-	- Two data sets
-		Balanced <- type frequency
+	- Two data sets?
+		- Balanced <- type frequency
 		- Realistically <- token frequency

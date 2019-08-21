@@ -13,6 +13,10 @@ Generative phonology and phonemic analysis
 
 {{TOC}}
 
+> The concept of the “phoneme” (a functionally significant unit in the rigidly defined pattern or configuration of sounds peculiar to a language), as distinct from that of the “sound” or “phonetic element” as such (an objectively definable entity in the articulated and perceived totality of speech), is becoming more and more familiar to linguists. The difficulty that many still seem to feel in distinguishing between the two must eventually disappear as the realization grows that no entity in human experience can be adequately defined as the mechanical sum or product of its physical properties.
+>
+> – Sapir (1933)
+
 # Generative phonology
 - The central premise of Generative Grammar is that linguistic knowledge consists of both a **grammar** and a **lexicon**.
 - The **lexicon** contains all unpredictable information about words/morphemes, including their **Underlying Representations** (URs).

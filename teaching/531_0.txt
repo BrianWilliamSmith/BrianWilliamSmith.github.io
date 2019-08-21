@@ -13,19 +13,25 @@ Course overview
 
 {{TOC}}
 
+> It has been said that "all models are wrong but some models are useful." In other words, any model is at best a useful fiction—there never was, or ever will be, an exactly normal distribution or an exact linear relationship. Nevertheless, enormous progress has been made by entertaining such fictions and using them as approximations.
+> 
+> — Box & Luceño (1997)
+
 # Course overview
-- Let's look at [the syllabus](531_syllabus.html).
 - This course
+	- In this course, we'll focus primarily on **Optimality Theory**, a framework that emerged in the early 1990s and replaced rules with constraints.
+	- Here's the story I'll be telling in the class, which very roughly follows the real world history of generative phonology:
+		- Phonology basics: some sounds vary depending on context - let's do phonemic analysis to discover how.
+		- Generative phonology: let's build a model with rules and features.
+		- Problem: rules fail to capture some data.
+		- Solution: let's add constraints!
+		- Problem: rules and constraints together are difficult to formalize.
+		- Solution: let's get rid of rules and try a constraint-only model (OT)
+		- Repeated until the semester ends: the constraint-only model can't capture some data, let's revise it to get it to work.
+		- At the end of the semester, we won't have a perfect model, but it will capture more data than the model we started with.
 	- The big idea in this course is **phonological argumentation**: how to evaluate, compare, and apply phonological models.
 	- We'll practice **iterative model development**, building a model to accomplish some goals, testing it with new data, revising, and repeating.
-	- We'll focus primarily on **Optimality Theory**, a framework that emerged in the early 1990s and replaced rules with constraints.
-- Syllabus
-	- Course overview, goals, requirements
-	- Handouts and schedule
-		- The schedule is very flexible.
-		- Handouts usually span multiple class meetings.
-		- This handout is exceptionally long and detailed.
-	- Laptops, Slack, and Google docs
+- Let's look at [the syllabus](531_syllabus.html).
 - To print or not to print?
 	- Handouts are viewable on electronic devices, and you can see all of them at the daily schedule, accessible by clicking the link at the top of the page.
 	- Trivia: Handouts are typeset using [Markdown syntax](https://guides.github.com/features/mastering-markdown/). 
