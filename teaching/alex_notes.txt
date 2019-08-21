@@ -24,7 +24,6 @@ CSS: bws.css
 	- point outliers -- speech error, error
 	- contextual outliers -- noise
 	- collective outliers -- unaccounted for variance
-
 - Use validation set
 
 # Constraints and data specifically for French project
