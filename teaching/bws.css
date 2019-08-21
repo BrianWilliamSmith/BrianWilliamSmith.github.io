@@ -5,6 +5,7 @@ h4,
 h5,
 h6,
 p,
+ul,
 blockquote {
     margin: 0;
     padding: 0;
@@ -131,21 +132,12 @@ a img {
     border: none;
 }
 
-p {
-    margin-bottom: .5em;
-    padding: .1em;
-}
-
-
-ul {
-    padding:0;
-}
-
 ul li {
     list-style-type: none;
     counter-increment: subsection;
     margin-top: .5em;
     margin-left: 3em;
+    margin-bottom: 0;
 }
 
 ul li::before {
@@ -201,10 +193,14 @@ ul ul li::before,
     list-style-type:square;
 }
 
+.TOC {
+    margin-bottom:3%;
+}
 
 .TOC ul{
     counter-reset: tocsection;
     padding: 0;
+    margin-left: 0;
 }
 
 .TOC ul li {
@@ -243,7 +239,6 @@ h6 {
 
 h1 {
     font-size: 1.5em;
-    margin-top: 3%;
     margin-bottom: 3%;
     margin-left: 0;
     counter-increment: section;
@@ -287,25 +282,24 @@ hr {
 
 
 blockquote {
-    padding: 13px 13px 21px 15px;
-    margin-bottom: 18px;
-    font-family:georgia,serif;
-    font-style: italic;
+    color: grey;
+    margin-bottom: 3%;
+    margin-left: 3em;
 }
+
 blockquote:before {
     content:"\201C";
-    font-size:40px;
-    margin-left:-10px;
-    font-family:georgia,serif;
-    color:#eee;
+    font-size:2em;
+    margin-left:-.5em;
+    color:grey;
+    position: absolute;
 }
-blockquote p {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 18px;
-    margin-bottom: 0;
-    font-style: italic;
-}
+
+blockquote p:last-of-type {
+            font-style: normal;
+            margin-left: 1em;
+        }
+        
 code, pre {
     font-family: Menlo, Andale Mono, Courier New, monospace;
 }

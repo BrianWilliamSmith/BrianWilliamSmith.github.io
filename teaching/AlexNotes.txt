@@ -1,0 +1,49 @@
+Title: Notes with Alex
+Author: Brian W. Smith
+Date: 8/13 to present
+Comment: for USC Ling 531A
+CSS: bws.css
+
+<div class="title"> Notes for Aleksei </div>
+
+{{TOC}}
+
+# Model evaluation and goals
+
+- How to evaluate and diagnose the model
+	- What's the baseline model?
+	- What are goals? (statistical evaluation)
+
+# Learning algorithm and training
+
+- Read about outlier detection
+	- ML outlier detection?
+	- Forward model selection?
+	- Stephanie Shih — backward model selection for exceptionality
+- Read up on outlier detection in ML
+	- point outliers -- speech error, error
+	- contextual outliers -- noise
+	- collective outliers -- unaccounted for variance
+
+- Use validation set
+
+# Constraints and data specifically for French project
+
+- Constraint set
+	- 6 or 7 constraints is upper limit of practical
+		- *schwa
+		- *CCC (recalculate)
+		- *Max-schwa
+		- *gn+C (reconsider?)
+		- *[CC (reconsider?)
+	- Sonority
+		- two types of clusters?
+		- Marie-Hélène Côté (2000)?
+		- Aaron Kaplan (2015)?
+	- Morphology (epenthesis vs. deletion)
+		- look at subset of data, controlling for influence of morphology
+- Data for French project (model input)
+	- Frequency calculation
+	- Two data sets
+		Balanced <- type frequency
+		- Realistically <- token frequency
