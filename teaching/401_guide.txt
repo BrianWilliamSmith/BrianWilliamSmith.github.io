@@ -1,4 +1,4 @@
-Title: Introduction and Review
+Title: Daily schedule for USC Advanced Undergraduate Phonology
 Author: Brian W. Smith
 Date: 8/13-present
 Comment: for USC Ling 401
@@ -37,15 +37,15 @@ Don't forget quizzes - every Monday. See the [syllabus](401_syllabus.html) for m
 	- Comments 
 	- To do
 		- Read DOT 1–13 (1–1.2)
-		- **HW 1** due 9/4		
+		- [HW 1](401_HW1.html) due 9/4		
 - Mon 9/2
 	- **No class**
 	- To do
-		- **HW 1** due 9/4		
+		- [HW 1](401_HW1.html) due 9/4		
 - Wed 9/4
 	- Handout 
 	- Comments 
-		- **HW 1** is due today	
+		- [HW 1](401_HW1.html) is due today	
 	- To do
 		- Read DOT 13–29 (1.3–1.8)
 		- Read Kager 18–27 (1.4)

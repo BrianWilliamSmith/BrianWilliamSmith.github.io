@@ -1,4 +1,4 @@
-Title: Introduction and Review
+Title: Daily schedule for USC Graduate Phonology
 Author: Brian W. Smith
 Date: 8/13 to present
 Comment: for USC Ling 531A
@@ -28,7 +28,7 @@ See the [syllabus](531_syllabus.html) for a full list of scheduled readings.
 		- Join Slack
 			- Post an introduction (as short as you'd like) in #introductions
 			- Post a short comment or question on one of the readings in #papercomments
-		- Assignment 1 due on 9/4
+		- [Assignment 1](531_HW1.html) due on 9/4
 		- Read Zsiga (2013) Ch 10–11
 			- Focus on: 10-10.3, 11.2
 		- Read Zsiga (2013) Ch 12-13
@@ -38,7 +38,7 @@ See the [syllabus](531_syllabus.html) for a full list of scheduled readings.
 - Wed 9/4
 	- Handout 
 	- Comments 
-		- Assignment 1 due today
+		- [Assignment 1](531_HW1.html) due today
 	- To do 
 - Wed 9/11
 	- Handout 

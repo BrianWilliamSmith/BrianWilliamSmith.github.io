@@ -1,4 +1,4 @@
-Title: Introduction and Review
+Title: Course overview
 Author: Brian W. Smith
 Date: 8/13/2019
 Comment: for USC Ling 531A and Ling 401 Fall 2019
@@ -26,25 +26,25 @@ Course overview
 		- Problem: rules fail to capture some data.
 		- Solution: let's add constraints!
 		- Problem: rules and constraints together are difficult to formalize.
-		- Solution: let's get rid of rules and try a constraint-only model (OT)
+		- Solution: let's get rid of rules and try a constraint-only model (OT).
 		- Repeated until the semester ends: the constraint-only model can't capture some data, let's revise it to get it to work.
-		- At the end of the semester, we won't have a perfect model, but it will capture more data than the model we started with.
-	- The big idea in this course is **phonological argumentation**: how to evaluate, compare, and apply phonological models.
+		- At the end of the semester, we won't have a perfect model, but it will capture some generalizations that the original model didn't.
+	- The central idea of this course is **phonological argumentation**: how to evaluate, compare, apply, and argue for phonological models.
 	- We'll practice **iterative model development**, building a model to accomplish some goals, testing it with new data, revising, and repeating.
-	
+	- Determining the **predictions** of a model is an essential step in both model argumentation and development, and we'll practice this as much as possible.
 - Let's look at [the syllabus](401_syllabus.html).
-	- Course overview, goals, requirements
+	- Submit work in hard copy, and I'll return it with handwritten comments. 
+	- You should save all returned work at least until the end of the semester.
+	- Laptops, Slack, and Google docs
 	- Handouts and schedule
 		- The schedule is very flexible.
 		- Handouts usually span multiple class meetings.
-		- This handout is exceptionally long and detailed.
-	- Laptops, Slack, and Google docs
-- To print or not to print?
-	- Handouts are viewable on electronic devices, and you can see all of them at the daily schedule, accessible by clicking the link at the top of the page.
-	- Trivia: Handouts are typeset using [Markdown syntax](https://guides.github.com/features/mastering-markdown/). 
-		- I actually use [MultiMarkdown](https://fletcherpenney.net/multimarkdown/), which is basically Github-flavored Markdown with some nice extensions (especially headerless tables!).
-		- The raw code underlying every handout is available at a near-identical URL: replace `.html` with `.txt`.
-		- The arcane and hacky CSS is [viewable](bws.css) if you're a masochist and/or web development enthusiast.
+	- To print or not to print?
+		- Handouts are viewable on electronic devices, and you can see all of them at the daily schedule, accessible by clicking the link at the top of every page.
+			- Trivia: Handouts are typeset using [Markdown syntax](https://guides.github.com/features/mastering-markdown/). 
+				- I actually use [MultiMarkdown](https://fletcherpenney.net/multimarkdown/), which is basically Github-flavored Markdown with some nice extensions (especially headerless tables!).
+				- The raw code underlying every handout is available at a near-identical URL: replace `.html` with `.txt`.
+				- The arcane and hacky CSS is [viewable](bws.css) if you're a masochist and/or web development enthusiast.
 - For next time, think of as  many answers as possible to the questions below.
 	-   "What are other possible goals of phonological theory?"
 	-   "What are phonological data?"
