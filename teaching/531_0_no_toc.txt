@@ -43,7 +43,10 @@ CSS: bws.css
 	- The first few HW assignments will have bonus questions (both easier and harder) to accommodate various backgrounds.
 	- Submit work in hard copy, and I'll return it with handwritten comments. 
 	- You should save all returned work at least until the end of the semester.
-	- Laptops, Slack, and Google docs
+	- Laptops, Slack, dropbox, and Google docs
+		- Dropbox directory contains readings and the Slack invite link
+		- We'll use Slack as the course forum for announcements and communication
+		- When we collaborate during class, I'll post a google docs link. You won't need an account to collaborate on the sheet
 	- Handouts and schedule
 		- The schedule is very flexible.
 		- Handouts usually span multiple class meetings.

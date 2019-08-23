@@ -23,6 +23,7 @@
 <ul>
 <li><a href="#modelevaluationandgoals">Model evaluation and goals</a></li>
 <li><a href="#learningalgorithmandtraining">Learning algorithm and training</a></li>
+<li><a href="#outlierdetectionnotes">Outlier detection notes</a></li>
 <li><a href="#constraintsanddataspecificallyforfrenchproject">Constraints and data specifically for French project</a></li>
 </ul>
 </div>
@@ -54,18 +55,47 @@
 <li><a href="http://gerardnico.com/data_mining/stepwise_regression">overview of backward and forward selection</a></li>
 <li>Stephanie Shih — backward model selection for exceptionality</li>
 </ul></li>
-<li>Link: <a href="http://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561">towards data science article on outlier detection</a>
+</ul></li>
+</ul>
+
+<h1 id="outlierdetectionnotes">Outlier detection notes</h1>
+
+<pre><code>- Link: [wiki article on Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance)
+- Link: [towards data science article on outlier detection](http://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561)
+- Problem: we need to detect outliers in categorical data -- harder
+	- Found this: [Detection of Outliers and Influential Observations in Binary Logistic Regression: An Empirical Study](https://scialert.net/fulltextmobile/?doi=jas.2011.26.35)
+- Types of outliers
+	- univariate vs. multivariate
+		- &quot;Univariate outliers can be found when looking at a distribution of values in a single feature space. Multivariate outliers can be found in a n-dimensional space (of n-features).&quot;
+	- point outliers &quot;Point outliers are single data points that lay far from the rest of the distribution.&quot;
+	- contextual outliers &quot;Contextual outliers can be noise in data, such as punctuation symbols when realizing text analysis or background noise signal when doing speech recognition.&quot;
+	- collective outliers &quot;Collective outliers can be subsets of novelties in data such as a signal that may indicate the discovery of new phenomena&quot;
+</code></pre>
 
 <ul>
-<li>point outliers &#8211; speech error, error</li>
-<li>contextual outliers &#8211; noise</li>
-<li>collective outliers &#8211; unaccounted for variance</li>
-</ul></li>
-</ul></li>
 <li>How to fit hyper parameters?
 
 <ul>
 <li>Use validation set to determine <a href="http://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)">hyper parameters</a>?</li>
+<li>Some of the most popular methods for outlier detection are
+
+<ul>
+<li>Z-Score or Extreme Value Analysis (parametric)
+
+<ul>
+<li>Some good ‘thumb-rule’ thresholds can be: 2.5, 3, 3.5 or more standard deviations.</li>
+</ul></li>
+<li>Probabilistic and Statistical Modeling (parametric)</li>
+<li>Linear Regression Models (PCA, LMS)</li>
+<li>Proximity Based Models (non-parametric)
+
+<ul>
+<li>Dbscan (Density Based Spatial Clustering of Applications with Noise)</li>
+<li></li>
+</ul></li>
+<li>Information Theory Models</li>
+<li>High Dimensional Outlier Detection Methods (high dimensional sparse data)</li>
+</ul></li>
 </ul></li>
 </ul>
 
