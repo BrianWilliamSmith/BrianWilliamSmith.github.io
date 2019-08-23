@@ -1,17 +1,28 @@
 Title: Assignment 1: phonology practice problems
 Author: Brian W. Smith
 Date: 8/22/2019
-Comment: for USC Ling 531a Fall 2019
+Comment: for USC Ling 531A Fall 2019
 CSS: bws.css
+
+<!-- Standard header. Change title in metadata -->
 
 [USC Graduate Phonology](531_guide.html) ✳︎ Fall 19 ✳︎ Smith
 ***
 
 <div class="title">
-Assignment 1: phonology practice problems</div>
+
+[%title]
+
+</div>
+
+<!-- {{TOC}} -->
+
+***
+
+<!-- Content starts below -->
 
 # Goals
-- to provide a baseline for your experience with respect to writing and linguistic argumentation
+- to provide me with a baseline estimate of your experience with writing and linguistic argumentation
 - to practice phonemic analysis and argumentation
 
 # Instructions
@@ -26,12 +37,12 @@ follows..."
 	- argue for the phonemicization you went with
 - The "optional challenges" are provided in case the assignment feels too easy.
 - Assignment prompts are very prone to typos, so let me know via e-mail if you suspect one.
-- Turn in at the beginning of class on **9/2**.
+- Submit your completed assignment in hardcopy at the beginning of class on **September 4**.
 	- You can format or typeset the paper however you like, as long as:
 		- It's typed, including IPA characters.
 		- It's as clear as possible. This is especially important for examples.
 		- You leave margins and double space so I can add comments.
-	- You are free to copy-paste the data from [this file](401_HW1.txt).
+	- You are free to copy-paste the data from [this file](531_HW1.txt).
 
 # How to write it up
 - For all of the assignments in this class, write up your solution as a short paper, including:

@@ -1,12 +1,20 @@
-Title: Notes with Alex
+Title: French schwa project to do and notes
 Author: Brian W. Smith
 Date: 8/13 to present
-Comment: for USC Ling 531A
+Comment: French schwa project to do and notes
 CSS: bws.css
 
-<div class="title"> Notes for Aleksei </div>
+***
+
+<div class="title">
+
+[%title]
+
+</div>
 
 {{TOC}}
+
+===
 
 # Model evaluation and goals
 

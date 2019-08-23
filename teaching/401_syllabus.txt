@@ -1,26 +1,38 @@
-Title: Syllabus for USC Advanced Undergraduate Phonology
+Title: Syllabus for Ling 401
 Author: Brian W. Smith
-Date: 8/13-present
-Comment: for USC Ling 401
+Date: 8/20/2019
 CSS: bws.css
+
+<!-- Standard header. Change title in metadata -->
 
 [USC Advanced Undergraduate Phonology](401_guide.html) ✳︎ Fall 2019 ✳︎ Smith
 ***
 
 <div class="title">
-Advanced Undergraduate Phonology (Ling 401) </div>
+
+[%title]
+
+</div>
+
+<!-- {{TOC}} -->
+
+<!-- Content starts below -->
 
 <div class="boring">
 
 - **Time:** MW 12:30–2pm
 - **Place:** GFS 210
 - **Instructor:** [Brian W. Smith](http://brianwilliamsmith.github.io/)
-- **Contact:** bsmith88@usc.edu
+- **Contact:** <bsmith88@usc.edu>
 - **Office hours:** Mondays 2-4pm in GFS 301C
 - **Course forum:** [ling401-fall2019.slack.com](http://ling401-fall2019.slack.com)
 - **Updated schedule and handouts:** [401 schedule](401_guide.html)
 
+***
+
 {{TOC}}
+
+***
 
 # Overview
 
@@ -155,7 +167,7 @@ When this course is completed, you should:
 
 |9/11–9/18	|**OT Mechanics**</br>— The selection problem</br>— The ranking problem</br>— Comparative tableaux</br>— Ranking arguments</br>— Harmonic bounding"|HW #2 due on 9/18|
 
-|9/23–9/25	|**Phonemes, allophones, and contrast**</br>— Richness of the base</br>— Factorial typology</br>— Lexicon optimization"|HW #3 due on 9/25 |
+|9/23–9/25	|**Phonemes, allophones, and contrast**</br>— Richness of the base</br>— Factorial typology</br>— Lexicon optimization|HW #3 due on 9/25 |
 
 |9/30	|**Constraint ranking by algorithm**</br>— Recursive Constraint Demotion</br>— ERC Fusion</br>— Using OT-Help | |
 

@@ -29,12 +29,6 @@ CSS: bws.css
 - **Course forum:** [ling531a-fall2019.slack.com](http://ling531a-fall2019.slack.com)
 - **Updated schedule and handouts:** [531 schedule](531_guide.html)
 
-***
-
-{{TOC}}
-
-***
-
 # Overview
 
 This course deals with central issues in segmental phonology, focusing on the mental representation of individual speech sounds and their interaction. The emphasis throughout is on theory development and argumentation: how formal models are evaluated and revised in order to meet empirical and conceptual goals. 

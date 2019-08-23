@@ -1,111 +1,117 @@
-Title: Introduction and Review
+Title: Hacking tableaux in MMD
 Author: Brian W. Smith
 Date: 8/6/2019
 Comment:  For USC Ling 531A and Ling 401 Fall 2019
 CSS: bws.css
 
-**Let’s test tableau formatting**
+<!-- Standard header. Change title in metadata -->
+
+[USC Ling 401](401_guide.html) ~ [USC Ling 531](531_guide.html)✳︎ Fall 19 ✳︎ Smith
+***
+
+<div class="title">
+
+[%title]
+
+</div>
 
 {{TOC}}
 
+***
+
+
+<!-- Content starts below -->
+
+[The multimarkdown version of this document, before conversion into html](markdown_ot.txt).
+
 # A regular table in bws.css
 
-- Markdown code being rendered
+- The table in MMD
 ```
 |Lexicon 	|Grammar (simplified)				|Surface forms	|
 |--- 		|--- 						|--- 		|
-/bræg/+/d/ 	|make /d/ voiceless after a voiceless segment	|[brægd]	|
-/hæk/+/d/  	|make /d/ voiceless after a voiceless segment	|[hækt]	|
-/su/+/d/  	|make /d/ voiceless after a voiceless segment	|[sud] 	|
+|/bræg/+/d/ 	|make /d/ voiceless after a voiceless segment	|[brægd]	|
+|/hæk/+/d/  	|make /d/ voiceless after a voiceless segment	|[hækt]		|
+|/su/+/d/  	|make /d/ voiceless after a voiceless segment	|[sud] 		|
 [Example of a derivation]
 ```
 
-- Renders as:
+- After conversion into html
 
-|Lexicon  |Grammar (simplified) |Surface forms
-|---		|--- 						|---	 	|
-/bræg/+/d/ 	|make /d/ voiceless after a voiceless segment	|[brægd]	|
-/hæk/+/d/  	|make /d/ voiceless after a voiceless segment	|[hækt]	|
-/su/+/d/  	|make /d/ voiceless after a voiceless segment	|[sud] 	|
+|Lexicon 	|Grammar (simplified)				|Surface forms	|
+|--- 		|--- 						|--- 		|
+|/bræg/+/d/ 	|make /d/ voiceless after a voiceless segment	|[brægd]	|
+|/hæk/+/d/  	|make /d/ voiceless after a voiceless segment	|[hækt]		|
+|/su/+/d/  	|make /d/ voiceless after a voiceless segment	|[sud] 		|
 [Example of a derivation]
-
-- Code blocks in markdown don't render tabs the same way as my word processor
-	- All of the columns are nicely lined up in my word processor
-	- Here's a pic so you can appreciate
-
-![It's all lined up][]
-
-[It's all lined up]: nicelylinedup.png "It's so nicely lined up" 
-width=500px 
 
 
 # A violation tableau using "tableau" class in bws.css
 
 
-- To format a table as a tableau, nest the table within div tags calling the "tableau" class 
-- Markdown code
+- To turn a table into a tableu, nest the MMD table within div tags calling the "tableau" class, with a blank line between the div tags and table
+- In MMD
 
 ```
 
 <div class="tableau">
 
-|Candidates 	||	|*NoCoda* |*Max*|*Dep*	|*Onset* |
-|--- 	|:--- |--: 	|:---: |:---:|:---:	|:---:	|
-|/CV/	|a. |☞ CV	|	|	|	|	|
-|	|b. |CVC	|✳︎	|	|✳︎	|	|
-|	|c. |V		|	|✳︎	|	|✳︎	|
-|	|d. |VC		|✳︎	|✳︎	|✳︎	|✳︎	|
+|Candidates 	|||	*NoCoda*|*Max*	|*Dep*	|*Onset* |
+|--- 	|:--- 	|---: 	|:---: 	|:---:	|:---:	|:---:	|
+|/CV/	|a. 	|☞ CV	|	|	|	|	|
+|	|b. 	|CVC	|✳︎	|	|✳︎	|	|
+|	|c. 	|V	|	|✳︎	|	|✳︎	|
+|	|d. 	|VC	|✳︎	|✳︎	|✳︎	|✳︎	|
 
-|/CVC/	|a. |☞ CV	|	|✳︎	|	|	|
-|	|b. |CVC	|✳︎	|	|	|	|
-|	|c. |V		|	|✳︎✳︎	|	|✳︎	|
-|	|d. |VC		|✳︎	|✳︎	|	|✳︎	|
-[Example of a tableau]
+|/CVC/	|a. 	|☞ CV	|	|✳︎	|	|	|
+|	|b. 	|CVC	|✳︎	|	|	|	|
+|	|c. 	|V	|	|✳︎✳︎	|	|✳︎	|
+|	|d. 	|VC	|✳︎	|✳︎	|	|✳︎	|
+[Example of a tableau using class tableau]
 
 </div>
 ```
-- The CSS class "tableau" is doing all of the work
 
-- Here's what it looks like
+- After conversion into html
 
 <div class="tableau">
 
-|Candidates 	||	|*NoCoda* |*Max*|*Dep*	|*Onset* |
-|--- 	|:--- |--: 	|:---: |:---:|:---:	|:---:	|
-|/CV/	|a. |☞ CV	|	|	|	|	|
-|	|b. |CVC	|✳︎	|	|✳︎	|	|
-|	|c. |V		|	|✳︎	|	|✳︎	|
-|	|d. |VC		|✳︎	|✳︎	|✳︎	|✳︎	|
+|Candidates 	|||	*NoCoda*|*Max*	|*Dep*	|*Onset* |
+|--- 	|:--- 	|---: 	|:---: 	|:---:	|:---:	|:---:	|
+|/CV/	|a. 	|☞ CV	|	|	|	|	|
+|	|b. 	|CVC	|✳︎	|	|✳︎	|	|
+|	|c. 	|V	|	|✳︎	|	|✳︎	|
+|	|d. 	|VC	|✳︎	|✳︎	|✳︎	|✳︎	|
 
-|/CVC/	|a. |☞ CV	|	|✳︎	|	|	|
-|	|b. |CVC	|✳︎	|	|	|	|
-|	|c. |V		|	|✳︎✳︎	|	|✳︎	|
-|	|d. |VC		|✳︎	|✳︎	|	|✳︎	|
-[Example of a tableau]
+|/CVC/	|a. 	|☞ CV	|	|✳︎	|	|	|
+|	|b. 	|CVC	|✳︎	|	|	|	|
+|	|c. 	|V	|	|✳︎✳︎	|	|✳︎	|
+|	|d. 	|VC	|✳︎	|✳︎	|	|✳︎	|
+[Example of a tableau using class tableau]
 
 </div>
 
 - For comparison, here's the tableau with the default table settings. Not so different really
 
-|Candidates 	|||	*NoCoda* |*Max*|*Dep*	|*Onset* |
-|--- 	|:--- |--: 	|:---: |:---:|:---:	|:---:	|
-|/CV/	|a. |☞ CV	|	|	|	|	|
-|	|b. |CVC	|✳︎	|	|✳︎	|	|
-|	|c. |V		|	|✳︎	|	|✳︎	|
-|	|d. |VC		|✳︎	|✳︎	|✳︎	|✳︎	|
+|Candidates 	|||	*NoCoda*|*Max*	|*Dep*	|*Onset* |
+|--- 	|:--- 	|---: 	|:---: 	|:---:	|:---:	|:---:	|
+|/CV/	|a. 	|☞ CV	|	|	|	|	|
+|	|b. 	|CVC	|✳︎	|	|✳︎	|	|
+|	|c. 	|V	|	|✳︎	|	|✳︎	|
+|	|d. 	|VC	|✳︎	|✳︎	|✳︎	|✳︎	|
 
-|/CVC/	|a. |☞ CV	|	|✳︎	|	|	|
-|	|b. |CVC	|✳︎	|	|	|	|
-|	|c. |V	|	|✳︎✳︎	|	|✳︎	|
-|	|d. |VC	|✳︎	|✳︎	|	|✳︎	|
-[Example of a tableau without tableau formatting]
+|/CVC/	|a. 	|☞ CV	|	|✳︎	|	|	|
+|	|b. 	|CVC	|✳︎	|	|	|	|
+|	|c. 	|V	|	|✳︎✳︎	|	|✳︎	|
+|	|d. 	|VC	|✳︎	|✳︎	|	|✳︎	|
+[The same tableau without class tableau]
 
-- Formatted automatically in CSS class "tableau"
+- What's formatted automatically by the CSS class
 	- Emphasized text in the header is rendered as small caps
 	- First three columns have no vertical lines
-	- This means violations should start exactly in the fourth column
+	- So violations should start exactly in the fourth column
 - Need to include manually to get a nice tableau
-	- Blank line in the markdown code for tables renders as a horizontal line (creates a new "tbody" in html)
+	- Blank line in the markdown table renders as a horizontal line (creates a  ```<tbody>``` in html)
 	- Text alignment is specified in the markdown table code (e.g. ```:---``` is left-aligned)
 	- A better asterisk should be used, since * is reserved for some markdown stuff (and looks bad)
 		- Maybe a…
@@ -114,23 +120,42 @@ width=500px
 			- eight spoked asterisk ✳︎
 	- Constraints need to be emphasized (e.g. ```*Constraint*```) to get small caps
 
-# There's another table class too: fullrule
+# There's another table class in bws.css: "fullrule"
 
 - Like default table formatting, with extra lines added
 
+```
 <div class="fullrule">
 
-|Candidates 	|||	*NoCoda* |*Max*|*Dep*	|*Onset* |
-|--- 	|:--- |--: 	|:---: |:---:|:---:	|:---:	|
-|/CV/	|a. |☞ CV	|	|	|	|	|
-|	|b. |CVC	|✳︎	|	|✳︎	|	|
-|	|c. |V		|	|✳︎	|	|✳︎	|
-|	|d. |VC		|✳︎	|✳︎	|✳︎	|✳︎	|
+|Candidates 	|||	*NoCoda*|*Max*	|*Dep*	|*Onset* |
+|--- 	|:--- 	|---: 	|:---: 	|:---:	|:---:	|:---:	|
+|/CV/	|a. 	|☞ CV	|	|	|	|	|
+|	|b. 	|CVC	|✳︎	|	|✳︎	|	|
+|	|c. 	|V	|	|✳︎	|	|✳︎	|
+|	|d. 	|VC	|✳︎	|✳︎	|✳︎	|✳︎	|
 
-|/CVC/	|a. |☞ CV	|	|✳︎	|	|	|
-|	|b. |CVC	|✳︎	|	|	|	|
-|	|c. |V	|	|✳︎✳︎	|	|✳︎	|
-|	|d. |VC	|✳︎	|✳︎	|	|✳︎	|
+|/CVC/	|a. 	|☞ CV	|	|✳︎	|	|	|
+|	|b. 	|CVC	|✳︎	|	|	|	|
+|	|c. 	|V	|	|✳︎✳︎	|	|✳︎	|
+|	|d. 	|VC	|✳︎	|✳︎	|	|✳︎	|
+[Example of a tableau with fullrule formatting]
+
+</div>
+```
+
+<div class="fullrule">
+
+|Candidates 	|||	*NoCoda*|*Max*	|*Dep*	|*Onset* |
+|--- 	|:--- 	|---: 	|:---: 	|:---:	|:---:	|:---:	|
+|/CV/	|a. 	|☞ CV	|	|	|	|	|
+|	|b. 	|CVC	|✳︎	|	|✳︎	|	|
+|	|c. 	|V	|	|✳︎	|	|✳︎	|
+|	|d. 	|VC	|✳︎	|✳︎	|✳︎	|✳︎	|
+
+|/CVC/	|a.	|☞ CV	|	|✳︎	|	|	|
+|	|b. 	|CVC	|✳︎	|	|	|	|
+|	|c. 	|V	|	|✳︎✳︎	|	|✳︎	|
+|	|d. 	|VC	|✳︎	|✳︎	|	|✳︎	|
 [Example of a tableau with fullrule formatting]
 
 </div>
@@ -140,30 +165,32 @@ width=500px
 - Shading is a big pain
 	- The best approach is to 
 		- add note to the beginning of a cell that needs shading
-		- Moi, I add "sm" to beginning
-		- in the mmd renderer, take the html generated from the mmd code and copy-paste it
+		- moi, I add "sm" to beginning
+		- take the html generated by the mmd parser and copy-paste it
 		- find-replace 
 			- replace `<td style="text-align:center;">sm`
 			- with `<td class="shaded">`
-		- markdown will render the raw html
+		- this will be a raw html table hanging out in your markdown document
+		- unreadable but it works (despite breaking the markdown design philosophy of eyeball-friendly documents)
 - I rarely use shading, so this annoying process works for me
-	- This process can be extended to make any table that can be represented in html
-	- Note: this needs "retain line breaks in paragraphs" turned off in the rendering preferences in my preferred markdown renderer (Marked), otherwise the raw html code's linebreaks are rendered as ```</ br>```, giving a ton of whitespace above the table
+	- I use raw html for any table that can't be represented in markdown.
+	- Be careful! Some programs are really bad at converting markdown that has raw html. For example, the program Marked needs "retain line breaks in paragraphs" turned off in the rendering preferences, otherwise the raw html code's linebreaks are rendered as ```</ br>```, giving a ton of unwanted whitespace.
+		- I just use Fletcher Penney's script for conversion from mmd to html
 - Here's the annotated table, written in mmd, whose html is ready for copy-pasting
 
 <div class="tableau">
 
-|Candidates 	|||	*NoCoda* |*Max*|*Dep*	|*Onset* |
-|--- 	|:--- |--: 	|:---: |:---:|:---:	|:---:	|
-|/CV/	|a. |☞ CV	|	|	|sm	|sm	|
-|	|b. |CVC	|✳︎!	|sm	|sm ✳︎	|sm	|
-|	|c. |V		|	|✳︎!	|sm	|sm ✳︎	|
-|	|d. |VC		|✳︎!	|sm ✳︎ 	|sm ✳︎	|sm ✳︎	|
+|Candidates 	|||	*NoCoda*|*Max*	|*Dep*	|*Onset* |
+|--- 	|:--- |--: 	|:---: 	|:---:	|:---:	|:---:	|
+|/CV/	|a. 	|☞ CV	|	|	|sm	|sm	|
+|	|b. 	|CVC	|✳︎!	|sm	|sm ✳︎	|sm	|
+|	|c. 	|V	|	|✳︎!	|sm	|sm ✳︎	|
+|	|d. 	|VC	|✳︎!	|sm ✳︎ 	|sm ✳︎	|sm ✳︎	|
 
-|/CVC/	|a. |☞ CV	|	|✳︎	|sm	|sm	|
-|	|b. |CVC	|✳︎!	|sm	|sm	|sm	|
-|	|c. |V		|	|✳︎!✳︎	|sm	|sm ✳︎	|
-|	|d. |VC		|✳︎!	|sm ✳︎	|sm 	|sm ✳︎	|
+|/CVC/	|a. 	|☞ CV	|	|✳︎	|sm	|sm	|
+|	|b. 	|CVC	|✳︎!	|sm	|sm	|sm	|
+|	|c. 	|V	|	|✳︎!✳︎	|sm	|sm ✳︎	|
+|	|d. 	|VC	|✳︎!	|sm ✳︎	|sm 	|sm ✳︎	|
 [Example of a tableau annotated for conversion to html with shading]
 
 </div>
@@ -273,7 +300,7 @@ width=500px
 </table>
 </div>
 
-- You can see what markdown is actually rendering for the tableau above by checking out the raw html below
+- Below is the html that is being rendered. 
 	- I like the "sm" hack because you don't have to figure out which cell is which or manually change anything in the raw html
 	- But it's really not so hard: ```<tr>``` marks a row and each ```<td>``` is a cell in that row
 
@@ -384,6 +411,7 @@ width=500px
 ```
 - Here is a fancier version of shading, using CSS class "shaded2" from "bws.css"
 	- CSS class "shaded2" has some extra definitions using ```nth-child``` to ensure it properly overrides cell borders from CSS class "tableau"
+	- It looks nice enough
 
 <div class="tableau">
 <table>
@@ -490,16 +518,16 @@ width=500px
 
 # A comparative tableau using "tableau" class in bws.css
 
-- easiest way: make the first three columns letter, input, winner/loser
+- The easiest way is to make the first three columns letter, input, winner/loser
 
 ```
 <div class="tableau">
 
-| 	|Input 	|Winner ~ Loser	|*NoCoda* |*Max*|*Dep*|*Onset* |
-|---:	|:---: 	|:---: 		|:---: |:---:|:---:	|:---:	|
-|a.	|/CV/ 	|CV ~ CVC	|W	|e	|W	|e	|
-|b.	|/CV/ 	|CV ~ V		|e	|W	|e	|W	|
-|c.	|/CVC/ 	|CV ~ CVC	|W	|L	|e	|W	|
+| 	|Input 	|Winner ~ Loser	|*NoCoda* 	|*Max*	|*Dep*	|*Onset* |
+|---:	|:---: 	|:---: 		|:---: 		|:---:	|:---:	|:---:	|
+|a.	|/CV/ 	|CV ~ CVC	|W		|e	|W	|e	|
+|b.	|/CV/ 	|CV ~ V		|e		|W	|e	|W	|
+|c.	|/CVC/ 	|CV ~ CVC	|W		|L	|e	|W	|
 [Example of a comparative tableau]
 
 </div>
@@ -507,23 +535,26 @@ width=500px
 
 <div class="tableau">
 
-| |Input |Winner ~ Loser	|*NoCoda* |*Max*|*Dep*|*Onset* |
-|---: 	|:---: |:---: 		|:---: |:---:|:---:	|:---:	|
-|a.	|/CV/ 	|CV ~ CVC	|W	|e	|W	|e	|
-|b.	|/CV/ 	|CV ~ V	|e	|W	|e	|W 	|
-|c.	|/CVC/ |CV ~ CVC	|W	|L	|e	|W	|
+| 	|Input 	|Winner ~ Loser	|*NoCoda* 	|*Max*	|*Dep*	|*Onset* |
+|---:	|:---: 	|:---: 		|:---: 		|:---:	|:---:	|:---:	|
+|a.	|/CV/ 	|CV ~ CVC	|W		|e	|W	|e	|
+|b.	|/CV/ 	|CV ~ V		|e		|W	|e	|W	|
+|c.	|/CVC/ 	|CV ~ CVC	|W		|L	|e	|W	|
 [Example of a comparative tableau]
+
 
 </div>
 
 # A hybrid tableau
 
-- Use ```X~Y``` to get subscript: X~Y
-	- ```*~Y``` renders as *~Y (or emphasis if you have two \*'s) so don't use \*
-		- Here's the line from above without the \*'s escaped: *~Y renders as *~Y (or emphasis if you have two *)'s so don't use *
-- `X~Y` does work with integers or non-\* special characters like ✳︎: ```✳︎~Y``` renders as ✳︎~Y 
-	- Predictably, ```~L``` and ```~e``` don't work (giving ~L ~e)
-	- Use a typographic space (option+space) for lone L or e: ` ~L` and ` ~e` render as  ~L and  ~e
+- Use ```X~Y``` to get subscript in MMD: X~Y
+	- ```*~Y``` renders as *~Y, but...
+		- If you don't escape the asterisk, MMD may parse it as emphasis
+		- So maybe don't use \*, which is ugly anyway
+- `X~Y` does work with integers or non-\* special characters like ✳︎
+	- ```✳︎~Y``` renders as ✳︎~Y 
+- ```~L``` and ```~e``` do work (giving ~L and ~e)
+	- But if they don't, use a typographic space (option+space) for lone L or e: ` ~L` and ` ~e` always render as  ~L and  ~e
 
 
 ```
@@ -531,17 +562,17 @@ width=500px
 <div class="tableau">
 
 |Candidates 	||		|*NoCoda*|*Max*|*Dep*	|*Onset* |
-|--- 	|:--- |--: 		|:---:  |:---:|:---:	|:---:	|
-|/CV/	|a. |☞ CV		| 	| 	|	| 	|
-|	|b. |CVC		|1~W	| ~e	|1~W	| ~e	|
-|	|c. |V			| ~e	|1~W	| ~e	|1~W	|
-|	|d. |VC			|1~W	|1~W	|1~W	|1~W	|
+|--- 	|:--- 	|--: 		|:---:  |:---:|:---:	|:---:	|
+|/CV/	|a. 	|☞ CV		| 	| 	|	| 	|
+|	|b. 	|CVC		|1~W	|~e	|1~W	|~e	|
+|	|c. 	|V		|~e	|1~W	|~e	|1~W	|
+|	|d. 	|VC		|1~W	|1~W	|1~W	|1~W	|
 
-|/CVC/	|a. |☞ CV		|	|✳︎	|	|	|
-|	|b. |CVC		|✳︎~W	| ~L	|	|	|
-|	|c. |V			|	|✳︎✳︎~W	|	|✳︎~W	|
-|	|d. |VC			|✳︎~W	|✳︎~W	|	|✳︎~W	|
-[Example of a hybrid tableau]
+|/CVC/	|a. 	|☞ CV		|	|✳︎	|	|	|
+|	|b. 	|CVC		|✳︎~W	|~L	|	|	|
+|	|c. 	|V		|	|✳︎✳︎~W	|	|✳︎~W	|
+|	|d. 	|VC		|✳︎~W	|✳︎~W	|	|✳︎~W	|
+[Example of a hybrid tableau, with integers and e's on top and ✳︎'s and no e's on bottom]
 
 
 </div>
@@ -549,18 +580,17 @@ width=500px
 
 <div class="tableau">
 
-|Candidates 	|||		*NoCoda* |*Max* |*Dep* |*Onset* |
-|--- 	|:--- |--: 		|:---:  |:---:|:---:	|:---:	|
-|/CV/	|a. |☞ CV		| 	| 	| 	| 	|
-|	|b. |CVC		|1~W	| ~e	|1~W	| ~e	|
-|	|c. |V		| ~e	|1~W	| ~e	|1~W	|
-|	|d. |VC		|1~W	|1~W	|1~W	|1~W	|
+|Candidates 	||		|*NoCoda*|*Max*|*Dep*	|*Onset* |
+|--- 	|:--- 	|--: 		|:---:  |:---:|:---:	|:---:	|
+|/CV/	|a. 	|☞ CV		| 	| 	|	| 	|
+|	|b. 	|CVC		|1~W	|~e	|1~W	|~e	|
+|	|c. 	|V		|~e	|1~W	|~e	|1~W	|
+|	|d. 	|VC		|1~W	|1~W	|1~W	|1~W	|
 
-|/CVC/	|a. |☞ CV		|	|✳︎	|	|	|
-|	|b. |CVC		|✳︎~W	| ~L	|	|	|
-|	|c. |V		|	|✳︎✳︎~W	|	|✳︎~W	|
-|	|d. |VC		|✳︎~W	|✳︎~W	|	|✳︎~W	|
-[Example of a hybrid tableau]
-
+|/CVC/	|a. 	|☞ CV		|	|✳︎	|	|	|
+|	|b. 	|CVC		|✳︎~W	|~L	|	|	|
+|	|c. 	|V		|	|✳︎✳︎~W	|	|✳︎~W	|
+|	|d. 	|VC		|✳︎~W	|✳︎~W	|	|✳︎~W	|
+[Example of a hybrid tableau, with integers and e's on top and ✳︎'s and no e's on bottom]
 
 </div>

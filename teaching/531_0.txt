@@ -1,17 +1,24 @@
 Title: Course overview
 Author: Brian W. Smith
-Date: 8/13/2019
-Comment: for USC Ling 531A Fall 2019
+Date: 8/20/2019
 CSS: bws.css
+
+<!-- Standard header. Change title in metadata -->
 
 [USC Graduate Phonology](531_guide.html) ✳︎ Fall 19 ✳︎ Smith
 ***
 
 <div class="title">
-Course overview
+
+[%title]
+
 </div>
 
 {{TOC}}
+
+***
+
+<!-- Content starts below -->
 
 > It has been said that "all models are wrong but some models are useful." In other words, any model is at best a useful fiction—there never was, or ever will be, an exactly normal distribution or an exact linear relationship. Nevertheless, enormous progress has been made by entertaining such fictions and using them as approximations.
 > 

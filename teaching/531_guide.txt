@@ -1,20 +1,29 @@
-Title: Daily schedule for USC Graduate Phonology
+Title: Daily schedule for Ling 531A
 Author: Brian W. Smith
-Date: 8/13 to present
-Comment: for USC Ling 531A
+Date: 8/13/2019 to present
+Comment: for USC Ling 531A Fall 2019
 CSS: bws.css
+
+<!-- Standard header. Change title in metadata -->
 
 [USC Graduate Phonology](531_guide.html) ✳︎ Fall 19 ✳︎ Smith
 ***
 
 <div class="title">
-Daily schedule for Ling 531A </div>
+
+[%title]
+
+</div>
+
+{{TOC}}
+
+<!-- Content starts below -->
 
 See the [syllabus](531_syllabus.html) for a full list of scheduled readings.
 
 <div class="syllabus">
-<div class="old">
-</div>
+
+<div class="current">
 
 - Wed 8/28
 	- Handouts
@@ -23,8 +32,8 @@ See the [syllabus](531_syllabus.html) for a full list of scheduled readings.
 		- [Generative phonology and phonemic analysis](531_1.html)
 	- Comments
 		- We made it up to section ... on the handout
-		- Consider attending PhonLunch if you're interested in phonetics/phonology
-			 - Thursday 12-1pm in Conference Room
+		- Consider attending [PhonLunch](https://dornsife.usc.edu/labs/usc-phon/fall-2019/) if you're interested in phonetics and phonology
+			- First meeting is Thursday 12-1pm in Conference Room
 	- To do 
 		- This week there's a lot to do!
 		- Join Slack
@@ -34,8 +43,8 @@ See the [syllabus](531_syllabus.html) for a full list of scheduled readings.
 		- Read Zsiga (2013) Ch 10–11
 			- Focus on: 10-10.3, 11.2
 		- Read Zsiga (2013) Ch 12-13
-			- Focus on 12-12.2.1, 12.3, 13.3
-<div class="old">
+			- Focus on 12-12.2.1, 12.3, 13.3 
+</div>
 
 - Wed 9/4
 	- Handout 
@@ -114,6 +123,4 @@ See the [syllabus](531_syllabus.html) for a full list of scheduled readings.
 	- Term paper presentations today
 	- To do
 		- Term paper due on 12/13
-
-</div>
 </div>

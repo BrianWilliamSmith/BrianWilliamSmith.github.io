@@ -1,12 +1,11 @@
-Title: Syllabus for Ling 531A
+Title: Syllabus for Ling 401
 Author: Brian W. Smith
 Date: 8/20/2019
-Comment: for USC Ling 531A Fall 2019
 CSS: bws.css
 
 <!-- Standard header. Change title in metadata -->
 
-[USC Graduate Phonology](531_guide.html) ✳︎ Fall 19 ✳︎ Smith
+[USC Advanced Undergraduate Phonology](401_guide.html) ✳︎ Fall 2019 ✳︎ Smith
 ***
 
 <div class="title">
@@ -15,49 +14,41 @@ CSS: bws.css
 
 </div>
 
-<!-- {{TOC}} -->
+<!-- {{TOC}}-->
 
 <!-- Content starts below -->
 
 <div class="boring">
 
-- **Time:** W 9:00am–11:30am
-- **Place:** Linguistics Seminar room
+- **Time:** MW 12:30–2pm
+- **Place:** GFS 210
 - **Instructor:** [Brian W. Smith](http://brianwilliamsmith.github.io/)
 - **Contact:** <bsmith88@usc.edu>
 - **Office hours:** Mondays 2-4pm in GFS 301C
-- **Course forum:** [ling531a-fall2019.slack.com](http://ling531a-fall2019.slack.com)
-- **Updated schedule and handouts:** [531 schedule](531_guide.html)
-
-***
-
-{{TOC}}
-
-***
+- **Course forum:** [ling401-fall2019.slack.com](http://ling401-fall2019.slack.com)
+- **Updated schedule and handouts:** [401 schedule](401_guide.html)
 
 # Overview
 
-This course deals with central issues in segmental phonology, focusing on the mental representation of individual speech sounds and their interaction. The emphasis throughout is on theory development and argumentation: how formal models are evaluated and revised in order to meet empirical and conceptual goals. 
+**Prerequisites:** Introduction to Phonetics and Phonology (Ling 301)
 
-We focus in particular on the constraint-based framework Optimality Theory (OT: Prince and Smolensky 1993/2004), an alternative to rule-based frameworks in the tradition of Chomsky and Halle’s (1968) Sound Pattern of English. We will survey the motivations for adopting OT, and become familiar with its formal architecture, some of its results, and some of its shortcomings. OT makes predictions about phonological typology, and we will discuss many cross-linguistic generalizations about patterns involving sets of segments, especially as they relate to assimilation, syllable structure, and licensing. The course concludes with discussion of current issues in constraint-based frameworks, including variation and weighted constraints.
+This course is about phonological theory development and argumentation: how formal phonological models are evaluated and revised in order to meet empirical and conceptual goals. We focus in particular on constraint-based frameworks, especially Optimality Theory (OT: Prince and Smolensky 1993/2004), which is the major competitor to rule-based frameworks in the tradition of Chomsky and Halle’s (1968) Sound Pattern of English. We discuss OT’s motivations, its formal architecture, some of its results, and some of its shortcomings. OT makes predictions about phonological typology, and this course involves data from many familiar and unfamiliar languages, especially regarding syllabification, stress, and reduplication.
 
-The sequel to this course, LING 531B, continues within constraint-based frameworks, focusing on prosodic phonology and phonology-morphology interactions.
-
-# Goals
-- By the course's conclusion, you will:
-	- be able to find generalizations in a data set and describe phonological patterns in relatively theory-neutral terms,
-	- be familiar with rule formalism and rule ordering,
-	- be able to formulate analyses in OT and understand the predictions that they make,
-	- be able to argue effectively for a given analysis (especially able to justify constraints),
-	- be able to read and interpret original research in OT and segmental phonology, 
-	- have begun to develop your own research project that makes use of the concepts discussed in class.
+When this course is completed, you should:
+- be able to find generalizations in a data set and describe phonological patterns in relatively theory-neutral terms,
+- be able to formulate analyses in OT and understand the predictions that they make,
+- be able to argue effectively for a given analysis (especially able to justify constraints),
+- be able to read and interpret original research in OT, 
+- have begun to develop your own research project that makes use of the concepts discussed in class.
 
 # Materials
 
-## Textbook and handouts
-- There is one required textbook: *Doing Optimality Theory* by John J. McCarthy (2008).
-- Handouts are posted on my website for [USC Graduate Phonology](531_guide.html).
-- Readings are downloadable at a private link I've shared via Slack and e-mail. Please don't share this link. 
+## Textbooks and handouts
+- There are two required textbooks
+	- *Doing Optimality Theory* by John J. McCarthy (2008).
+	- *Optimality Theory* by René Kager (1999)
+- Handouts are posted on my website for [USC Advanced Undergraduate Phonology](401_guide.html).
+- Readings are downloadable at a private link I've shared via Slack. Please don't share this link. 
 
 ## Electronic device policy
 - Please bring your charged laptop to class. Throughout the semester, we’ll collaborate using Google Docs and Slack.
@@ -72,42 +63,49 @@ The sequel to this course, LING 531B, continues within constraint-based framewor
 
 ## Class participation
 - This is the most important requirement.
-- Engagement is important for establishing your reputation as a serious, competent graduate student.
-- It also gives you practice for conferences, academic meetings, etc.
-- Our collective goal is to get everyone talking roughly the same amount.
+- Our collective goal is to get everyone talking roughly the same amount. 
+- Time is not an issue: the goal is to develop skills – not cover any particular material.
 
 ## Reading comments
-- For every class (except the first), you are required to post (on Slack) a short question or comment on one of the assigned readings.
+- You are required to post (on Slack) one short question or comment per class on the assigned reading, unless an assignment or presentation is due that day.
+- The goal is to encourage you to do the readings and give you practice critically engaging with phonology. 
+- See the course website for ideas about types of comments or questions you can write. One to three sentences is sufficient and ideal, and a single one-sentence question is all I expect.
 - The deadline is the night before class.
-- Two or three sentences is sufficient and ideal.
+- There is overlap between the two textbooks, which means that sometimes you will read things you already know. This is a good thing! The two textbooks may contradict each other in small ways. This is not uncommon at this level.
 
 ## Opt-out office hours
 - Since the class is small, I’m going to schedule a weekly 20-30 minute meeting with each of you.
 - You can use this time to discuss the final paper, class material, additional readings, or whatever else you’d like to.
 - You can always opt out: if you’d like to skip a meeting, just e-mail me the night before. 
 
+## Weekly quizzes
+- Quizzes help you assess your comprehension of assigned readings and class material.
+- They are intended to be relatively easy if you’ve been following the material.
+- There is quiz every Monday, 12:30pm–12:45pm.
+- The lowest two quiz grades are dropped. If you miss class due to illness or an emergency, you can make up a quiz, but only if you provide documentation.
+- Quizzes are graded on a 0–5 scale:
+	- 0  (didn't complete)	
+	- 1–2 (serious misunderstanding of material — major mistakes)
+	- 3  (some understanding — many small mistakes)
+	- 4  (thorough understanding — a few small mistakes)
+	- 5  (absolutely perfect in every way — no improvement possible)
+
+
 ## Homework assignments
 - These provide hands-on practice with analysis, argumentation, and applying, extending and revising theories.
 - Think of them as mini-papers.
-- There will be about six or seven.
+- There will be about five or six of them.
 - You are encouraged to collaborate with others, but you must write up and submit your own solution, listing anyone with whom you collaborated.
 - Submit hard copies at the beginning of class on the due date.
 - Assignments are returned in class within seven days of submission.
 - Submitted assignments should not contain text, figures, tables, and so on that have been copied electronically or otherwise from another student or any other source.
 	- Quotations or other forms of reference to other work are of course acceptable with the appropriate citations.
 	- USC takes academic integrity very seriously and enforces it strictly.
-	- To find out more, students should consult [the guide to academic integrity for graduate students](http://sjacs.usc.edu/files/2015/03/GradIntegrity.pdf). Also see the [Academic Conduct][] section of the syllabus.
+	- You can read more at the [Academic Conduct][] section of the syllabus.
 	- If you have any questions about what constitutes plagiarism or cheating, please come and see me.
 
 
-## In-class language data presentation
-- Your goal is to demonstrate the ability to objectively describe language data.
-- For your presentation, you will present a set of data supporting claims about the phoneme inventory of a language and demonstrating an allophonic alternation. 
-- Your presentation should be about 12-15 minutes long and must be accompanied by a handout or slides.
-- The presentations will be on October 2.
-
-
-## A term paper 
+## A final paper 
 - Your goal is to demonstrate all of the skills you’ve developed in class.
 - The aims of the paper are threefold:
 	- To show your ability to describe and analyze a set of data.
@@ -118,6 +116,10 @@ The sequel to this course, LING 531B, continues within constraint-based framewor
 	- Write an original rule-based analysis of the pattern.
 	- Write a constraint-based analysis of the pattern.
 	- Compare the rule-based and constraint-based analysis, and argue for one over the other.
+- “Original” analysis?
+	- I don’t require you to read everything written on the topic, or even other OT analyses of the phenomenon. 
+	- This means you might inadvertently replicate an existing analysis, which is okay.
+	- However, if you want to use this paper as a writing sample for graduate school, originality and thoroughness are important.
 - Paper timeline:
 	- By November 13: select a proposed topic and meet with me for approval of the topic.
 	- By November 20: submit a 1–2 page outline of your paper proposal. Your proposal should summarize the key aspects of the data/problem that you are interested in investigating. 
@@ -146,45 +148,38 @@ The sequel to this course, LING 531B, continues within constraint-based framewor
 |12/13|Due date for final paper
 
 
-# Schedule
+# Schedule and topics
 
-
-- The schedule will be updated depending on the pace of the class. See [this page](531_guide.html) for an up-to-date daily schedule.
+- See [this page](401_guide.html) for an up-to-date daily schedule, including readings.
 - Changes to readings or due dates will be announced in class.
-- The readings with citations like (Year/2004) are from McCarthy’s (2004) book *Optimality Theory: A reader*, which republished excerpts from influential OT papers.
 
-|Date |Read before class|Topics	|Deadlines|
-|---  |---		|---	|---	|
-|8/28|Zsiga (2013) Ch 10–11|<ul><li>Phonemes, allophones, and contrast</li><li>Phonotactics and alternations</li><li>Contrastive distribution</li><li>Complementary distribution</li><li>Contextually-limited contrast (positional neutralization)</li></ul>| |
+|Dates 		|Topics			|Deadlines|
+|---  		|---			|---	|
+|8/26–8/28	|**Introduction and Review**</br>— Review of distributions | |
 
-|9/4|Zsiga (2013) Ch 12–13|<ul><li>Natural classes, distinctive features, and rules</li><li>Why features?</li><li>Rule writing conventions</li><li>Rule ordering</li><li>Autosegmental representations</li></ul>|Assignment 1</br>(identifying distributions)|
+|9/4–9/9	|**Introducing constraints**</br>— Review of rules and features</br>— The conspiracy problem</br>— A conceptual crisis</br>— Introducing OT: Gen, Con, Eval"|HW #1 due on 9/4|
 
-|9/11|Kisseberth (1970)</br>Doing OT Ch 1|<ul><li>Introducing constraints</li><li>The conspiracy problem</li><li>A conceptual crisis</li><li>Introducing OT: Gen, Con, Eval</li></ul>| |
+|9/11–9/18	|**OT Mechanics**</br>— The selection problem</br>— The ranking problem</br>— Comparative tableaux</br>— Ranking arguments</br>— Harmonic bounding"|HW #2 due on 9/18|
 
-|9/18|Doing OT Ch 2–2.7|<ul><li>OT Mechanics</li><li>The selection problem and VTs</li><li>The ranking problem and CTs</li><li>Ranking arguments</li><li>Harmonic bounding</li></ul>|Assignment 2</br>(rules and constraints)|
+|9/23–9/25	|**Phonemes, allophones, and contrast**</br>— Richness of the base</br>— Factorial typology</br>— Lexicon optimization"|HW #3 due on 9/25 |
 
-|9/25|Doing OT Ch 2.8</br>Steriade (2007)|<ul><li>Phonemes, allophones, and contrast in OT</li><li>Richness of the Base</li><li>Lexicon optimization</li><li>Typology of contrast in OT</li></ul>|Assignment 3</br>(OT practice)|
+|9/30	|**Constraint ranking by algorithm**</br>— Recursive Constraint Demotion</br>— ERC Fusion</br>— Using OT-Help | |
 
-|10/2|Doing OT Ch 3|<ul><li>Language data presentations</li></ul>| |
+|10/2–10/7	|**Factorial typology and universals**</br>— Syllable structure typology</br>— Correspondence theory</br>— Positional faithfulness</br>— Assimilation typology | |
 
-|10/9|Doing OT Ch 2.10–2.12</br>Tesar & Smolensky (1998/2004)|<ul><li>Constraint ranking by algorithm and computer</li><li>RCD and EDCD</li><li>ERC Fusion</li><li>Using OT-Help</li></ul>|Assignment 4</br>(licensing)|
+|10/9	| **Justifying constraints**</br>— Phonetic grounding</br>— Alignment constraints | HW #4 due on 10/9 |
 
-|10/16|Doing OT Ch 4.6</br>Doing OT Ch 5</br>Lombardi (1999/2004)|<ul><li>Factorial typology and universals</li><li>Syllable structure typology</li><li>Correspondence theory</li><li>Positional faithfulness</li><li>Assimilation typology</li></ul>|Assignment 5</br>(RCD)|
+|10/14–10/16	|**Writing and review**</br>— An extra week for review</br>— Writing</br>— Responsible scholarship | |
 
-|10/23|Hayes (1999/2004)</br>Doing OT Ch 4|<ul><li>Justifying constraints</li><li>Functional grounding</li><li>Assimilation typology, revisited</li></ul>|Assignment 6</br>(typology)|
+|10/21–10/30	|**Stress**</br>— Diagnosing stress patterns </br>— The metrical foot</br>— Generalized Alignment</br>— Quantity-insensitive stress</br>— Quantity-sensitive stress | HW #5 due on 10/30|
 
-|10/30|Pater (1999/2004)</br>Zuraw and Lu (2009)|<ul><li>Homogeneity of target / heterogeneity of process</li><li>*NC̥ effects</li><li>Dissimilation</li><li>The too-many-solutions problem</li></ul>| |
+|11/4–11/13	|**Prosodic morphology**</br>— The Emergence of the Unmarked </br>— Templates</br>— A typology of reduplication</br>— B–R Correspondence | HW #6 due on 11/6</br>Paper topic approval by 11/13 |
 
-|11/6|Bakovic (2011)</br>Doing OT Ch 6.4|<ul><li>Derivational opacity</li><li>The opacity problem</li><li>Output-output faithfulness|Assignment 7 </br>(HoT/HoP)</li></ul>|
+|11/18–11/20| **Over and undergeneration**</br>— Opacity and transparency</br>— Output-output faithfulness</br>— The Too-Many–Solutions Problem | Paper outline due on 11/20 |
 
-|11/13|Pater (2016)|<ul><li>Weighted constraints</li><li>Harmonic Grammar</li><li>Gang effects / ganging</li></ul>|Paper topic by now|
+|11/25–12/2| **Variation**</br> — What is phonological variation?</br>— Weighted constraints | |
 
-|11/20|Doing OT Ch 6.2</br>Coetzee & Pater (2011)|<ul><li>Phonological variation</li><li>Types of variation</li><li>MaxEnt Harmonic Grammar</li></ul>|Paper proposal due|
-
-|11/27| No class - Thanksgiving holiday |||
-
-|12/4| Term paper presentations |||
-
+|12/4 | In-class presentations | Final paper due on 12/13|
 
 # Statement on Academic Conduct and Support Systems
 

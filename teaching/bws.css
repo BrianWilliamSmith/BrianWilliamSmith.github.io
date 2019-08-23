@@ -10,6 +10,7 @@ blockquote {
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: "helvetica";
     font-size: 12pt;
@@ -24,7 +25,8 @@ body {
     color:#0069d6;
     font-size: 2em;
     font-weight: bold;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
+    margin-top: 2%;
     line-height: 1em;
 }
 
@@ -45,6 +47,7 @@ table {
 	margin-left: auto;
     margin-right: auto;
     margin-bottom: 1em;
+    margin-top: 1%;
     border-collapse: collapse;
     border: 2px solid black;
 }
@@ -132,10 +135,6 @@ a img {
     border: none;
 }
 
-ul {
-    margin-bottom: 3%;
-}
-
 ul ul {
     margin-bottom: 0;
 }
@@ -145,7 +144,6 @@ ul li {
     counter-increment: subsection;
     margin-top: 1%;
     margin-left: 3em;
-    margin-bottom: 0;
 }
 
 ul li::before {
@@ -159,6 +157,14 @@ ul ul ul li {
     list-style-type: circle;
     counter-increment: none;
     margin-left: 1em;
+}
+
+.syllabus {
+    color:grey;
+}
+
+.current {
+    color: black;
 }
 
 
@@ -202,7 +208,6 @@ ul ul li::before,
 }
 
 .TOC {
-    margin-bottom: 1%;
 }
 
 .TOC ul{
@@ -212,7 +217,7 @@ ul ul li::before,
 }
 
 .TOC ul li {
-    margin-top: .5em;
+    margin-top: 1%;
     padding: 0;
     list-style-type: none;
     list-style-position: inside;
@@ -229,7 +234,7 @@ ul ul li::before,
 }
 
 .TOC ul ul li {
-    margin-top: .5em;
+    margin-top: 1%;
     padding: 0;
     list-style-type: none;
     list-style-position: inside;
@@ -247,7 +252,7 @@ h6 {
 
 h1 {
     font-size: 1.5em;
-    margin-top: 1%;
+    margin-top: 2%;
     margin-bottom: 0;
     margin-left: 0;
     counter-increment: section;
@@ -261,6 +266,7 @@ h1::before {
 h2 {
     font-size: 1.2em;
     counter-increment: title-subsection;
+    margin-top: 1%;
 }
 
 h2::before {
@@ -280,27 +286,28 @@ h6 {
 }
 
 hr {
-    margin: 0 0 19px;
+    margin-top: 1%;
     border: 0;
     border-bottom: 1px solid #ccc;
 }
 
-.old {
-    color: grey;
+p {
+    margin-top: 1%;
+    text-align: justify;
 }
-
 
 blockquote {
     color: grey;
     margin-top: 1%;
-    margin-left: 3em;
+    margin-left: .5em;
+    margin-right: .5em;
 }
 
 blockquote:before {
     content:"\201C";
     font-size:2em;
-    margin-left:-.5em;
-    color:grey;
+    margin-left:-.4em;
+    color: grey;
     position: absolute;
 }
 
@@ -311,29 +318,27 @@ blockquote p:last-of-type {
         
 code, pre {
     font-family: Menlo, Andale Mono, Courier New, monospace;
+    background-color: #ffebbf;
 }
+
 code {
-    background-color: #fee9cc;
-    color: rgba(0, 0, 0, 0.75);
     padding: 1px 3px;
-    font-size: 11pt;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
+    font-size: 10pt;
     border-radius: 3px;
 }
 pre {
     display: block;
     padding: 14px;
-    margin: 0 0 18px;
+    margin-top: 1%;
     line-height: 16px;
-    font-size: 11px;
-    border: 1px solid #d9d9d9;
+    border: 1px solid black;
     white-space: pre-wrap;
     word-wrap: break-word;
 }
 pre code {
-    background-color: #fff;
-    color:#737373;
+    color: black;
     font-size: 10pt;
 }
 sup {
