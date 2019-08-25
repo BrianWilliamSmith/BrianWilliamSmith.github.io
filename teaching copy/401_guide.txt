@@ -1,9 +1,11 @@
+
 Title: Daily schedule for Ling 401
 Author: Brian W. Smith
 Date: 8/20/2019 to present
 CSS: bws.css
 
 <!-- Standard header. Change title in metadata -->
+
 
 [USC Advanced Undergraduate Phonology](401_guide.html) ✳︎ Fall 2019 ✳︎ Smith
 ***

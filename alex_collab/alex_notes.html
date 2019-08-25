@@ -60,26 +60,19 @@
 
 <h1 id="outlierdetectionnotes">Outlier detection notes</h1>
 
-<ul>
-<li>Link: <a href="https://en.wikipedia.org/wiki/Mahalanobis_distance">wiki article on Mahalanobis distance</a></li>
-<li>Link: <a href="http://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561">towards data science article on outlier detection</a></li>
-<li>Problem: we need to detect outliers in categorical data &#8211; harder
+<pre><code>- Link: [wiki article on Mahalanobis distance](https://en.wikipedia.org/wiki/Mahalanobis_distance)
+- Link: [towards data science article on outlier detection](http://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561)
+- Problem: we need to detect outliers in categorical data -- harder
+	- Found this: [Detection of Outliers and Influential Observations in Binary Logistic Regression: An Empirical Study](https://scialert.net/fulltextmobile/?doi=jas.2011.26.35)
+- Types of outliers
+	- univariate vs. multivariate
+		- &quot;Univariate outliers can be found when looking at a distribution of values in a single feature space. Multivariate outliers can be found in a n-dimensional space (of n-features).&quot;
+	- point outliers &quot;Point outliers are single data points that lay far from the rest of the distribution.&quot;
+	- contextual outliers &quot;Contextual outliers can be noise in data, such as punctuation symbols when realizing text analysis or background noise signal when doing speech recognition.&quot;
+	- collective outliers &quot;Collective outliers can be subsets of novelties in data such as a signal that may indicate the discovery of new phenomena&quot;
+</code></pre>
 
 <ul>
-<li>Found this: <a href="https://scialert.net/fulltextmobile/?doi=jas.2011.26.35">Detection of Outliers and Influential Observations in Binary Logistic Regression: An Empirical Study</a></li>
-</ul></li>
-<li>Types of outliers
-
-<ul>
-<li>univariate vs. multivariate
-
-<ul>
-<li>&#8220;Univariate outliers can be found when looking at a distribution of values in a single feature space. Multivariate outliers can be found in a n-dimensional space (of n-features).&#8221;</li>
-</ul></li>
-<li>point outliers &#8220;Point outliers are single data points that lay far from the rest of the distribution.&#8221;</li>
-<li>contextual outliers &#8220;Contextual outliers can be noise in data, such as punctuation symbols when realizing text analysis or background noise signal when doing speech recognition.&#8221;</li>
-<li>collective outliers &#8220;Collective outliers can be subsets of novelties in data such as a signal that may indicate the discovery of new phenomena&#8221;</li>
-</ul></li>
 <li>How to fit hyper parameters?
 
 <ul>

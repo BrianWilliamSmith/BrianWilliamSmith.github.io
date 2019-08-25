@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Hacking tableaux in MMD</title>
+	<meta name="author" content="Brian W. Smith"/>
+	<meta name="date" content="8/6/2019"/>
+	<meta name="comment" content="For USC Ling 531A and Ling 401 Fall 2019"/>
+	<link type="text/css" rel="stylesheet" href="bws.css"/>
+</head>
+<body>
+
+<!-- Standard header. Change title in metadata -->
+
+<p><a href="401_guide.html">USC Ling 401</a> ~ <a href="531_guide.html">USC Ling 531</a>✳︎ Fall 19 ✳︎ Smith</p>
+
+<hr />
+
+<div class="title">
+
+<p>Hacking tableaux in MMD</p>
+
+</div>
+
+<div class="TOC">
+
+<ul>
+<li><a href="#aregulartableinbws.css">A regular table in bws.css</a></li>
+<li><a href="#aviolationtableauusingtableauclassinbws.css">A violation tableau using &#8220;tableau&#8221; class in bws.css</a></li>
+<li><a href="#theresanothertableclassinbws.css:fullrule">There&#8217;s another table class in bws.css: &#8220;fullrule&#8221;</a></li>
+<li><a href="#atableauusingcssclassshadedfrombws.css">A tableau using CSS class &#8220;shaded&#8221; from bws.css</a></li>
+<li><a href="#acomparativetableauusingtableauclassinbws.css">A comparative tableau using &#8220;tableau&#8221; class in bws.css</a></li>
+<li><a href="#ahybridtableau">A hybrid tableau</a></li>
+</ul>
+</div>
+
+<hr />
+
+<!-- Content starts below -->
+
+<p><a href="markdown_ot.txt">The multimarkdown version of this document, before conversion into html</a>.</p>
+
+<h1 id="aregulartableinbws.css">A regular table in bws.css</h1>
+
+<ul>
+<li>The table in MMD</li>
+</ul>
+
+<pre><code>|Lexicon 	|Grammar (simplified)				|Surface forms	|
+|--- 		|--- 						|--- 		|
+|/bræg/+/d/ 	|make /d/ voiceless after a voiceless segment	|[brægd]	|
+|/hæk/+/d/  	|make /d/ voiceless after a voiceless segment	|[hækt]		|
+|/su/+/d/  	|make /d/ voiceless after a voiceless segment	|[sud] 		|
+[Example of a derivation]
+</code></pre>
+
+<ul>
+<li>After conversion into html</li>
+</ul>
+
+<table>
+<caption style="caption-side: bottom;" id="exampleofaderivation">Example of a derivation</caption>
+<colgroup>
+<col />
+<col />
+<col />
+</colgroup>
+
+<thead>
+<tr>
+	<th>Lexicon 	</th>
+	<th>Grammar (simplified)				</th>
+	<th>Surface forms	</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>/bræg/+/d/ 	</td>
+	<td>make /d/ voiceless after a voiceless segment	</td>
+	<td>[brægd]	</td>
+</tr>
+<tr>
+	<td>/hæk/+/d/ 	</td>
+	<td>make /d/ voiceless after a voiceless segment	</td>
+	<td>[hækt]		</td>
+</tr>
+<tr>
+	<td>/su/+/d/ 	</td>
+	<td>make /d/ voiceless after a voiceless segment	</td>
+	<td>[sud] 		</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="aviolationtableauusingtableauclassinbws.css">A violation tableau using &#8220;tableau&#8221; class in bws.css</h1>
+
+<ul>
+<li>To turn a table into a tableu, nest the MMD table within div tags calling the &#8220;tableau&#8221; class, with a blank line between the div tags and table</li>
+<li>In MMD</li>
+</ul>
+
+<pre><code>
+&lt;div class=&quot;tableau&quot;&gt;
+
+|Candidates 	|||	*NoCoda*|*Max*	|*Dep*	|*Onset* |
+|--- 	|:--- 	|---: 	|:---: 	|:---:	|:---:	|:---:	|
+|/CV/	|a. 	|☞ CV	|	|	|	|	|
+|	|b. 	|CVC	|✳︎	|	|✳︎	|	|
+|	|c. 	|V	|	|✳︎	|	|✳︎	|
+|	|d. 	|VC	|✳︎	|✳︎	|✳︎	|✳︎	|
+
+|/CVC/	|a. 	|☞ CV	|	|✳︎	|	|	|
+|	|b. 	|CVC	|✳︎	|	|	|	|
+|	|c. 	|V	|	|✳︎✳︎	|	|✳︎	|
+|	|d. 	|VC	|✳︎	|✳︎	|	|✳︎	|
+[Example of a tableau using class tableau]
+
+&lt;/div&gt;
+</code></pre>
+
+<ul>
+<li>After conversion into html</li>
+</ul>
+
+<div class="tableau">
+
+<table>
+<caption style="caption-side: bottom;" id="exampleofatableauusingclasstableau">Example of a tableau using class tableau</caption>
+<colgroup>
+<col />
+<col style="text-align:left;"/>
+<col style="text-align:right;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th colspan="3">Candidates 	</th>
+	<th style="text-align:center;">	<em>NoCoda</em></th>
+	<th style="text-align:center;"><em>Max</em>	</th>
+	<th style="text-align:center;"><em>Dep</em>	</th>
+	<th style="text-align:center;"><em>Onset</em> </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>/CV/	</td>
+	<td style="text-align:left;">a. 	</td>
+	<td style="text-align:right;">☞ CV	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">b. 	</td>
+	<td style="text-align:right;">CVC	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">c. 	</td>
+	<td style="text-align:right;">V	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">d. 	</td>
+	<td style="text-align:right;">VC	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">✳︎	</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td>/CVC/	</td>
+	<td style="text-align:left;">a. 	</td>
+	<td style="text-align:right;">☞ CV	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">b. 	</td>
+	<td style="text-align:right;">CVC	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">c. 	</td>
+	<td style="text-align:right;">V	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">d. 	</td>
+	<td style="text-align:right;">VC	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<ul>
+<li>For comparison, here&#8217;s the tableau with the default table settings. Not so different really</li>
+</ul>
+
+<table>
+<caption style="caption-side: bottom;" id="thesametableauwithoutclasstableau">The same tableau without class tableau</caption>
+<colgroup>
+<col />
+<col style="text-align:left;"/>
+<col style="text-align:right;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th colspan="3">Candidates 	</th>
+	<th style="text-align:center;">	<em>NoCoda</em></th>
+	<th style="text-align:center;"><em>Max</em>	</th>
+	<th style="text-align:center;"><em>Dep</em>	</th>
+	<th style="text-align:center;"><em>Onset</em> </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>/CV/	</td>
+	<td style="text-align:left;">a. 	</td>
+	<td style="text-align:right;">☞ CV	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">b. 	</td>
+	<td style="text-align:right;">CVC	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">c. 	</td>
+	<td style="text-align:right;">V	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">d. 	</td>
+	<td style="text-align:right;">VC	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">✳︎	</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td>/CVC/	</td>
+	<td style="text-align:left;">a. 	</td>
+	<td style="text-align:right;">☞ CV	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">b. 	</td>
+	<td style="text-align:right;">CVC	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">c. 	</td>
+	<td style="text-align:right;">V	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">d. 	</td>
+	<td style="text-align:right;">VC	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>What&#8217;s formatted automatically by the CSS class
+
+<ul>
+<li>Emphasized text in the header is rendered as small caps</li>
+<li>First three columns have no vertical lines</li>
+<li>So violations should start exactly in the fourth column</li>
+</ul></li>
+<li>Need to include manually to get a nice tableau
+
+<ul>
+<li>Blank line in the markdown table renders as a horizontal line (creates a <code>&lt;tbody&gt;</code> in html)</li>
+<li>Text alignment is specified in the markdown table code (e.g. <code>:---</code> is left-aligned)</li>
+<li>A better asterisk should be used, since * is reserved for some markdown stuff (and looks bad)
+
+<ul>
+<li>Maybe a…
+
+<ul>
+<li>heavy asterisk ✱</li>
+<li>open centre asterisk ✲</li>
+<li>eight spoked asterisk ✳︎</li>
+</ul></li>
+</ul></li>
+<li>Constraints need to be emphasized (e.g. <code>*Constraint*</code>) to get small caps</li>
+</ul></li>
+</ul>
+
+<h1 id="theresanothertableclassinbws.css:fullrule">There&#8217;s another table class in bws.css: &#8220;fullrule&#8221;</h1>
+
+<ul>
+<li>Like default table formatting, with extra lines added</li>
+</ul>
+
+<pre><code>&lt;div class=&quot;fullrule&quot;&gt;
+
+|Candidates 	|||	*NoCoda*|*Max*	|*Dep*	|*Onset* |
+|--- 	|:--- 	|---: 	|:---: 	|:---:	|:---:	|:---:	|
+|/CV/	|a. 	|☞ CV	|	|	|	|	|
+|	|b. 	|CVC	|✳︎	|	|✳︎	|	|
+|	|c. 	|V	|	|✳︎	|	|✳︎	|
+|	|d. 	|VC	|✳︎	|✳︎	|✳︎	|✳︎	|
+
+|/CVC/	|a. 	|☞ CV	|	|✳︎	|	|	|
+|	|b. 	|CVC	|✳︎	|	|	|	|
+|	|c. 	|V	|	|✳︎✳︎	|	|✳︎	|
+|	|d. 	|VC	|✳︎	|✳︎	|	|✳︎	|
+[Example of a tableau with fullrule formatting]
+
+&lt;/div&gt;
+</code></pre>
+
+<div class="fullrule">
+
+<table>
+<caption style="caption-side: bottom;" id="exampleofatableauwithfullruleformatting">Example of a tableau with fullrule formatting</caption>
+<colgroup>
+<col />
+<col style="text-align:left;"/>
+<col style="text-align:right;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th colspan="3">Candidates 	</th>
+	<th style="text-align:center;">	<em>NoCoda</em></th>
+	<th style="text-align:center;"><em>Max</em>	</th>
+	<th style="text-align:center;"><em>Dep</em>	</th>
+	<th style="text-align:center;"><em>Onset</em> </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>/CV/	</td>
+	<td style="text-align:left;">a. 	</td>
+	<td style="text-align:right;">☞ CV	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">b. 	</td>
+	<td style="text-align:right;">CVC	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">c. 	</td>
+	<td style="text-align:right;">V	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">d. 	</td>
+	<td style="text-align:right;">VC	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">✳︎	</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td>/CVC/	</td>
+	<td style="text-align:left;">a.	</td>
+	<td style="text-align:right;">☞ CV	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">b. 	</td>
+	<td style="text-align:right;">CVC	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">c. 	</td>
+	<td style="text-align:right;">V	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">d. 	</td>
+	<td style="text-align:right;">VC	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<h1 id="atableauusingcssclassshadedfrombws.css">A tableau using CSS class &#8220;shaded&#8221; from bws.css</h1>
+
+<ul>
+<li>Shading is a big pain
+
+<ul>
+<li>The best approach is to
+
+<ul>
+<li>add note to the beginning of a cell that needs shading</li>
+<li>moi, I add &#8220;sm&#8221; to beginning</li>
+<li>take the html generated by the mmd parser and copy-paste it</li>
+<li>find-replace
+
+<ul>
+<li>replace <code>&lt;td style=&quot;text-align:center;&quot;&gt;sm</code></li>
+<li>with <code>&lt;td class=&quot;shaded&quot;&gt;</code></li>
+</ul></li>
+<li>this will be a raw html table hanging out in your markdown document</li>
+<li>unreadable but it works (despite breaking the markdown design philosophy of eyeball-friendly documents)</li>
+</ul></li>
+</ul></li>
+<li>I rarely use shading, so this annoying process works for me
+
+<ul>
+<li>I use raw html for any table that can&#8217;t be represented in markdown.</li>
+<li>Be careful! Some programs are really bad at converting markdown that has raw html. For example, the program Marked needs &#8220;retain line breaks in paragraphs&#8221; turned off in the rendering preferences, otherwise the raw html code&#8217;s linebreaks are rendered as <code>&lt;/ br&gt;</code>, giving a ton of unwanted whitespace.
+
+<ul>
+<li>I just use Fletcher Penney&#8217;s script for conversion from mmd to html</li>
+</ul></li>
+</ul></li>
+<li>Here&#8217;s the annotated table, written in mmd, whose html is ready for copy-pasting</li>
+</ul>
+
+<div class="tableau">
+
+<table>
+<caption style="caption-side: bottom;" id="exampleofatableauannotatedforconversiontohtmlwithshading">Example of a tableau annotated for conversion to html with shading</caption>
+<colgroup>
+<col />
+<col style="text-align:left;"/>
+<col style="text-align:right;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th colspan="3">Candidates 	</th>
+	<th style="text-align:center;">	<em>NoCoda</em></th>
+	<th style="text-align:center;"><em>Max</em>	</th>
+	<th style="text-align:center;"><em>Dep</em>	</th>
+	<th style="text-align:center;"><em>Onset</em> </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>/CV/	</td>
+	<td style="text-align:left;">a. 	</td>
+	<td style="text-align:right;">☞ CV	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">sm	</td>
+	<td style="text-align:center;">sm	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">b. 	</td>
+	<td style="text-align:right;">CVC	</td>
+	<td style="text-align:center;">✳︎!	</td>
+	<td style="text-align:center;">sm	</td>
+	<td style="text-align:center;">sm ✳︎	</td>
+	<td style="text-align:center;">sm	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">c. 	</td>
+	<td style="text-align:right;">V	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎!	</td>
+	<td style="text-align:center;">sm	</td>
+	<td style="text-align:center;">sm ✳︎	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">d. 	</td>
+	<td style="text-align:right;">VC	</td>
+	<td style="text-align:center;">✳︎!	</td>
+	<td style="text-align:center;">sm ✳︎ 	</td>
+	<td style="text-align:center;">sm ✳︎	</td>
+	<td style="text-align:center;">sm ✳︎	</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td>/CVC/	</td>
+	<td style="text-align:left;">a. 	</td>
+	<td style="text-align:right;">☞ CV	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">sm	</td>
+	<td style="text-align:center;">sm	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">b. 	</td>
+	<td style="text-align:right;">CVC	</td>
+	<td style="text-align:center;">✳︎!	</td>
+	<td style="text-align:center;">sm	</td>
+	<td style="text-align:center;">sm	</td>
+	<td style="text-align:center;">sm	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">c. 	</td>
+	<td style="text-align:right;">V	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎!✳︎	</td>
+	<td style="text-align:center;">sm	</td>
+	<td style="text-align:center;">sm ✳︎	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">d. 	</td>
+	<td style="text-align:right;">VC	</td>
+	<td style="text-align:center;">✳︎!	</td>
+	<td style="text-align:center;">sm ✳︎	</td>
+	<td style="text-align:center;">sm 	</td>
+	<td style="text-align:center;">sm ✳︎	</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<ul>
+<li>After copy-pasting and find-replacing the raw html</li>
+</ul>
+
+<div class="tableau">
+<table>
+<caption id="exampleofatableau">Example of a tableau with shading</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+<col style="text-align:right;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="3">Candidates</th>
+	<th style="text-align:center;"><em>NoCoda</em></th>
+	<th style="text-align:center;"><em>Max</em></th>
+	<th style="text-align:center;"><em>Dep</em></th>
+	<th style="text-align:center;"><em>Onset</em></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">/CV/</td>
+	<td style="text-align:left;">a.</td>
+	<td style="text-align:right;">☞ CV</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+	<td class="shaded"></td>
+	<td class="shaded"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">b.</td>
+	<td style="text-align:right;">CVC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded"></td>
+	<td class="shaded"> ✳︎</td>
+	<td class="shaded"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">c.</td>
+	<td style="text-align:right;">V</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded"></td>
+	<td class="shaded"> ✳︎</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">d.</td>
+	<td style="text-align:right;">VC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded"> ✳︎</td>
+	<td class="shaded"> ✳︎</td>
+	<td class="shaded"> ✳︎</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">/CVC/</td>
+	<td style="text-align:left;">a.</td>
+	<td style="text-align:right;">☞ CV</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✳︎</td>
+	<td class="shaded"></td>
+	<td class="shaded"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">b.</td>
+	<td style="text-align:right;">CVC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded"></td>
+	<td class="shaded"></td>
+	<td class="shaded"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">c.</td>
+	<td style="text-align:right;">V</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✳︎!✳︎</td>
+	<td class="shaded"></td>
+	<td class="shaded"> ✳︎</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">d.</td>
+	<td style="text-align:right;">VC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded"> ✳︎</td>
+	<td class="shaded"></td>
+	<td class="shaded"> ✳︎</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ul>
+<li>Below is the html that is being rendered.
+
+<ul>
+<li>I like the &#8220;sm&#8221; hack because you don&#8217;t have to figure out which cell is which or manually change anything in the raw html</li>
+<li>But it&#8217;s really not so hard: <code>&lt;tr&gt;</code> marks a row and each <code>&lt;td&gt;</code> is a cell in that row</li>
+</ul></li>
+</ul>
+
+<pre><code>
+&lt;div class=&quot;tableau&quot;&gt;
+&lt;table&gt;
+&lt;caption id=&quot;exampleofatableau&quot;&gt;Example of a tableau with shading&lt;/caption&gt;
+&lt;colgroup&gt;
+&lt;col style=&quot;text-align:left;&quot;/&gt;
+&lt;col style=&quot;text-align:left;&quot;/&gt;
+&lt;col style=&quot;text-align:right;&quot;/&gt;
+&lt;col style=&quot;text-align:center;&quot;/&gt;
+&lt;col style=&quot;text-align:center;&quot;/&gt;
+&lt;col style=&quot;text-align:center;&quot;/&gt;
+&lt;col style=&quot;text-align:center;&quot;/&gt;
+&lt;/colgroup&gt;
+
+&lt;thead&gt;
+&lt;tr&gt;
+	&lt;th style=&quot;text-align:left;&quot; colspan=&quot;3&quot;&gt;Candidates&lt;/th&gt;
+	&lt;th style=&quot;text-align:center;&quot;&gt;&lt;em&gt;NoCoda&lt;/em&gt;&lt;/th&gt;
+	&lt;th style=&quot;text-align:center;&quot;&gt;&lt;em&gt;Max&lt;/em&gt;&lt;/th&gt;
+	&lt;th style=&quot;text-align:center;&quot;&gt;&lt;em&gt;Dep&lt;/em&gt;&lt;/th&gt;
+	&lt;th style=&quot;text-align:center;&quot;&gt;&lt;em&gt;Onset&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+	&lt;td style=&quot;text-align:left;&quot;&gt;/CV/&lt;/td&gt;
+	&lt;td style=&quot;text-align:left;&quot;&gt;a.&lt;/td&gt;
+	&lt;td style=&quot;text-align:right;&quot;&gt;☞ CV&lt;/td&gt;
+	&lt;td style=&quot;text-align:center;&quot;&gt;&lt;/td&gt;
+	&lt;td style=&quot;text-align:center;&quot;&gt;&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt;&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td style=&quot;text-align:left;&quot;&gt;&lt;/td&gt;
+	&lt;td style=&quot;text-align:left;&quot;&gt;b.&lt;/td&gt;
+	&lt;td style=&quot;text-align:right;&quot;&gt;CVC&lt;/td&gt;
+	&lt;td style=&quot;text-align:center;&quot;&gt;✳︎!&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt;&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt; ✳︎&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td style=&quot;text-align:left;&quot;&gt;&lt;/td&gt;
+	&lt;td style=&quot;text-align:left;&quot;&gt;c.&lt;/td&gt;
+	&lt;td style=&quot;text-align:right;&quot;&gt;V&lt;/td&gt;
+	&lt;td style=&quot;text-align:center;&quot;&gt;&lt;/td&gt;
+	&lt;td style=&quot;text-align:center;&quot;&gt;✳︎!&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt;&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt; ✳︎&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td style=&quot;text-align:left;&quot;&gt;&lt;/td&gt;
+	&lt;td style=&quot;text-align:left;&quot;&gt;d.&lt;/td&gt;
+	&lt;td style=&quot;text-align:right;&quot;&gt;VC&lt;/td&gt;
+	&lt;td style=&quot;text-align:center;&quot;&gt;✳︎!&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt; ✳︎&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt; ✳︎&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt; ✳︎&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+	&lt;td style=&quot;text-align:left;&quot;&gt;/CVC/&lt;/td&gt;
+	&lt;td style=&quot;text-align:left;&quot;&gt;a.&lt;/td&gt;
+	&lt;td style=&quot;text-align:right;&quot;&gt;☞ CV&lt;/td&gt;
+	&lt;td style=&quot;text-align:center;&quot;&gt;&lt;/td&gt;
+	&lt;td style=&quot;text-align:center;&quot;&gt;✳︎&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt;&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td style=&quot;text-align:left;&quot;&gt;&lt;/td&gt;
+	&lt;td style=&quot;text-align:left;&quot;&gt;b.&lt;/td&gt;
+	&lt;td style=&quot;text-align:right;&quot;&gt;CVC&lt;/td&gt;
+	&lt;td style=&quot;text-align:center;&quot;&gt;✳︎!&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt;&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt;&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td style=&quot;text-align:left;&quot;&gt;&lt;/td&gt;
+	&lt;td style=&quot;text-align:left;&quot;&gt;c.&lt;/td&gt;
+	&lt;td style=&quot;text-align:right;&quot;&gt;V&lt;/td&gt;
+	&lt;td style=&quot;text-align:center;&quot;&gt;&lt;/td&gt;
+	&lt;td style=&quot;text-align:center;&quot;&gt;✳︎!✳︎&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt;&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt; ✳︎&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td style=&quot;text-align:left;&quot;&gt;&lt;/td&gt;
+	&lt;td style=&quot;text-align:left;&quot;&gt;d.&lt;/td&gt;
+	&lt;td style=&quot;text-align:right;&quot;&gt;VC&lt;/td&gt;
+	&lt;td style=&quot;text-align:center;&quot;&gt;✳︎!&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt; ✳︎&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt;&lt;/td&gt;
+	&lt;td class=&quot;shaded&quot;&gt; ✳︎&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+
+<ul>
+<li>Here is a fancier version of shading, using CSS class &#8220;shaded2&#8221; from &#8220;bws.css&#8221;
+
+<ul>
+<li>CSS class &#8220;shaded2&#8221; has some extra definitions using <code>nth-child</code> to ensure it properly overrides cell borders from CSS class &#8220;tableau&#8221;</li>
+<li>It looks nice enough</li>
+</ul></li>
+</ul>
+
+<div class="tableau">
+<table>
+<caption id="exampleofatableau">Example of a tableau using css class shaded2</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+<col style="text-align:right;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="3">Candidates</th>
+	<th style="text-align:center;"><em>NoCoda</em></th>
+	<th style="text-align:center;"><em>Max</em></th>
+	<th style="text-align:center;"><em>Dep</em></th>
+	<th style="text-align:center;"><em>Onset</em></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">/CV/</td>
+	<td style="text-align:left;">a.</td>
+	<td style="text-align:right;">☞ CV</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;"></td>
+	<td class="shaded2"></td>
+	<td class="shaded2"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">b.</td>
+	<td style="text-align:right;">CVC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded2"></td>
+	<td class="shaded2"> ✳︎</td>
+	<td class="shaded2"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">c.</td>
+	<td style="text-align:right;">V</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded2"></td>
+	<td class="shaded2"> ✳︎</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">d.</td>
+	<td style="text-align:right;">VC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded2"> ✳︎</td>
+	<td class="shaded2"> ✳︎</td>
+	<td class="shaded2"> ✳︎</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">/CVC/</td>
+	<td style="text-align:left;">a.</td>
+	<td style="text-align:right;">☞ CV</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✳︎</td>
+	<td class="shaded2"></td>
+	<td class="shaded2"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">b.</td>
+	<td style="text-align:right;">CVC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded2"></td>
+	<td class="shaded2"></td>
+	<td class="shaded2"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">c.</td>
+	<td style="text-align:right;">V</td>
+	<td style="text-align:center;"></td>
+	<td style="text-align:center;">✳︎!✳︎</td>
+	<td class="shaded2"></td>
+	<td class="shaded2"> ✳︎</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">d.</td>
+	<td style="text-align:right;">VC</td>
+	<td style="text-align:center;">✳︎!</td>
+	<td class="shaded2"> ✳︎</td>
+	<td class="shaded2"></td>
+	<td class="shaded2"> ✳︎</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h1 id="acomparativetableauusingtableauclassinbws.css">A comparative tableau using &#8220;tableau&#8221; class in bws.css</h1>
+
+<ul>
+<li>The easiest way is to make the first three columns letter, input, winner/loser</li>
+</ul>
+
+<pre><code>&lt;div class=&quot;tableau&quot;&gt;
+
+| 	|Input 	|Winner ~ Loser	|*NoCoda* 	|*Max*	|*Dep*	|*Onset* |
+|---:	|:---: 	|:---: 		|:---: 		|:---:	|:---:	|:---:	|
+|a.	|/CV/ 	|CV ~ CVC	|W		|e	|W	|e	|
+|b.	|/CV/ 	|CV ~ V		|e		|W	|e	|W	|
+|c.	|/CVC/ 	|CV ~ CVC	|W		|L	|e	|W	|
+[Example of a comparative tableau]
+
+&lt;/div&gt;
+</code></pre>
+
+<div class="tableau">
+
+<table>
+<caption style="caption-side: bottom;" id="exampleofacomparativetableau">Example of a comparative tableau</caption>
+<colgroup>
+<col style="text-align:right;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:right;"> 	</th>
+	<th style="text-align:center;">Input 	</th>
+	<th style="text-align:center;">Winner ~ Loser	</th>
+	<th style="text-align:center;"><em>NoCoda</em> 	</th>
+	<th style="text-align:center;"><em>Max</em>	</th>
+	<th style="text-align:center;"><em>Dep</em>	</th>
+	<th style="text-align:center;"><em>Onset</em> </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:right;">a.	</td>
+	<td style="text-align:center;">/CV/ 	</td>
+	<td style="text-align:center;">CV ~ CVC	</td>
+	<td style="text-align:center;">W		</td>
+	<td style="text-align:center;">e	</td>
+	<td style="text-align:center;">W	</td>
+	<td style="text-align:center;">e	</td>
+</tr>
+<tr>
+	<td style="text-align:right;">b.	</td>
+	<td style="text-align:center;">/CV/ 	</td>
+	<td style="text-align:center;">CV ~ V		</td>
+	<td style="text-align:center;">e		</td>
+	<td style="text-align:center;">W	</td>
+	<td style="text-align:center;">e	</td>
+	<td style="text-align:center;">W	</td>
+</tr>
+<tr>
+	<td style="text-align:right;">c.	</td>
+	<td style="text-align:center;">/CVC/ 	</td>
+	<td style="text-align:center;">CV ~ CVC	</td>
+	<td style="text-align:center;">W		</td>
+	<td style="text-align:center;">L	</td>
+	<td style="text-align:center;">e	</td>
+	<td style="text-align:center;">W	</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<h1 id="ahybridtableau">A hybrid tableau</h1>
+
+<ul>
+<li>Use <code>X~Y</code> to get subscript in MMD: X<sub>Y</sub>
+
+<ul>
+<li><code>*~Y</code> renders as *<sub>Y</sub>, but&#8230;
+
+<ul>
+<li>If you don&#8217;t escape the asterisk, MMD may parse it as emphasis</li>
+<li>So maybe don&#8217;t use *, which is ugly anyway</li>
+</ul></li>
+</ul></li>
+<li><code>X~Y</code> does work with integers or non-* special characters like ✳︎
+
+<ul>
+<li><code>✳︎~Y</code> renders as ✳︎<sub>Y</sub></li>
+</ul></li>
+<li><code>~L</code> and <code>~e</code> do work (giving <sub>L</sub> and <sub>e</sub>)
+
+<ul>
+<li>But if they don&#8217;t, use a typographic space (option+space) for lone L or e: <code> ~L</code> and <code> ~e</code> always render as <sub>L</sub> and <sub>e</sub></li>
+</ul></li>
+</ul>
+
+<pre><code>
+&lt;div class=&quot;tableau&quot;&gt;
+
+|Candidates 	||		|*NoCoda*|*Max*|*Dep*	|*Onset* |
+|--- 	|:--- 	|--: 		|:---:  |:---:|:---:	|:---:	|
+|/CV/	|a. 	|☞ CV		| 	| 	|	| 	|
+|	|b. 	|CVC		|1~W	|~e	|1~W	|~e	|
+|	|c. 	|V		|~e	|1~W	|~e	|1~W	|
+|	|d. 	|VC		|1~W	|1~W	|1~W	|1~W	|
+
+|/CVC/	|a. 	|☞ CV		|	|✳︎	|	|	|
+|	|b. 	|CVC		|✳︎~W	|~L	|	|	|
+|	|c. 	|V		|	|✳︎✳︎~W	|	|✳︎~W	|
+|	|d. 	|VC		|✳︎~W	|✳︎~W	|	|✳︎~W	|
+[Example of a hybrid tableau, with integers and e's on top and ✳︎'s and no e's on bottom]
+
+
+&lt;/div&gt;
+</code></pre>
+
+<div class="tableau">
+
+<table>
+<caption style="caption-side: bottom;" id="exampleofahybridtableauwithintegersandesontopand✳︎sandnoesonbottom">Example of a hybrid tableau, with integers and e&#8217;s on top and ✳︎&#8217;s and no e&#8217;s on bottom</caption>
+<colgroup>
+<col />
+<col style="text-align:left;"/>
+<col style="text-align:right;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th colspan="2">Candidates 	</th>
+	<th style="text-align:right;">		</th>
+	<th style="text-align:center;"><em>NoCoda</em></th>
+	<th style="text-align:center;"><em>Max</em></th>
+	<th style="text-align:center;"><em>Dep</em>	</th>
+	<th style="text-align:center;"><em>Onset</em> </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>/CV/	</td>
+	<td style="text-align:left;">a. 	</td>
+	<td style="text-align:right;">☞ CV		</td>
+	<td style="text-align:center;"> 	</td>
+	<td style="text-align:center;"> 	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;"> 	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">b. 	</td>
+	<td style="text-align:right;">CVC		</td>
+	<td style="text-align:center;">1<sub>W</sub>	</td>
+	<td style="text-align:center;"><sub>e</sub>	</td>
+	<td style="text-align:center;">1<sub>W</sub>	</td>
+	<td style="text-align:center;"><sub>e</sub>	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">c. 	</td>
+	<td style="text-align:right;">V		</td>
+	<td style="text-align:center;"><sub>e</sub>	</td>
+	<td style="text-align:center;">1<sub>W</sub>	</td>
+	<td style="text-align:center;"><sub>e</sub>	</td>
+	<td style="text-align:center;">1<sub>W</sub>	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">d. 	</td>
+	<td style="text-align:right;">VC		</td>
+	<td style="text-align:center;">1<sub>W</sub>	</td>
+	<td style="text-align:center;">1<sub>W</sub>	</td>
+	<td style="text-align:center;">1<sub>W</sub>	</td>
+	<td style="text-align:center;">1<sub>W</sub>	</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td>/CVC/	</td>
+	<td style="text-align:left;">a. 	</td>
+	<td style="text-align:right;">☞ CV		</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">b. 	</td>
+	<td style="text-align:right;">CVC		</td>
+	<td style="text-align:center;">✳︎<sub>W</sub>	</td>
+	<td style="text-align:center;"><sub>L</sub>	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">c. 	</td>
+	<td style="text-align:right;">V		</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎✳︎<sub>W</sub>	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎<sub>W</sub>	</td>
+</tr>
+<tr>
+	<td>	</td>
+	<td style="text-align:left;">d. 	</td>
+	<td style="text-align:right;">VC		</td>
+	<td style="text-align:center;">✳︎<sub>W</sub>	</td>
+	<td style="text-align:center;">✳︎<sub>W</sub>	</td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">✳︎<sub>W</sub>	</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+</body>
+</html>
+

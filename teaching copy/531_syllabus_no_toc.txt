@@ -31,10 +31,6 @@ CSS: bws.css
 
 ***
 
-{{TOC}}
-
-***
-
 # Overview
 
 This course deals with central issues in segmental phonology, focusing on the mental representation of individual speech sounds and their interaction. The emphasis throughout is on theory development and argumentation: how formal models are evaluated and revised in order to meet empirical and conceptual goals. 
@@ -56,25 +52,27 @@ The sequel to this course, LING 531B, continues within constraint-based framewor
 
 ## Textbook and handouts
 - There is one required textbook: *Doing Optimality Theory* by John J. McCarthy (2008).
-- Handouts are posted on my website for [USC Graduate Phonology](531_guide.html).
+- Handouts are posted on the website for [USC Graduate Phonology](531_guide.html).
+- The class forum is hosted on Slack.
 - Readings are downloadable at a private link I've shared via Slack and e-mail. Please don't share this link. 
 
 ## Electronic device policy
 - Please bring your charged laptop to class. Throughout the semester, we’ll collaborate using Google Docs and Slack.
-- However, I ask that outside of these activities, you minimize your electronic device usage, restricting it to accessing readings or taking notes.
-	- Use of electronic devices during class can serve as a distraction not only to you, but also to others.
+- However, I ask that outside of these activities, you minimize your electronic device usage, restricting it to accessing readings and taking notes.
+	- Using electronic devices during class can serve as a distraction not only to you, but also to others.
 	- Please silence phones and stow them during class. Texts, emails, web browsing and so on, can wait until afterwards.
 	- Your respect for this policy is appreciated – it makes a real difference to the classroom environment as a whole. 
 - My personal advice is to take handwritten notes and focus on the handout. 
-	- Studies seem to agree that handwritten notes result in better recall and increased focus, relative to typed notes.  
+	- [Studies seem to agree](https://journals.sagepub.com/doi/abs/10.1177/0956797614524581) that handwritten notes result in better recall and increased focus, relative to typed notes.
 
 # Requirements
 
 ## Class participation
 - This is the most important requirement.
 - Engagement is important for establishing your reputation as a serious, competent graduate student.
-- It also gives you practice for conferences, academic meetings, etc.
-- Our collective goal is to get everyone talking roughly the same amount.
+- It provides practice for question asking and conversation at conferences, academic meetings, and job interviews.
+- Our shared goal is to get everyone talking roughly the same amount.
+- Running out of time is never an issue: the goal of the course is to develop skills –- not cover any particular material.
 
 ## Reading comments
 - For every class (except the first), you are required to post (on Slack) a short question or comment on one of the assigned readings.
@@ -84,7 +82,7 @@ The sequel to this course, LING 531B, continues within constraint-based framewor
 ## Opt-out office hours
 - Since the class is small, I’m going to schedule a weekly 20-30 minute meeting with each of you.
 - You can use this time to discuss the final paper, class material, additional readings, or whatever else you’d like to.
-- You can always opt out: if you’d like to skip a meeting, just e-mail me the night before. 
+- You can always opt out: if you’d like to skip a meeting, e-mail me the night before. 
 
 ## Homework assignments
 - These provide hands-on practice with analysis, argumentation, and applying, extending and revising theories.
@@ -93,7 +91,7 @@ The sequel to this course, LING 531B, continues within constraint-based framewor
 - You are encouraged to collaborate with others, but you must write up and submit your own solution, listing anyone with whom you collaborated.
 - Submit hard copies at the beginning of class on the due date.
 - Assignments are returned in class within seven days of submission.
-- Submitted assignments should not contain text, figures, tables, and so on that have been copied electronically or otherwise from another student or any other source.
+- Submitted assignments shouldn't contain text, figures, tables, and so on that have been copied electronically or otherwise from another student or any other source.
 	- Quotations or other forms of reference to other work are of course acceptable with the appropriate citations.
 	- USC takes academic integrity very seriously and enforces it strictly.
 	- To find out more, students should consult [the guide to academic integrity for graduate students](http://sjacs.usc.edu/files/2015/03/GradIntegrity.pdf). Also see the [Academic Conduct][] section of the syllabus.
@@ -127,11 +125,10 @@ The sequel to this course, LING 531B, continues within constraint-based framewor
 # Grade breakdown
 
 |--- | --- |
-|Participation, readings, reading comments|15%|
 |Assignments				|50%|
-|In-class language data presentation (10/2)|10%|
 |Term paper (due 12/11)			|25%|
-
+|In-class language data presentation (10/2)|10%|
+|Participation, readings, reading comments|15%|
 
 # Important dates
 
