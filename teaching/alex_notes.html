@@ -44,10 +44,56 @@
 <h1 id="learningalgorithmandtraining">Learning algorithm and training</h1>
 
 <ul>
-<li>Read about outlier detection
+<li><p>The induction mechanism has two big parts, which I&#8217;ll give names</p>
 
 <ul>
-<li>ML outlier detection?</li>
+<li><strong>Outlier Detector</strong> Detect whether a word is an outlier</li>
+<li><strong>Constraint Choooser</strong> Determine which constraint(s) to index the word to</li>
+</ul></li>
+<li><p><strong>Outlier Detector</strong> possibilities</p>
+
+<ul>
+<li>Residuals method (requires a model)
+
+<ul>
+<li>For every word, compare the model predictions to the real probabilities</li>
+<li>Basically, calculate residuals</li>
+<li>z-score residuals and find outliers with a threshhold (e.g. Z &gt; 2.5 SD)</li>
+<li>Nice thing: works with ANY model afaik, takes into account different categories and contexts</li>
+<li>Bad thing: requires a ton of calculations</li>
+</ul></li>
+<li>A dumb method: univariate tails cutoff
+
+<ul>
+<li>Calculate a probability for every word</li>
+<li>If underlying probability isn&#8217;t extreme (e.g. if schwa rates are closer to 50%), the probabilities will be normally distributed</li>
+<li>Read more on binomial distribution and central limit theorem to determine the actual conditions for the CLT (it&#8217;s messy!)</li>
+<li>cut off words that are extreme &#8211; these will be ones that are more categorical</li>
+<li>Nice thing: this doesn&#8217;t require a model, is blindingly fast</li>
+<li>Bad thing: doesn&#8217;t take into account context, will identify categorical cases as outliers, even if they obey the grammar</li>
+</ul></li>
+<li>A weird adaptation of univariate tails cutoff
+
+<ul>
+<li>Do the method above, but grouping together words with the same violation profile</li>
+<li>All words with the same violation profile should be normally distributed around their baseline probability</li>
+<li>Problem: will certainly break the CLT</li>
+</ul></li>
+</ul></li>
+<li><p>Read about outlier detection</p>
+
+<ul>
+<li>ML outlier detection?
+
+<ul>
+<li>Lots about numerical data, hard to find proportion data
+
+<ul>
+<li>Weird, because this is a classifier! and ML always does classifiers</li>
+<li>But: most ML outlier detection is supervised. Ugh.</li>
+</ul></li>
+<li>We want ultivariate and unsupervised</li>
+</ul></li>
 <li>Backward/forward model selection
 
 <ul>

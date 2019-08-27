@@ -24,8 +24,35 @@ CSS: bws.css
 
 # Learning algorithm and training
 
+- The induction mechanism has two big parts, which I'll give names
+	- **Outlier Detector** Detect whether a word is an outlier
+	- **Constraint Choooser** Determine which constraint(s) to index the word to
+
+- **Outlier Detector** possibilities
+	- Residuals method (requires a model)
+		- For every word, compare the model predictions to the real probabilities
+		- Basically, calculate residuals
+		- z-score residuals and find outliers with a threshhold (e.g. Z > 2.5 SD)
+		- Nice thing: works with ANY model afaik, takes into account different categories and contexts
+		- Bad thing: requires a ton of calculations
+	- A dumb method: univariate tails cutoff
+		+ Calculate a probability for every word
+		+ If underlying probability isn't extreme (e.g. if schwa rates are closer to 50%), the probabilities will be normally distributed
+		+ Read more on binomial distribution and central limit theorem to determine the actual conditions for the CLT (it's messy!)
+		+ cut off words that are extreme -- these will be ones that are more categorical
+		+ Nice thing: this doesn't require a model, is blindingly fast
+		+ Bad thing: doesn't take into account context, will identify categorical cases as outliers, even if they obey the grammar
+	- A weird adaptation of univariate tails cutoff
+		+ Do the method above, but grouping together words with the same violation profile
+		+ All words with the same violation profile should be normally distributed around their baseline probability
+		+ Problem: will certainly break the CLT
+
 - Read about outlier detection
 	- ML outlier detection?
+		- Lots about numerical data, hard to find proportion data
+			- Weird, because this is a classifier! and ML always does classifiers
+			- But: most ML outlier detection is supervised. Ugh.
+		- We want ultivariate and unsupervised
 	- Backward/forward model selection
 		- [helpful slides on model selection: BIC vs. AIC vs. LRT](http://sct.uab.cat/estadistica/sites/sct.uab.cat.estadistica/files/uab_june_2017.pdf)
 		- [overview of backward and forward selection](http://gerardnico.com/data_mining/stepwise_regression)
