@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Rules, features, and abbreviations</title>
+	<meta name="author" content="Brian W. Smith"/>
+	<meta name="date" content="8/20/2019"/>
+	<link type="text/css" rel="stylesheet" href="bws.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+
+<!-- Standard header. Change title in metadata -->
+
+<p><a href="401_guide.html">USC Advanced Undergraduate Phonology</a> ✳︎ Fall 2019 ✳︎ Smith</p>
+
+<hr />
+
+<div class="title">
+
+<p>Rules, features, and abbreviations</p>
+
+</div>
+
+<div class="TOC">
+
+<ul>
+<li><a href="#spebasics">SPE basics</a></li>
+<li><a href="#anatomyofarule">Anatomy of a rule</a></li>
+<li><a href="#theevaluationmetricinspe">The Evaluation Metric in SPE</a></li>
+<li><a href="#phonologicalfeatures">Phonological features</a></li>
+<li><a href="#howdowedecidewhatthefeaturesshouldbe">How do we decide what the features should be?</a></li>
+<li><a href="#abbreviatoryconventions">Abbreviatory conventions</a></li>
+<li><a href="#solution">Solution</a></li>
+</ul>
+</div>
+
+<hr />
+
+<!-- Content starts below -->
+
+<blockquote>
+<p>The &#8216;value&#8217; of a sequence of rules is the reciprocal of the number of symbols in its minimal representation.</p>
+
+<p>– Chomsky &amp; Halle (1968)</p>
+</blockquote>
+
+<h1 id="spebasics">SPE basics</h1>
+
+<ul>
+<li>Today, we&#8217;ll consider a rule-based grammar that generates mappings via rule-based derivations, as formalized in Chomsky &amp; Halle&#8217;s (1968) book <em>Sound Pattern of English</em> (SPE).</li>
+<li>A few things set the SPE research program apart from earlier work. If you&#8217;d like more discussion of these points, I recommend Goldsmith &amp; Laks 2010, which I&#8217;m paraphrasing below.
+
+<ul>
+<li>The most important difference from earlier work is that the central goal of SPE is to develop fully explicit algorithms which generate all and only the surface forms of a language.
+
+<ul>
+<li>A fully explicit algorithm is a description of a process that can be carried out in a finite amount of time on a computational device.</li>
+<li>&#8220;The rules of the grammar operate in a mechanical fashion; one may think of them as instructions that might be given to a mindless robot, incapable of exercising any judgment or imagination in their application. Any ambiguity or inexplicitness in the statement of rules must in principle be eliminated, since the receiver of the instructions is assumed to be incapable of using intelligence to fill in gaps or to correct errors.&#8221; (p. 60)</li>
+<li>When multiple analyses are possible, formal simplicity dictates the best analysis.</li>
+</ul></li>
+<li>In SPE, the surface forms of a language are generated via a sequence of phonological rules.
+
+<ul>
+<li>input ⟹ rule 1 ⟹ rule 2 … rule k ⟹ output</li>
+<li>Knowledge of a language consists of a set of rules and an ordering of the rules.</li>
+<li>As a result, a priority for the phonologist is to determine &#8211; to the greatest extent possible &#8211; the ordering of rules.</li>
+</ul></li>
+<li>In SPE, representations are linear sequences of feature bundles. They contain nothing more &#8211; not even syllables.</li>
+<li>What&#8217;s missing in SPE: compared to earlier work, there is much less of a focus on contrast, and there are fewer limitations on proposing underlying segments.
+
+<ul>
+<li>Analyses even entertain underlying segments that never appear on the surface.</li>
+<li>For example, to account for stress, SPE proposes a distinction between final /ss/ (in <em>caress</em>) and final /s/ (in <em>Paris</em>) (p. 151).</li>
+<li>The central goal is to construct a model that generates surface forms, and a UR is justified so long as it explains some data.</li>
+</ul></li>
+</ul></li>
+<li>These differences are why Chomsky and Halle explicitly avoid the terms <em>phoneme</em> and <em>allophone</em> (p. 11, p. 65).
+
+<ul>
+<li>Earlier work assumed only two levels: phonemes and allophones, but in SPE, there are many intermediate levels, which contain a mix of so-called allophones and phonemes.</li>
+<li>The earlier requirement that every phone belongs to exactly one phoneme is incompatible with many phonological patterns.</li>
+<li>Earlier work contained unordered rules that apply simultaneously, such as &#8220;Phoneme A has the variant B in context X––Y&#8221;, but in SPE rules are ordered.</li>
+<li>What&#8217;s important to remember is that <em>phoneme</em> is a very loaded term with many meanings. If we use <em>phoneme</em> to mean a sound contained in URs, it&#8217;s completely compatible with SPE.</li>
+</ul></li>
+</ul>
+
+<h1 id="anatomyofarule">Anatomy of a rule</h1>
+
+<ul>
+<li>Rewrite rules take the form X ➔ Y / A ＿ B
+
+<ul>
+<li>Transforms A<strong>X</strong>B into A<strong>Y</strong>B</li>
+</ul></li>
+<li>Rules have the following parts.
+
+<ul>
+<li>Target / input configuration / focus (X)</li>
+<li>Structural change (Y)</li>
+<li>Environment / context (A＿B)</li>
+<li>Structural description = target + environment (AXB)
+
+<ul>
+<li>Describes the structure necessary for the rule to apply</li>
+</ul></li>
+</ul></li>
+<li>The environment may contain non-local sounds.
+
+<ul>
+<li>For example: X ➔ Y / A B C ＿ D E F</li>
+<li>Transforms ABC<strong>X</strong>DEF into ABC<strong>Y</strong>DEF</li>
+</ul></li>
+<li>Here are some examples, including some with features and other conventions you may have seen (#, ]<sub>X</sub>, Ø, C, V).
+
+<ul>
+<li>[+consonantal] ➔ [–voice] / [–voice] ＿</li>
+<li>Ø ➔ [i] / C＿C</li>
+<li>[+high] ➔ Ø / [–voice] ＿ [–voice]</li>
+<li>[–sonorant] ➔ [–voice] / ＿ #</li>
+<li>[–sonorant] ➔ [–voice] ∕ ＿ ]<sub>wd</sub></li>
+<li>C ➔ [+voice] / V ＿ V</li>
+<li>[+coronal] ➔ [–voice] ∕ [–voice] ＿</li>
+</ul></li>
+<li>Properties of the focus can be written under the underscore, but this is relatively uncommon.</li>
+</ul>
+
+<figure>
+<img src="under_brackets_example.svg" alt="This rule deletes voiceless vowels between consonants" />
+<figcaption>This rule deletes voiceless vowels between consonants</figcaption>
+</figure>
+
+<h1 id="theevaluationmetricinspe">The Evaluation Metric in SPE</h1>
+
+<ul>
+<li>SPE suggested a metric for the evaluation of a system of rules, arguing that grammars with fewer symbols better capture linguistic generalizations.
+
+<ul>
+<li><strong>Fact</strong>: There&#8217;s usually (always?) more than one analysis that works for the observed data.</li>
+<li><strong>Problem</strong>: How does the language learner choose one?
+
+<ul>
+<li><strong>Conjecture</strong>: The language learner favors rules that are simple, and analyses with fewer rules; SPE defines &#8220;simpler&#8221; as &#8220;having fewer symbols.&#8221;</li>
+</ul></li>
+<li><strong>Corollary 1</strong>: Rules with fewer symbols should be more widespread among the world&#8217;s languages.</li>
+<li><strong>Corollary 2</strong>: A theory that can capture widespread rules or sets of rules with fewer symbols than it needs to capture rare rules or sets of rules is more likely to be a correct model of the learner.</li>
+<li>Note that the evaluation metric is for comparing analyses with the same empirical coverage.
+
+<ul>
+<li>A helpful aphorism attributed to Einstein: &#8220;Everything should be made as simple as possible, but not simpler.&#8221;</li>
+</ul></li>
+</ul></li>
+<li>Here is the Evaluation Metric in the words of Chomsky and Halle (1968):
+
+<ul>
+<li>&#8220;The &#8220;value&#8221; of a sequence of rules is the reciprocal of the number of symbols in its minimal representation.&#8221; (p. 334)</li>
+<li>&#8220;[…] the number of symbols in a rule is inversely related to the degree of linguistically significant generalization achieved in the rule.&#8221; (p. 335)</li>
+</ul></li>
+<li>When rules resemble each other in specific ways, this resemblance is a significant linguistic generalization which needs to be captured.</li>
+<li>To help capture generalizations and minimize the number of symbols, SPE used both <strong>phonological features</strong> and <strong>abbreviatory conventions</strong> to combine rules.</li>
+</ul>
+
+<h1 id="phonologicalfeatures">Phonological features</h1>
+
+<ul>
+<li>In SPE, URs are built of <strong>distinctive features</strong>, and this is what the grammar manipulates.</li>
+<li>/kæt/ is really just an abbreviation for a sequence of three feature bundles. We write /kæt/ to preserve our sanity, but we really mean:</li>
+</ul>
+
+<table>
+<caption style="caption-side: bottom;" id="portionsofthefeaturebundlesofkæandtusingthefeaturesetofhayes2009textbook">Portions of the feature bundles of /k/, /æ/, and /t/, using the feature set of Hayes' (2009) textbook</caption>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col />
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">k</th>
+	<th style="text-align:center;">æ</th>
+	<th style="text-align:center;">t</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">	–syllabic </td>
+	<td style="text-align:center;">	+syllabic </td>
+	<td style="text-align:center;"> –syllabic </td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–long </td>
+	<td style="text-align:center;"> –long </td>
+	<td style="text-align:center;"> –long </td>
+</tr>
+<tr>
+	<td style="text-align:center;">	+consonantal </td>
+	<td style="text-align:center;"> –consonantal </td>
+	<td style="text-align:center;"> +consonantal </td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–sonorant </td>
+	<td style="text-align:center;"> +sonorant </td>
+	<td style="text-align:center;"> –sonorant </td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–continuant </td>
+	<td style="text-align:center;"> +continuant </td>
+	<td style="text-align:center;"> –continuant </td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–delayed release </td>
+	<td style="text-align:center;"> </td>
+	<td style="text-align:center;"> 	–delayed release </td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–approximant </td>
+	<td style="text-align:center;">+approximant </td>
+	<td style="text-align:center;">–approximant </td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–tap </td>
+	<td style="text-align:center;"> –tap </td>
+	<td style="text-align:center;"> –tap </td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–trill </td>
+	<td style="text-align:center;"> –trill </td>
+	<td style="text-align:center;"> –trill </td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–nasal </td>
+	<td style="text-align:center;"> –nasal </td>
+	<td style="text-align:center;"> –nasal </td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–voice </td>
+	<td style="text-align:center;"> +voice </td>
+	<td style="text-align:center;"> –voice </td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–spread glottis </td>
+	<td style="text-align:center;"> –spread glottis </td>
+	<td style="text-align:center;"> –spread glottis</td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–constricted glottis </td>
+	<td style="text-align:center;"> –constricted glottis </td>
+	<td style="text-align:center;"> –constricted glottis</td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–labial </td>
+	<td style="text-align:center;"> –labial </td>
+	<td style="text-align:center;"> –labial</td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–round </td>
+	<td style="text-align:center;"> –round </td>
+	<td style="text-align:center;"> –round</td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–labiodental </td>
+	<td style="text-align:center;">	–labiodental </td>
+	<td style="text-align:center;">	–labiodental</td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–coronal </td>
+	<td style="text-align:center;">–coronal </td>
+	<td style="text-align:center;">+coronal</td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–lateral </td>
+	<td style="text-align:center;">–lateral </td>
+	<td style="text-align:center;">–lateral</td>
+</tr>
+<tr>
+	<td style="text-align:center;">	+dorsal </td>
+	<td style="text-align:center;">–dorsal </td>
+	<td style="text-align:center;">–dorsal</td>
+</tr>
+<tr>
+	<td style="text-align:center;">	+high	</td>
+	<td style="text-align:center;">–high</td>
+	<td style="text-align:center;"> </td>
+</tr>
+<tr>
+	<td style="text-align:center;">	–low 	</td>
+	<td style="text-align:center;">+low </td>
+	<td style="text-align:center;"> </td>
+</tr>
+<tr>
+	<td style="text-align:center;">	…	</td>
+	<td style="text-align:center;"> … </td>
+	<td style="text-align:center;"> … </td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>There is quite a bit of variation in how features are used (see Zsiga (2013) for discussion).
+
+<ul>
+<li>We&#8217;ll assume that features are binary: they are always + or –.</li>
+<li>We&#8217;ll also assume that each sound is specified for most features</li>
+<li>We&#8217;ll assume the feature set is universal and the same in every language.</li>
+<li>But not every sound is specified for every feature.
+
+<ul>
+<li>For example, most consonants don&#8217;t have features relating to tongue height like [high] or [low].</li>
+</ul></li>
+<li>Disclaimers
+
+<ul>
+<li>There are proposals with non-binary (privative) features.</li>
+<li>There are proposals in which feature specifications are as minimal as possible, and all predictable features are added by rules.
+
+<ul>
+<li>For example, in a language without voiceless sonorants, a rule might make [+sonorant] sounds [+voice].</li>
+</ul></li>
+<li>There are arguments against feature being universal.</li>
+</ul></li>
+</ul></li>
+<li>Features allow us to combine related-looking rules, by referring to <strong>natural classes</strong>, groups of sounds that pattern the same.
+
+<ul>
+<li>These two rules of English…
+
+<ul>
+<li>n ➔ n̪ / ＿ θ</li>
+<li>l ➔ l̪ / ＿ θ</li>
+</ul></li>
+<li>…can be combined into one rule:
+
+<ul>
+<li>[+coronal] ➔ [+dental] / _ [+dental]</li>
+<li>&#8220;A coronal becomes dental before a dental.&#8221;</li>
+</ul></li>
+<li>The system of rules with features has many fewer symbols and captures the insight that the same process is occuring in both n ➔ n̪ and l ➔ l̪.</li>
+</ul></li>
+<li>In SPE-style rules, e.g. [+coronal] ➔ [+dental]
+
+<ul>
+<li>Features in the focus mean: find a sound with the required features, in the required environment.</li>
+<li>Feature in the change mean: make the specifed change.</li>
+<li>The rule [+coronal] ➔ [+dental] / _ [+dental] does the following:
+
+<ul>
+<li>1. find a sound that is [+coronal]</li>
+<li>2. if the [+coronal] sound is followed by a sound that is [+dental]</li>
+<li>3. change the [dental] feature of the [+coronal] sound to [+dental]</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1 id="howdowedecidewhatthefeaturesshouldbe">How do we decide what the features should be?</h1>
+
+<ul>
+<li>Phonologists have developed a more-or-less consensus set of features, based on the processes seen in languages.</li>
+<li>This is based on the assumption that features are universal and part of Univeral Grammar.</li>
+<li>Typical desiderata:
+
+<ul>
+<li>If two sounds are contrastive in some language, they must differ in at least one feature.
+
+<ul>
+<li>E.g., if tap [ɾ] and trill [r] are separate phonemes in Spanish, we need a feature to distinguish them, like [trill].</li>
+</ul></li>
+<li>If we see a rule like {A, B, C, D} ➔ &#8230;, or &#8230; / {A, B, C, D} _, especially in more than one language, then {A,B,C,D} should be a natural class: it should be describable with a set of features.
+
+<ul>
+<li>E.g., if lots of languages nasalize a vowel before any consonant with nasal airflow (like [m, n, ŋ]), then [+nasal] seems like a good feature.</li>
+<li>Example: the feature [+strident] picks out the set of sounds that trigger epenthesis in the English plural.</li>
+</ul></li>
+<li>A feature should correspond to some phonetic property.
+
+<ul>
+<li>Most are articulatory, but they can be acoustic too.</li>
+</ul></li>
+</ul></li>
+<li>Another view is that feature systems are not innate, but emergent.
+
+<ul>
+<li>The language learner discovers his/her language&#8217;s feature set during the course of language learning via exposure to ambient language patterns.</li>
+<li>A typological survey in Mielke (2007) finds that existing feature systems can only account for about 70% of classes in natural languages.</li>
+<li>There are many &#8220;unnatural&#8221; processes that refer to disjointed sets of sounds.</li>
+</ul></li>
+</ul>
+
+<h1 id="abbreviatoryconventions">Abbreviatory conventions</h1>
+
+<ul>
+<li>Rules can also be combined using <strong>abbreviatory conventions</strong>. Here are three of the most common:</li>
+</ul>
+
+<figure>
+<img src="braces_example.svg" alt="Braces such as {X,Y} mean "either X or Y"" />
+<figcaption>Braces such as {X,Y} mean &#8220;either X or Y&#8221;</figcaption>
+</figure>
+
+<figure>
+<img src="parens_example.svg" alt="Parentheses such as (X) mean "one or zero X"" />
+<figcaption>Parentheses such as (X) mean &#8220;one or zero X&#8221;</figcaption>
+</figure>
+
+<figure>
+<img src="C0_example.svg" alt="Subscripts such as X~Y mean "Y or more Xs"" />
+<figcaption>Subscripts such as X<sub>Y</sub> mean &#8220;Y or more Xs&#8221;</figcaption>
+</figure>
+
+<ul>
+<li><p>Each of the rules above is <strong>expanded</strong> into <strong>sub-rules</strong>.</p>
+
+<ul>
+<li>The way expansion operates is not trivial, which becomes clear once you try it.</li>
+<li>For example the rule C ➔ Ø / ＿ {C, #} is evaluated like this:
+
+<ul>
+<li>First, try C ➔ Ø / ＿ C.</li>
+<li>Second, try C ➔ Ø / ＿ #.</li>
+</ul></li>
+<li>The rule C ➔ Ø / ＿ (C)C is evaluated like this:
+
+<ul>
+<li>First, try C ➔ Ø / ＿ CC.</li>
+<li>Second, if and only if the first sub-rule didn&#8217;t apply, try C ➔ Ø / ＿ C.</li>
+</ul></li>
+<li>It&#8217;s very easy to push the limits: what happens in C ➔ Ø / ＿ {C(C), #}?
+
+<ul>
+<li>In its quest for algorithmic explicitness, SPE does discuss these cases.</li>
+</ul></li>
+</ul></li>
+<li><p><p>Let&#8217;s see abbreviatory conventions in action using the following example from SPE (p. 339, adapted slightly). Consider a fictional language in which:</p>
+
+<ul>
+<li>/ i / and / j / are actualized as [ j ] before / p r j a /.</li>
+<li>/ w / and / u / are actualized as [ u ] before / p r j a /.</li>
+<li>Let&#8217;s assume this fictional language has the same consonants as English and five vowels: / i e a o u /.</li>
+</ul></p></li>
+<li><p>At first glance, it looks like we need 8 rules, but we can use braces, features, and trickery to reduce this down to <em>just one rule</em>. <a href="#solution">Solution at the bottom.</a></p></li>
+</ul>
+
+<figure>
+<img src="rule0.svg" alt="Eight rules" />
+<figcaption>Eight rules</figcaption>
+</figure>
+
+<ul>
+<li><p>Although it may seem needless complex, this is treted as a good thing: whenever we have different rules that seem to be doing the same thing, we want to be able to combine them.</p></li>
+<li><p>The fictional example is far from the most complex rule in SPE.</p>
+
+<ul>
+<li>Rules like the vowel tensing rule below have many sub-rules, capturing a complicated set of requirements for application.</li>
+<li>Without abbreviatory conventions, SPE would have many, many more rules for vowel tensing.</li>
+</ul></li>
+</ul>
+
+<figure>
+<img src="SPE_tensing_rule.png" alt="One of the five vowel tensing rules from SPE (p. 242). [FB] and [seg] are features used for boundaries." />
+<figcaption>One of the five vowel tensing rules from SPE (p. 242). [FB] and [seg] are features used for boundaries.</figcaption>
+</figure>
+
+<h1 id="solution">Solution</h1>
+
+<figure>
+<img src="rule0.svg" alt="Eight rules" />
+<figcaption>Eight rules</figcaption>
+</figure>
+
+<ul>
+<li>We can create two rules using braces.</li>
+</ul>
+
+<figure>
+<img src="rule1.svg" alt="Two rules" />
+<figcaption>Two rules</figcaption>
+</figure>
+
+<ul>
+<li>There&#8217;s still some similarities between the two rules not being captured.</li>
+<li>Braces, features, and some other conventions reveal the similarities:</li>
+</ul>
+
+<figure>
+<img src="rule2.svg" alt="Two rules with features" />
+<figcaption>Two rules with features</figcaption>
+</figure>
+
+<ul>
+<li>Adding braces gives us one rule:</li>
+</ul>
+
+<figure>
+<img src="rule3.svg" alt="One rule" />
+<figcaption>One rule</figcaption>
+</figure>
+
+</body>
+</html>
+

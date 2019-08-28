@@ -44,13 +44,13 @@
 <h1 id="learningalgorithmandtraining">Learning algorithm and training</h1>
 
 <ul>
-<li><p>The induction mechanism has two big parts, which I&#8217;ll give names</p>
+<li>The induction mechanism has two big parts, which I&#8217;ll give names
 
 <ul>
 <li><strong>Outlier Detector</strong> Detect whether a word is an outlier</li>
 <li><strong>Constraint Choooser</strong> Determine which constraint(s) to index the word to</li>
 </ul></li>
-<li><p><strong>Outlier Detector</strong> possibilities</p>
+<li><strong>Outlier Detector</strong> possibilities
 
 <ul>
 <li>Residuals method (requires a model)
@@ -65,8 +65,8 @@
 <li>A dumb method: univariate tails cutoff
 
 <ul>
-<li>Calculate a probability for every word</li>
-<li>If underlying probability isn&#8217;t extreme (e.g. if schwa rates are closer to 50%), the probabilities will be normally distributed</li>
+<li>Calculate actual probability of schwa for every word</li>
+<li>If the mean rate isn&#8217;t extreme (e.g. if schwa rates are closer to 50%), he probabilities will be normally distributed</li>
 <li>Read more on binomial distribution and central limit theorem to determine the actual conditions for the CLT (it&#8217;s messy!)</li>
 <li>cut off words that are extreme &#8211; these will be ones that are more categorical</li>
 <li>Nice thing: this doesn&#8217;t require a model, is blindingly fast</li>
@@ -76,11 +76,40 @@
 
 <ul>
 <li>Do the method above, but grouping together words with the same violation profile</li>
-<li>All words with the same violation profile should be normally distributed around their baseline probability</li>
-<li>Problem: will certainly break the CLT</li>
+<li>Idea: same violation profile = same phonological and morphological environment
+
+<ul>
+<li>Depends on constraint set, of course</li>
+<li>It&#8217;s more like: these are externally defined classes</li>
+<li>for this data set, class is isomorphic with violation profile</li>
+</ul></li>
+<li>All words with the same violation profile should be normally distributed around some baseline probability</li>
+<li>This actually works, I think, and is a great way to identify outliers</li>
+<li>An open question is whether this should be done as part of outlier detection in the learner, or just done to identify outliers before the fact</li>
+<li>This is very offline</li>
+<li>Excitingly, constraint induction means the word is no longer part of the same class. it&#8217;s now in its own class &#8211; since it now violates a constraint it didn&#8217;t violate before</li>
+<li>A weirdness: as outliers are removed, the mean and SD changes. this is a big problem in outlier removal geneally
+
+<ul>
+<li>mean is very sensitive to outliers, so the mean changes when they&#8217;re removed</li>
+</ul></li>
+<li>some words in Racine&#8217;s data simply don&#8217;t have schwa &#8211; these would need to be pruned ahead of time (idea: cut out words that don&#8217;t vary)</li>
+<li>Normal approximation of the binomial distribution
+
+<ul>
+<li><a href="https://newonlinecourses.science.psu.edu/stat414/node/179/">psu</a></li>
+<li><a href="http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Probability/BS704_Probability12.html">bu</a></li>
+<li>requirements for n: np ≥ 5  and  n(1 − p) ≥ 5</li>
+<li>If p(schwa) for some category is 0.1, we need at least 50 observations to approximate normal distribution
+
+<ul>
+<li>we need n(1&#8211;0.1)≥ 5, n ≥ (5/.9), n ≥ 5.5</li>
+<li>we need n(0.1)≥ 5, n ≥ (5/.1), n ≥ 50</li>
 </ul></li>
 </ul></li>
-<li><p>Read about outlier detection</p>
+</ul></li>
+</ul></li>
+<li>Read about outlier detection
 
 <ul>
 <li>ML outlier detection?
@@ -148,7 +177,7 @@
 <li></li>
 </ul></li>
 <li>Information Theory Models</li>
-<li>High Dimensional Outlier Detection Methods (high dimensional sparse data)</li>
+<li>High Dimensional Outlier Detection Methods (high dimensional sparse data)!</li>
 </ul></li>
 </ul></li>
 </ul>

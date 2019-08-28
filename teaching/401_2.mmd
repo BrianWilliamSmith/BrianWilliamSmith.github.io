@@ -1,0 +1,214 @@
+Title: Rules, features, and abbreviations
+Author: Brian W. Smith
+Date: 8/20/2019
+CSS: bws.css
+HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<!-- Standard header. Change title in metadata -->
+
+[USC Advanced Undergraduate Phonology](401_guide.html) ✳︎ Fall 2019 ✳︎ Smith
+***
+
+<div class="title">
+
+[%title]
+
+</div>
+
+{{TOC}}
+
+***
+
+<!-- Content starts below -->
+
+> The 'value' of a sequence of rules is the reciprocal of the number of symbols in its minimal representation.
+> 
+> – Chomsky & Halle (1968)
+
+# SPE basics
+- Today, we'll consider a rule-based grammar that generates mappings via rule-based derivations, as formalized in Chomsky & Halle's (1968) book *Sound Pattern of English* (SPE).
+- A few things set the SPE research program apart from earlier work. If you'd like more discussion of these points, I recommend Goldsmith & Laks 2010, which I'm paraphrasing below.
+	- The most important difference from earlier work is that the central goal of SPE is to develop fully explicit algorithms which generate all and only the surface forms of a language.
+		+ A fully explicit algorithm is a description of a process that can be carried out in a finite amount of time on a computational device.
+		+ "The rules of the grammar operate in a mechanical fashion; one may think of them as instructions that might be given to a mindless robot, incapable of exercising any judgment or imagination in their application. Any ambiguity or inexplicitness in the statement of rules must in principle be eliminated, since the receiver of the instructions is assumed to be incapable of using intelligence to fill in gaps or to correct errors." (p. 60)
+		+  When multiple analyses are possible, formal simplicity dictates the best analysis.
+	- In SPE, the surface forms of a language are generated via a sequence of phonological rules.
+		- input ⟹ rule 1 ⟹ rule 2 … rule k ⟹ output
+		- Knowledge of a language consists of a set of rules and an ordering of the rules.
+		- As a result, a priority for the phonologist is to determine -- to the greatest extent possible -- the ordering of rules.
+	- In SPE, representations are linear sequences of feature bundles. They contain nothing more -- not even syllables.
+	- What's missing in SPE: compared to earlier work, there is much less of a focus on contrast, and there are fewer limitations on proposing underlying segments. 
+		- Analyses even entertain underlying segments that never appear on the surface.
+		+ For example, to account for stress, SPE proposes a distinction between final /ss/ (in *caress*) and final /s/ (in *Paris*) (p. 151).
+		+ The central goal is to construct a model that generates surface forms, and a UR is justified so long as it explains some data.
+- These differences are why Chomsky and Halle explicitly avoid the terms *phoneme* and *allophone* (p. 11, p. 65).
+	+ Earlier work assumed only two levels: phonemes and allophones, but in SPE, there are many intermediate levels, which contain a mix of so-called allophones and phonemes.
+	+ The earlier requirement that every phone belongs to exactly one phoneme is incompatible with many phonological patterns.
+	- Earlier work contained unordered rules that apply simultaneously, such as "Phoneme A has the variant B in context X––Y", but in SPE rules are ordered.
+	- What's important to remember is that *phoneme* is a very loaded term with many meanings. If we use *phoneme* to mean a sound contained in URs, it's completely compatible with SPE.
+
+# Anatomy of a rule
+- Rewrite rules take the form X ➔ Y / A ＿ B
+	+ Transforms A**X**B into A**Y**B
+- Rules have the following parts.
+	- Target / input configuration / focus (X)
+	- Structural change (Y)
+	- Environment / context (A＿B)
+	- Structural description = target + environment (AXB)
+		- Describes the structure necessary for the rule to apply
+- The environment may contain non-local sounds.
+	+  For example: X ➔ Y / A B C ＿ D E F
+	+  Transforms ABC**X**DEF into ABC**Y**DEF
+- Here are some examples, including some with features and other conventions you may have seen (#, ]~X, Ø, C, V).
+	+ [+consonantal] ➔ [–voice] / [–voice] ＿
+	+ Ø ➔ [i] / C＿C
+	+ [+high] ➔ Ø / [–voice] ＿ [–voice]
+	+ [–sonorant] ➔ [–voice] / ＿ #
+	+ [–sonorant] ➔ [–voice] ∕ ＿ ]~wd
+	+ C ➔ [+voice] / V ＿ V
+	+ [+coronal] ➔ [–voice] ∕ [–voice] ＿
+- Properties of the focus can be written under the underscore, but this is relatively uncommon.
+
+![This rule deletes voiceless vowels between consonants](under_brackets_example.svg)
+	
+# The Evaluation Metric in SPE
+- SPE suggested a metric for the evaluation of a system of rules, arguing that grammars with fewer symbols better capture linguistic generalizations.
+	- **Fact**: There's usually (always?) more than one analysis that works for the observed data.
+	- **Problem**: How does the language learner choose one?
+		- **Conjecture**: The language learner favors rules that are simple, and analyses with fewer rules; SPE defines "simpler" as "having fewer symbols."
+	- **Corollary 1**: Rules with fewer symbols should be more widespread among the world's languages.
+	- **Corollary 2**: A theory that can capture widespread rules or sets of rules with fewer symbols than it needs to capture rare rules or sets of rules is more likely to be a correct model of the learner.
+	- Note that the evaluation metric is for comparing analyses with the same empirical coverage.
+		+ A helpful aphorism attributed to Einstein: "Everything should be made as simple as possible, but not simpler."
+- Here is the Evaluation Metric in the words of Chomsky and Halle (1968):
+	+ "The "value" of a sequence of rules is the reciprocal of the number of symbols in its minimal representation." (p. 334)
+	+ "[…] the number of symbols in a rule is inversely related to the degree of linguistically significant generalization achieved in the rule." (p. 335)
+- When rules resemble each other in specific ways, this resemblance is a significant linguistic generalization which needs to be captured.
+- To help capture generalizations and minimize the number of symbols, SPE used both **phonological features** and **abbreviatory conventions** to combine rules.
+
+# Phonological features
+- In SPE, URs are built of **distinctive features**, and this is what the grammar manipulates.
+- /kæt/ is really just an abbreviation for a sequence of three feature bundles. We write /kæt/ to preserve our sanity, but we really mean:
+
+|k|æ|t|
+|:---:| :---: | :---:|	 
+|	–syllabic |	+syllabic | –syllabic |
+|	–long | –long | –long |
+|	+consonantal | –consonantal | +consonantal |
+|	–sonorant | +sonorant | –sonorant |
+|	–continuant | +continuant | –continuant |
+|	–delayed release | | 	–delayed release |
+|	–approximant |+approximant |–approximant |
+|	–tap | –tap | –tap |
+|	–trill | –trill | –trill |
+|	–nasal | –nasal | –nasal |
+|	–voice | +voice | –voice |
+|	–spread glottis | –spread glottis | –spread glottis|
+|	–constricted glottis | –constricted glottis | –constricted glottis|
+|	–labial | –labial | –labial|
+|	–round | –round | –round|
+|	–labiodental |	–labiodental |	–labiodental|
+|	–coronal |–coronal |+coronal|
+|	–lateral |–lateral |–lateral|
+|	+dorsal |–dorsal |–dorsal|
+|	+high	|–high| | 
+|	–low 	|+low | |
+|	…	| … | … |
+[Portions of the feature bundles of /k/, /æ/, and /t/, using the feature set of Hayes' (2009) textbook]
+
+- There is quite a bit of variation in how features are used (see Zsiga (2013) for discussion). 
+	- We'll assume that features are binary: they are always + or –.
+	- We'll also assume that each sound is specified for most features
+	- We'll assume the feature set is universal and the same in every language.
+	- But not every sound is specified for every feature.
+		+ For example, most consonants don't have features relating to tongue height like [high] or [low].
+	- Disclaimers
+		+ There are proposals with non-binary (privative) features.
+		+ There are proposals in which feature specifications are as minimal as possible, and all predictable features are added by rules. 
+			+ For example, in a language without voiceless sonorants, a rule might make [+sonorant] sounds [+voice].
+		- There are arguments against feature being universal.
++ Features allow us to combine related-looking rules, by referring to **natural classes**, groups of sounds that pattern the same.
+	+ These two rules of English…
+		* n ➔ n̪ / ＿ θ
+		* l ➔ l̪ / ＿ θ
+	- …can be combined into one rule:
+		+ [+coronal] ➔ [+dental] / _ [+dental]
+		+ "A coronal becomes dental before a dental."
+	+ The system of rules with features has many fewer symbols and captures the insight that the same process is occuring in both n ➔ n̪ and l ➔ l̪.
+- In SPE-style rules, e.g. [+coronal] ➔ [+dental]
+	- Features in the focus mean: find a sound with the required features, in the required environment.
+	- Feature in the change mean: make the specifed change.
+	- The rule [+coronal] ➔ [+dental] / _ [+dental] does the following:
+		- 1. find a sound that is [+coronal]
+		- 2. if the [+coronal] sound is followed by a sound that is [+dental]
+		- 3. change the [dental] feature of the [+coronal] sound to [+dental]
+
+# How do we decide what the features should be?
+- Phonologists have developed a more-or-less consensus set of features, based on the processes seen in languages.
+- This is based on the assumption that features are universal and part of Univeral Grammar.
+- Typical desiderata:
+	- If two sounds are contrastive in some language, they must differ in at least one feature.
+		- E.g., if tap [ɾ] and trill [r] are separate phonemes in Spanish,  we need a feature to distinguish them, like [trill].
+	- If we see a rule like {A, B, C, D} ➔ ..., or ... / {A, B, C, D} _, especially in more than one language, then {A,B,C,D} should be a natural class: it should be describable with a set of features.
+		- E.g., if lots of languages nasalize a vowel before any consonant with nasal airflow (like [m, n, ŋ]), then [+nasal] seems like a good feature.
+		- Example: the feature [+strident] picks out the set of sounds that trigger epenthesis in the English plural.
+	- A feature should correspond to some phonetic property.
+		- Most are articulatory, but they can be acoustic too.
+- Another view is that feature systems are not innate, but emergent.
+	- The language learner discovers his/her language's feature set during the course of language learning via exposure to ambient language patterns.
+	- A typological survey in Mielke (2007) finds that existing feature systems can only account for about 70% of classes in natural languages.
+	- There are many "unnatural" processes that refer to disjointed sets of sounds.
+
+# Abbreviatory conventions
+- Rules can also be combined using **abbreviatory conventions**. Here are three of the most common:
+
+![Braces such as {X,Y} mean "either X or Y"](braces_example.svg)
+	
+![Parentheses such as (X) mean "one or zero X"](parens_example.svg)
+
+![Subscripts such as X~Y mean "Y or more Xs"](C0_example.svg)
+
+- Each of the rules above is **expanded** into **sub-rules**.
+	+ The way expansion operates is not trivial, which becomes clear once you try it.
+	+ For example the rule C ➔ Ø / ＿ {C, #} is evaluated like this:
+		+ First, try C ➔ Ø / ＿ C.
+		+ Second, try C ➔ Ø / ＿ #.
+	+ The rule C ➔ Ø / ＿ (C)C is evaluated like this:
+		+ First, try C ➔ Ø / ＿ CC.
+		+ Second, if and only if the first sub-rule didn't apply, try C ➔ Ø / ＿ C.
+	- It's very easy to push the limits: what happens in C ➔ Ø / ＿ {C(C), #}? 
+		+ In its quest for algorithmic explicitness, SPE does discuss these cases.
+
++ Let's see abbreviatory conventions in action using the following example from SPE (p. 339, adapted slightly). Consider a fictional language in which:
+	* / i / and / j / are actualized as [ j ] before / p r j a /.
+	+ / w / and / u / are actualized as [ u ] before / p r j a /.
+	+ Let's assume this fictional language has the same consonants as English and five vowels: / i e a o u /.
+- At first glance, it looks like we need 8 rules, but we can use braces, features, and trickery to reduce this down to *just one rule*.  [Solution at the bottom.][Solution]
+
+![Eight rules](rule0.svg)
+
+- Although it may seem needless complex, this is treted as a good thing: whenever we have different rules that seem to be doing the same thing, we want to be able to combine them.
+
+- The fictional example is far from the most complex rule in SPE.
+	- Rules like the vowel tensing rule below have many sub-rules, capturing a complicated set of requirements for application.
+	- Without abbreviatory conventions, SPE would have many, many more rules for vowel tensing.
+
+![One of the five vowel tensing rules from SPE (p. 242). [FB] and [seg] are features used for boundaries.](SPE_tensing_rule.png)
+
+
+# Solution
+
+![Eight rules](rule0.svg)
+
+- We can create two rules using braces.
+
+![Two rules](rule1.svg)
+	
+- There's still some similarities between the two rules not being captured. 
+- Braces, features, and some other conventions reveal the similarities:
+	
+![Two rules with features](rule2.svg)
+	
+- Adding braces gives us one rule:
+	
+![One rule](rule3.svg)

@@ -1,0 +1,36 @@
+mathmode rules
+
+
+https://www.codecogs.com/latex/eqneditor.php?lang=en-en
+
+ \mathrm{V} \rightarrow \emptyset \:\big/\: \begin{matrix}\mathrm{t}\;\underline{\hspace{.8cm}} \;\mathrm{t}\\\begin{bmatrix} \mathrm{-voi}\end{bmatrix}\end{matrix}
+
+ \mathrm{C} \rightarrow \emptyset \:\big/\:\underline{\hspace{.25cm}} \begin{Bmatrix}\mathrm{C} \\ \#\end{Bmatrix}
+
+  \mathrm{V} \rightarrow \begin{bmatrix}\mathrm{+round}\end{bmatrix} \:\big/\: \begin{matrix}\mathrm{V} \\ \begin{bmatrix}+round\end{bmatrix}\end{Bmatrix} C_0 \: \underline{\hspace{.25cm}}
+ 
+ \mathrm{V} \rightarrow \emptyset \:\big/\: \mathrm{V} (\mathrm{C}) \: \underline{\hspace{.25cm}}  (\mathrm{C})\mathrm{V}\#
+ 
+\begin{array}{l}
+ \mathrm{i} \rightarrow \mathrm{j}\:\big/\:\underline{\hspace{.25cm}}\: \mathrm{p}  \\
+ \mathrm{i} \rightarrow \mathrm{j} \:\big/\:\underline{\hspace{.25cm}}\: \mathrm{r}  \\ 
+ \mathrm{i} \rightarrow \mathrm{j} \:\big/\:\underline{\hspace{.25cm}}\: \mathrm{j}  \\
+ \mathrm{i} \rightarrow \mathrm{j} \:\big/\:\underline{\hspace{.25cm}}\: \mathrm{a}  \\
+\end{array} \hspace{2cm}
+\begin{array}{l}
+ \mathrm{w} \rightarrow \mathrm{u}\:\big/\:\underline{\hspace{.25cm}}\: \mathrm{p}  \\
+ \mathrm{w} \rightarrow \mathrm{u} \:\big/\:\underline{\hspace{.25cm}}\: \mathrm{r}  \\ 
+ \mathrm{w} \rightarrow \mathrm{u} \:\big/\:\underline{\hspace{.25cm}}\: \mathrm{j}  \\
+ \mathrm{w} \rightarrow \mathrm{u} \:\big/\:\underline{\hspace{.25cm}}\: \mathrm{a}  \\
+\end{array}
+
+\mathrm{i} \rightarrow \mathrm{j}\:\big/\underline{\hspace{.25cm}}\begin{Bmatrix} \mathrm{p} \\\mathrm{r} \\ \mathrm{j} \\ \mathrm{a} \end{Bmatrix} \hspace{2cm}
+\mathrm{w} \rightarrow \mathrm{u}\:\big/\underline{\hspace{.25cm}}\begin{Bmatrix} \mathrm{p} \\\mathrm{r} \\ \mathrm{j} \\ \mathrm{a} \end{Bmatrix}
+
+\begin{bmatrix} \mathrm{-cons}\\\mathrm{+high}\end{bmatrix} \rightarrow \begin{bmatrix}\mathrm{-syllabic} \end{bmatrix} \big/ \begin{bmatrix} \underline{\hspace{.5cm}} \\\mathrm{-back}\end{bmatrix}\begin{Bmatrix} \mathrm{p} \\\mathrm{r} \\ \mathrm{j} \\ \mathrm{a} \end{Bmatrix}
+\hspace{1cm}
+\begin{bmatrix} \mathrm{-cons}\\\mathrm{+high}\end{bmatrix} \rightarrow \begin{bmatrix}\mathrm{+syllabic} \end{bmatrix} \big/ \begin{bmatrix} \underline{\hspace{.5cm}} \\\mathrm{+back}\end{bmatrix}\begin{Bmatrix} \mathrm{p} \\\mathrm{r} \\ \mathrm{j} \\ \mathrm{a} \end{Bmatrix}
+
+4
+
+\begin{bmatrix} \mathrm{-cons} \\ \mathrm{+high} \end{bmatrix} \rightarrow$ $\begin{Bmatrix} \begin{bmatrix}\mathrm{-syllabic}\end{bmatrix} \big/ \begin{bmatrix} \underline{\hspace{.5cm}} \\ \mathrm{-back}  \end{bmatrix}  \\ \\ \begin{bmatrix}\mathrm{+syllabic}\end{bmatrix} \big/ \begin{bmatrix} \underline{\hspace{.5cm}} \\ \mathrm{+back}  \end{bmatrix} \end{Bmatrix}\begin{Bmatrix} \mathrm{p} \\ \mathrm{r} \\ \mathrm{j} \\ \mathrm{a} \end{Bmatrix}

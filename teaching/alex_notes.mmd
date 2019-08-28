@@ -17,17 +17,14 @@ CSS: bws.css
 ===
 
 # Model evaluation and goals
-
 - How to evaluate and diagnose the model
 	- What's the baseline model?
 	- What are goals? (statistical evaluation)
-
+	
 # Learning algorithm and training
-
 - The induction mechanism has two big parts, which I'll give names
 	- **Outlier Detector** Detect whether a word is an outlier
 	- **Constraint Choooser** Determine which constraint(s) to index the word to
-
 - **Outlier Detector** possibilities
 	- Residuals method (requires a model)
 		- For every word, compare the model predictions to the real probabilities
@@ -36,17 +33,33 @@ CSS: bws.css
 		- Nice thing: works with ANY model afaik, takes into account different categories and contexts
 		- Bad thing: requires a ton of calculations
 	- A dumb method: univariate tails cutoff
-		+ Calculate a probability for every word
-		+ If underlying probability isn't extreme (e.g. if schwa rates are closer to 50%), the probabilities will be normally distributed
+		+ Calculate actual probability of schwa for every word
+		+ If the mean rate isn't extreme (e.g. if schwa rates are closer to 50%), he probabilities will be normally distributed
 		+ Read more on binomial distribution and central limit theorem to determine the actual conditions for the CLT (it's messy!)
 		+ cut off words that are extreme -- these will be ones that are more categorical
 		+ Nice thing: this doesn't require a model, is blindingly fast
 		+ Bad thing: doesn't take into account context, will identify categorical cases as outliers, even if they obey the grammar
 	- A weird adaptation of univariate tails cutoff
 		+ Do the method above, but grouping together words with the same violation profile
-		+ All words with the same violation profile should be normally distributed around their baseline probability
-		+ Problem: will certainly break the CLT
-
+		+ Idea: same violation profile = same phonological and morphological environment
+			* Depends on constraint set, of course
+			* It's more like: these are externally defined classes
+			* for this data set, class is isomorphic with violation profile 
+		+ All words with the same violation profile should be normally distributed around some baseline probability
+		+ This actually works, I think, and is a great way to identify outliers
+		+ An open question is whether this should be done as part of outlier detection in the learner, or just done to identify outliers before the fact
+		+ This is very offline
+		+ Excitingly, constraint induction means the word is no longer part of the same class. it's now in its own class -- since it now violates a constraint it didn't violate before
+		+ A weirdness: as outliers are removed, the mean and SD changes. this is a big problem in outlier removal geneally
+			* mean is very sensitive to outliers, so the mean changes when they're removed
+		- some words in Racine's data simply don't have schwa -- these would need to be pruned ahead of time (idea: cut out words that don't vary)
+		- Normal approximation of the binomial distribution
+			+ [psu](https://newonlinecourses.science.psu.edu/stat414/node/179/)
+			+ [bu](http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Probability/BS704_Probability12.html)
+			+ requirements for n: np ≥ 5     and     n(1 − p) ≥ 5
+			+ If p(schwa) for some category is 0.1, we need at least 50 observations to approximate normal distribution
+				- we need n(1-0.1)≥ 5, n ≥ (5/.9), n ≥ 5.5
+				- we need n(0.1)≥ 5, n ≥ (5/.1), n ≥ 50
 - Read about outlier detection
 	- ML outlier detection?
 		- Lots about numerical data, hard to find proportion data
@@ -84,7 +97,6 @@ CSS: bws.css
 		- High Dimensional Outlier Detection Methods (high dimensional sparse data)!
 
 # Constraints and data specifically for French project
-
 - Constraint set
 	- 6 or 7 constraints is upper limit of practical
 		- *schwa
