@@ -51,14 +51,18 @@
 <h1 id="spebasics">SPE basics</h1>
 
 <ul>
-<li>Today, we&#8217;ll consider a rule-based grammar that generates mappings via rule-based derivations, as formalized in Chomsky &amp; Halle&#8217;s (1968) book <em>Sound Pattern of English</em> (SPE).</li>
+<li>SPE: Chomsky &amp; Halle&#8217;s (1968) book <em>Sound Pattern of English</em>.
+
+<ul>
+<li>Proposes a framework that generate mappings via rule-based derivations.</li>
+</ul></li>
 <li>A few things set the SPE research program apart from earlier work.<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote"><sup>1</sup></a>
 
 <ul>
-<li>The most important difference from earlier work is that the central goal of SPE is to develop <strong>fully explicit algorithms</strong> which generate all and only the surface forms of a language.
+<li>The central goal of SPE is to develop <strong>fully explicit algorithms</strong> which generate all and only the surface forms of a language.
 
 <ul>
-<li>A fully explicit algorithm is a description of a process that can be carried out in a finite amount of time on a computational device.</li>
+<li>A fully explicit algorithm is a description of a process that can be carried out in a finite amount of time on a computational device. See the quote at top.</li>
 <li>When multiple algorithms are possible, formal simplicity dictates the best one.</li>
 </ul></li>
 <li>SPE is a model of mappings between URs and SRs.The SRs of a language are generated via a sequence of phonological rules.
@@ -66,27 +70,38 @@
 <ul>
 <li>input ⟹ rule 1 ⟹ rule 2 … rule k ⟹ output</li>
 <li>A language consists of both a set of rules and an ordering of the rules.</li>
-<li>As a result, a priority for the phonologist is to determine &#8211; to the greatest extent possible &#8211; the ordering of rules.</li>
+<li>A priority for the phonologist is to determine &#8211; to the greatest extent possible &#8211; the ordering of rules.</li>
 </ul></li>
 <li>In SPE, representations are linear sequences of feature bundles. They contain nothing more &#8211; not even syllables.
 
 <ul>
-<li>Later work in phonology proposed richer represetnations, such as syllable structure, autosegmental features, metrical feet, moras, etc.</li>
+<li>Later work in phonology proposed richer representations, such as syllable structure, autosegmental features, metrical feet, moras, etc.</li>
 </ul></li>
-<li>What&#8217;s missing in SPE: compared to earlier work, there is much less of a focus on contrast, and there are fewer limitations on proposing underlying segments.
+<li>In SPE, there are fewer limitations on proposing underlying segments.
 
 <ul>
-<li>Analyses even can contain underlying segments that never appear on the surface, giving <strong>abstract URs</strong>.</li>
+<li>Analyses may contain underlying segments that never appear on the surface, giving <strong>abstract URs</strong>.</li>
 <li>For example, to account for stress, SPE proposes a distinction between final /ss/ (in <em>caress</em>) and final /s/ (in <em>Paris</em>) (p. 151).</li>
-<li>The central goal is to construct a model that generates surface forms, and a UR is justified so long as it explains some data.</li>
 </ul></li>
 </ul></li>
-<li>These differences are one reason why Chomsky and Halle explicitly avoid the terms <em>phoneme</em> and <em>allophone</em> (p. 11, p. 65).
+<li>These differences are one reason why Chomsky and Halle distance themselves from previous work and explicitly avoid the terms <em>phoneme</em> and <em>allophone</em> (p. 11, p. 65). Earlier work in the Structuralist program…
 
 <ul>
-<li>Earlier work assumed only two levels: phonemes and allophones, but in SPE, there are many intermediate levels, which contain a mix of so-called allophones and phonemes.</li>
-<li>Earlier work contains unordered rules that apply simultaneously, such as &#8220;Phoneme A has the variant B in context X––Y&#8221;.</li>
-<li>The earlier requirement that every phone belongs to exactly one phoneme is incompatible with many phonological patterns, such as positional neutralization.</li>
+<li>… uses unordered taxonomic rules such as &#8220;Phoneme A has the variant B in context X––Y&#8221;.
+
+<ul>
+<li>In SPE, rules are ordered, apply in sequence, and are defined in a formally rigorous way.</li>
+</ul></li>
+<li>… assumes only two levels: phonemes and allophones.
+
+<ul>
+<li>In SPE, there are many intermediate levels, which contain a mix of so-called allophones and phonemes.</li>
+</ul></li>
+<li>… operates under the requirement that every phone belongs to exactly one phoneme.
+
+<ul>
+<li>In SPE, the goal is to construct a model that generates the correct surface forms, and a UR is justified so long as it explains some data.</li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -308,12 +323,12 @@
 </table>
 
 <ul>
-<li>There is quite a bit of variation in how features are used (see Zsiga (2013) for discussion).
+<li>There is quite a bit of variation in how features are used (see the reading Zsiga 2013 for some examples).
 
 <ul>
-<li>We&#8217;ll assume that features are binary: they are always + or –.</li>
-<li>We&#8217;ll also assume that each sound is specified for most features</li>
 <li>We&#8217;ll assume the feature set is universal and the same in every language.</li>
+<li>We&#8217;ll assume that features are binary: they are always + or –.</li>
+<li>We&#8217;ll also assume that every sound is specified for most features.</li>
 <li>But not every sound is specified for every feature.
 
 <ul>
@@ -322,16 +337,16 @@
 <li>Disclaimers
 
 <ul>
-<li>There are proposals with non-binary (privative) features.</li>
-<li>There are proposals in which feature specifications are as minimal as possible, and all predictable features are added by rules.
+<li>There are proposals with non-binary (&#8220;privative&#8221;) features.</li>
+<li>There are proposals in which feature specifications are as minimal as possible, and all redundant/predictable features are added by rules.
 
 <ul>
 <li>For example, in a language without voiceless sonorants, a rule might make [+sonorant] sounds [+voice].</li>
 </ul></li>
-<li>There are arguments against feature being universal.</li>
+<li>There are arguments against feature being universal (more on this below).</li>
 </ul></li>
 </ul></li>
-<li>Features allow us to combine related-looking rules, by referring to <strong>natural classes</strong>, groups of sounds that pattern the same.
+<li>Features allow us to combine related-looking rules by referring to <strong>natural classes</strong>, groups of sounds that share a set of features.
 
 <ul>
 <li>These two rules of English…
@@ -367,7 +382,7 @@
 
 <ul>
 <li>Phonologists have developed a more-or-less consensus set of features, based on the processes seen in languages.</li>
-<li>This is based on the assumption that features are universal and part of Univeral Grammar.</li>
+<li>This is based on the assumption that features are innate and universal.</li>
 <li>Typical desiderata:
 
 <ul>
@@ -380,7 +395,7 @@
 
 <ul>
 <li>E.g., if lots of languages nasalize a vowel before any consonant with nasal airflow (like [m, n, ŋ]), then [+nasal] seems like a good feature.</li>
-<li>Example: the feature [+strident] picks out the set of sounds that trigger epenthesis in the English plural.</li>
+<li>E.g., the feature [+strident] picks out the set of sounds that trigger epenthesis in the English plural [s, z, ʧ, ʤ, ʃ, ʒ]. Without [strident], these sounds wouldn&#8217;t form a natural class.</li>
 </ul></li>
 <li>A feature should correspond to some phonetic property.
 
@@ -388,12 +403,22 @@
 <li>Most are articulatory, but they can be acoustic too.</li>
 </ul></li>
 </ul></li>
-<li>Another view is that feature systems are not innate, but emergent.
+<li>A different view is that feature systems are neither innate nor universal.
 
 <ul>
 <li>The language learner discovers his/her language&#8217;s feature set during the course of language learning via exposure to ambient language patterns.</li>
+<li>As a result, a sound shared by two languages could have different features in each language.</li>
 <li>A typological survey in Mielke (2007) finds that existing feature systems can only account for about 70% of classes in natural languages.</li>
-<li>There are many &#8220;unnatural&#8221; processes that refer to disjointed sets of sounds.</li>
+<li>There are many &#8220;unnatural&#8221; processes that refer to disjointed sets of sounds.
+
+<ul>
+<li>For example, consider this pattern from Kolami (Mielke 2011, citing Emenau 1961)
+
+<ul>
+<li>Allomorph [-l] after /ʈ ɖ n̪ i iː e eː a aː /</li>
+<li>Allomorph [-ul] after /p t̪ k d̪ g s z m ŋ j/</li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 
