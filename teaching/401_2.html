@@ -27,7 +27,7 @@
 <ul>
 <li><a href="#spebasics">SPE basics</a></li>
 <li><a href="#anatomyofanspe-stylerule">Anatomy of an SPE-style rule</a></li>
-<li><a href="#theevaluationmetricinspe">The Evaluation Metric in SPE</a></li>
+<li><a href="#theevaluationprocedureinspe">The evaluation procedure in SPE</a></li>
 <li><a href="#phonologicalfeatures">Phonological features</a></li>
 <li><a href="#howdowedecidewhatthefeaturesshouldbe">How do we decide what the features should be?</a></li>
 <li><a href="#abbreviatoryconventions">Abbreviatory conventions</a></li>
@@ -43,7 +43,7 @@
 <!-- Content starts below -->
 
 <blockquote>
-<p>&#8220;The rules of the grammar operate in a mechanical fashion; one may think of them as instructions that might be given to a mindless robot, incapable of exercising any judgment or imagination in their application. Any ambiguity or inexplicitness in the statement of rules must in principle be eliminated, since the receiver of the instructions is assumed to be incapable of using intelligence to fill in gaps or to correct errors.&#8221;</p>
+<p>The rules of the grammar operate in a mechanical fashion; one may think of them as instructions that might be given to a mindless robot, incapable of exercising any judgment or imagination in their application. Any ambiguity or inexplicitness in the statement of rules must in principle be eliminated, since the receiver of the instructions is assumed to be incapable of using intelligence to fill in gaps or to correct errors.</p>
 
 <p>– Chomsky &amp; Halle (1968) (p. 60)</p>
 </blockquote>
@@ -140,7 +140,7 @@
 <figcaption>This rule deletes voiceless vowels between consonants</figcaption>
 </figure>
 
-<h1 id="theevaluationmetricinspe">The Evaluation Metric in SPE</h1>
+<h1 id="theevaluationprocedureinspe">The evaluation procedure in SPE</h1>
 
 <ul>
 <li>SPE suggested a metric for the evaluation of a system of rules, arguing that grammars with fewer symbols better capture linguistic generalizations.
@@ -154,13 +154,13 @@
 </ul></li>
 <li><strong>Corollary 1</strong>: Rules with fewer symbols should be more widespread among the world&#8217;s languages.</li>
 <li><strong>Corollary 2</strong>: A theory that can capture widespread rules or sets of rules with fewer symbols than it needs to capture rare rules or sets of rules is more likely to be a correct model of the learner.</li>
-<li>Note that the evaluation metric is for comparing analyses with the same empirical coverage.
+<li>Note that the evaluation procedure is for comparing analyses with the same empirical coverage.
 
 <ul>
 <li>A helpful aphorism attributed to Einstein: &#8220;Everything should be made as simple as possible, but not simpler.&#8221;</li>
 </ul></li>
 </ul></li>
-<li>Here is the Evaluation Metric in the words of Chomsky and Halle (1968):
+<li>Here is the evaluation procedure in the words of Chomsky and Halle (1968):
 
 <ul>
 <li>&#8220;The &#8220;value&#8221; of a sequence of rules is the reciprocal of the number of symbols in its minimal representation.&#8221; (p. 334)</li>
@@ -425,7 +425,7 @@
 </figure>
 
 <ul>
-<li><p>Each of the rules above is <strong>expanded</strong> into <strong>sub-rules</strong> in pre-defined ways.</p>
+<li>Each of the rules above is <strong>expanded</strong> into <strong>sub-rules</strong> in pre-defined ways.
 
 <ul>
 <li>The rule C ➔ Ø / ＿ {C, #}
@@ -453,7 +453,7 @@
 <li>The rule C ➔ [αnasal] / ＿ [αnasal]
 
 <ul>
-<li>Apply these two sub-rules simulatenously:
+<li>Apply these two sub-rules simultenously:
 
 <ul>
 <li>C ➔ [+nasal] / ＿ [+nasal]</li>
@@ -463,7 +463,7 @@
 <li>The rule C ➔ [αnasal] / ＿ [αnasal]
 
 <ul>
-<li>Apply these sub-rules simulatenously:
+<li>Apply these sub-rules simultenously:
 
 <ul>
 <li>C ➔ [+nasal] / ＿ [+nasal]</li>
@@ -473,21 +473,24 @@
 <li>The (strange) rule C ➔ [αnasal, βvoice] / ＿ [αnasal, –βvoice]
 
 <ul>
-<li>Apply these sub-rules simulatenously:</li>
+<li>Apply these sub-rules simultenously:
+
+<ul>
 <li>ɑ+, β+: C ➔ [+nasal, +voice] / ＿ [+nasal, –voice]</li>
 <li>ɑ–, β+: C ➔ [–nasal, +voice] / ＿ [–nasal, –voice]</li>
 <li>ɑ+, β–: C ➔ [+nasal, –voice] / ＿ [+nasal, +voice]</li>
 <li>ɑ–, β–: C ➔ [–nasal, –voice] / ＿ [–nasal, +voice]</li>
 </ul></li>
 </ul></li>
-<li><p><p>Let&#8217;s see abbreviatory conventions in action using the following example from SPE (p. 339, adapted slightly). Consider a fictional language in which:</p>
+</ul></li>
+<li>Let&#8217;s see abbreviatory conventions in action using the following example from SPE (p. 339, adapted slightly). Consider a fictional language in which:
 
 <ul>
 <li>/ i / and / j / are actualized as [ j ] before / p r j a /.</li>
 <li>/ w / and / u / are actualized as [ u ] before / p r j a /.</li>
 <li>Let&#8217;s assume this fictional language has the same consonants as English and five vowels: / i e a o u /.</li>
-</ul></p></li>
-<li><p>At first glance, it looks like we need 8 rules, but we can use braces, features, and trickery to reduce this down to <em>just one rule</em>. <a href="#solution">Solution at the bottom.</a></p></li>
+</ul></li>
+<li>At first glance, it looks like we need 8 rules, but we can use braces, features, and trickery to reduce this down to <em>just one rule</em>. <a href="#solution">Solution at the bottom.</a></li>
 </ul>
 
 <figure>
@@ -496,7 +499,7 @@
 </figure>
 
 <ul>
-<li>Although it may seem needlessly complex, this is treted as a good thing: whenever we have different rules that seem to be doing the same thing, we want to be able to combine them.</li>
+<li>Although it may seem needlessly complex, this is really a good thing: whenever we have different rules that seem to be doing the same thing, we want to be able to combine them.</li>
 </ul>
 
 <h1 id="arealexamplefromspe">A real example from SPE</h1>
@@ -615,7 +618,7 @@
 <li>As a theory of possible phonological alternations, SPE is possibly too powerful.
 
 <ul>
-<li>Consider the prediction from <a href="#theevaluationmetricinspe">above</a>: Rules with fewer symbols should be more widespread among the world’s languages.</li>
+<li>Consider the prediction from <a href="#theevaluationprocedureinspe">above</a>: Rules with fewer symbols should be more widespread among the world’s languages.</li>
 <li>It&#8217;s quite easy to write two rules with the same number of symbols, where the process captured by one rule is very common and the processed by the other rule is very rare.
 
 <ul>
@@ -650,7 +653,7 @@
 <li>environment</li>
 <li>structural description</li>
 </ul></li>
-<li>the Evaluation Metric</li>
+<li>the evaluation procedure in SPE</li>
 <li>abbreviatory conventions (), {}, C<sub>n</sub>, Greek letter variables</li>
 </ul>
 

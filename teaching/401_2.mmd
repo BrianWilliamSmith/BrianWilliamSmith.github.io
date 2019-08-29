@@ -21,7 +21,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 
 <!-- Content starts below -->
 
-> "The rules of the grammar operate in a mechanical fashion; one may think of them as instructions that might be given to a mindless robot, incapable of exercising any judgment or imagination in their application. Any ambiguity or inexplicitness in the statement of rules must in principle be eliminated, since the receiver of the instructions is assumed to be incapable of using intelligence to fill in gaps or to correct errors."
+>The rules of the grammar operate in a mechanical fashion; one may think of them as instructions that might be given to a mindless robot, incapable of exercising any judgment or imagination in their application. Any ambiguity or inexplicitness in the statement of rules must in principle be eliminated, since the receiver of the instructions is assumed to be incapable of using intelligence to fill in gaps or to correct errors.
 > 
 > – Chomsky & Halle (1968) (p. 60)
 
@@ -72,16 +72,16 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 
 ![This rule deletes voiceless vowels between consonants](under_brackets_example.svg)
 	
-# The Evaluation Metric in SPE
+# The evaluation procedure in SPE
 - SPE suggested a metric for the evaluation of a system of rules, arguing that grammars with fewer symbols better capture linguistic generalizations.
 	- **Fact**: There's usually (always?) more than one analysis that works for the observed data.
 	- **Problem**: How does the language learner choose one?
 		- **Conjecture**: The language learner favors rules that are simple, and analyses with fewer rules; SPE defines "simpler" as "having fewer symbols."
 	- **Corollary 1**: Rules with fewer symbols should be more widespread among the world's languages.
 	- **Corollary 2**: A theory that can capture widespread rules or sets of rules with fewer symbols than it needs to capture rare rules or sets of rules is more likely to be a correct model of the learner.
-	- Note that the evaluation metric is for comparing analyses with the same empirical coverage.
+	- Note that the evaluation procedure is for comparing analyses with the same empirical coverage.
 		+ A helpful aphorism attributed to Einstein: "Everything should be made as simple as possible, but not simpler."
-- Here is the Evaluation Metric in the words of Chomsky and Halle (1968):
+- Here is the evaluation procedure in the words of Chomsky and Halle (1968):
 	+ "The "value" of a sequence of rules is the reciprocal of the number of symbols in its minimal representation." (p. 334)
 	+ "[…] the number of symbols in a rule is inversely related to the degree of linguistically significant generalization achieved in the rule." (p. 335)
 - When rules resemble each other in specific ways, this resemblance is a significant linguistic generalization which needs to be captured.
@@ -186,21 +186,19 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 		- If it didn't apply, try C ➔ Ø / C ＿
 		- If it didn't apply, try C ➔ Ø / ＿
 	- The rule C ➔ [αnasal] / ＿ [αnasal]
-		+ Apply these two sub-rules simulatenously:
+		+ Apply these two sub-rules simultenously:
 			* C ➔ [+nasal] / ＿ [+nasal]
 			* C ➔ [–nasal] / ＿ [–nasal]
 	- The rule C ➔ [αnasal] / ＿ [αnasal] 
-		+ Apply these sub-rules simulatenously:
+		+ Apply these sub-rules simultenously:
 			* C ➔ [+nasal] / ＿ [+nasal]
 			* C ➔ [–nasal] / ＿ [–nasal]
 	- The (strange) rule C ➔ [αnasal, βvoice] / ＿ [αnasal, –βvoice] 
-		+ Apply these sub-rules simulatenously:
-		+ ɑ+, β+: C ➔ [+nasal, +voice] / ＿ [+nasal, –voice] 
-		+ ɑ–, β+: C ➔ [–nasal, +voice] / ＿ [–nasal, –voice]
-		+ ɑ+, β–: C ➔ [+nasal, –voice] / ＿ [+nasal, +voice]
-		+ ɑ–, β–: C ➔ [–nasal, –voice] / ＿ [–nasal, +voice]
-
-
+		+ Apply these sub-rules simultenously:
+			+ ɑ+, β+: C ➔ [+nasal, +voice] / ＿ [+nasal, –voice] 
+			+ ɑ–, β+: C ➔ [–nasal, +voice] / ＿ [–nasal, –voice]
+			+ ɑ+, β–: C ➔ [+nasal, –voice] / ＿ [+nasal, +voice]
+			+ ɑ–, β–: C ➔ [–nasal, –voice] / ＿ [–nasal, +voice]
 + Let's see abbreviatory conventions in action using the following example from SPE (p. 339, adapted slightly). Consider a fictional language in which:
 	* / i / and / j / are actualized as [ j ] before / p r j a /.
 	+ / w / and / u / are actualized as [ u ] before / p r j a /.
@@ -209,7 +207,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 
 ![Eight rules](rule0.svg)
 
-- Although it may seem needlessly complex, this is treted as a good thing: whenever we have different rules that seem to be doing the same thing, we want to be able to combine them.
+- Although it may seem needlessly complex, this is really a good thing: whenever we have different rules that seem to be doing the same thing, we want to be able to combine them.
 
 # A real example from SPE
 
@@ -243,7 +241,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 # Some potential problems
 
 - As a theory of possible phonological alternations, SPE is possibly too powerful.
-	- Consider the prediction from [above][theevaluationmetricinspe]: Rules with fewer symbols should be more widespread among the world’s languages.
+	- Consider the prediction from [above][theevaluationprocedureinspe]: Rules with fewer symbols should be more widespread among the world’s languages.
 	- It's quite easy to write two rules with the same number of symbols, where the process captured by one rule is very common and the processed by the other rule is very rare.
 		- For example: word-final devoicing (very common across the world's languages) and word-final voicing (very rare across the world's languages).
 	+ In fact, nearly any phonological process can be generated using rules. 
@@ -262,7 +260,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 	- structural change
 	+ environment
 	+ structural description
-- the Evaluation Metric
+- the evaluation procedure in SPE
 + abbreviatory conventions \(\), \{\}, C~n, Greek letter variables
 
 # Solution
