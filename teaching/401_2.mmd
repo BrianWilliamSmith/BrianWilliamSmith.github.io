@@ -21,40 +21,40 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 
 <!-- Content starts below -->
 
-> The 'value' of a sequence of rules is the reciprocal of the number of symbols in its minimal representation.
+> "The rules of the grammar operate in a mechanical fashion; one may think of them as instructions that might be given to a mindless robot, incapable of exercising any judgment or imagination in their application. Any ambiguity or inexplicitness in the statement of rules must in principle be eliminated, since the receiver of the instructions is assumed to be incapable of using intelligence to fill in gaps or to correct errors."
 > 
-> – Chomsky & Halle (1968)
+> – Chomsky & Halle (1968) (p. 60)
 
 # SPE basics
 - Today, we'll consider a rule-based grammar that generates mappings via rule-based derivations, as formalized in Chomsky & Halle's (1968) book *Sound Pattern of English* (SPE).
-- A few things set the SPE research program apart from earlier work. If you'd like more discussion of these points, I recommend Goldsmith & Laks 2010, which I'm paraphrasing below.
-	- The most important difference from earlier work is that the central goal of SPE is to develop fully explicit algorithms which generate all and only the surface forms of a language.
-		+ A fully explicit algorithm is a description of a process that can be carried out in a finite amount of time on a computational device.
-		+ "The rules of the grammar operate in a mechanical fashion; one may think of them as instructions that might be given to a mindless robot, incapable of exercising any judgment or imagination in their application. Any ambiguity or inexplicitness in the statement of rules must in principle be eliminated, since the receiver of the instructions is assumed to be incapable of using intelligence to fill in gaps or to correct errors." (p. 60)
-		+  When multiple analyses are possible, formal simplicity dictates the best analysis.
-	- In SPE, the surface forms of a language are generated via a sequence of phonological rules.
+- A few things set the SPE research program apart from earlier work.[^goldsmithlaks]
+	- The most important difference from earlier work is that the central goal of SPE is to develop **fully explicit algorithms** which generate all and only the surface forms of a language.
+		- A fully explicit algorithm is a description of a process that can be carried out in a finite amount of time on a computational device.
+		+ When multiple algorithms are possible, formal simplicity dictates the best one.
+	+ SPE is a model of mappings between URs and SRs.The SRs of a language are generated via a sequence of phonological rules.
 		- input ⟹ rule 1 ⟹ rule 2 … rule k ⟹ output
-		- Knowledge of a language consists of a set of rules and an ordering of the rules.
+		- A language consists of both a set of rules and an ordering of the rules.
 		- As a result, a priority for the phonologist is to determine -- to the greatest extent possible -- the ordering of rules.
 	- In SPE, representations are linear sequences of feature bundles. They contain nothing more -- not even syllables.
+		+ Later work in phonology proposed richer represetnations, such as syllable structure, autosegmental features, metrical feet, moras, etc.
 	- What's missing in SPE: compared to earlier work, there is much less of a focus on contrast, and there are fewer limitations on proposing underlying segments. 
-		- Analyses even entertain underlying segments that never appear on the surface.
+		- Analyses even can contain underlying segments that never appear on the surface, giving **abstract URs**.
 		+ For example, to account for stress, SPE proposes a distinction between final /ss/ (in *caress*) and final /s/ (in *Paris*) (p. 151).
 		+ The central goal is to construct a model that generates surface forms, and a UR is justified so long as it explains some data.
-- These differences are why Chomsky and Halle explicitly avoid the terms *phoneme* and *allophone* (p. 11, p. 65).
+- These differences are one reason why Chomsky and Halle explicitly avoid the terms *phoneme* and *allophone* (p. 11, p. 65).
 	+ Earlier work assumed only two levels: phonemes and allophones, but in SPE, there are many intermediate levels, which contain a mix of so-called allophones and phonemes.
-	+ The earlier requirement that every phone belongs to exactly one phoneme is incompatible with many phonological patterns.
-	- Earlier work contained unordered rules that apply simultaneously, such as "Phoneme A has the variant B in context X––Y", but in SPE rules are ordered.
+	+ The earlier requirement that every phone belongs to exactly one phoneme is incompatible with many phonological patterns, such as positional neutralization.
+	- Earlier work contains unordered rules that apply simultaneously, such as "Phoneme A has the variant B in context X––Y", but in SPE rules are ordered and generate mappings.
 	- What's important to remember is that *phoneme* is a very loaded term with many meanings. If we use *phoneme* to mean a sound contained in URs, it's completely compatible with SPE.
 
-# Anatomy of a rule
+# Anatomy of an SPE-style rule
 - Rewrite rules take the form X ➔ Y / A ＿ B
 	+ Transforms A**X**B into A**Y**B
 - Rules have the following parts.
-	- Target / input configuration / focus (X)
+	- Target / focus (X)
 	- Structural change (Y)
-	- Environment / context (A＿B)
-	- Structural description = target + environment (AXB)
+	- Context (A＿B)
+	- Structural description (AXB)
 		- Describes the structure necessary for the rule to apply
 - The environment may contain non-local sounds.
 	+  For example: X ➔ Y / A B C ＿ D E F
@@ -68,6 +68,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 	+ C ➔ [+voice] / V ＿ V
 	+ [+coronal] ➔ [–voice] ∕ [–voice] ＿
 - Properties of the focus can be written under the underscore, but this is relatively uncommon.
+	+ This is usually done so abbreviatory conventions can be used to combine parts of the rule.
 
 ![This rule deletes voiceless vowels between consonants](under_brackets_example.svg)
 	
@@ -160,24 +161,45 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 	- There are many "unnatural" processes that refer to disjointed sets of sounds.
 
 # Abbreviatory conventions
-- Rules can also be combined using **abbreviatory conventions**. Here are three of the most common:
+- Rules can also be combined using **abbreviatory conventions**. Here are four of the most common:
 
 ![Braces such as {X,Y} mean "either X or Y"](braces_example.svg)
 	
 ![Parentheses such as (X) mean "one or zero X"](parens_example.svg)
 
-![Subscripts such as X~Y mean "Y or more Xs"](C0_example.svg)
+![Subscripts such as X~Y mean "Y or more Xs". You can provide an upper limit with a superscript.](C0_example.svg)
 
-- Each of the rules above is **expanded** into **sub-rules**.
-	+ The way expansion operates is not trivial, which becomes clear once you try it.
-	+ For example the rule C ➔ Ø / ＿ {C, #} is evaluated like this:
+![Lowercase greek letters are variables that must match](alpha_example.svg)
+
+- Each of the rules above is **expanded** into **sub-rules** in pre-defined ways.
+	+ The rule C ➔ Ø / ＿ {C, #}
 		+ First, try C ➔ Ø / ＿ C.
 		+ Second, try C ➔ Ø / ＿ #.
-	+ The rule C ➔ Ø / ＿ (C)C is evaluated like this:
+	+ The rule C ➔ Ø / ＿ (C)C
 		+ First, try C ➔ Ø / ＿ CC.
 		+ Second, if and only if the first sub-rule didn't apply, try C ➔ Ø / ＿ C.
-	- It's very easy to push the limits: what happens in C ➔ Ø / ＿ {C(C), #}? 
-		+ In its quest for algorithmic explicitness, SPE does discuss these cases.
+	+ The rule C ➔ Ø / ＿ C<sup>5</sup><sub style='position: relative; left: -.5em;'>0</sub>
+		- First, try C ➔ Ø / CCCCC ＿
+		- If it didn't apply, try C ➔ Ø / CCCC ＿
+		- If it didn't apply, try C ➔ Ø / CCC ＿
+		- If it didn't apply, try C ➔ Ø / CC ＿
+		- If it didn't apply, try C ➔ Ø / C ＿
+		- If it didn't apply, try C ➔ Ø / ＿
+	- The rule C ➔ [αnasal] / ＿ [αnasal]
+		+ Apply these two sub-rules simulatenously:
+			* C ➔ [+nasal] / ＿ [+nasal]
+			* C ➔ [–nasal] / ＿ [–nasal]
+	- The rule C ➔ [αnasal] / ＿ [αnasal] 
+		+ Apply these sub-rules simulatenously:
+			* C ➔ [+nasal] / ＿ [+nasal]
+			* C ➔ [–nasal] / ＿ [–nasal]
+	- The (strange) rule C ➔ [αnasal, βvoice] / ＿ [αnasal, –βvoice] 
+		+ Apply these sub-rules simulatenously:
+		+ ɑ+, β+: C ➔ [+nasal, +voice] / ＿ [+nasal, –voice] 
+		+ ɑ–, β+: C ➔ [–nasal, +voice] / ＿ [–nasal, –voice]
+		+ ɑ+, β–: C ➔ [+nasal, –voice] / ＿ [+nasal, +voice]
+		+ ɑ–, β–: C ➔ [–nasal, –voice] / ＿ [–nasal, +voice]
+
 
 + Let's see abbreviatory conventions in action using the following example from SPE (p. 339, adapted slightly). Consider a fictional language in which:
 	* / i / and / j / are actualized as [ j ] before / p r j a /.
@@ -187,7 +209,9 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 
 ![Eight rules](rule0.svg)
 
-- Although it may seem needless complex, this is treted as a good thing: whenever we have different rules that seem to be doing the same thing, we want to be able to combine them.
+- Although it may seem needlessly complex, this is treted as a good thing: whenever we have different rules that seem to be doing the same thing, we want to be able to combine them.
+
+# A real example from SPE
 
 - The fictional example is far from the most complex rule in SPE.
 	- Rules like the vowel tensing rule below have many sub-rules, capturing a complicated set of requirements for application.
@@ -195,6 +219,51 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 
 ![One of the five vowel tensing rules from SPE (p. 242). [FB] and [seg] are features used for boundaries.](SPE_tensing_rule.png)
 
+![Just the top part (rule 30 in SPE Ch. 3)](SPE_tensing_simple.png)
+
+- The top part of this rule expands into the sub-rules:
+	+ Sub-rule #1: V ➔ [+tense] / ＿ V
+	+ Sub-rule #2a: [+low, +stress] ➔ [+tense] / _ #
+	+ Sub-rule #2b: [–low, +stress] ➔ [+tense] / _ #
+	+ Sub-rule #2c: [–low, –stress] ➔ [+tense] / _ #
+
+- Let's think about the predictions of this rule for the vowels below.
+
+|Vowel|Tense|Low| |Vowel|Tense|Low|
+|:---:|:---:| :---: |:---:|:---:|:---:|:---:|
+|i	|	+| –| |u	|	+| –|
+|ɪ	|	–| –| |ʊ	|	–| –|
+|e	|	+| –| |o	|	+| –|
+|ɛ	|	–| –| |	|	 |  |
+|æ	|	–| +| |ɑ	|	+| +|
+[English vowel features]
+
+- After tensing applies, another rule reduces unstressed lax vowels to [ə].
+
+# Some potential problems
+
+- As a theory of possible phonological alternations, SPE is possibly too powerful.
+	- Consider the prediction from [above][theevaluationmetricinspe]: Rules with fewer symbols should be more widespread among the world’s languages.
+	- It's quite easy to write two rules with the same number of symbols, where the process captured by one rule is very common and the processed by the other rule is very rare.
+		- For example: word-final devoicing (very common across the world's languages) and word-final voicing (very rare across the world's languages).
+	+ In fact, nearly any phonological process can be generated using rules. 
+- There are sometime related-looking rules that can't be combined using abbreviatory conventions.
+	+ We'll consider these next when we talk about conspiracies.
+
+# Recap
+- explicit algorithm
+- rules and rule ordering
+- distinctive features
+	- natural class
+	- desiderata for fetaures
+- abstract URs
+- rule formalism
+	+ target / focus
+	- structural change
+	+ environment
+	+ structural description
+- the Evaluation Metric
++ abbreviatory conventions \(\), \{\}, C~n, Greek letter variables
 
 # Solution
 
@@ -212,3 +281,6 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 - Adding braces gives us one rule:
 	
 ![One rule](rule3.svg)
+
+
+[^goldsmithlaks]: If you'd like to learn more about the history, I recommend Goldsmith & Laks' (2012) Chapter "Generative Phonology: its origins, its principles, and its successors" in the *Cambridge History of Linguistics*. That is what I'm paraphrasing below.

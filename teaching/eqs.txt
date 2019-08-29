@@ -5,9 +5,13 @@ https://www.codecogs.com/latex/eqneditor.php?lang=en-en
 
  \mathrm{V} \rightarrow \emptyset \:\big/\: \begin{matrix}\mathrm{t}\;\underline{\hspace{.8cm}} \;\mathrm{t}\\\begin{bmatrix} \mathrm{-voi}\end{bmatrix}\end{matrix}
 
+ \mathrm{V} \rightarrow \emptyset \:\big/\: \begin{matrix}\mathrm{t}\;\underline{\hspace{.8cm}} \;\mathrm{t}\\\begin{bmatrix} \mathrm{-voi}\end{bmatrix}\end{matrix}
+
  \mathrm{C} \rightarrow \emptyset \:\big/\:\underline{\hspace{.25cm}} \begin{Bmatrix}\mathrm{C} \\ \#\end{Bmatrix}
 
-  \mathrm{V} \rightarrow \begin{bmatrix}\mathrm{+round}\end{bmatrix} \:\big/\: \begin{matrix}\mathrm{V} \\ \begin{bmatrix}+round\end{bmatrix}\end{Bmatrix} C_0 \: \underline{\hspace{.25cm}}
+ \mathrm{C} \rightarrow \begin{bmatrix}\alpha\mathrm{nasal}\end{bmatrix} \:\big/\: \underline{\hspace{.25cm}}\:\begin{bmatrix}\alpha\mathrm{nasal}\end{bmatrix}
+
+  \mathrm{V} \rightarrow \begin{bmatrix}\mathrm{+round}\end{bmatrix} \:\big/\: \begin{matrix}\mathrm{V} \\ \begin{bmatrix}+\mathrm{round}\end{bmatrix}\end{matrix}\mathrm{C}_0 \: \underline{\hspace{.25cm}}
  
  \mathrm{V} \rightarrow \emptyset \:\big/\: \mathrm{V} (\mathrm{C}) \: \underline{\hspace{.25cm}}  (\mathrm{C})\mathrm{V}\#
  

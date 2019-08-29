@@ -26,11 +26,14 @@
 
 <ul>
 <li><a href="#spebasics">SPE basics</a></li>
-<li><a href="#anatomyofarule">Anatomy of a rule</a></li>
+<li><a href="#anatomyofanspe-stylerule">Anatomy of an SPE-style rule</a></li>
 <li><a href="#theevaluationmetricinspe">The Evaluation Metric in SPE</a></li>
 <li><a href="#phonologicalfeatures">Phonological features</a></li>
 <li><a href="#howdowedecidewhatthefeaturesshouldbe">How do we decide what the features should be?</a></li>
 <li><a href="#abbreviatoryconventions">Abbreviatory conventions</a></li>
+<li><a href="#arealexamplefromspe">A real example from SPE</a></li>
+<li><a href="#somepotentialproblems">Some potential problems</a></li>
+<li><a href="#recap">Recap</a></li>
 <li><a href="#solution">Solution</a></li>
 </ul>
 </div>
@@ -40,52 +43,55 @@
 <!-- Content starts below -->
 
 <blockquote>
-<p>The &#8216;value&#8217; of a sequence of rules is the reciprocal of the number of symbols in its minimal representation.</p>
+<p>&#8220;The rules of the grammar operate in a mechanical fashion; one may think of them as instructions that might be given to a mindless robot, incapable of exercising any judgment or imagination in their application. Any ambiguity or inexplicitness in the statement of rules must in principle be eliminated, since the receiver of the instructions is assumed to be incapable of using intelligence to fill in gaps or to correct errors.&#8221;</p>
 
-<p>– Chomsky &amp; Halle (1968)</p>
+<p>– Chomsky &amp; Halle (1968) (p. 60)</p>
 </blockquote>
 
 <h1 id="spebasics">SPE basics</h1>
 
 <ul>
 <li>Today, we&#8217;ll consider a rule-based grammar that generates mappings via rule-based derivations, as formalized in Chomsky &amp; Halle&#8217;s (1968) book <em>Sound Pattern of English</em> (SPE).</li>
-<li>A few things set the SPE research program apart from earlier work. If you&#8217;d like more discussion of these points, I recommend Goldsmith &amp; Laks 2010, which I&#8217;m paraphrasing below.
+<li>A few things set the SPE research program apart from earlier work.<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote"><sup>1</sup></a>
 
 <ul>
-<li>The most important difference from earlier work is that the central goal of SPE is to develop fully explicit algorithms which generate all and only the surface forms of a language.
+<li>The most important difference from earlier work is that the central goal of SPE is to develop <strong>fully explicit algorithms</strong> which generate all and only the surface forms of a language.
 
 <ul>
 <li>A fully explicit algorithm is a description of a process that can be carried out in a finite amount of time on a computational device.</li>
-<li>&#8220;The rules of the grammar operate in a mechanical fashion; one may think of them as instructions that might be given to a mindless robot, incapable of exercising any judgment or imagination in their application. Any ambiguity or inexplicitness in the statement of rules must in principle be eliminated, since the receiver of the instructions is assumed to be incapable of using intelligence to fill in gaps or to correct errors.&#8221; (p. 60)</li>
-<li>When multiple analyses are possible, formal simplicity dictates the best analysis.</li>
+<li>When multiple algorithms are possible, formal simplicity dictates the best one.</li>
 </ul></li>
-<li>In SPE, the surface forms of a language are generated via a sequence of phonological rules.
+<li>SPE is a model of mappings between URs and SRs.The SRs of a language are generated via a sequence of phonological rules.
 
 <ul>
 <li>input ⟹ rule 1 ⟹ rule 2 … rule k ⟹ output</li>
-<li>Knowledge of a language consists of a set of rules and an ordering of the rules.</li>
+<li>A language consists of both a set of rules and an ordering of the rules.</li>
 <li>As a result, a priority for the phonologist is to determine &#8211; to the greatest extent possible &#8211; the ordering of rules.</li>
 </ul></li>
-<li>In SPE, representations are linear sequences of feature bundles. They contain nothing more &#8211; not even syllables.</li>
+<li>In SPE, representations are linear sequences of feature bundles. They contain nothing more &#8211; not even syllables.
+
+<ul>
+<li>Later work in phonology proposed richer represetnations, such as syllable structure, autosegmental features, metrical feet, moras, etc.</li>
+</ul></li>
 <li>What&#8217;s missing in SPE: compared to earlier work, there is much less of a focus on contrast, and there are fewer limitations on proposing underlying segments.
 
 <ul>
-<li>Analyses even entertain underlying segments that never appear on the surface.</li>
+<li>Analyses even can contain underlying segments that never appear on the surface, giving <strong>abstract URs</strong>.</li>
 <li>For example, to account for stress, SPE proposes a distinction between final /ss/ (in <em>caress</em>) and final /s/ (in <em>Paris</em>) (p. 151).</li>
 <li>The central goal is to construct a model that generates surface forms, and a UR is justified so long as it explains some data.</li>
 </ul></li>
 </ul></li>
-<li>These differences are why Chomsky and Halle explicitly avoid the terms <em>phoneme</em> and <em>allophone</em> (p. 11, p. 65).
+<li>These differences are one reason why Chomsky and Halle explicitly avoid the terms <em>phoneme</em> and <em>allophone</em> (p. 11, p. 65).
 
 <ul>
 <li>Earlier work assumed only two levels: phonemes and allophones, but in SPE, there are many intermediate levels, which contain a mix of so-called allophones and phonemes.</li>
-<li>The earlier requirement that every phone belongs to exactly one phoneme is incompatible with many phonological patterns.</li>
-<li>Earlier work contained unordered rules that apply simultaneously, such as &#8220;Phoneme A has the variant B in context X––Y&#8221;, but in SPE rules are ordered.</li>
+<li>The earlier requirement that every phone belongs to exactly one phoneme is incompatible with many phonological patterns, such as positional neutralization.</li>
+<li>Earlier work contains unordered rules that apply simultaneously, such as &#8220;Phoneme A has the variant B in context X––Y&#8221;, but in SPE rules are ordered and generate mappings.</li>
 <li>What&#8217;s important to remember is that <em>phoneme</em> is a very loaded term with many meanings. If we use <em>phoneme</em> to mean a sound contained in URs, it&#8217;s completely compatible with SPE.</li>
 </ul></li>
 </ul>
 
-<h1 id="anatomyofarule">Anatomy of a rule</h1>
+<h1 id="anatomyofanspe-stylerule">Anatomy of an SPE-style rule</h1>
 
 <ul>
 <li>Rewrite rules take the form X ➔ Y / A ＿ B
@@ -96,10 +102,10 @@
 <li>Rules have the following parts.
 
 <ul>
-<li>Target / input configuration / focus (X)</li>
+<li>Target / focus (X)</li>
 <li>Structural change (Y)</li>
-<li>Environment / context (A＿B)</li>
-<li>Structural description = target + environment (AXB)
+<li>Context (A＿B)</li>
+<li>Structural description (AXB)
 
 <ul>
 <li>Describes the structure necessary for the rule to apply</li>
@@ -122,7 +128,11 @@
 <li>C ➔ [+voice] / V ＿ V</li>
 <li>[+coronal] ➔ [–voice] ∕ [–voice] ＿</li>
 </ul></li>
-<li>Properties of the focus can be written under the underscore, but this is relatively uncommon.</li>
+<li>Properties of the focus can be written under the underscore, but this is relatively uncommon.
+
+<ul>
+<li>This is usually done so abbreviatory conventions can be used to combine parts of the rule.</li>
+</ul></li>
 </ul>
 
 <figure>
@@ -391,7 +401,7 @@
 <h1 id="abbreviatoryconventions">Abbreviatory conventions</h1>
 
 <ul>
-<li>Rules can also be combined using <strong>abbreviatory conventions</strong>. Here are three of the most common:</li>
+<li>Rules can also be combined using <strong>abbreviatory conventions</strong>. Here are four of the most common:</li>
 </ul>
 
 <figure>
@@ -405,31 +415,69 @@
 </figure>
 
 <figure>
-<img src="C0_example.svg" alt="Subscripts such as X~Y mean "Y or more Xs"" />
-<figcaption>Subscripts such as X<sub>Y</sub> mean &#8220;Y or more Xs&#8221;</figcaption>
+<img src="C0_example.svg" alt="Subscripts such as X~Y mean "Y or more Xs". You can provide an upper limit with a superscript." />
+<figcaption>Subscripts such as X<sub>Y</sub> mean &#8220;Y or more Xs&#8221;. You can provide an upper limit with a superscript.</figcaption>
+</figure>
+
+<figure>
+<img src="alpha_example.svg" alt="Lowercase greek letters are variables that must match" />
+<figcaption>Lowercase greek letters are variables that must match</figcaption>
 </figure>
 
 <ul>
-<li><p>Each of the rules above is <strong>expanded</strong> into <strong>sub-rules</strong>.</p>
+<li><p>Each of the rules above is <strong>expanded</strong> into <strong>sub-rules</strong> in pre-defined ways.</p>
 
 <ul>
-<li>The way expansion operates is not trivial, which becomes clear once you try it.</li>
-<li>For example the rule C ➔ Ø / ＿ {C, #} is evaluated like this:
+<li>The rule C ➔ Ø / ＿ {C, #}
 
 <ul>
 <li>First, try C ➔ Ø / ＿ C.</li>
 <li>Second, try C ➔ Ø / ＿ #.</li>
 </ul></li>
-<li>The rule C ➔ Ø / ＿ (C)C is evaluated like this:
+<li>The rule C ➔ Ø / ＿ (C)C
 
 <ul>
 <li>First, try C ➔ Ø / ＿ CC.</li>
 <li>Second, if and only if the first sub-rule didn&#8217;t apply, try C ➔ Ø / ＿ C.</li>
 </ul></li>
-<li>It&#8217;s very easy to push the limits: what happens in C ➔ Ø / ＿ {C(C), #}?
+<li>The rule C ➔ Ø / ＿ C<sup>5</sup><sub style='position: relative; left: -.5em;'>0</sub>
 
 <ul>
-<li>In its quest for algorithmic explicitness, SPE does discuss these cases.</li>
+<li>First, try C ➔ Ø / CCCCC ＿</li>
+<li>If it didn&#8217;t apply, try C ➔ Ø / CCCC ＿</li>
+<li>If it didn&#8217;t apply, try C ➔ Ø / CCC ＿</li>
+<li>If it didn&#8217;t apply, try C ➔ Ø / CC ＿</li>
+<li>If it didn&#8217;t apply, try C ➔ Ø / C ＿</li>
+<li>If it didn&#8217;t apply, try C ➔ Ø / ＿</li>
+</ul></li>
+<li>The rule C ➔ [αnasal] / ＿ [αnasal]
+
+<ul>
+<li>Apply these two sub-rules simulatenously:
+
+<ul>
+<li>C ➔ [+nasal] / ＿ [+nasal]</li>
+<li>C ➔ [–nasal] / ＿ [–nasal]</li>
+</ul></li>
+</ul></li>
+<li>The rule C ➔ [αnasal] / ＿ [αnasal]
+
+<ul>
+<li>Apply these sub-rules simulatenously:
+
+<ul>
+<li>C ➔ [+nasal] / ＿ [+nasal]</li>
+<li>C ➔ [–nasal] / ＿ [–nasal]</li>
+</ul></li>
+</ul></li>
+<li>The (strange) rule C ➔ [αnasal, βvoice] / ＿ [αnasal, –βvoice]
+
+<ul>
+<li>Apply these sub-rules simulatenously:</li>
+<li>ɑ+, β+: C ➔ [+nasal, +voice] / ＿ [+nasal, –voice]</li>
+<li>ɑ–, β+: C ➔ [–nasal, +voice] / ＿ [–nasal, –voice]</li>
+<li>ɑ+, β–: C ➔ [+nasal, –voice] / ＿ [+nasal, +voice]</li>
+<li>ɑ–, β–: C ➔ [–nasal, –voice] / ＿ [–nasal, +voice]</li>
 </ul></li>
 </ul></li>
 <li><p><p>Let&#8217;s see abbreviatory conventions in action using the following example from SPE (p. 339, adapted slightly). Consider a fictional language in which:</p>
@@ -448,8 +496,13 @@
 </figure>
 
 <ul>
-<li><p>Although it may seem needless complex, this is treted as a good thing: whenever we have different rules that seem to be doing the same thing, we want to be able to combine them.</p></li>
-<li><p>The fictional example is far from the most complex rule in SPE.</p>
+<li>Although it may seem needlessly complex, this is treted as a good thing: whenever we have different rules that seem to be doing the same thing, we want to be able to combine them.</li>
+</ul>
+
+<h1 id="arealexamplefromspe">A real example from SPE</h1>
+
+<ul>
+<li>The fictional example is far from the most complex rule in SPE.
 
 <ul>
 <li>Rules like the vowel tensing rule below have many sub-rules, capturing a complicated set of requirements for application.</li>
@@ -461,6 +514,145 @@
 <img src="SPE_tensing_rule.png" alt="One of the five vowel tensing rules from SPE (p. 242). [FB] and [seg] are features used for boundaries." />
 <figcaption>One of the five vowel tensing rules from SPE (p. 242). [FB] and [seg] are features used for boundaries.</figcaption>
 </figure>
+
+<figure>
+<img src="SPE_tensing_simple.png" alt="Just the top part (rule 30 in SPE Ch. 3)" />
+<figcaption>Just the top part (rule 30 in SPE Ch. 3)</figcaption>
+</figure>
+
+<ul>
+<li><p>The top part of this rule expands into the sub-rules:</p>
+
+<ul>
+<li>Sub-rule #1: V ➔ [+tense] / ＿ V</li>
+<li>Sub-rule #2a: [+low, +stress] ➔ [+tense] / _ #</li>
+<li>Sub-rule #2b: [–low, +stress] ➔ [+tense] / _ #</li>
+<li>Sub-rule #2c: [–low, –stress] ➔ [+tense] / _ #</li>
+</ul></li>
+<li><p>Let&#8217;s think about the predictions of this rule for the vowels below.</p></li>
+</ul>
+
+<table>
+<caption style="caption-side: bottom;" id="englishvowelfeatures">English vowel features</caption>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">Vowel</th>
+	<th style="text-align:center;">Tense</th>
+	<th style="text-align:center;">Low</th>
+	<th style="text-align:center;"> </th>
+	<th style="text-align:center;">Vowel</th>
+	<th style="text-align:center;">Tense</th>
+	<th style="text-align:center;">Low</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">i	</td>
+	<td style="text-align:center;">	+</td>
+	<td style="text-align:center;"> –</td>
+	<td style="text-align:center;"> </td>
+	<td style="text-align:center;">u	</td>
+	<td style="text-align:center;">	+</td>
+	<td style="text-align:center;"> –</td>
+</tr>
+<tr>
+	<td style="text-align:center;">ɪ	</td>
+	<td style="text-align:center;">	–</td>
+	<td style="text-align:center;"> –</td>
+	<td style="text-align:center;"> </td>
+	<td style="text-align:center;">ʊ	</td>
+	<td style="text-align:center;">	–</td>
+	<td style="text-align:center;"> –</td>
+</tr>
+<tr>
+	<td style="text-align:center;">e	</td>
+	<td style="text-align:center;">	+</td>
+	<td style="text-align:center;"> –</td>
+	<td style="text-align:center;"> </td>
+	<td style="text-align:center;">o	</td>
+	<td style="text-align:center;">	+</td>
+	<td style="text-align:center;"> –</td>
+</tr>
+<tr>
+	<td style="text-align:center;">ɛ	</td>
+	<td style="text-align:center;">	–</td>
+	<td style="text-align:center;"> –</td>
+	<td style="text-align:center;"> </td>
+	<td style="text-align:center;">	</td>
+	<td style="text-align:center;">	 </td>
+	<td style="text-align:center;"> </td>
+</tr>
+<tr>
+	<td style="text-align:center;">æ	</td>
+	<td style="text-align:center;">	–</td>
+	<td style="text-align:center;"> +</td>
+	<td style="text-align:center;"> </td>
+	<td style="text-align:center;">ɑ	</td>
+	<td style="text-align:center;">	+</td>
+	<td style="text-align:center;"> +</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>After tensing applies, another rule reduces unstressed lax vowels to [ə].</li>
+</ul>
+
+<h1 id="somepotentialproblems">Some potential problems</h1>
+
+<ul>
+<li>As a theory of possible phonological alternations, SPE is possibly too powerful.
+
+<ul>
+<li>Consider the prediction from <a href="#theevaluationmetricinspe">above</a>: Rules with fewer symbols should be more widespread among the world’s languages.</li>
+<li>It&#8217;s quite easy to write two rules with the same number of symbols, where the process captured by one rule is very common and the processed by the other rule is very rare.
+
+<ul>
+<li>For example: word-final devoicing (very common across the world&#8217;s languages) and word-final voicing (very rare across the world&#8217;s languages).</li>
+</ul></li>
+<li>In fact, nearly any phonological process can be generated using rules.</li>
+</ul></li>
+<li>There are sometime related-looking rules that can&#8217;t be combined using abbreviatory conventions.
+
+<ul>
+<li>We&#8217;ll consider these next when we talk about conspiracies.</li>
+</ul></li>
+</ul>
+
+<h1 id="recap">Recap</h1>
+
+<ul>
+<li>explicit algorithm</li>
+<li>rules and rule ordering</li>
+<li>distinctive features
+
+<ul>
+<li>natural class</li>
+<li>desiderata for fetaures</li>
+</ul></li>
+<li>abstract URs</li>
+<li>rule formalism
+
+<ul>
+<li>target / focus</li>
+<li>structural change</li>
+<li>environment</li>
+<li>structural description</li>
+</ul></li>
+<li>the Evaluation Metric</li>
+<li>abbreviatory conventions (), {}, C<sub>n</sub>, Greek letter variables</li>
+</ul>
 
 <h1 id="solution">Solution</h1>
 
@@ -496,6 +688,17 @@
 <img src="rule3.svg" alt="One rule" />
 <figcaption>One rule</figcaption>
 </figure>
+
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn:1">
+<p>If you&#8216;d like to learn more about the history, I recommend Goldsmith &amp; Laks&#8217; (2012) Chapter &#8220;Generative Phonology: its origins, its principles, and its successors&#8221; in the <em>Cambridge History of Linguistics</em>. That is what I'm paraphrasing below. <a href="#fnref:1" title="return to body" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+</ol>
+</div>
 
 </body>
 </html>
