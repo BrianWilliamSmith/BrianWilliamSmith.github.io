@@ -37,6 +37,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 # Anatomy of an SPE-style rule
 - Rewrite rules take the form X ➔ Y / A ＿ B
 	+ Transforms A**X**B into A**Y**B
+	+ "X becomes Y when it's between A and B"
 - Rules have the following parts.
 	- Target / focus (X)
 	- Structural change (Y)
@@ -75,6 +76,10 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 - Rules are ordered and applied in sequence.
 	+ input ➔ rule 1 ➔ rule 2 … rule k ➔ output
 		* The output of rule 1 serves as the input to rule 2.
+	+ Rules are **extrinsically ordered**.
+		* Extrinsic ordering means you can't determine the order of rules without looking at the mappings of the language.
+		* This means that children need to learn the ordering of rules.
+	- There are proposals for **instrinsic rule ordering**, determined by characteristics of the rules themselves, or by characteristics of the rules and URs.
 	- How else could rules apply?
 - Order matters -- but not always.
 	+ Sometimes changing the order of two rules changes the output of the grammar, sometimes it doesn't.
@@ -101,6 +106,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 	+ "The "value" of a sequence of rules is the reciprocal of the number of symbols in its minimal representation." (p. 334)
 	+ "[…] the number of symbols in a rule is inversely related to the degree of linguistically significant generalization achieved in the rule." (p. 335)
 - When rules resemble each other in specific ways, this resemblance is a significant linguistic generalization which needs to be captured.
+- Let's brainstorm some other measures we could use to compare rule-based systems.
 - To help capture generalizations and minimize the number of symbols, SPE used both **phonological features** and **abbreviatory conventions** to combine rules.
 
 # Phonological features
@@ -134,12 +140,16 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 [Portions of the feature bundles of /k/, /æ/, and /t/, using the feature set of Hayes' (2009) textbook]
 
 - There is quite a bit of variation in how features are used (see the reading Zsiga 2013 for some examples). 
-	+ We'll assume that URs are composed of a series of feature bundles.
 	- We'll assume the feature set is universal and the same in every language.
 	- We'll assume that features are binary: they are always + or –.
 	- We'll also assume that every sound is specified for most features.
 	- But not every sound is specified for every feature.
 		+ For example, most consonants don't have features relating to tongue height like [high] or [low].
+	- Disclaimers
+		+ There are proposals with non-binary ("privative") features.
+		+ There are proposals in which feature specifications are as minimal as possible, and all redundant/predictable features are added by rules. 
+			+ For example, in a language without voiceless sonorants, sonorants don't need a [voice] feature if a rule makes [+sonorant] sounds [+voice].
+		- There are arguments against feature being universal (more on this below).
 - Features allow us to combine related-looking rules by referring to natural classes.
 	+ A **natural class** is group of sounds in an inventory which share one or more distinctive features, to the exclusion of all other sounds in the inventory.
 	+ These two rules of English…
@@ -149,7 +159,6 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 		+ [+coronal] ➔ [+dental] / _ [+dental]
 		+ "A coronal becomes dental before a dental."
 		+ This rule predicts that *any* [+coronal] sound will become [+dental] before *any* [+dental] sound.[^dental]
-	+ The system of rules with features has many fewer symbols and captures the insight that the same process is occuring in both n ➔ n̪ and l ➔ l̪.
 - In SPE-style rules, e.g. [+coronal] ➔ [+dental]…
 	- Features in the focus mean: find a sound with the required features, in the required environment.
 	- Feature in the change mean: make the specifed change.
@@ -160,18 +169,28 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 
 # How do we decide what the features should be?
 - Phonologists have developed a more-or-less consensus set of features, based on the processes seen in languages.
+- This is based on the assumption that features are innate and universal.
 - Typical desiderata:
 	- If two sounds are contrastive in some language, they must differ in at least one feature.
 		- E.g., if tap [ɾ] and trill [r] are contrastive in Spanish,  we need a feature to distinguish them, like [trill].
-	- If a group of sounds is targeted by a rule, they should be describable with a set of features.	
-		- If we see a rule like {A, B, C, D} ➔ ..., or ... / {A, B, C, D} _, especially in more than one language, then {A,B,C,D} should be a natural class: it should be describable with a set of features.
-		- E.g., if lots of languages nasalize a vowel before any consonant with nasal airflow (like [m, n, ŋ]), then [+nasal] seems like a good feature.
+	- If a group of sounds is targeted by a rule, they should be describable with a set of features.
+		+ E.g., if we see a rule like {A, B, C, D} ➔ ... or ... / {A, B, C, D},
+		- especially in more than one language, then {A,B,C,D} should be a natural class.
+		- E.g., if lots of languages nasalize a vowel before a consonant with nasal airflow (like [m, n, ŋ]), then [+nasal] seems like a good feature.
 		- E.g., the feature [+strident] picks out the set of sounds that trigger epenthesis in the English plural [s, z, ʧ, ʤ, ʃ, ʒ]. Without [strident], these sounds wouldn't form a natural class.
 	- A feature should correspond to some phonetic property.
 		- Most are articulatory, but they can be acoustic too.
+- A different view is that feature systems are neither innate nor universal.
+	- The language learner discovers his/her language's feature set during the course of language learning via exposure to ambient language patterns.
+	- As a result, a sound shared by two languages could have different features in each language.
+	- A typological survey in Mielke (2007) finds that existing feature systems can only account for about 70% of rule-targetting classes in natural languages.
+	- There are many "unnatural" processes that refer to disjointed sets of sounds.
+		+ For example, consider this pattern from Kolami (Mielke 2011 citing Emenau 1961).[^mielke]
+			* Allomorph [-l] after / ʈ ɖ n̪ i iː e eː a aː / 
+			* Allomorph [-ul] after / p t̪ k d̪ g s z m ŋ j /
 
 # Commonly used features worth knowing
-- You do *not* need to memorize these, but they are the features most commonly used.
+- You do *not* need to memorize these.
 - **Voicing features**
 	+ [voice]: voiced sounds are +
 	+ [spread glottis]: aspirated sounds are +
@@ -188,7 +207,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 - **Major place features**
 	- [labial]: lips are active articulator (e.g., bilabial, labiodental)
 	- [coronal]: tongue tip/blade/front is active articulator (e.g., dental and alveolar, retroflex, palatal)
-	- [dorsal]: tongue body/back is active articulator (e.g., palatal velar, uvular)
+	- [dorsal]: tongue body/back is active articulator (e.g. palatal velar, uvular)
 	- [pharyngeal]: tongue root is active articulator 
 	- [laryngeal]: "glottal" sounds, e.g. [h] and [ʔ]
 - **Vowel features**
@@ -200,10 +219,10 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 		+ [i e u o] are [+ATR] or [+tense]
 		+ [ɪ ɛ ʊ ɔ] are [+ATR] or [+tense]
 		+ Low vowels depend on the feature system.
-	- Most feature systems use vowel features to distinguish between [+dorsal] consonants, in addition to using them for vowels.
+	- Most feature systems use vowel features to differentiate [+dorsal] consonants, in addition to using them for vowels.
 - The class materials contain a few different feature charts, if you're curious to see how they differ.
 	+ Elisabeth Zsiga's (2013) Phonetics and Phonology feature chart.
-		* Place features aren't [+] or [–].
+		* Place features are privative, but other features are binary.
 	+ Bruce Hayes' (2009) Introductory Phonology feature chart.
 		+ Covers nearly every soound in the IPA, including secondary articulations.
 	+ Jason Riggle's (2008) feature chart.
@@ -236,6 +255,20 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 		- If it didn't apply, try C ➔ Ø / CC ＿
 		- If it didn't apply, try C ➔ Ø / C ＿
 		- If it didn't apply, try C ➔ Ø / ＿
+	- C ➔ [αnasal] / ＿ [αnasal]
+		+ Apply these two sub-rules simultenously:
+			* C ➔ [+nasal] / ＿ [+nasal]
+			* C ➔ [–nasal] / ＿ [–nasal]
+	- C ➔ [αnasal] / ＿ [–αnasal] 
+		+ Apply these sub-rules simultenously:
+			* C ➔ [+nasal] / ＿ [–nasal]
+			* C ➔ [–nasal] / ＿ [+nasal]
+	- C ➔ [αnasal, βvoice] / ＿ [αnasal, –βvoice]
+		+ Apply these sub-rules simultenously:
+			+ ɑ+, β+: C ➔ [+nasal, +voice] / ＿ [+nasal, –voice] 
+			+ ɑ–, β+: C ➔ [–nasal, +voice] / ＿ [–nasal, –voice]
+			+ ɑ+, β–: C ➔ [+nasal, –voice] / ＿ [+nasal, +voice]
+			+ ɑ–, β–: C ➔ [–nasal, –voice] / ＿ [–nasal, +voice]
 + Let's see abbreviatory conventions in action using the following example from SPE (p. 339, adapted slightly). Consider a fictional language in which:
 	* / i / and / j / are actualized as [ j ] before / p r j a /.
 	+ / w / and / u / are actualized as [ u ] before / p r j a /.
@@ -285,13 +318,31 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 	+ We're failing to capture a generalization.
 	+ We'll consider these next when we talk about conspiracies.
 
-# Phonemes and allophones in SPE 
-- Compared to earlier work, there are fewer limitations on proposing underlying segments in SPE.
-	- Analyses may contain URs that differ substantially from SRs, even containing segments that never appear on the surface, giving more **abstract URs**.
-	+ For example, to account for stress, SPE proposes a distinction between final /ss/ (in *caress*) and final /s/ (in *Paris*) (p. 151).
-- These differences are why Chomsky and Halle (1968) distance themselves from previous work and explicitly avoid the terms *phoneme* and *allophone* (p. 11, p. 65). 
-	- From this point on, we'll rarely see the terms *phoneme* and *allophone*.
-		- We'll still talk about sounds in URs and sounds in SRs. 
+# The defining characteristics of SPE 
+- The following are major characteristics of the SPE research program, many of which set it apart from earlier work.[^goldsmithlaks]
+	+ Generative grammar, URs and SRs:
+		+ SPE is a model of mappings between URs and SRs.
+	- Fully explicit algorithms:
+		- The goal is to generate all and only the mappings of a language.
+		+ Formal simplicity dictates the best analysis, and is achieved using features and abbreviatory conventions.
+	+ The SRs of a language are generated via a sequence of phonological rules.
+		- input ➔ rule 1 ➔ rule 2 … rule k ➔ output
+		- A priority for the phonologist is to determine -- to the greatest extent possible -- the ordering of rules.
+	- Features: 
+		- In SPE, representations are linear sequences of feature bundles. 
+		+ They contain nothing more -- not even syllables.
+		+ Later work in phonology proposed richer representations, containing syllable structure, autosegmental features, metrical feet, moras, etc.
+	- More abstractness: 
+		- In SPE, there are fewer limitations on proposing underlying segments. 
+		- Analyses may contain URs that differ substantially from SRs, even containing segments that never appear on the surface, giving more **abstract URs**.
+		+ For example, to account for stress, SPE proposes a distinction between final /ss/ (in *caress*) and final /s/ (in *Paris*) (p. 151).
+- These differences are why Chomsky and Halle (1968) distance themselves from earlier work and explicitly avoid the terms *phoneme* and *allophone* (p. 11, p. 65). Earlier work in the Structuralist program…
+	+ … uses unordered "taxonomic" rules such as "Phoneme A is realized with variant B in context X––Y".
+		+ In SPE, rules are ordered, apply in sequence, and are defined as algorithms.
+	+ … has rigid requirements for positing phonemes, such as the requirement that every phonetic representation has a unique phonemic representation, and the requirement that the set of phonemes be as small as possible.
+		* In SPE, the goal is to construct a model that generates the correct surface forms, and a UR is justified so long as it explains some data.
+	- From this point on, we'll rarely see the terms *phoneme* and *allophone*. 
+		- We'll often talk about sounds in URs and sounds in SRs. 
 		- You should feel free to use *phoneme* and *allophone*, since it's clear that you don't intend the terms in the pre-1950s sense.
  	
 # Recap of major ideas
@@ -327,4 +378,9 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 	
 ![One rule](rule3.svg)
 
+
+[^goldsmithlaks]: If you'd like to learn more about the history, I recommend Goldsmith & Laks' (2012) Chapter "Generative Phonology: its origins, its principles, and its successors" in the *Cambridge History of Linguistics*. That is what I'm paraphrasing here.
+
 [^dental]: [dental] isn't usually a feature, but is used here for simplicity.
+
+[^mielke]: Mielke (2011) is an optional reading in the shared files for the course.

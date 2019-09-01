@@ -23,35 +23,24 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 
 >What is clear is that any serious theory of phonology must rely heavily on well-formedness constraints [...]. What remains in dispute, or in subformal obscurity, is the character of the interaction among the posited well-formedness constraints, as well as the relation between such constraints and whatever derivational rules they are meant to influence. Given the pervasiveness of this unclarity, and the extent to which it impedes understanding even the most basic functioning of the grammar, it is not excessively dramatic to speak of the issues surrounding the role of well-formedness constraints as involving a kind of conceptual crisis at the center of phonological thought.		
 > 
->- Prince & Smolensky (1993/2004, p. 1)
+>– Prince & Smolensky (1993/2004, p. 1)
 
-# The conspiracy problem: non-collapsible rules that do the same thing (Kisseberth 1970)
-- The **conspiracy** problem was most prominently pointed out by Kisseberth (1970).
+# The conspiracy problem: non-combinable rules do the same thing 
 - Sometimes different rules seem to be aiming for the same surface pattern.
 	- We call this a **conspiracy**: rules are independent but **conspire** to perform a common function. 
-- Kisseberth presents a conspiracy of rules in Yawelmani Yokuts , in which different rules all conspire to repair consonant clusters.
-	- However, the rules in Yokuts can't be collapsed using notional conventions in SPE.
-	- To collapse the rules, Kisseberth proposes the addition of **constraints**, resulting in a shorter grammar that can capture the linguistically significant generalization.
+- The conspiracy problem was most prominently pointed out by Kisseberth (1970).
+- Kisseberth presents a conspiracy of rules in Yawelmani Yokuts. 
+	+ The application of the rules all result in the same output structure being avoided.
+	- However, the rules in Yawelmani can't be combined using notional conventions in SPE.
+	- To combine the rules, Kisseberth proposes the addition of **constraints**, resulting in a shorter grammar that can capture the linguistically significant generalization.
 
-# Discard?
-+ In SPE, we collapse such rules using notional conventions.
-	+ Kisseberth (1970), p. 292: "Notational conventions in generative phonology have been selected with the general goal of establishing a correlation between the shortness of a grammar and the degree of linguistically significant generalization attained in a grammar."  
-	- For example a theory with braces can collapse these rules:
-	  - Ø → i / C __ C#		e.g., kabt → kabit
-	  - Ø → i / C __ CC		e.g., talbto → talibto
-	  - into this shorter rule Ø → i / C __ C{C,#}
-- The rules below have something in common, but they can't be collapsed using curly brackets. 
-	- C → Ø  / CC + __		e.g., barg+du → bargu
-	- Ø  → i / C __ CC		e.g., talbto → talibto	
-	- Writing two separate rules seems to be missing something.
-		
 #	The conspiracy in Yawelmani Yokuts 
 - Kisseberth (1970) analyzes the data below from Yawelmani Yokuts.
 	+ The preferred name for this dialect of Yokuts is now Yolumne.
 	+ We won't be discussing some of the rules you might notice in the data: vowel harmony, vowel lowering, shortening/lengthening
 - Yawelmani consonant deletion (rules 7, 8, 9 in Kisseberth 1970)
 	- Let's write a rule.
-	- C → Ø / …?
+	- C ➔ Ø / …?
 
 |Underlying	| Surface | Gloss|
 |--|--|--|
@@ -59,23 +48,22 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 
 - Yawelmani vowel epenthesis (rule 3 in Kisseberth 1970)
 	+ Let's write a rule to account for epentheiss.
-	+ Ø → i / …?
+	+ Ø ➔ i / …?
 
 |Underlying	| Surface | Gloss|
 |--|--|--|
 |/ʔilk-hin/	|[ʔilikhin]	|	'sing (nonfuture)'|
 |/lihm-hin/	|[lihimhin]	|	'run (nonfuture)'|
-|/ʔilk-al/	|[ʔilkal]		|	'sing (dubitative)'|
-|/lihm-al/	|[lihmal]		|	'run (dubitative)'|
+|/ʔilk-al/	|[ʔilkal]	|	'sing (dubitative)'|
+|/lihm-al/	|[lihmal]	|	'run (dubitative)'|
 
-|Underlying	| Surface | Gloss|
 |/pulm/		| [poːlum]	| 'husband (subjective)'|
-|/pulm-a/	| [polma]	| 'husband (locative)'|	
+|/pulm-a/	| [polma]	| 'husband (locative)'|
 
 - Yawelmani final vowel deletion (apocope)
 	+ This only applies to certain verbal suffixes.
 	+ Let's write a rule.
-	+ V → Ø / …?
+	+ V ➔ Ø / …?
 
 |Underlying	| Surface | Gloss|
 |--|--|--|
@@ -84,7 +72,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 |/xat-kʔa/		| [xatkʔa]	| 'eat'				|
 |/xat-mi/		| [xatmi]	| 'having eaten'	|
 
-- These rules can't be collapsed using notational conventions. Why not?
+- These rules can't be combined using notational conventions. Why not?
 - Kisseberth describes these rules as *functionally equivalent* and not *structurally equivalent*. How are they functioanlly equivalent?
  
 # An introduction to constraints
@@ -100,12 +88,13 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 		* "Discard any URs that meet the following conditions:"
 		* "Discard any SRs that meet the following conditions:"
 
-#Constraints: blocking
+# Constraints: blocking
 - Kisseberth (1970) proposes using a constraint to simplify the rule system and capture the functional unity of the rules.
-	- The rule V → Ø/ V+C _ #	
-  	- is simplified to	V → Ø / +C _ #, subject to blocking by a constraint we could name *{C,#}C{C,#}.
-  	- This constraint says that strings containing the sequences CC#, #CC, CCC are not possible outputs of any phonological rule (if the sequences were not present in the input.)
- 	- In other words, a rule cannot create a {C,#}C{C,#} sequence, which violates the constraint.
+	- The rule V ➔ Ø / V + C _ # …
+	- … is simplified to V ➔ Ø / + C _ # …
+	- … subject to blocking by a constraint we could name *{C,#}C{C,#}.
+	- This constraint says that strings containing the sequences CC#, #CC, CCC are not possible outputs of any phonological rule (if the sequences were not present in the input).
+	- In other words, a rule cannot create a {C,#}C{C,#} sequence, which violates the constraint.
 
 - Let's think about how to make this into explicit algorithm.
 	- How would the new system work for these hypothetical URs?
@@ -116,196 +105,181 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 # Constraints: triggering
 - Kisseberth (1970) also mentions the possibility constraints can trigger rules, although he doesn't formalize it.
 	- This means that a rule applies only if it gets rid of a constraint violation.
-- For example, what happens if the rule  Ø → i / C_ is triggered by the constraint *{C,#}C{C,#}? 
+- For example, what happens if the rule  Ø ➔ i / C _ is triggered by the constraint *{C,#}C{C,#}? 
 	- Again, break this down into individual algorithm steps.
 	- Consider the hypothetical URs:
 		- /talb-hin/
 		- /talb-al/
 
 # Conspiracies and constraints: why is this good?
-- Kisseberth's central argument is that output constraints give us simpler rule.
+- Kisseberth's central argument is that output constraints give us simpler rules.
 - This predicts that rules that participate in conspiracies should be more natural (given the evaluation procedure of SPE), and systems with related rules (simplifiable with constraints) should be more natural than systems with unrelated rules.
 
 
-#  Another argument for constraints from Shibatani (1973) 
-Japanese: Underlyingly, morphemes may end in any consonant, but on the surface the possible codas are a nasal or the first half of a geminate C (suffix allomorphy takes care of other morpheme-final Cs).
-"	Some loans:     peɴ 	           'pen'
-doɾesɯ	'dress'
-sɯkɯɾipɯto	'script'
+#  Another argument for constraints from Shibatani (1973)
+- Loanword adaptation shows that speakers have knowledge of the constraints of their language.
+	- Speakers apply rules to fix illicit structures in loanwords. 
+	- And these rules aren't found in native words. 
+	- But functionally related rules and phonotactics are. 
+- In Japanese, URs may end in any consonant, but on the surface the only possible codas are a nasal or the first half of a geminate consonant.
+	- This restriction results in epenthesis in loanwords.
 
-"	Shibatani argues that Japanese has no V-insertion rule (native morphemes that end in non-nasal consonants get taken care of in other ways). 
-"	So how do Japanese speakers know that they should fix foreign words like dress?
-"	Harder problem: even if Japanese speakers know that they should fix dress, how do they know to do it with V insertion rather than, say, C deletion?
+|---|---|
+|peɴ |'pen'|
+|doɾesɯ	|'dress'|
+|sɯkɯɾipɯto	|'script'|
+[Epenthesis in loanwords in Japanese]
 
+- Shibatani argues that Japanese has no V-insertion rule outside of loanwords.
+	- URs of native morphemes that end in non-nasal consonants get taken care of in other ways.
+	- So how do Japanese speakers know that they should fix foreign words like *dress*?
+	- Harder problem: even if Japanese speakers know that they should fix *dress*, how do they know to do it with vowel epenthesis rather than consonant deletion?
+	- Hardest problem: even if Japanese speakers know that they should fix *dress* with epenthesis, how do we capture the similarity between this rule and rules that apply in native Japanese words?
+- In Korean (still Shibatani), there are no word-initial liquids ([l] or [ɾ]) in SRs of native words.
+	- Originally, there were also no underlying word-initial liquids.
+	
+|---|---|
+|nok (sɛk) |'green' from Chinese lok (Middle Chinese, more or less)|
+|nam (sɛk) |'blue' from Chinese lam|
+|nampʰu|'lamp' (archaic) from Japanese ɺampu (from Eng. lamp)|
 
-Korean (still Shibatani): On the surface there are no word-initial liquids ([l] or [ɾ]) in native words. Originally, there were also no underlying word-initial liquids.
-"	Some older loans:
-nok (sɛk)  	'green' < Ch. lok (Middle Chinese, more or less)
-nam (sɛk) 	'blue' < Ch. lam
-nampʰu	'lamp' (archaic) < Jp. ɺampu (< Eng. lamp)
+- We can observe alternations in some loans that suggest underlying liquids, but initial liquids are avoided (assuming these are really alternations):
 
-"	And alternations in loans [we have to assume here that these words really were related synchronically, and the compounds weren't just borrowed as unanalyzed wholes]:
-no in 	'old man'	vs.	tʃo ɾo 	         'premature old age'
-nak wɔn	'paradise'	   vs.	kʰwɛ ɾak	'enjoyment'
-"	Why did Korean speakers innovate a rule /ɾ/ → [n] (or /l/ → [n])?
+|---|---|--|---|---|
+|no in| 	'old man'|	vs.|	tʃo ɾo 	   |      'premature old age'|
+|nak wɔn|	'paradise'|	   vs.|	kʰwɛ ɾak	|'enjoyment'|
+
+- Why did Korean speakers innovate a rule ɾ ➔ n (or l ➔ n)?
 
 # The duplication problem
-"	Observation: dynamic processes (e.g., alternations, loanword adaptation) reiterate static restrictions (e.g. phonotactics, morpheme structure constraints)
-"	This is a variant of the Conspiracies Problem, called the Duplication Problem
-"	Hypothetical (but realistic) example from McCarthy (2002: 71)
-	Lexical redundancy rule (static restriction): 
-		[-back]   [-round]				(fills in predictable feature)
-Fronting: (dynamic process)
-		/put + i/   [piti]
-		/kop + i/   [kepi]
-Fronting Rule:
-	V   [-back, -round] / _____ C0 i
-"	The redundancy rule expresses the generalization that rounding is predictable for front vowels. However, the fronting rule duplicates the same information. Instead of just fronting, it also changes rounding.
-"	Yawelmani also suffers the duplication problem: it has a MSC (Morpheme Structure Condition) against triliteral clusters, and all the rules we discussed above re-iterate this static restriction.
-
+- Observation: dynamic processes (e.g., alternations, loanword adaptation) reiterate static restrictions (e.g. phonotactics, morpheme structure constraints)
+- This is a variant of the conspiracy problem, called the **duplication problem**.
+ - Hypothetical (but realistic) example from McCarthy (2002: 71)
+	- Lexical redundancy rule
+		- [–back] ➔ [–round]		(if a sound is front it's also unrounded)
+	- A fronting process
+		- /put + i/ ➔ [piti]
+		- /kop + i/ ➔ [kepi]
+	- Fronting Rule:
+		- V ➔ [–back, –round] / ＿ C~0 i
+- The redundancy rule expresses the generalization that front vowels are always unrounded.
+	- However, the fronting rule duplicates the same information.
+	- Instead of just fronting, it also changes rounding.
+- Yawelmani also suffers the duplication problem.
+	- It has a Morpheme Structure Condition that requires URs have no underlying CCC clusters… 
+	- … and the rules we discussed above re-iterate this requirement, avoiding CCC clusters when they occur as a result of concatenating URs.
 
 # Problems with rules plus constraints: overview
-"	Ambiguous triggering
-"	Constraint violability
-"	Constraint conflict
-"	How much lookahead?
+- Previously, we discussed the first sentence of the quote at the top of this handout: "What is clear is that any serious theory of phonology must rely heavily on well-formedness constraints."
+- Next, we discuss the second sentence: "What remains in dispute, or in subformal obscurity, is the character of the interaction among the posited well-formedness constraints, as well as the relation between such constraints and whatever derivational rules they are meant to influence."
+- Four ways in which the interaction of constraints and rules is in subformal obscurity:
+	- Ambiguous triggering
+	- Constraint violability
+	- Constraint conflict
+	- Lookahead
 
 # Ambiguous triggering
-"	Blocking and triggering
-o	Saying that a constraint blocks a rule means that the rule can't apply if it would produce a violation of the constraint.
-o	Imagine the rule V ➔ Ø / C _ C is blocked by the constraint *{C,#}C{C,#}
-o	How would the new system work for these hypothetical underlying forms?  (i.e. what steps are required to evaluate blocking constraints?)
+- Sometimes there are multiple ways a rule could be triggered by a constraint.
+-  What are the different ways the rule  Ø ➔ i / C _ could avoid a CCC sequence in /talbto/
+	-  How might we choose between them?
 
-	/bisotu/	/badlupi/
+# Constraint violability
+- Sometimes a constraint is violated by SRs, even though it seems to have an effect in part of the langauge. 
 
+|Plain|Nominative|Gloss|
+|---|---|---|
+|ton	|to.ni		|'money'|
+|sa.ɾam	|sa.ɾa.mi	|'person'|
+|koŋ	|ko.ŋi		|'ball'|
+|na.mu	|na.mu.ɡa	|'tree'|
+|pʰa.ɾi	|pʰa.ɾi.ɡa	|'fly'|
+|kʰo	|kʰo.ɡa		|'nose'|
+|ɕ*i	|ɕ*i.ɡa		|'seed'|
+|bɔ.tʰɔ	|bɔ.tʰɔ.ga	|'butter'|
+[Korean nominative allomorphy]
+
+- What is the distribution of the two allomorphs of the nominative?
+- What output structure are they avoiding?
+- But what about these words?
+
+|UR	| Plain	|Nominative|Gloss|
+|---|---|---|---|
+|/salm/	|sam |sal.mi|'life'|
+|/talk/	|tak |tal.ɡi |'chicken'|
+|/sʌtʰeikʰʌ/|sʌ.tʰe.i.kʰʌ |sʌ.tʰe.i.kʰʌ.ga|'steak|
+[More Korean nominative allomorphy]
+
+- If *CC or *VV is a real constraint of Korean, our theory must allow active constraints to be violated.
+
+# Constraint conflict
+- Dutch (example from Smith 2002, data originally from Booij 1995)
+	- What constraint is triggering what rule?
 	
+| Foreign word	| Dutch pronunciation	| Gloss |
+|---|---|---|
+|pa.é.ʎa	|pa.ʔɛ́l.ja	|'paella'|
+|a.ór.ta	|a.ʔɔ́r.ta	|'aorta'|
+|ka.ún.da	|ka.ʔún.da	|'Kaunda' (first president of Zambia)|
 
+- But Dutch has a constraint *ʔV-stress :
 
+| Foreign	| Dutch pronunciation	| Gloss |
+|---|---|---|
+|ká.os|xá.os|'chaos'|
+|fá.ra.o|fá.ra.o|'pharaoh'|
 
-"	Kisseberth also proposes that constraints can trigger rules, although he doesn't formalize it. This means that a rule applies only if it gets rid of a constraint violation
-"	For example, what happens if the rule Ø ➔ i / C_ is triggered by the constraint *{C,#}C{C,#}? Again, break this down into atomic steps.
-	/talbto/	
+- What's the problem? How could we fix it?
 
+# Look-ahead
+- Is look-ahead necessary when deciding whether to trigger a rule? How far?
 
+- Hypothetical (and unrealistic, but simple) case.
+	- What happens to /tab/
+	
+| Constraint| Rules that could be triggered by the constraint|
+| --- | ---|
+|*C#	| C ➔ [–voice] |
+|		| [-voice] ➔ Ø|
 
-
-
-
-
-
-
-# Constraint violability
-"	A major innovation of OT was the introduction of violable constraints. Violability played a crucial role both in typology and in analyses of individual languages.
-"	To understand the importance of violable constraints for analyzing interactions within a language, consider McCarthy's example applying the Filters Model (Chomsky and Lasnik 1977) to Yawelmani.
-
-Filters Model (Chomsky and Lasnik 1977)
-a.	There is a set of transformations (which all apply optionally to create possible outputs)
-b.	A set of output filters (which rule out ungrammatical outputs)
-"	Consider the Yawelmani facts. Let's see how this approach might work for epenthesis and deletion. What goes wrong when we try to account for blocking?
-"	Reminder: our constraint is *{C,#}C{C,#}
-Yawelmani vowel epenthesis:
-Underlying	Surface
-
-a.	/ʔilk-hin/		[ʔi.lik.hin]	'sing (nonfuture)'
-/lihm-hin/		[li.him.hin]	'run (nonfuture)'
-b.	/ʔilk-al/		[ʔil.kal]	'sing (dubitative)'
-/lihm-al/		[lih.mal]	'run (dubitative)'
-
-Yawelmani final vowel deletion (apocope) applies to certain verbal suffixes:
-
-Underlying	Surface
-c.	/taxaː-kʔa/		[ta.xakʔ]	'bring'
-/taxaː-mi/		[ta.xam]	'having brought'
-d.	/xat-kʔa/		[xat.kʔa]	'eat'
-/xat-mi/		[xat.mi]	'having eaten'
-
-
-
-
-
-
-# Constraint violability
-Korean (example from Kie Zuraw)
-plain	nominative 	
-ton	to.ni	'money'
-sa.ɾam	sa.ɾa.mi	'person'
-koŋ	ko.ŋi	'ball'
-na.mu	na.mu.ɡa	'tree'
-pʰa.ɾi	pʰa.ɾi.ɡa	'fly'
-kʰo	kʰo.ɡa	'nose'
-ɕ*i	ɕ*i.ɡa	'seed'
-(* is used when no IPA symbol exists for something; here, it stands for "tenseness", a  phonemic property of certain Korean obstruents) 
-"	But what about these words?
-UR	plain	nominative	
-/salm/	sam	sal.mi	'life'
-/talk/	tak	tal.ɡi 
-(ignore the voicing rule)	'chicken'
-"	If *CC is a real constraint of Korean, our theory must allow constraints to be violated
-
-
-
-
-
-
-
-
-
-# What happens when constraints conflict? 
-Dutch (example from Smith 2002, data originally from Booij 1995)
-"	What constraint is triggering what rule?
-foreign word	Dutch pronunciation	
-pa.é.ʎa	pa.ʔɛ́l.ja	'paella'
-a.ór.ta	a.ʔɔ́r.ta	'aorta'
-ka.ún.da	ka.ʔún.da	'Kaunda' (first president of Zambia)
-But Dutch has a constraint *ʔV-stress :
-foreign word	Dutch pronunciation	
-xá.os	xá.os	'chaos'
-fá.ra.o	fá.ra.o	'pharaoh'
-"	What could we do?
-
-# Is look-ahead necessary when deciding whether to trigger a rule? How far?
-"	Hypothetical (and unrealistic, but simple) case:
-	constraint	rules that could be triggered by the constraint	
-	*C#		C → [-voice]
-			[-voice] → Ø
-o	What happens to /tab/?
-"	An even more extreme example (also a bit silly)-things get worse before they get better:
-	constraint	rules that could be triggered by the constraint	
-	*CC		Ø → p / m__C
-			m → Ø / __[+lab]
-			p → Ø / __ C
-
-o	What happens to /omsi/?
+-	An even more extreme example (also a bit silly): things get worse before they get better.
+	+ What happens to /omsi/?
+	
+|Constraint	| Rules that could be triggered by the constraint|
+| --- | ---|
+|	*CC		|Ø ➔ p / m＿C|
+|			|m ➔ Ø / ＿[+lab]|
+|			|p ➔ Ø / ＿ C|
 
 # The conceptual crisis
-"	Since Kisseberth 1970, constraints were taking on a bigger and bigger role. But there were open questions... 
-o	Why aren't constraints always obeyed?  
-o	What happens if there's more than one way to satisfy a constraint? 
-grammar: *CC, satisfied by C → Ø or Ø → i
-"	Maybe we need to prioritize the rules that could be triggered
-"	Can different constraints prioritize rules differently?  
-o	Relatedly, what happens when constraints conflict?
-"	What if one constraint wants to trigger a rule, but another wants to block it?
-"	Must the grammar prioritize constraints?  
-o	Should a rule be allowed to look ahead in the derivation to see if applying alleviates a constraint violation? (how far?) 
-"	Or does the alleviation have to be immediate?
-"	Is a rule allowed to make things worse if a later rule will make them better?  
-o	Can a constraint prohibit a certain type of change, rather than a certain structure?
+- Since Kisseberth (1970), constraints were taking on a bigger and bigger role. But there were open questions... 
+- Why aren't constraints always obeyed?  
+- What happens if there's more than one way to satisfy a constraint? 
+	- Maybe we need to prioritize the rules that could be triggered
+	- Can different constraints prioritize rules differently?  
+- Relatedly, what happens when constraints conflict?
+	- What if one constraint wants to trigger a rule, but another wants to block it?
+	- Must the grammar prioritize constraints?  
+- Should a rule be allowed to look ahead in the derivation to see if applying alleviates a constraint violation? (how far?) 
+	- Or does the alleviation have to be immediate?
+	- Is a rule allowed to make things worse if a later rule will make them better?  
+	- Can a constraint prohibit a certain type of change, rather than a certain structure?
 
+# Optimality Theory
+- One solution was presented in Prince & Smolensky's (1993) *Optimality Theory* (OT), which solves the problems with combining rules and constraints by getting rid of rules entirely.
 
-# Enter OT
-- The solution to these problems was to abandon rules, giving a constraint-only theory.
+| A "derivation" in rule-based grammars with constrints | A "derivation" in an OT |
+|:---:|:---:|
+|start with UR/input (from mental lexicon, maybe after morphology)||
 
-A "derivation" in rule-based grammars (L) vs. OT (R) 
-rule-based grammar with constraints 	OT grammar 
-start with UR/input (from mental lexicon, maybe after morphology)
-apply rules in sequence-intermediate
-representation is known at all times 	apply all possible rules, producing a (large!) set of candidate outputs 
-constraints may block or trigger rules 	constraints pick the best candidate 
-look-ahead: nonexistent or sketchy 	candidate outputs are (potential) surface forms => 
-full look-ahead to end of each possible derivation 
-interaction of constraints: nonexistent or sketchy 	constraints interact through strict domination 
-similarity to UR results from not applying too many rules, not having too many constraints 	similarity to UR is enforced by faithfulness constraints 
-end with SR/output (send it to the phonetic system) 
+|apply rules in sequence | apply all possible rules,</br> producing a (large!) set of candidate outputs |
 
+|constraints may block or trigger rules | constraints pick the best candidate |
+
+|look-ahead: nonexistent or sketchy | candidate outputs are (potential) surface forms,</br> giving full look-ahead to end of each possible derivation |
+
+|interaction of constraints: nonexistent or sketchy |constraints interact through strict domination |
+
+|similarity to UR results </br>from not applying too many rules,</br>not having too many constraints | similarity to UR is enforced by faithfulness constraints|
+
+|end with SR/output (send it to the phonetic system) ||
 

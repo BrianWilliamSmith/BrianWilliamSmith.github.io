@@ -35,7 +35,7 @@
 <li><a href="#abbreviatoryconventions">Abbreviatory conventions</a></li>
 <li><a href="#arealexamplefromspe">A real example from SPE</a></li>
 <li><a href="#somepotentialproblems">Some potential problems</a></li>
-<li><a href="#phonemesandallophonesinspe">Phonemes and allophones in SPE</a></li>
+<li><a href="#thedefiningcharacteristicsofspe">The defining characteristics of SPE</a></li>
 <li><a href="#recapofmajorideas">Recap of major ideas</a></li>
 <li><a href="#solution">Solution</a></li>
 </ul>
@@ -79,6 +79,7 @@
 
 <ul>
 <li>Transforms A<strong>X</strong>B into A<strong>Y</strong>B</li>
+<li>&#8220;X becomes Y when it&#8217;s between A and B&#8221;</li>
 </ul></li>
 <li>Rules have the following parts.
 
@@ -168,6 +169,13 @@
 <ul>
 <li>The output of rule 1 serves as the input to rule 2.</li>
 </ul></li>
+<li>Rules are <strong>extrinsically ordered</strong>.
+
+<ul>
+<li>Extrinsic ordering means you can&#8217;t determine the order of rules without looking at the mappings of the language.</li>
+<li>This means that children need to learn the ordering of rules.</li>
+</ul></li>
+<li>There are proposals for <strong>instrinsic rule ordering</strong>, determined by characteristics of the rules themselves, or by characteristics of the rules and URs.</li>
 <li>How else could rules apply?</li>
 </ul></li>
 <li>Order matters &#8211; but not always.
@@ -220,6 +228,7 @@
 <li>&#8220;[…] the number of symbols in a rule is inversely related to the degree of linguistically significant generalization achieved in the rule.&#8221; (p. 335)</li>
 </ul></li>
 <li>When rules resemble each other in specific ways, this resemblance is a significant linguistic generalization which needs to be captured.</li>
+<li>Let&#8217;s brainstorm some other measures we could use to compare rule-based systems.</li>
 <li>To help capture generalizations and minimize the number of symbols, SPE used both <strong>phonological features</strong> and <strong>abbreviatory conventions</strong> to combine rules.</li>
 </ul>
 
@@ -365,7 +374,6 @@
 <li>There is quite a bit of variation in how features are used (see the reading Zsiga 2013 for some examples).
 
 <ul>
-<li>We&#8217;ll assume that URs are composed of a series of feature bundles.</li>
 <li>We&#8217;ll assume the feature set is universal and the same in every language.</li>
 <li>We&#8217;ll assume that features are binary: they are always + or –.</li>
 <li>We&#8217;ll also assume that every sound is specified for most features.</li>
@@ -373,6 +381,17 @@
 
 <ul>
 <li>For example, most consonants don&#8217;t have features relating to tongue height like [high] or [low].</li>
+</ul></li>
+<li>Disclaimers
+
+<ul>
+<li>There are proposals with non-binary (&#8220;privative&#8221;) features.</li>
+<li>There are proposals in which feature specifications are as minimal as possible, and all redundant/predictable features are added by rules.
+
+<ul>
+<li>For example, in a language without voiceless sonorants, sonorants don&#8217;t need a [voice] feature if a rule makes [+sonorant] sounds [+voice].</li>
+</ul></li>
+<li>There are arguments against feature being universal (more on this below).</li>
 </ul></li>
 </ul></li>
 <li>Features allow us to combine related-looking rules by referring to natural classes.
@@ -392,7 +411,6 @@
 <li>&#8220;A coronal becomes dental before a dental.&#8221;</li>
 <li>This rule predicts that <em>any</em> [+coronal] sound will become [+dental] before <em>any</em> [+dental] sound.<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote"><sup>1</sup></a></li>
 </ul></li>
-<li>The system of rules with features has many fewer symbols and captures the insight that the same process is occuring in both n ➔ n̪ and l ➔ l̪.</li>
 </ul></li>
 <li>In SPE-style rules, e.g. [+coronal] ➔ [+dental]…
 
@@ -413,6 +431,7 @@
 
 <ul>
 <li>Phonologists have developed a more-or-less consensus set of features, based on the processes seen in languages.</li>
+<li>This is based on the assumption that features are innate and universal.</li>
 <li>Typical desiderata:
 
 <ul>
@@ -421,11 +440,12 @@
 <ul>
 <li>E.g., if tap [ɾ] and trill [r] are contrastive in Spanish, we need a feature to distinguish them, like [trill].</li>
 </ul></li>
-<li>If a group of sounds is targeted by a rule, they should be describable with a set of features.	
+<li>If a group of sounds is targeted by a rule, they should be describable with a set of features.
 
 <ul>
-<li>If we see a rule like {A, B, C, D} ➔ &#8230;, or &#8230; / {A, B, C, D} _, especially in more than one language, then {A,B,C,D} should be a natural class: it should be describable with a set of features.</li>
-<li>E.g., if lots of languages nasalize a vowel before any consonant with nasal airflow (like [m, n, ŋ]), then [+nasal] seems like a good feature.</li>
+<li>E.g., if we see a rule like {A, B, C, D} ➔ &#8230; or &#8230; / {A, B, C, D},</li>
+<li>especially in more than one language, then {A,B,C,D} should be a natural class.</li>
+<li>E.g., if lots of languages nasalize a vowel before a consonant with nasal airflow (like [m, n, ŋ]), then [+nasal] seems like a good feature.</li>
 <li>E.g., the feature [+strident] picks out the set of sounds that trigger epenthesis in the English plural [s, z, ʧ, ʤ, ʃ, ʒ]. Without [strident], these sounds wouldn&#8217;t form a natural class.</li>
 </ul></li>
 <li>A feature should correspond to some phonetic property.
@@ -434,12 +454,29 @@
 <li>Most are articulatory, but they can be acoustic too.</li>
 </ul></li>
 </ul></li>
+<li>A different view is that feature systems are neither innate nor universal.
+
+<ul>
+<li>The language learner discovers his/her language&#8217;s feature set during the course of language learning via exposure to ambient language patterns.</li>
+<li>As a result, a sound shared by two languages could have different features in each language.</li>
+<li>A typological survey in Mielke (2007) finds that existing feature systems can only account for about 70% of rule-targetting classes in natural languages.</li>
+<li>There are many &#8220;unnatural&#8221; processes that refer to disjointed sets of sounds.
+
+<ul>
+<li>For example, consider this pattern from Kolami (Mielke 2011 citing Emenau 1961).<a href="#fn:2" id="fnref:2" title="see footnote" class="footnote"><sup>2</sup></a>
+
+<ul>
+<li>Allomorph [-l] after / ʈ ɖ n̪ i iː e eː a aː /</li>
+<li>Allomorph [-ul] after / p t̪ k d̪ g s z m ŋ j /</li>
+</ul></li>
+</ul></li>
+</ul></li>
 </ul>
 
 <h1 id="commonlyusedfeaturesworthknowing">Commonly used features worth knowing</h1>
 
 <ul>
-<li>You do <em>not</em> need to memorize these, but they are the features most commonly used.</li>
+<li>You do <em>not</em> need to memorize these.</li>
 <li><strong>Voicing features</strong>
 
 <ul>
@@ -467,7 +504,7 @@
 <ul>
 <li>[labial]: lips are active articulator (e.g., bilabial, labiodental)</li>
 <li>[coronal]: tongue tip/blade/front is active articulator (e.g., dental and alveolar, retroflex, palatal)</li>
-<li>[dorsal]: tongue body/back is active articulator (e.g., palatal velar, uvular)</li>
+<li>[dorsal]: tongue body/back is active articulator (e.g. palatal velar, uvular)</li>
 <li>[pharyngeal]: tongue root is active articulator</li>
 <li>[laryngeal]: &#8220;glottal&#8221; sounds, e.g. [h] and [ʔ]</li>
 </ul></li>
@@ -485,7 +522,7 @@
 <li>[ɪ ɛ ʊ ɔ] are [+ATR] or [+tense]</li>
 <li>Low vowels depend on the feature system.</li>
 </ul></li>
-<li>Most feature systems use vowel features to distinguish between [+dorsal] consonants, in addition to using them for vowels.</li>
+<li>Most feature systems use vowel features to differentiate [+dorsal] consonants, in addition to using them for vowels.</li>
 </ul></li>
 <li>The class materials contain a few different feature charts, if you&#8217;re curious to see how they differ.
 
@@ -493,7 +530,7 @@
 <li>Elisabeth Zsiga&#8217;s (2013) Phonetics and Phonology feature chart.
 
 <ul>
-<li>Place features aren&#8217;t [+] or [–].</li>
+<li>Place features are privative, but other features are binary.</li>
 </ul></li>
 <li>Bruce Hayes' (2009) Introductory Phonology feature chart.
 
@@ -561,6 +598,38 @@
 <li>If it didn&#8217;t apply, try C ➔ Ø / CC ＿</li>
 <li>If it didn&#8217;t apply, try C ➔ Ø / C ＿</li>
 <li>If it didn&#8217;t apply, try C ➔ Ø / ＿</li>
+</ul></li>
+<li>C ➔ [αnasal] / ＿ [αnasal]
+
+<ul>
+<li>Apply these two sub-rules simultenously:
+
+<ul>
+<li>C ➔ [+nasal] / ＿ [+nasal]</li>
+<li>C ➔ [–nasal] / ＿ [–nasal]</li>
+</ul></li>
+</ul></li>
+<li>C ➔ [αnasal] / ＿ [–αnasal]
+
+<ul>
+<li>Apply these sub-rules simultenously:
+
+<ul>
+<li>C ➔ [+nasal] / ＿ [–nasal]</li>
+<li>C ➔ [–nasal] / ＿ [+nasal]</li>
+</ul></li>
+</ul></li>
+<li>C ➔ [αnasal, βvoice] / ＿ [αnasal, –βvoice]
+
+<ul>
+<li>Apply these sub-rules simultenously:
+
+<ul>
+<li>ɑ+, β+: C ➔ [+nasal, +voice] / ＿ [+nasal, –voice]</li>
+<li>ɑ–, β+: C ➔ [–nasal, +voice] / ＿ [–nasal, –voice]</li>
+<li>ɑ+, β–: C ➔ [+nasal, –voice] / ＿ [+nasal, +voice]</li>
+<li>ɑ–, β–: C ➔ [–nasal, –voice] / ＿ [–nasal, +voice]</li>
+</ul></li>
 </ul></li>
 </ul></li>
 <li>Let&#8217;s see abbreviatory conventions in action using the following example from SPE (p. 339, adapted slightly). Consider a fictional language in which:
@@ -714,22 +783,61 @@
 </ul></li>
 </ul>
 
-<h1 id="phonemesandallophonesinspe">Phonemes and allophones in SPE</h1>
+<h1 id="thedefiningcharacteristicsofspe">The defining characteristics of SPE</h1>
 
 <ul>
-<li>Compared to earlier work, there are fewer limitations on proposing underlying segments in SPE.
+<li>The following are major characteristics of the SPE research program, many of which set it apart from earlier work.<a href="#fn:3" id="fnref:3" title="see footnote" class="footnote"><sup>3</sup></a>
 
 <ul>
+<li>Generative grammar, URs and SRs:
+
+<ul>
+<li>SPE is a model of mappings between URs and SRs.</li>
+</ul></li>
+<li>Fully explicit algorithms:
+
+<ul>
+<li>The goal is to generate all and only the mappings of a language.</li>
+<li>Formal simplicity dictates the best analysis, and is achieved using features and abbreviatory conventions.</li>
+</ul></li>
+<li>The SRs of a language are generated via a sequence of phonological rules.
+
+<ul>
+<li>input ➔ rule 1 ➔ rule 2 … rule k ➔ output</li>
+<li>A priority for the phonologist is to determine &#8211; to the greatest extent possible &#8211; the ordering of rules.</li>
+</ul></li>
+<li>Features:
+
+<ul>
+<li>In SPE, representations are linear sequences of feature bundles.</li>
+<li>They contain nothing more &#8211; not even syllables.</li>
+<li>Later work in phonology proposed richer representations, containing syllable structure, autosegmental features, metrical feet, moras, etc.</li>
+</ul></li>
+<li>More abstractness:
+
+<ul>
+<li>In SPE, there are fewer limitations on proposing underlying segments.</li>
 <li>Analyses may contain URs that differ substantially from SRs, even containing segments that never appear on the surface, giving more <strong>abstract URs</strong>.</li>
 <li>For example, to account for stress, SPE proposes a distinction between final /ss/ (in <em>caress</em>) and final /s/ (in <em>Paris</em>) (p. 151).</li>
 </ul></li>
-<li>These differences are why Chomsky and Halle (1968) distance themselves from previous work and explicitly avoid the terms <em>phoneme</em> and <em>allophone</em> (p. 11, p. 65).
+</ul></li>
+<li>These differences are why Chomsky and Halle (1968) distance themselves from earlier work and explicitly avoid the terms <em>phoneme</em> and <em>allophone</em> (p. 11, p. 65). Earlier work in the Structuralist program…
 
 <ul>
+<li>… uses unordered &#8220;taxonomic&#8221; rules such as &#8220;Phoneme A is realized with variant B in context X––Y&#8221;.
+
+<ul>
+<li>In SPE, rules are ordered, apply in sequence, and are defined as algorithms.</li>
+</ul></li>
+<li>… has rigid requirements for positing phonemes, such as the requirement that every phonetic representation has a unique phonemic representation, and the requirement that the set of phonemes be as small as possible.
+
+<ul>
+<li>In SPE, the goal is to construct a model that generates the correct surface forms, and a UR is justified so long as it explains some data.</li>
+</ul></li>
 <li>From this point on, we&#8217;ll rarely see the terms <em>phoneme</em> and <em>allophone</em>.
 
 <ul>
-<li>We&#8217;ll still talk about sounds in URs and sounds in SRs.</li>
+<li>We&#8217;ll often talk about sounds in URs and sounds in SRs.</li>
 <li>You should feel free to use <em>phoneme</em> and <em>allophone</em>, since it&#8217;s clear that you don&#8217;t intend the terms in the pre-1950s sense.</li>
 </ul></li>
 </ul></li>
@@ -801,6 +909,14 @@
 
 <li id="fn:1">
 <p>[dental] isn't usually a feature, but is used here for simplicity. <a href="#fnref:1" title="return to body" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+<li id="fn:2">
+<p>Mielke (2011) is an optional reading in the shared files for the course. <a href="#fnref:2" title="return to body" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+<li id="fn:3">
+<p>If you&#8216;d like to learn more about the history, I recommend Goldsmith &amp; Laks&#8217; (2012) Chapter &#8220;Generative Phonology: its origins, its principles, and its successors&#8221; in the <em>Cambridge History of Linguistics</em>. That is what I'm paraphrasing here. <a href="#fnref:3" title="return to body" class="reversefootnote">&#160;&#8617;</a></p>
 </li>
 
 </ol>

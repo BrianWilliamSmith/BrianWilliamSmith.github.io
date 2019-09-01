@@ -25,10 +25,10 @@
 <div class="TOC">
 
 <ul>
-<li><a href="#theconspiracyproblem:non-collapsiblerulesthatdothesamethingkisseberth1970">The conspiracy problem: non-collapsible rules that do the same thing (Kisseberth 1970)</a></li>
-<li><a href="#discard">Discard?</a></li>
+<li><a href="#theconspiracyproblem:non-combinablerulesdothesamething">The conspiracy problem: non-combinable rules do the same thing</a></li>
 <li><a href="#theconspiracyinyawelmaniyokuts">The conspiracy in Yawelmani Yokuts</a></li>
 <li><a href="#anintroductiontoconstraints">An introduction to constraints</a></li>
+<li><a href="#constraints:blocking">Constraints: blocking</a></li>
 <li><a href="#constraints:triggering">Constraints: triggering</a></li>
 <li><a href="#conspiraciesandconstraints:whyisthisgood">Conspiracies and constraints: why is this good?</a></li>
 <li><a href="#anotherargumentforconstraintsfromshibatani1973">Another argument for constraints from Shibatani (1973)</a></li>
@@ -36,11 +36,10 @@
 <li><a href="#problemswithrulesplusconstraints:overview">Problems with rules plus constraints: overview</a></li>
 <li><a href="#ambiguoustriggering">Ambiguous triggering</a></li>
 <li><a href="#constraintviolability">Constraint violability</a></li>
-<li><a href="#constraintviolability">Constraint violability</a></li>
-<li><a href="#whathappenswhenconstraintsconflict">What happens when constraints conflict?</a></li>
-<li><a href="#islook-aheadnecessarywhendecidingwhethertotriggerarulehowfar">Is look-ahead necessary when deciding whether to trigger a rule? How far?</a></li>
+<li><a href="#constraintconflict">Constraint conflict</a></li>
+<li><a href="#look-ahead">Look-ahead</a></li>
 <li><a href="#theconceptualcrisis">The conceptual crisis</a></li>
-<li><a href="#enterot">Enter OT</a></li>
+<li><a href="#optimalitytheory">Optimality Theory</a></li>
 </ul>
 </div>
 
@@ -51,46 +50,24 @@
 <blockquote>
 <p>What is clear is that any serious theory of phonology must rely heavily on well-formedness constraints [&#8230;]. What remains in dispute, or in subformal obscurity, is the character of the interaction among the posited well-formedness constraints, as well as the relation between such constraints and whatever derivational rules they are meant to influence. Given the pervasiveness of this unclarity, and the extent to which it impedes understanding even the most basic functioning of the grammar, it is not excessively dramatic to speak of the issues surrounding the role of well-formedness constraints as involving a kind of conceptual crisis at the center of phonological thought.		</p>
 
-<ul>
-<li>Prince &amp; Smolensky (1993/2004, p. 1)</li>
-</ul>
+<p>– Prince &amp; Smolensky (1993/2004, p. 1)</p>
 </blockquote>
 
-<h1 id="theconspiracyproblem:non-collapsiblerulesthatdothesamethingkisseberth1970">The conspiracy problem: non-collapsible rules that do the same thing (Kisseberth 1970)</h1>
+<h1 id="theconspiracyproblem:non-combinablerulesdothesamething">The conspiracy problem: non-combinable rules do the same thing</h1>
 
 <ul>
-<li>The <strong>conspiracy</strong> problem was most prominently pointed out by Kisseberth (1970).</li>
 <li>Sometimes different rules seem to be aiming for the same surface pattern.
 
 <ul>
 <li>We call this a <strong>conspiracy</strong>: rules are independent but <strong>conspire</strong> to perform a common function.</li>
 </ul></li>
-<li>Kisseberth presents a conspiracy of rules in Yawelmani Yokuts , in which different rules all conspire to repair consonant clusters.
+<li>The conspiracy problem was most prominently pointed out by Kisseberth (1970).</li>
+<li>Kisseberth presents a conspiracy of rules in Yawelmani Yokuts.
 
 <ul>
-<li>However, the rules in Yokuts can&#8217;t be collapsed using notional conventions in SPE.</li>
-<li>To collapse the rules, Kisseberth proposes the addition of <strong>constraints</strong>, resulting in a shorter grammar that can capture the linguistically significant generalization.</li>
-</ul></li>
-</ul>
-
-<h1 id="discard">Discard?</h1>
-
-<ul>
-<li>In SPE, we collapse such rules using notional conventions.
-
-<ul>
-<li>Kisseberth (1970), p. 292: &#8220;Notational conventions in generative phonology have been selected with the general goal of establishing a correlation between the shortness of a grammar and the degree of linguistically significant generalization attained in a grammar.&#8221;  </li>
-<li>For example a theory with braces can collapse these rules:</li>
-<li> Ø → i / C __ C#		e.g., kabt → kabit</li>
-<li> Ø → i / C __ CC		e.g., talbto → talibto</li>
-<li> into this shorter rule Ø → i / C __ C{C,#}</li>
-</ul></li>
-<li>The rules below have something in common, but they can&#8217;t be collapsed using curly brackets.
-
-<ul>
-<li>C → Ø / CC + __		e.g., barg+du → bargu</li>
-<li>Ø → i / C __ CC		e.g., talbto → talibto	</li>
-<li>Writing two separate rules seems to be missing something.</li>
+<li>The application of the rules all result in the same output structure being avoided.</li>
+<li>However, the rules in Yawelmani can&#8217;t be combined using notional conventions in SPE.</li>
+<li>To combine the rules, Kisseberth proposes the addition of <strong>constraints</strong>, resulting in a shorter grammar that can capture the linguistically significant generalization.</li>
 </ul></li>
 </ul>
 
@@ -107,7 +84,7 @@
 
 <ul>
 <li>Let&#8217;s write a rule.</li>
-<li>C → Ø / …?</li>
+<li>C ➔ Ø / …?</li>
 </ul></li>
 </ul>
 
@@ -140,7 +117,7 @@
 
 <ul>
 <li>Let&#8217;s write a rule to account for epentheiss.</li>
-<li>Ø → i / …?</li>
+<li>Ø ➔ i / …?</li>
 </ul></li>
 </ul>
 
@@ -172,22 +149,17 @@
 </tr>
 <tr>
 	<td>/ʔilk-al/	</td>
-	<td>[ʔilkal]		</td>
+	<td>[ʔilkal]	</td>
 	<td>	&#8216;sing (dubitative)&#8217;</td>
 </tr>
 <tr>
 	<td>/lihm-al/	</td>
-	<td>[lihmal]		</td>
+	<td>[lihmal]	</td>
 	<td>	&#8216;run (dubitative)&#8217;</td>
 </tr>
 </tbody>
 
 <tbody>
-<tr>
-	<td>Underlying	</td>
-	<td> Surface </td>
-	<td> Gloss</td>
-</tr>
 <tr>
 	<td>/pulm/		</td>
 	<td> [poːlum]	</td>
@@ -197,7 +169,6 @@
 	<td>/pulm-a/	</td>
 	<td> [polma]	</td>
 	<td> &#8216;husband (locative)&#8217;</td>
-	<td>	</td>
 </tr>
 </tbody>
 </table>
@@ -208,7 +179,7 @@
 <ul>
 <li>This only applies to certain verbal suffixes.</li>
 <li>Let&#8217;s write a rule.</li>
-<li>V → Ø / …?</li>
+<li>V ➔ Ø / …?</li>
 </ul></li>
 </ul>
 
@@ -252,7 +223,7 @@
 </table>
 
 <ul>
-<li>These rules can&#8217;t be collapsed using notational conventions. Why not?</li>
+<li>These rules can&#8217;t be combined using notational conventions. Why not?</li>
 <li>Kisseberth describes these rules as <em>functionally equivalent</em> and not <em>structurally equivalent</em>. How are they functioanlly equivalent?</li>
 </ul>
 
@@ -287,16 +258,17 @@
 </ul></li>
 </ul>
 
-<p>#Constraints: blocking</p>
+<h1 id="constraints:blocking">Constraints: blocking</h1>
 
 <ul>
 <li><p>Kisseberth (1970) proposes using a constraint to simplify the rule system and capture the functional unity of the rules.</p>
 
 <ul>
-<li>The rule V → Ø/ V+C _ #	
-- is simplified to	V → Ø / +C _ #, subject to blocking by a constraint we could name *{C,#}C{C,#}.
-- This constraint says that strings containing the sequences CC#, #CC, CCC are not possible outputs of any phonological rule (if the sequences were not present in the input.)
-- In other words, a rule cannot create a {C,#}C{C,#} sequence, which violates the constraint.</li>
+<li>The rule V ➔ Ø / V + C _ # …</li>
+<li>… is simplified to V ➔ Ø / + C _ # …</li>
+<li>… subject to blocking by a constraint we could name *{C,#}C{C,#}.</li>
+<li>This constraint says that strings containing the sequences CC#, #CC, CCC are not possible outputs of any phonological rule (if the sequences were not present in the input).</li>
+<li>In other words, a rule cannot create a {C,#}C{C,#} sequence, which violates the constraint.</li>
 </ul></li>
 <li><p>Let&#8217;s think about how to make this into explicit algorithm.</p>
 
@@ -319,7 +291,7 @@
 <ul>
 <li>This means that a rule applies only if it gets rid of a constraint violation.</li>
 </ul></li>
-<li>For example, what happens if the rule Ø → i / C_ is triggered by the constraint *{C,#}C{C,#}?
+<li>For example, what happens if the rule Ø ➔ i / C _ is triggered by the constraint *{C,#}C{C,#}?
 
 <ul>
 <li>Again, break this down into individual algorithm steps.</li>
@@ -335,175 +307,559 @@
 <h1 id="conspiraciesandconstraints:whyisthisgood">Conspiracies and constraints: why is this good?</h1>
 
 <ul>
-<li>Kisseberth&#8217;s central argument is that output constraints give us simpler rule.</li>
+<li>Kisseberth&#8217;s central argument is that output constraints give us simpler rules.</li>
 <li>This predicts that rules that participate in conspiracies should be more natural (given the evaluation procedure of SPE), and systems with related rules (simplifiable with constraints) should be more natural than systems with unrelated rules.</li>
 </ul>
 
 <h1 id="anotherargumentforconstraintsfromshibatani1973">Another argument for constraints from Shibatani (1973)</h1>
 
-<p>Japanese: Underlyingly, morphemes may end in any consonant, but on the surface the possible codas are a nasal or the first half of a geminate C (suffix allomorphy takes care of other morpheme-final Cs).
-&quot;	Some loans:  peɴ 	   &#8216;pen&#8217;
-doɾesɯ	&#8216;dress&#8217;
-sɯkɯɾipɯto	&#8216;script&#8217;</p>
+<ul>
+<li>Loanword adaptation shows that speakers have knowledge of the constraints of their language.
 
-<p>&quot;	Shibatani argues that Japanese has no V-insertion rule (native morphemes that end in non-nasal consonants get taken care of in other ways).
-&quot;	So how do Japanese speakers know that they should fix foreign words like dress?
-&quot;	Harder problem: even if Japanese speakers know that they should fix dress, how do they know to do it with V insertion rather than, say, C deletion?</p>
+<ul>
+<li>Speakers apply rules to fix illicit structures in loanwords.</li>
+<li>And these rules aren&#8217;t found in native words.</li>
+<li>But functionally related rules and phonotactics are.</li>
+</ul></li>
+<li>In Japanese, URs may end in any consonant, but on the surface the only possible codas are a nasal or the first half of a geminate consonant.
 
-<p>Korean (still Shibatani): On the surface there are no word-initial liquids ([l] or [ɾ]) in native words. Originally, there were also no underlying word-initial liquids.
-&quot;	Some older loans:
-nok (sɛk) 	&#8216;green&#8217; &lt; Ch. lok (Middle Chinese, more or less)
-nam (sɛk) 	&#8216;blue&#8217; &lt; Ch. lam
-nampʰu	&#8216;lamp&#8217; (archaic) &lt; Jp. ɺampu (&lt; Eng. lamp)</p>
+<ul>
+<li>This restriction results in epenthesis in loanwords.</li>
+</ul></li>
+</ul>
 
-<p>&quot;	And alternations in loans [we have to assume here that these words really were related synchronically, and the compounds weren&#8217;t just borrowed as unanalyzed wholes]:
-no in 	&#8216;old man&#8217;	vs.	tʃo ɾo 	   &#8216;premature old age&#8217;
-nak wɔn	&#8216;paradise&#8217;	 vs.	kʰwɛ ɾak	&#8216;enjoyment&#8217;
-&quot;	Why did Korean speakers innovate a rule /ɾ/ → [n] (or /l/ → [n])?</p>
+<table>
+<caption style="caption-side: bottom;" id="epenthesisinloanwordsinjapanese">Epenthesis in loanwords in Japanese</caption>
+<colgroup>
+<col />
+<col />
+</colgroup>
+
+<thead>
+</thead>
+
+<tbody>
+<tr>
+	<td>peɴ </td>
+	<td>&#8216;pen&#8217;</td>
+</tr>
+<tr>
+	<td>doɾesɯ	</td>
+	<td>&#8216;dress&#8217;</td>
+</tr>
+<tr>
+	<td>sɯkɯɾipɯto	</td>
+	<td>&#8216;script&#8217;</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>Shibatani argues that Japanese has no V-insertion rule outside of loanwords.
+
+<ul>
+<li>URs of native morphemes that end in non-nasal consonants get taken care of in other ways.</li>
+<li>So how do Japanese speakers know that they should fix foreign words like <em>dress</em>?</li>
+<li>Harder problem: even if Japanese speakers know that they should fix <em>dress</em>, how do they know to do it with vowel epenthesis rather than consonant deletion?</li>
+<li>Hardest problem: even if Japanese speakers know that they should fix <em>dress</em> with epenthesis, how do we capture the similarity between this rule and rules that apply in native Japanese words?</li>
+</ul></li>
+<li>In Korean (still Shibatani), there are no word-initial liquids ([l] or [ɾ]) in SRs of native words.
+
+<ul>
+<li>Originally, there were also no underlying word-initial liquids.</li>
+</ul></li>
+</ul>
+
+<table>
+<colgroup>
+<col />
+<col />
+</colgroup>
+
+<thead>
+</thead>
+
+<tbody>
+<tr>
+	<td>nok (sɛk) </td>
+	<td>&#8216;green&#8217; from Chinese lok (Middle Chinese, more or less)</td>
+</tr>
+<tr>
+	<td>nam (sɛk) </td>
+	<td>&#8216;blue&#8217; from Chinese lam</td>
+</tr>
+<tr>
+	<td>nampʰu</td>
+	<td>&#8216;lamp&#8217; (archaic) from Japanese ɺampu (from Eng. lamp)</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>We can observe alternations in some loans that suggest underlying liquids, but initial liquids are avoided (assuming these are really alternations):</li>
+</ul>
+
+<table>
+<colgroup>
+<col />
+<col />
+<col />
+<col />
+<col />
+</colgroup>
+
+<thead>
+</thead>
+
+<tbody>
+<tr>
+	<td>no in</td>
+	<td> 	&#8216;old man&#8217;</td>
+	<td>	vs.</td>
+	<td>	tʃo ɾo 	 </td>
+	<td>  &#8216;premature old age&#8217;</td>
+</tr>
+<tr>
+	<td>nak wɔn</td>
+	<td>	&#8216;paradise&#8217;</td>
+	<td>	 vs.</td>
+	<td>	kʰwɛ ɾak	</td>
+	<td>&#8216;enjoyment&#8217;</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>Why did Korean speakers innovate a rule ɾ ➔ n (or l ➔ n)?</li>
+</ul>
 
 <h1 id="theduplicationproblem">The duplication problem</h1>
 
-<p>&quot;	Observation: dynamic processes (e.g., alternations, loanword adaptation) reiterate static restrictions (e.g. phonotactics, morpheme structure constraints)
-&quot;	This is a variant of the Conspiracies Problem, called the Duplication Problem
-&quot;	Hypothetical (but realistic) example from McCarthy (2002: 71)
-Lexical redundancy rule (static restriction):
-[-back] [-round]				(fills in predictable feature)
-Fronting: (dynamic process)
-/put + i/ [piti]
-/kop + i/ [kepi]
-Fronting Rule:
-V [-back, -round] / _____ C0 i
-&quot;	The redundancy rule expresses the generalization that rounding is predictable for front vowels. However, the fronting rule duplicates the same information. Instead of just fronting, it also changes rounding.
-&quot;	Yawelmani also suffers the duplication problem: it has a MSC (Morpheme Structure Condition) against triliteral clusters, and all the rules we discussed above re-iterate this static restriction.</p>
+<ul>
+<li>Observation: dynamic processes (e.g., alternations, loanword adaptation) reiterate static restrictions (e.g. phonotactics, morpheme structure constraints)</li>
+<li>This is a variant of the conspiracy problem, called the <strong>duplication problem</strong>.</li>
+<li> Hypothetical (but realistic) example from McCarthy (2002: 71)
+
+<ul>
+<li>Lexical redundancy rule
+
+<ul>
+<li>[–back] ➔ [–round]		(if a sound is front it&#8217;s also unrounded)</li>
+</ul></li>
+<li>A fronting process
+
+<ul>
+<li>/put + i/ ➔ [piti]</li>
+<li>/kop + i/ ➔ [kepi]</li>
+</ul></li>
+<li>Fronting Rule:
+
+<ul>
+<li>V ➔ [–back, –round] / ＿ C<sub>0</sub> i</li>
+</ul></li>
+</ul></li>
+<li>The redundancy rule expresses the generalization that front vowels are always unrounded.
+
+<ul>
+<li>However, the fronting rule duplicates the same information.</li>
+<li>Instead of just fronting, it also changes rounding.</li>
+</ul></li>
+<li>Yawelmani also suffers the duplication problem.
+
+<ul>
+<li>It has a Morpheme Structure Condition that requires URs have no underlying CCC clusters…</li>
+<li>… and the rules we discussed above re-iterate this requirement, avoiding CCC clusters when they occur as a result of concatenating URs.</li>
+</ul></li>
+</ul>
 
 <h1 id="problemswithrulesplusconstraints:overview">Problems with rules plus constraints: overview</h1>
 
-<p>&quot;	Ambiguous triggering
-&quot;	Constraint violability
-&quot;	Constraint conflict
-&quot;	How much lookahead?</p>
+<ul>
+<li>Previously, we discussed the first sentence of the quote at the top of this handout: &#8220;What is clear is that any serious theory of phonology must rely heavily on well-formedness constraints.&#8221;</li>
+<li>Next, we discuss the second sentence: &#8220;What remains in dispute, or in subformal obscurity, is the character of the interaction among the posited well-formedness constraints, as well as the relation between such constraints and whatever derivational rules they are meant to influence.&#8221;</li>
+<li>Four ways in which the interaction of constraints and rules is in subformal obscurity:
+
+<ul>
+<li>Ambiguous triggering</li>
+<li>Constraint violability</li>
+<li>Constraint conflict</li>
+<li>Lookahead</li>
+</ul></li>
+</ul>
 
 <h1 id="ambiguoustriggering">Ambiguous triggering</h1>
 
-<p>&quot;	Blocking and triggering
-o	Saying that a constraint blocks a rule means that the rule can&#8217;t apply if it would produce a violation of the constraint.
-o	Imagine the rule V ➔ Ø / C _ C is blocked by the constraint *{C,#}C{C,#}
-o	How would the new system work for these hypothetical underlying forms? (i.e. what steps are required to evaluate blocking constraints?)</p>
+<ul>
+<li>Sometimes there are multiple ways a rule could be triggered by a constraint.</li>
+<li>What are the different ways the rule Ø ➔ i / C _ could avoid a CCC sequence in /talbto/
 
-<pre><code>/bisotu/	/badlupi/
-</code></pre>
-
-<p>&quot;	Kisseberth also proposes that constraints can trigger rules, although he doesn&#8217;t formalize it. This means that a rule applies only if it gets rid of a constraint violation
-&quot;	For example, what happens if the rule Ø ➔ i / C_ is triggered by the constraint *{C,#}C{C,#}? Again, break this down into atomic steps.
-/talbto/	</p>
+<ul>
+<li>How might we choose between them?</li>
+</ul></li>
+</ul>
 
 <h1 id="constraintviolability">Constraint violability</h1>
 
-<p>&quot;	A major innovation of OT was the introduction of violable constraints. Violability played a crucial role both in typology and in analyses of individual languages.
-&quot;	To understand the importance of violable constraints for analyzing interactions within a language, consider McCarthy&#8217;s example applying the Filters Model (Chomsky and Lasnik 1977) to Yawelmani.</p>
+<ul>
+<li>Sometimes a constraint is violated by SRs, even though it seems to have an effect in part of the langauge.</li>
+</ul>
 
-<p>Filters Model (Chomsky and Lasnik 1977)
-a.	There is a set of transformations (which all apply optionally to create possible outputs)
-b.	A set of output filters (which rule out ungrammatical outputs)
-&quot;	Consider the Yawelmani facts. Let&#8217;s see how this approach might work for epenthesis and deletion. What goes wrong when we try to account for blocking?
-&quot;	Reminder: our constraint is *{C,#}C{C,#}
-Yawelmani vowel epenthesis:
-Underlying	Surface</p>
+<table>
+<caption style="caption-side: bottom;" id="koreannominativeallomorphy">Korean nominative allomorphy</caption>
+<colgroup>
+<col />
+<col />
+<col />
+</colgroup>
 
-<p>a.	/ʔilk-hin/		[ʔi.lik.hin]	&#8216;sing (nonfuture)&#8217;
-/lihm-hin/		[li.him.hin]	&#8216;run (nonfuture)&#8217;
-b.	/ʔilk-al/		[ʔil.kal]	&#8216;sing (dubitative)&#8217;
-/lihm-al/		[lih.mal]	&#8216;run (dubitative)&#8217;</p>
+<thead>
+<tr>
+	<th>Plain</th>
+	<th>Nominative</th>
+	<th>Gloss</th>
+</tr>
+</thead>
 
-<p>Yawelmani final vowel deletion (apocope) applies to certain verbal suffixes:</p>
+<tbody>
+<tr>
+	<td>ton	</td>
+	<td>to.ni		</td>
+	<td>&#8216;money&#8217;</td>
+</tr>
+<tr>
+	<td>sa.ɾam	</td>
+	<td>sa.ɾa.mi	</td>
+	<td>&#8216;person&#8217;</td>
+</tr>
+<tr>
+	<td>koŋ	</td>
+	<td>ko.ŋi		</td>
+	<td>&#8216;ball&#8217;</td>
+</tr>
+<tr>
+	<td>na.mu	</td>
+	<td>na.mu.ɡa	</td>
+	<td>&#8216;tree&#8217;</td>
+</tr>
+<tr>
+	<td>pʰa.ɾi	</td>
+	<td>pʰa.ɾi.ɡa	</td>
+	<td>&#8216;fly&#8217;</td>
+</tr>
+<tr>
+	<td>kʰo	</td>
+	<td>kʰo.ɡa		</td>
+	<td>&#8216;nose&#8217;</td>
+</tr>
+<tr>
+	<td>ɕ*i	</td>
+	<td>ɕ*i.ɡa		</td>
+	<td>&#8216;seed&#8217;</td>
+</tr>
+<tr>
+	<td>bɔ.tʰɔ	</td>
+	<td>bɔ.tʰɔ.ga	</td>
+	<td>&#8216;butter&#8217;</td>
+</tr>
+</tbody>
+</table>
 
-<p>Underlying	Surface
-c.	/taxaː-kʔa/		[ta.xakʔ]	&#8216;bring&#8217;
-/taxaː-mi/		[ta.xam]	&#8216;having brought&#8217;
-d.	/xat-kʔa/		[xat.kʔa]	&#8216;eat&#8217;
-/xat-mi/		[xat.mi]	&#8216;having eaten&#8217;</p>
+<ul>
+<li>What is the distribution of the two allomorphs of the nominative?</li>
+<li>What output structure are they avoiding?</li>
+<li>But what about these words?</li>
+</ul>
 
-<h1 id="constraintviolability">Constraint violability</h1>
+<table>
+<caption style="caption-side: bottom;" id="morekoreannominativeallomorphy">More Korean nominative allomorphy</caption>
+<colgroup>
+<col />
+<col />
+<col />
+<col />
+</colgroup>
 
-<p>Korean (example from Kie Zuraw)
-plain	nominative 	
-ton	to.ni	&#8216;money&#8217;
-sa.ɾam	sa.ɾa.mi	&#8216;person&#8217;
-koŋ	ko.ŋi	&#8216;ball&#8217;
-na.mu	na.mu.ɡa	&#8216;tree&#8217;
-pʰa.ɾi	pʰa.ɾi.ɡa	&#8216;fly&#8217;
-kʰo	kʰo.ɡa	&#8216;nose&#8217;
-ɕ<em>i	ɕ</em>i.ɡa	&#8216;seed&#8217;
-(* is used when no IPA symbol exists for something; here, it stands for &#8220;tenseness&#8221;, a phonemic property of certain Korean obstruents)
-&quot;	But what about these words?
-UR	plain	nominative	
-/salm/	sam	sal.mi	&#8216;life&#8217;
-/talk/	tak	tal.ɡi
-(ignore the voicing rule)	&#8216;chicken&#8217;
-&quot;	If *CC is a real constraint of Korean, our theory must allow constraints to be violated</p>
+<thead>
+<tr>
+	<th>UR	</th>
+	<th> Plain	</th>
+	<th>Nominative</th>
+	<th>Gloss</th>
+</tr>
+</thead>
 
-<h1 id="whathappenswhenconstraintsconflict">What happens when constraints conflict?</h1>
+<tbody>
+<tr>
+	<td>/salm/	</td>
+	<td>sam </td>
+	<td>sal.mi</td>
+	<td>&#8216;life&#8217;</td>
+</tr>
+<tr>
+	<td>/talk/	</td>
+	<td>tak </td>
+	<td>tal.ɡi </td>
+	<td>&#8216;chicken&#8217;</td>
+</tr>
+<tr>
+	<td>/sʌtʰeikʰʌ/</td>
+	<td>sʌ.tʰe.i.kʰʌ </td>
+	<td>sʌ.tʰe.i.kʰʌ.ga</td>
+	<td>'steak</td>
+</tr>
+</tbody>
+</table>
 
-<p>Dutch (example from Smith 2002, data originally from Booij 1995)
-&quot;	What constraint is triggering what rule?
-foreign word	Dutch pronunciation	
-pa.é.ʎa	pa.ʔɛ́l.ja	&#8216;paella&#8217;
-a.ór.ta	a.ʔɔ́r.ta	&#8216;aorta&#8217;
-ka.ún.da	ka.ʔún.da	&#8216;Kaunda&#8217; (first president of Zambia)
-But Dutch has a constraint *ʔV-stress :
-foreign word	Dutch pronunciation	
-xá.os	xá.os	&#8216;chaos&#8217;
-fá.ra.o	fá.ra.o	&#8216;pharaoh&#8217;
-&quot;	What could we do?</p>
+<ul>
+<li>If *CC or *VV is a real constraint of Korean, our theory must allow active constraints to be violated.</li>
+</ul>
 
-<h1 id="islook-aheadnecessarywhendecidingwhethertotriggerarulehowfar">Is look-ahead necessary when deciding whether to trigger a rule? How far?</h1>
+<h1 id="constraintconflict">Constraint conflict</h1>
 
-<p>&quot;	Hypothetical (and unrealistic, but simple) case:
-constraint	rules that could be triggered by the constraint	
-*C#		C → [-voice]
-[-voice] → Ø
-o	What happens to /tab/?
-&quot;	An even more extreme example (also a bit silly)-things get worse before they get better:
-constraint	rules that could be triggered by the constraint	
-*CC		Ø → p / m__C
-m → Ø / __[+lab]
-p → Ø / __ C</p>
+<ul>
+<li>Dutch (example from Smith 2002, data originally from Booij 1995)
 
-<p>o	What happens to /omsi/?</p>
+<ul>
+<li>What constraint is triggering what rule?</li>
+</ul></li>
+</ul>
+
+<table>
+<colgroup>
+<col />
+<col />
+<col />
+</colgroup>
+
+<thead>
+<tr>
+	<th> Foreign word	</th>
+	<th> Dutch pronunciation	</th>
+	<th> Gloss </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>pa.é.ʎa	</td>
+	<td>pa.ʔɛ́l.ja	</td>
+	<td>&#8216;paella&#8217;</td>
+</tr>
+<tr>
+	<td>a.ór.ta	</td>
+	<td>a.ʔɔ́r.ta	</td>
+	<td>&#8216;aorta&#8217;</td>
+</tr>
+<tr>
+	<td>ka.ún.da	</td>
+	<td>ka.ʔún.da	</td>
+	<td>&#8216;Kaunda&#8217; (first president of Zambia)</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>But Dutch has a constraint *ʔV-stress :</li>
+</ul>
+
+<table>
+<colgroup>
+<col />
+<col />
+<col />
+</colgroup>
+
+<thead>
+<tr>
+	<th> Foreign	</th>
+	<th> Dutch pronunciation	</th>
+	<th> Gloss </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>ká.os</td>
+	<td>xá.os</td>
+	<td>&#8216;chaos&#8217;</td>
+</tr>
+<tr>
+	<td>fá.ra.o</td>
+	<td>fá.ra.o</td>
+	<td>&#8216;pharaoh&#8217;</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>What&#8217;s the problem? How could we fix it?</li>
+</ul>
+
+<h1 id="look-ahead">Look-ahead</h1>
+
+<ul>
+<li><p>Is look-ahead necessary when deciding whether to trigger a rule? How far?</p></li>
+<li><p>Hypothetical (and unrealistic, but simple) case.</p>
+
+<ul>
+<li>What happens to /tab/</li>
+</ul></li>
+</ul>
+
+<table>
+<colgroup>
+<col />
+<col />
+</colgroup>
+
+<thead>
+<tr>
+	<th> Constraint</th>
+	<th> Rules that could be triggered by the constraint</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>*C#	</td>
+	<td> C ➔ [–voice] </td>
+</tr>
+<tr>
+	<td>		</td>
+	<td> [-voice] ➔ Ø</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>An even more extreme example (also a bit silly): things get worse before they get better.
+
+<ul>
+<li>What happens to /omsi/?</li>
+</ul></li>
+</ul>
+
+<table>
+<colgroup>
+<col />
+<col />
+</colgroup>
+
+<thead>
+<tr>
+	<th>Constraint	</th>
+	<th> Rules that could be triggered by the constraint</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>	*CC		</td>
+	<td>Ø ➔ p / m＿C</td>
+</tr>
+<tr>
+	<td>			</td>
+	<td>m ➔ Ø / ＿[+lab]</td>
+</tr>
+<tr>
+	<td>			</td>
+	<td>p ➔ Ø / ＿ C</td>
+</tr>
+</tbody>
+</table>
 
 <h1 id="theconceptualcrisis">The conceptual crisis</h1>
 
-<p>&quot;	Since Kisseberth 1970, constraints were taking on a bigger and bigger role. But there were open questions&#8230;
-o	Why aren&#8217;t constraints always obeyed?  
-o	What happens if there&#8217;s more than one way to satisfy a constraint? 
-grammar: *CC, satisfied by C → Ø or Ø → i
-&quot;	Maybe we need to prioritize the rules that could be triggered
-&quot;	Can different constraints prioritize rules differently?  
-o	Relatedly, what happens when constraints conflict?
-&quot;	What if one constraint wants to trigger a rule, but another wants to block it?
-&quot;	Must the grammar prioritize constraints?  
-o	Should a rule be allowed to look ahead in the derivation to see if applying alleviates a constraint violation? (how far?) 
-&quot;	Or does the alleviation have to be immediate?
-&quot;	Is a rule allowed to make things worse if a later rule will make them better?  
-o	Can a constraint prohibit a certain type of change, rather than a certain structure?</p>
-
-<h1 id="enterot">Enter OT</h1>
+<ul>
+<li>Since Kisseberth (1970), constraints were taking on a bigger and bigger role. But there were open questions&#8230;</li>
+<li>Why aren&#8217;t constraints always obeyed?  </li>
+<li>What happens if there&#8217;s more than one way to satisfy a constraint? 
 
 <ul>
-<li>The solution to these problems was to abandon rules, giving a constraint-only theory.</li>
+<li>Maybe we need to prioritize the rules that could be triggered</li>
+<li>Can different constraints prioritize rules differently?  </li>
+</ul></li>
+<li>Relatedly, what happens when constraints conflict?
+
+<ul>
+<li>What if one constraint wants to trigger a rule, but another wants to block it?</li>
+<li>Must the grammar prioritize constraints?  </li>
+</ul></li>
+<li>Should a rule be allowed to look ahead in the derivation to see if applying alleviates a constraint violation? (how far?) 
+
+<ul>
+<li>Or does the alleviation have to be immediate?</li>
+<li>Is a rule allowed to make things worse if a later rule will make them better?  </li>
+<li>Can a constraint prohibit a certain type of change, rather than a certain structure?</li>
+</ul></li>
 </ul>
 
-<p>A &#8220;derivation&#8221; in rule-based grammars (L) vs. OT (R)
-rule-based grammar with constraints 	OT grammar
-start with UR/input (from mental lexicon, maybe after morphology)
-apply rules in sequence-intermediate
-representation is known at all times 	apply all possible rules, producing a (large!) set of candidate outputs
-constraints may block or trigger rules 	constraints pick the best candidate
-look-ahead: nonexistent or sketchy 	candidate outputs are (potential) surface forms =&gt;
-full look-ahead to end of each possible derivation
-interaction of constraints: nonexistent or sketchy 	constraints interact through strict domination
-similarity to UR results from not applying too many rules, not having too many constraints 	similarity to UR is enforced by faithfulness constraints
-end with SR/output (send it to the phonetic system)</p>
+<h1 id="optimalitytheory">Optimality Theory</h1>
+
+<ul>
+<li>One solution was presented in Prince &amp; Smolensky&#8217;s (1993) <em>Optimality Theory</em> (OT), which solves the problems with combining rules and constraints by getting rid of rules entirely.</li>
+</ul>
+
+<table>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;"> A &#8220;derivation&#8221; in rule&#8211;based grammars with constrints </th>
+	<th style="text-align:center;"> A &#8220;derivation&#8221; in an OT </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;" colspan="2">start with UR/input (from mental lexicon, maybe after morphology)</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">apply rules in sequence </td>
+	<td style="text-align:center;"> apply all possible rules,</br> producing a (large!) set of candidate outputs </td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">constraints may block or trigger rules </td>
+	<td style="text-align:center;"> constraints pick the best candidate </td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">look-ahead: nonexistent or sketchy </td>
+	<td style="text-align:center;"> candidate outputs are (potential) surface forms,</br> giving full look-ahead to end of each possible derivation </td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">interaction of constraints: nonexistent or sketchy </td>
+	<td style="text-align:center;">constraints interact through strict domination </td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">similarity to UR results </br>from not applying too many rules,</br>not having too many constraints </td>
+	<td style="text-align:center;"> similarity to UR is enforced by faithfulness constraints</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:center;" colspan="2">end with SR/output (send it to the phonetic system) </td>
+</tr>
+</tbody>
+</table>
 
 </body>
 </html>
