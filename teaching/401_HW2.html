@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Assignment 2: Rule-based analysis of Somali</title>
+	<meta name="author" content="Brian W. Smith"/>
+	<meta name="date" content="8/20/2019"/>
+	<link type="text/css" rel="stylesheet" href="bws.css"/>
+</head>
+<body>
+
+<!-- Standard header. Change title in metadata -->
+
+<p><a href="401_guide.html">USC Advanced Undergraduate Phonology</a> ✳︎ Fall 2019 ✳︎ Smith</p>
+
+<hr />
+
+<div class="title">
+
+<p>Assignment 2: Rule-based analysis of Somali</p>
+
+</div>
+
+<!-- {{TOC}}-->
+
+<!-- Content starts below -->
+
+<h1 id="goals">Goals</h1>
+
+<ul>
+<li>to develop, present, and argue for an SPE-style system of rules for a complicated data set</li>
+</ul>
+
+<h1 id="instructions">Instructions</h1>
+
+<ul>
+<li><p>Account for all phonological alternations in these data.</p></li>
+<li><p>Start with the data in part (A), and then, for each successive part (B–D), modify your analysis as needed by adding new rules or modifying existing ones</p></li>
+<li><p>Remember that the final set of rules you end up with must account for all of the data.</p></li>
+<li><p><p>Your analysis should conform to the assumptions we&#8217;ve been making:</p>
+
+<ul>
+<li>Every morpheme has a unique UR.</li>
+<li>Phonological rules manipulate features.</li>
+<li>Rules apply in sequence.</li>
+<li>Assume the Hayes (2009) feature set in the Dropbox folder.</li>
+</ul></p></li>
+<li><p><p>Otherwise, you are free to be as creative as you&#8217;d like:</p>
+
+<ul>
+<li>Abbreviatory conventions are allowed, if they provide a better analysis.</li>
+<li>You can use abstract URs, if they provide a better analysis.</li>
+<li>(I don&#8217;t think you need either)</li>
+</ul></p></li>
+<li><p>Other things to note about the data:</p>
+
+<ul>
+<li>You may assume a phonetically arbitrary /lt/ ➔ [ʃ] rule.</li>
+<li>Vː indicates a long vowel, which has the feature [+long] in this feature system.</li>
+</ul></li>
+<li><p>Your write up must contain the following things:</p>
+
+<ul>
+<li><strong>Description of alternations:</strong> Clearly describe each alternation that you observe, in neutral terms.</li>
+<li><strong>URs</strong>: Clearly state the URs of each morpheme (each root and each suffix).</li>
+<li><strong>Rules</strong>: For each alternation, clearly state (and name) a phonological rule or rules which operate on the URs ing representations you posited.</li>
+<li><strong>Discussion of alternatives</strong>: If you could have handled a given alternation (e.g. X ~ Y) by assuming underlying X and rule X → Y, discuss why that choice is better than the alternative (e.g. assuming underlying Y and rule Y → X).</li>
+<li><strong>Rule ordering and derivation</strong>: In this problem, the order of rules matter. Provide an ordering argument, using proof-by-demonstration: for relevant sample inputs, ordering rule A before rule B achieves the correct result, while ordering B before A does not. (You may have to figure out the order of rules through trial and error)</li>
+</ul></li>
+<li><p>I&#8217;ve posted a handout including write-up tips. This handout is relevant for every assignment, and you should read it.</p></li>
+</ul>
+
+<h1 id="howtowriteitup">How to write it up</h1>
+
+<ul>
+<li>Write up your solution in the form of a short paper, with an introduction, titled sections, and a conclusion.</li>
+<li>You are encouraged to collaborate on solving the problem, but you must write up your own analysis.</li>
+<li>Possible sections:
+
+<ul>
+<li>Introduction - a sentence of two explaining what the write-up is about</li>
+<li>Alternations - describe each of the alternations, using examples from the data to illustrate them. Make it clear what you think the morphemes are.</li>
+<li>Rules and URs - for each alternation, provide a rule or rules. Make sure you define the rule formally and also in prose. This is a good place to justify why you formalized the rule the way you did, and provide support for your choices of underlying vs. derived sounds.</li>
+<li>Rule ordering and derivation - provide a derivation for a set of inputs, showing that your analysis works. Choose inputs that undergo each rule. This is a good place to discuss rule ordering, and provide derivations showing that the rules must be in a certain order.</li>
+<li>Conclusion - summarize what your analysis did.</li>
+<li>Optional section: predictions - discuss testable predictions of your analysis.</li>
+</ul></li>
+</ul>
+
+<h1 id="dataparta">Data part A</h1>
+
+<table>
+<colgroup>
+<col />
+<col />
+<col />
+<col />
+</colgroup>
+
+<thead>
+<tr>
+	<th> Singular		</th>
+	<th>Singular definite</th>
+	<th> Plural		</th>
+	<th> Gloss			</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>	daːr		</td>
+	<td>	daːrta		</td>
+	<td>	daːro		</td>
+	<td>	house		</td>
+</tr>
+<tr>
+	<td>	geːs		</td>
+	<td>	geːsta		</td>
+	<td>	geːso		</td>
+	<td>	side		</td>
+</tr>
+<tr>
+	<td>	lug			</td>
+	<td>	lugta		</td>
+	<td>	luγo		</td>
+	<td>	leg			</td>
+</tr>
+<tr>
+	<td>	naːg		</td>
+	<td>	naːgta		</td>
+	<td>	naːγo		</td>
+	<td>	woman		</td>
+</tr>
+<tr>
+	<td>	tib			</td>
+	<td>	tibta		</td>
+	<td>	tiβo		</td>
+	<td>	pestle		</td>
+</tr>
+<tr>
+	<td>	sab			</td>
+	<td>	sabta		</td>
+	<td>	saβo		</td>
+	<td>	outcast		</td>
+</tr>
+<tr>
+	<td>	bad			</td>
+	<td>	bada		</td>
+	<td>	baðo		</td>
+	<td>	sea			</td>
+</tr>
+<tr>
+	<td>	ʕid			</td>
+	<td>	ʕida		</td>
+	<td>	ʕiðo		</td>
+	<td>	person		</td>
+</tr>
+<tr>
+	<td>	feːɖa		</td>
+	<td>	feːɖa		</td>
+	<td>	feːʐo		</td>
+	<td>	rib			</td>
+</tr>
+<tr>
+	<td>	ul			</td>
+	<td>	uʃa			</td>
+	<td>	ulo			</td>
+	<td>	stick		</td>
+</tr>
+<tr>
+	<td>	bil			</td>
+	<td>	biʃa		</td>
+	<td>	bilo		</td>
+	<td>	month		</td>
+</tr>
+<tr>
+	<td>	meːl		</td>
+	<td>	meːʃa		</td>
+	<td>	meːlo		</td>
+	<td>	place		</td>
+</tr>
+<tr>
+	<td>	kaliːl		</td>
+	<td>	kaliːʃa		</td>
+	<td>	kaliːlo		</td>
+	<td>	summer		</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="datapartb">Data part B</h1>
+
+<table>
+<colgroup>
+<col />
+<col />
+<col />
+<col />
+</colgroup>
+
+<thead>
+<tr>
+	<th> Singular		</th>
+	<th>Singular definite</th>
+	<th> Plural		</th>
+	<th> Gloss			</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>	sun			</td>
+	<td>	sunta		</td>
+	<td>	sumo		</td>
+	<td>	poison		</td>
+</tr>
+<tr>
+	<td>	laːn		</td>
+	<td>	laːnta		</td>
+	<td>	laːmo		</td>
+	<td>	branch		</td>
+</tr>
+<tr>
+	<td>	sin			</td>
+	<td>	sinta		</td>
+	<td>	simo		</td>
+	<td>	hip			</td>
+</tr>
+<tr>
+	<td>	dan			</td>
+	<td>	danta		</td>
+	<td>	dano		</td>
+	<td>	affair		</td>
+</tr>
+<tr>
+	<td>	daːn		</td>
+	<td>	daːnta		</td>
+	<td>	daːno		</td>
+	<td>	river bank	</td>
+</tr>
+<tr>
+	<td>	saːn		</td>
+	<td>	saːnta		</td>
+	<td>	saːno		</td>
+	<td>	hide		</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="datapartc">Data part C</h1>
+
+<table>
+<colgroup>
+<col />
+<col />
+<col />
+<col />
+</colgroup>
+
+<thead>
+<tr>
+	<th> Singular		</th>
+	<th>Singular definite</th>
+	<th> Plural		</th>
+	<th> Gloss			</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>	nirig		</td>
+	<td>	nirigta		</td>
+	<td>	nirgo		</td>
+	<td>	baby female camel</td>
+</tr>
+<tr>
+	<td>	gaβaɖ		</td>
+	<td>	gaβaɖa		</td>
+	<td>	gabɖo		</td>
+	<td>	girl		</td>
+</tr>
+<tr>
+	<td>	gaʕan		</td>
+	<td>	gaʕanta		</td>
+	<td>	gaʕmo		</td>
+	<td>	arm			</td>
+</tr>
+<tr>
+	<td>	hoɣol		</td>
+	<td>	hoɣoʃa		</td>
+	<td>	hoglo		</td>
+	<td>	downpour	</td>
+</tr>
+<tr>
+	<td>	baɣal		</td>
+	<td>	baɣaʃa		</td>
+	<td>	baglo		</td>
+	<td>	mule		</td>
+</tr>
+<tr>
+	<td>	waħar		</td>
+	<td>	waħarta		</td>
+	<td>	waħaro		</td>
+	<td>	female kd	</td>
+</tr>
+<tr>
+	<td>	kefed		</td>
+	<td>	kefeda		</td>
+	<td>	kefeðo		</td>
+	<td>	pan			</td>
+	<td>	</td>
+</tr>
+<tr>
+	<td>	ʕilin		</td>
+	<td>	ʕilinta		</td>
+	<td>	ʕilino		</td>
+	<td>	female dwarf</td>
+</tr>
+<tr>
+	<td>	bohol		</td>
+	<td>	bohoʃa		</td>
+	<td>	boholo		</td>
+	<td>	hole		</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="datapartd">Data part D</h1>
+
+<table>
+<colgroup>
+<col />
+<col />
+<col />
+<col />
+</colgroup>
+
+<thead>
+<tr>
+	<th>3sg. masc. past</th>
+	<th> 3sg. fem. past</th>
+	<th> 1 pl. past	</th>
+	<th> Gloss 		</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>	suɣaj		</td>
+	<td>	sugtaj		</td>
+	<td>	sugnaj		</td>
+	<td>	wait		</td>
+</tr>
+<tr>
+	<td>	kaβaj		</td>
+	<td>	kabtaj		</td>
+	<td>	kabnaj		</td>
+	<td>	fix			</td>
+</tr>
+<tr>
+	<td>	siðaj		</td>
+	<td>	sidaj		</td>
+	<td>	sidnaj		</td>
+	<td>	carry		</td>
+</tr>
+<tr>
+	<td>	dilaj		</td>
+	<td>	diʃaj		</td>
+	<td>	dillaj		</td>
+	<td>	kill		</td>
+</tr>
+<tr>
+	<td>	ganaj		</td>
+	<td>	gantaj		</td>
+	<td>	gannaj		</td>
+	<td>	aim			</td>
+</tr>
+<tr>
+	<td>	tumaj		</td>
+	<td>	tuntaj		</td>
+	<td>	tunnaj		</td>
+	<td>	hammer		</td>
+</tr>
+<tr>
+	<td>	argaj		</td>
+	<td>	aragtaj		</td>
+	<td>	aragnaj		</td>
+	<td>	see			</td>
+</tr>
+<tr>
+	<td>	gudbaj		</td>
+	<td>	guðubtaj	</td>
+	<td>	guðubnaj	</td>
+	<td>	cross a river</td>
+</tr>
+<tr>
+	<td>	qoslaj		</td>
+	<td>	qosoʃaj		</td>
+	<td>	qosollaj	</td>
+	<td>	laugh		</td>
+</tr>
+<tr>
+	<td>	hadlaj		</td>
+	<td>	haðaʃaj		</td>
+	<td>	haðallaj	</td>
+	<td>	talk		</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
+
