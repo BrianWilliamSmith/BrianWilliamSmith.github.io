@@ -31,6 +31,7 @@
 <li><a href="#theevaluationprocedureinspe">The evaluation procedure in SPE</a></li>
 <li><a href="#phonologicalfeatures">Phonological features</a></li>
 <li><a href="#howdowedecidewhatthefeaturesshouldbe">How do we decide what the features should be?</a></li>
+<li><a href="#phoneticsreview">Phonetics review</a></li>
 <li><a href="#commonlyusedfeaturesworthknowing">Commonly used features worth knowing</a></li>
 <li><a href="#abbreviatoryconventions">Abbreviatory conventions</a></li>
 <li><a href="#arealexamplefromspe">A real example from SPE</a></li>
@@ -370,10 +371,12 @@
 <li>We&#8217;ll assume the feature set is universal and the same in every language.</li>
 <li>We&#8217;ll assume that features are binary: they are always + or –.</li>
 <li>We&#8217;ll also assume that every sound is specified for most features.</li>
-<li>But not every sound is specified for every feature.
+<li>But not every sound can be specified for every feature.
 
 <ul>
 <li>For example, most consonants don&#8217;t have features relating to tongue height like [high] or [low].</li>
+<li>This is often represented as [0feature].</li>
+<li>Rules <em>cannot</em> target [0feature] sounds –- just [+feature] or [-feature].</li>
 </ul></li>
 </ul></li>
 <li>Features allow us to combine related-looking rules by referring to natural classes.
@@ -437,6 +440,49 @@
 </ul></li>
 </ul>
 
+<h1 id="phoneticsreview">Phonetics review</h1>
+
+<ul>
+<li><a href="https://sail.usc.edu/span/rtmri_ipa/db_2015.html">The rtMRI chart via SPAN</a></li>
+<li>Describing consonants in the IPA
+
+<ul>
+<li>Voicing (left vs. right in the call)
+
+<ul>
+<li>voiced, voiceless</li>
+<li>creaky voice</li>
+<li>breathy voice</li>
+<li>aspiration</li>
+</ul></li>
+<li>Place (columns)
+
+<ul>
+<li>labial</li>
+<li>labiodental</li>
+<li>dental</li>
+<li>alveolar</li>
+<li>postalveolar</li>
+<li>palatal</li>
+<li>retroflex</li>
+<li>velar</li>
+<li>uvular</li>
+<li>pharyngeal</li>
+<li>glottal</li>
+</ul></li>
+<li>Manner (rows)
+
+<ul>
+<li>stop (a.k.a. plosive)</li>
+<li>nasal (a.k.a. nasal stop)</li>
+<li>fricative</li>
+<li>affricate</li>
+<li>approximant (glide, liquid)</li>
+<li>lateral (lateral approximant)</li>
+</ul></li>
+</ul></li>
+</ul>
+
 <h1 id="commonlyusedfeaturesworthknowing">Commonly used features worth knowing</h1>
 
 <ul>
@@ -448,12 +494,53 @@
 <li>[spread glottis]: aspirated sounds are +</li>
 <li>[constricted glottis]: glottalized/creaky voice and ejectives are +</li>
 </ul></li>
+<li><strong>Major place features</strong>
+
+<ul>
+<li>[labial]: lips are active articulator (e.g., bilabial, labiodental)</li>
+<li>[coronal]: tongue tip/blade/front is active articulator, passive articulator is teeth, alveolar ridge, or palate
+
+<ul>
+<li>Dental, alveolar, postalveolar, alveopalatal, palatal</li>
+<li>Further broken down into…</li>
+<li>[distributed]
+
+<ul>
+<li>sounds made with tongue blade or front are +</li>
+<li>sounds made with the tongue tip are –</li>
+</ul></li>
+<li>[anterior]
+
+<ul>
+<li>sounds made at the alveolar ridge or fronter are +</li>
+<li>sounds made further back are –</li>
+</ul></li>
+</ul></li>
+<li>[dorsal]: tongue body/back is active articulator (e.g., palatal, velar, uvular)
+
+<ul>
+<li>Note: palatal is both [+dorsal] and [+coronal]</li>
+</ul></li>
+<li>[pharyngeal]: tongue root is active articulator</li>
+<li>[laryngeal]: &#8220;glottal&#8221; sounds, e.g. [h] and [ʔ]</li>
+<li>Major place features are often unary.
+
+<ul>
+<li>A coronal sound simply has a [coronal] feature, and non-coronals don&#8217;t have a [coronal] feature.</li>
+<li>This means rules can&#8217;t target [-coronal] as a natural class.</li>
+</ul></li>
+</ul></li>
 <li><strong>Manner features</strong>
 
 <ul>
 <li>[syllabic]: vowels and syllabic consonants are +</li>
 <li>[consonantal]: vowels and glides are –</li>
-<li>[sonorant]: obstruents (non-nasal stops, fricatives, affricates) are –</li>
+<li>[sonorant]
+
+<ul>
+<li>Obstruents (non-nasal stops, fricatives, affricates) are –</li>
+<li>Sonorants (nasals, approximants, vowels) are +</li>
+</ul></li>
 <li>[continuant]: fricatives and approximants are +
 
 <ul>
@@ -462,15 +549,14 @@
 <li>[nasal]: nasals are +</li>
 <li>[lateral]: laterals are +</li>
 <li>[delayed release]: affricates are +</li>
-</ul></li>
-<li><strong>Major place features</strong>
+<li>[strident]: certain fricatives and affricates are +
 
 <ul>
-<li>[labial]: lips are active articulator (e.g., bilabial, labiodental)</li>
-<li>[coronal]: tongue tip/blade/front is active articulator (e.g., dental and alveolar, retroflex, palatal)</li>
-<li>[dorsal]: tongue body/back is active articulator (e.g., palatal velar, uvular)</li>
-<li>[pharyngeal]: tongue root is active articulator</li>
-<li>[laryngeal]: &#8220;glottal&#8221; sounds, e.g. [h] and [ʔ]</li>
+<li>Fricatives and affricates with loud, high-pitched noise</li>
+<li>[f, v, s, z, ʧ, ʤ, ʃ, ʒ, χ, ᴚ] are +</li>
+<li>[ɸ, β, θ, ð, x, ɣ] are –</li>
+<li>In Hayes' feature chart, only coronals are specified for</li>
+</ul></li>
 </ul></li>
 <li><strong>Vowel features</strong>
 
@@ -479,6 +565,7 @@
 <li>[low]</li>
 <li>[front]</li>
 <li>[back]</li>
+<li>[round]</li>
 <li>[ATR], [tense]
 
 <ul>
@@ -486,7 +573,7 @@
 <li>[ɪ ɛ ʊ ɔ] are [+ATR] or [+tense]</li>
 <li>Low vowels depend on the feature system.</li>
 </ul></li>
-<li>Most feature systems use vowel features to distinguish between [+dorsal] consonants, in addition to using them for vowels.</li>
+<li>Most feature systems use vowel features to distinguish between different [+dorsal] consonants, in addition to using them for vowels.</li>
 </ul></li>
 <li>The class materials contain a few different feature charts, if you&#8217;re curious to see how they differ.
 
@@ -494,17 +581,99 @@
 <li>Elisabeth Zsiga&#8217;s (2013) Phonetics and Phonology feature chart.
 
 <ul>
-<li>Place features aren&#8217;t [+] or [–].</li>
+<li>Place features and some other features are unary: they aren&#8217;t [+] or [–].</li>
 </ul></li>
 <li>Bruce Hayes' (2009) Introductory Phonology feature chart.
 
 <ul>
-<li>Covers nearly every soound in the IPA, including secondary articulations.</li>
+<li>All features are binary.</li>
+<li>Has an [approximant] feature, and specifies fewer sounds for every feature. For example, [strident] is only used for coronals, and [delayed release] is only used for obstruents.</li>
 </ul></li>
-<li>Jason Riggle&#8217;s (2008) feature chart.</li>
-<li>A feature chart for SPE, typeset and commented by Ewan Dunbar.</li>
+<li>Jason Riggle&#8217;s (2008) feature chart.
+
+<ul>
+<li>All features are binary.</li>
+<li>Has a [tense] feature AND an [ATR] feature. The former is used to distinguish between vowels and dorsal consonants, and the latter is used for vowels only.</li>
+</ul></li>
+<li>A feature chart for SPE, typeset and commented by Ewan Dunbar.
+
+<ul>
+<li>This chart also has a very useful key to translate the IPA used in SPE to IPA you&#8217;re familiar with.</li>
+</ul></li>
+</ul></li>
+<li>To be explicit, we&#8217;ll use the Hayes' chart, since it has good coverage and the [approximant] feature is useful, and I have an Excel spreadsheet.
+
+<ul>
+<li>Most of the time, our rules will operate the same regardless of the chart we use.</li>
+<li>Here is a very helpful summary for the manner features.</li>
 </ul></li>
 </ul>
+
+<div class="fullrule">
+
+<table>
+<caption style="caption-side: bottom;" id="mannerfeaturesforhayes2009featurechart">Manner features for Hayes' (2009) feature chart</caption>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;" colspan="4"><strong>sonorants</strong></td>
+	<td style="text-align:center;" colspan="3">	<strong>obstruents</strong></td>
+</tr>
+<tr>
+	<td style="text-align:center;"><strong>vowels</strong>	</td>
+	<td style="text-align:center;"><strong>glides</strong></td>
+	<td style="text-align:center;">	<strong>liquids</strong></td>
+	<td style="text-align:center;"><strong>nasals</strong></td>
+	<td style="text-align:center;"><strong>fricatives</strong></td>
+	<td style="text-align:center;"><strong>affricates</strong></td>
+	<td style="text-align:center;"><strong>stops</strong></td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">[+syllabic]	</td>
+	<td style="text-align:center;" colspan="6">[–syllabic]</td>
+</tr>
+<tr>
+	<td style="text-align:center;" colspan="2">[–consonantal]</td>
+	<td style="text-align:center;" colspan="5">	[+consonantal]</td>
+</tr>
+<tr>
+	<td style="text-align:center;" colspan="3">[+approximant]</td>
+	<td style="text-align:center;" colspan="4">	[–approximant]</td>
+</tr>
+<tr>
+	<td style="text-align:center;" colspan="4">[+sonorant]	</td>
+	<td style="text-align:center;" colspan="3">[–sonorant]</td>
+</tr>
+<tr>
+	<td style="text-align:center;" colspan="3">[+continuant]	</td>
+	<td style="text-align:center;">[–continuant]</td>
+	<td style="text-align:center;">	[+continuant] </td>
+	<td style="text-align:center;" colspan="2">	[–continuant]</td>
+</tr>
+<tr>
+	<td style="text-align:center;" colspan="4">(no value for [delayed release])</td>
+	<td style="text-align:center;" colspan="2">	[+delayed release]	</td>
+	<td style="text-align:center;">[–del rel]</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 
 <h1 id="abbreviatoryconventions">Abbreviatory conventions</h1>
 

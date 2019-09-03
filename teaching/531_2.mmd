@@ -140,13 +140,17 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 [Portions of the feature bundles of /k/, /æ/, and /t/, using the feature set of Hayes' (2009) textbook]
 
 - There is quite a bit of variation in how features are used (see the reading Zsiga 2013 for some examples). 
+	+ We'll assume that URs are composed of a series of feature bundles.
 	- We'll assume the feature set is universal and the same in every language.
 	- We'll assume that features are binary: they are always + or –.
 	- We'll also assume that every sound is specified for most features.
-	- But not every sound is specified for every feature.
+	- But not every sound can be specified for every feature.
 		+ For example, most consonants don't have features relating to tongue height like [high] or [low].
+		+ This is often represented as [0feature].
+		+ Rules *cannot* target [0feature] sounds –- just [+feature] or [-feature].
 	- Disclaimers
 		+ There are proposals with non-binary ("privative") features.
+			* Especially for major place features, as discussed below.
 		+ There are proposals in which feature specifications are as minimal as possible, and all redundant/predictable features are added by rules. 
 			+ For example, in a language without voiceless sonorants, sonorants don't need a [voice] feature if a rule makes [+sonorant] sounds [+voice].
 		- There are arguments against feature being universal (more on this below).
@@ -188,45 +192,115 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 		+ For example, consider this pattern from Kolami (Mielke 2011 citing Emenau 1961).[^mielke]
 			* Allomorph [-l] after / ʈ ɖ n̪ i iː e eː a aː / 
 			* Allomorph [-ul] after / p t̪ k d̪ g s z m ŋ j /
-
+			
+# Phonetics review
+- [The rtMRI chart via SPAN](https://sail.usc.edu/span/rtmri_ipa/db_2015.html)
+- Describing consonants in the IPA 
+	+ Voicing (left vs. right in the call)
+		* voiced, voiceless
+		* creaky voice
+		* breathy voice
+		* aspiration
+	+ Place (columns)
+		* labial
+		* labiodental
+		* dental
+		* alveolar
+		* postalveolar
+		* palatal
+		* retroflex
+		* velar
+		* uvular
+		* pharyngeal
+		* glottal
+	+ Manner (rows)
+		* stop (a.k.a. plosive)
+		* nasal (a.k.a. nasal stop)
+		* fricative
+		* affricate
+		* approximant (glide, liquid)
+		* lateral (lateral approximant)
+		
 # Commonly used features worth knowing
-- You do *not* need to memorize these.
+- You do *not* need to memorize these, but they are the features most commonly used.
 - **Voicing features**
 	+ [voice]: voiced sounds are +
 	+ [spread glottis]: aspirated sounds are +
 	+ [constricted glottis]: glottalized/creaky voice and ejectives are +
+- **Major place features**
+	- [labial]: lips are active articulator (e.g., bilabial, labiodental)
+	- [coronal]: tongue tip/blade/front is active articulator, passive articulator is teeth, alveolar ridge, or palate
+		+ Dental, alveolar, postalveolar, alveopalatal, palatal
+		+ Further broken down with [distributed] and [anterior], two features which are only specified for coronals.
+		+ [distributed]
+			+ sounds made with tongue blade or front are +
+			+ sounds made with the tongue tip are –
+		+ [anterior]
+			* sounds made at the alveolar ridge or fronter are +
+			* sounds made further back are –
+	- [dorsal]: tongue body/back is active articulator (e.g., palatal, velar, uvular)
+		+ Note: palatal is both [+dorsal] and [+coronal]
+	- [pharyngeal]: tongue root is active articulator 
+	- [laryngeal]: "glottal" sounds, e.g. [h] and [ʔ]
+	- Major place features are often unary.
+		+ A coronal sound simply has a [coronal] feature, and non-coronals don't have a [coronal] feature.
+		+ This means rules can't target [-coronal] as a natural class.
 - **Manner features**
 	- [syllabic]: vowels and syllabic consonants are +
 	- [consonantal]: vowels and glides are –
-	- [sonorant]: obstruents (non-nasal stops, fricatives, affricates) are –
+	- [sonorant]
+		- Obstruents (non-nasal stops, fricatives, affricates) are –
+		- Sonorants (nasals, approximants, vowels) are +
 	- [continuant]: fricatives and approximants are +
 		+ Nasals are [–continuant]!
 	- [nasal]: nasals are +
 	- [lateral]: laterals are +
 	- [delayed release]: affricates are +
-- **Major place features**
-	- [labial]: lips are active articulator (e.g., bilabial, labiodental)
-	- [coronal]: tongue tip/blade/front is active articulator (e.g., dental and alveolar, retroflex, palatal)
-	- [dorsal]: tongue body/back is active articulator (e.g. palatal velar, uvular)
-	- [pharyngeal]: tongue root is active articulator 
-	- [laryngeal]: "glottal" sounds, e.g. [h] and [ʔ]
+		+ In some charts, fricatives are also +
+	- [strident]: certain fricatives and affricates are +
+		+ Fricatives and affricates with loud, high-pitched noise
+		+ [f, v, s, z, ʧ, ʤ, ʃ, ʒ, χ, ᴚ] are +
+		+ [ɸ, β, θ, ð, x, ɣ] are –
 - **Vowel features**
 	+ [high]
 	+ [low]
 	+ [front]
 	+ [back]
+	+ [round]
 	+ [ATR], [tense]
 		+ [i e u o] are [+ATR] or [+tense]
 		+ [ɪ ɛ ʊ ɔ] are [+ATR] or [+tense]
 		+ Low vowels depend on the feature system.
-	- Most feature systems use vowel features to differentiate [+dorsal] consonants, in addition to using them for vowels.
+	- Most feature systems use vowel features to distinguish between different [+dorsal] consonants, in addition to using them for vowels.
 - The class materials contain a few different feature charts, if you're curious to see how they differ.
 	+ Elisabeth Zsiga's (2013) Phonetics and Phonology feature chart.
-		* Place features are privative, but other features are binary.
+		* Place features and some other features are unary: they aren't [+] or [–].
 	+ Bruce Hayes' (2009) Introductory Phonology feature chart.
-		+ Covers nearly every soound in the IPA, including secondary articulations.
+		* All features are binary.
+		+ Has an [approximant] feature, and specifies fewer sounds for every feature. For example, [strident] is only used for coronals, and [delayed release] is only used for obstruents.
 	+ Jason Riggle's (2008) feature chart.
+		* All features are binary.
+		* Has a [tense] feature AND an [ATR] feature. The former is used to distinguish between vowels and dorsal consonants, and the latter is used for vowels only.
 	+ A feature chart for SPE, typeset and commented by Ewan Dunbar.
+		* This chart also has a very useful key to translate the IPA used in SPE to IPA you're familiar with.
+- To be explicit, we'll use the Hayes' chart, since it has good coverage and the [approximant] feature is useful, and I have an Excel spreadsheet.
+	+ Most of the time, our rules will operate the same regardless of the chart we use.
+ 
+<div class="fullrule">
+
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+**sonorants**||||	**obstruents**|||
+**vowels**	|**glides**|	**liquids**|**nasals**|**fricatives**|**affricates**|**stops**|
+
+[+syllabic]	|[–syllabic]||||||
+[–consonantal]||	[+consonantal]|||||
+[+approximant]|||	[–approximant]||||
+[+sonorant]	||||[–sonorant]|||
+[+continuant]	|||[–continuant]|	[+continuant] |	[–continuant]||
+(no value for [delayed release])||||	[+delayed release]	||[–del rel]|
+[Manner features for Hayes' (2009) feature chart]
+
+</div>
 
 # Abbreviatory conventions
 - Rules can also be combined using **abbreviatory conventions**. Here are four of the most common:
