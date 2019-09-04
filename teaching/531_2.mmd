@@ -55,7 +55,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 | [+consonantal] ➔ [–voice] / ＿ #|
 | [–sonorant] ➔ [–voice] ∕ ＿ ]~wd|
 | C ➔ [+voice] / V ＿ V|
-| [-sonorant] ➔ [–voice] ∕ [–voice] ＿|
+| [–sonorant] ➔ [–voice] ∕ [–voice] ＿|
 [Rule examples]
 
 + An important skill is being able to translate a rule into prose (and back again). Here are some tips and pitfalls for stating rules in prose:
@@ -66,7 +66,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 		* Sometimes a rule can't fruitfully be translated into prose, and needs to be paraphrased. Make this clear if you need to do it.
 	+ "Precedes" implies "immediately precedes", but is still possibly ambiguous. Same for "before", "after", etc.
 	+ "Between A and B" implies A_B, but is still possibly ambiguous.
-	+ It's a good idea to use phonetic terms instead of features. For example, "An obstruent becomes voiceless at the end of a word" instead of "A [-sonorant] segment becomes [-voice] at the end of a word". Features vary quite a bit.
+	+ It's a good idea to use phonetic terms instead of features. For example, "An obstruent becomes voiceless at the end of a word" instead of "A [–sonorant] segment becomes [–voice] at the end of a word". Features vary quite a bit.
 	+ "Left" and "right" can be usefully unambiguous.
 - Properties of the focus can be written under the underscore, but this is relatively uncommon.
 
@@ -86,7 +86,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 	+ Let's consider what (if any) order of rules is necessary to account for the mappings below, and write out a derivation.
 		* **Mappings**: /bɛt-d/ ➔ [bɛtəd], /ʤʌmp-d/ ➔ [ʤʌmpt], /fɪl-d/ ➔ [fɪld]
 		* **Epenthesis Rule**: Ø ➔ ə / [+coronal] ＿ [+coronal]
-		* **Devoicing Rule**: [-sonorant] ➔ [–voice] / [–voice] ＿
+		* **Devoicing Rule**: [–sonorant] ➔ [–voice] / [–voice] ＿
 	+ There are five types of rule interaction. We'll discuss these at length later, so it's okay if you don't remember them yet.
 		* **Feeding**:  X feeds Y if  Y is applicable to some form only because the form has undergone X. (X creates an input for Y)
 		* **Bleeding**:  X bleeds Y if Y is *not* applicable to some form because the form has undergone X. (X destroys an input for Y)
@@ -147,7 +147,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 	- But not every sound can be specified for every feature.
 		+ For example, most consonants don't have features relating to tongue height like [high] or [low].
 		+ This is often represented as [0feature].
-		+ Rules *cannot* target [0feature] sounds –- just [+feature] or [-feature].
+		+ Rules *cannot* target [0feature] sounds –- just [+feature] or [–feature].
 	- Disclaimers
 		+ There are proposals with non-binary ("privative") features.
 			* Especially for major place features, as discussed below.
@@ -190,8 +190,8 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 	- A typological survey in Mielke (2007) finds that existing feature systems can only account for about 70% of rule-targetting classes in natural languages.
 	- There are many "unnatural" processes that refer to disjointed sets of sounds.
 		+ For example, consider this pattern from Kolami (Mielke 2011 citing Emenau 1961).[^mielke]
-			* Allomorph [-l] after / ʈ ɖ n̪ i iː e eː a aː / 
-			* Allomorph [-ul] after / p t̪ k d̪ g s z m ŋ j /
+			* Allomorph [–l] after / ʈ ɖ n̪ i iː e eː a aː / 
+			* Allomorph [–ul] after / p t̪ k d̪ g s z m ŋ j /
 			
 # Phonetics review
 - [The rtMRI chart via SPAN](https://sail.usc.edu/span/rtmri_ipa/db_2015.html)
@@ -243,7 +243,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 	- [laryngeal]: "glottal" sounds, e.g. [h] and [ʔ]
 	- Major place features are often unary.
 		+ A coronal sound simply has a [coronal] feature, and non-coronals don't have a [coronal] feature.
-		+ This means rules can't target [-coronal] as a natural class.
+		+ This means rules can't target [–coronal] as a natural class.
 - **Manner features**
 	- [syllabic]: vowels and syllabic consonants are +
 	- [consonantal]: vowels and glides are –

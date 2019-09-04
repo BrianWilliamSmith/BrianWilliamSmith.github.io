@@ -23,7 +23,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 
 >The rules of the grammar operate in a mechanical fashion; one may think of them as instructions that might be given to a mindless robot, incapable of exercising any judgment or imagination in their application. Any ambiguity or inexplicitness in the statement of rules must in principle be eliminated, since the receiver of the instructions is assumed to be incapable of using intelligence to fill in gaps or to correct errors.
 > 
-> – Chomsky & Halle (1960: 60)
+> – Chomsky & Halle (1968: 60)
 
 # The Sound Pattern of English (SPE)
 - SPE: Chomsky & Halle's (1968) book *The Sound Pattern of English*.
@@ -54,7 +54,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 | [+consonantal] ➔ [–voice] / ＿ #|
 | [–sonorant] ➔ [–voice] ∕ ＿ ]~wd|
 | C ➔ [+voice] / V ＿ V|
-| [-sonorant] ➔ [–voice] ∕ [–voice] ＿|
+| [–sonorant] ➔ [–voice] ∕ [–voice] ＿|
 [Rule examples]
 
 + An important skill is being able to translate a rule into prose (and back again). Here are some tips and pitfalls for stating rules in prose:
@@ -65,7 +65,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 		* Sometimes a rule can't fruitfully be translated into prose, and needs to be paraphrased. Make this clear if you need to do it.
 	+ "Precedes" implies "immediately precedes", but is still possibly ambiguous. Same for "before", "after", etc.
 	+ "Between A and B" implies A_B, but is still possibly ambiguous.
-	+ It's a good idea to use phonetic terms instead of features. For example, "An obstruent becomes voiceless at the end of a word" instead of "A [-sonorant] segment becomes [-voice] at the end of a word". Features vary quite a bit.
+	+ It's a good idea to use phonetic terms instead of features. For example, "An obstruent becomes voiceless at the end of a word" instead of "A [–sonorant] segment becomes [–voice] at the end of a word". Features vary quite a bit.
 	+ "Left" and "right" can be usefully unambiguous.
 - Properties of the focus can be written under the underscore, but this is relatively uncommon.
 
@@ -81,7 +81,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 	+ Let's consider what (if any) order of rules is necessary to account for the mappings below, and write out a derivation.
 		* **Mappings**: /bɛt-d/ ➔ [bɛtəd], /ʤʌmp-d/ ➔ [ʤʌmpt], /fɪl-d/ ➔ [fɪld]
 		* **Epenthesis Rule**: Ø ➔ ə / [+coronal] ＿ [+coronal]
-		* **Devoicing Rule**: [-sonorant] ➔ [–voice] / [–voice] ＿
+		* **Devoicing Rule**: [–sonorant] ➔ [–voice] / [–voice] ＿
 	+ There are five types of rule interaction. We'll discuss these at length later, so it's okay if you don't remember them yet.
 		* **Feeding**:  X feeds Y if  Y is applicable to some form only because the form has undergone X. (X creates an input for Y)
 		* **Bleeding**:  X bleeds Y if Y is *not* applicable to some form because the form has undergone X. (X destroys an input for Y)
@@ -142,7 +142,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 	- But not every sound can be specified for every feature.
 		+ For example, most consonants don't have features relating to tongue height like [high] or [low].
 		+ This is often represented as [0feature].
-		+ Rules *cannot* target [0feature] sounds –- just [+feature] or [-feature].
+		+ Rules *cannot* target [0feature] sounds –- just [+feature] or [–feature].
 - Features allow us to combine related-looking rules by referring to natural classes.
 	+ A **natural class** is group of sounds in an inventory which share one or more distinctive features, to the exclusion of all other sounds in the inventory.
 	+ These two rules of English…
@@ -224,7 +224,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 	- [laryngeal]: "glottal" sounds, e.g. [h] and [ʔ]
 	- Major place features are often unary.
 		+ A coronal sound simply has a [coronal] feature, and non-coronals don't have a [coronal] feature.
-		+ This means rules can't target [-coronal] as a natural class.
+		+ This means rules can't target [–coronal] as a natural class.
 - **Manner features**
 	- [syllabic]: vowels and syllabic consonants are +
 	- [consonantal]: vowels and glides are –
@@ -256,18 +256,10 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 
 # Individual feature charts
 - The class materials contain a few different feature charts, if you're curious to see how they differ.
-	+ Elisabeth Zsiga's (2013) Phonetics and Phonology feature chart.
-		* Place features and some other features are unary: they aren't [+] or [–].
 	+ Bruce Hayes' (2009) Introductory Phonology feature chart.
 		* All features are binary.
 		+ Has an [approximant] feature, and specifies fewer sounds for every feature. For example, [strident] is only used for coronals, and [delayed release] is only used for obstruents.
-	+ Jason Riggle's (2008) feature chart.
-		* All features are binary.
-		* Has a [tense] feature AND an [ATR] feature. The former is used to distinguish between vowels and dorsal consonants, and the latter is used for vowels only.
-	+ A feature chart for SPE, typeset and commented by Ewan Dunbar.
-		* This chart also has a very useful key to translate the IPA used in SPE to IPA you're familiar with.
 - To be explicit, we'll use the Hayes' chart for our next assignment, since it has good coverage and the [approximant] feature is useful, and I have an Excel spreadsheet.
-	+ Most of the time, our rules will operate the same regardless of the chart we use.
 	+ In your write-up, be very explicit about the features you assume.
 + Here is a very helpful summary for the manner features.
 	
@@ -301,7 +293,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 
 ![Lowercase greek letters are variables that must match](alpha_example.svg)
 
-- Each of the rules above is **expanded** into **sub-rules** in pre-defined ways. Here are some made-up examples, some of which are a bit strange.
+- Each of the rules above is **expanded** into **sub-rules** in pre-defined ways. Here are some made-up examples.
 	+ C ➔ Ø / ＿ {C, #}
 		+ First, try C ➔ Ø / ＿ C.
 		+ Second, try C ➔ Ø / ＿ #.
@@ -331,7 +323,6 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 	- Rules like the vowel tensing rule below have many sub-rules, capturing a complicated set of requirements for application.
 	- Without abbreviatory conventions, SPE would have many, many more rules for vowel tensing.
 	- Since rule simplicity plays a pivotal role in the evaluation of grammars, the effect of abbreviatory conventions in reducing rules’ structure is a good result.
-
 
 ![One of the five vowel tensing rules from SPE (p. 242). [FB] and [seg] are features used for boundaries.](SPE_tensing_rule.png)
 
