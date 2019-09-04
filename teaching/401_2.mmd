@@ -88,6 +88,7 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 		* **Counterfeeding**: X is counterfed by Y if Y could've fed X, but X is ordered first, so it doesn't. (Y applies too late to feed X)
 		* **Counterbleeding**: X is counterbled by Y if Y could've bled X, but X is ordered first, so it doesn't. (Y applies too late to bleed X)
 		* …or order doesn't matter.
+		
 # The evaluation procedure in SPE
 - SPE suggested a metric for the evaluation of a system of rules, arguing that grammars with fewer symbols better capture linguistic generalizations.
 	- **Fact**: There's usually (always?) more than one analysis that works for the observed data.
@@ -349,21 +350,23 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 |i	|	+| –| |u	|	+| –|
 |ɪ	|	–| –| |ʊ	|	–| –|
 |e	|	+| –| |o	|	+| –|
-|ɛ	|	–| –| |	|	 |  |
+|ɛ	|	–| –| |ɔ	|	+| +|
 |æ	|	–| +| |ɑ	|	+| +|
 [English vowel features]
 
 - After tensing applies, another rule reduces unstressed lax vowels to [ə].
 
 # Some potential issues
++ The evaluation metric is blind to phonetic naturalness.
+	* Many sound patterns can be accounted for by appealing to principles of production and perception.
+	* …but the evaluation metric only counts symbols.
 - As a theory of possible phonological alternations, SPE is possibly too powerful.
 	- Consider the prediction from [above][theevaluationprocedureinspe]: Rules with fewer symbols should be more widespread among the world’s languages.
 	- It's quite easy to write two rules with the same number of symbols, where the process captured by one rule is very common and the processed by the other rule is very rare.
 		- For example: word-final devoicing (very common across the world's languages) and word-final voicing (very rare across the world's languages).
 	+ In fact, nearly any phonological process can be generated using rules. 
 - There are sometimes related-looking rules that can't be combined using abbreviatory conventions.
-	+ We're failing to capture a generalization.
-	+ We'll consider these next when we talk about conspiracies.
+	+ When this happens, we're failing to capture a generalization.
 
 # Phonemes and allophones in SPE 
 - Compared to earlier work, there are fewer limitations on proposing underlying segments in SPE.
