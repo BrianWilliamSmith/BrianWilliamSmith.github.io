@@ -1,0 +1,322 @@
+Title: Optimality Theory: rankings, GEN, CON, and EVAL
+Author: Brian W. Smith
+Date: 9/12/2019
+CSS: bws.css
+HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<!-- Standard header. Change title in metadata -->
+
+[USC Graduate Phonology](531_guide.html) ✳︎ Fall 2019 ✳︎ Smith
+***
+
+<div class="title">
+
+[%title]
+
+</div>
+
+{{TOC}}
+
+***
+
+> I say I listen to all voices but mine’s the final decision. [...] I hear the voices and I read the front page and I know the speculation but I’m the decider and I decide what is best."
+> 
+> George W. Bush
+
+<!-- Content starts below -->
+# Optimality Theory
+- We're going to be discussing what's sometimes called *Classic* Optimality Theory, consisting of:
+    + Optimality Theory (Prince & Smolensky 1993)
+    + Correspondence Theory (McCarthy & Prince 1995), which revised faithfulness constraints.
+    + Generalized Alignment (McCarthy & Prince 1993), which introduced alignment constraints.
+- Keep in mind that nearly every imagineable revision to OT assumptions has been pursued at some point in the past 20+ years, and much of the research in OT has been devoted to answering the question "What are the constraints?"
+
+# An /input/→[output] derivation in OT
+- Start with an input.
+- Generate a set of **candidates** (possible outputs).
+- Pick the **optimal** (best) candidate according to the **constraint ranking** for the language.
+- The optimal candidate is the output of the grammar.
+
+# Core assumptions of OT
+- The grammar generates mappings via a **strict ranking** of **violable constraints**.
+    + Constraints penalize marked structures in SRs, e.g. "Don't end a word with a voiced obstruent," or deviating from URs, e.g. "Don't devoice."
+    + Constraints are in a **strict ranking** (strict total order).
+        + For every pair of contraints, A and B, there is an ordering between them. Either A ranks above B, or B ranks above A.
+        + Ranking is transitive. If A ranks above B, and B ranks above C, then A ranks above C.
+    + When two constraints have conflicting requirements, satisfaction of the higher ranked constraint takes priority (no exceptions).
+        * What happens if the constraint "Don't end a word with a voiced obstruent" takes priority over "Don't devoice"?
+        * What happens if the constraint "Don't devoice" takes priority over "Don't end a word with a voiced obstruent"?
+    + If constraint A is ranked above constraint B, we say that A **dominates** B, and can write this with a much-greater-than symbol: A **≫** B.
+- Ranking captures *all* systematic differences between languages.
+    - The ranking of constraints accounts for the segmental inventory of a language, its phonotactics, and its alternations.
+    - Every language has a single ranking of constraints for all parts of the language.
+- The ranking of constraints is the *only* way languages differ from one another (except for vocabulary).
+    - Constraints are universal.
+    - The mechanism of candidate generation is universal.
+    - The mechanism for choosing the optimal candidate is universal.
+- Constraint re-ranking captures cross-linguistic variation and typology.
+    + Every ranking of constraints is a possible language.
+    - **Factorial typology**: There are n! orderings of constraints (n = number of constraints), and thus n! possible rankings.
+        + n! (n factorial) is the product of all positive integers less than or equal to n.
+        - 5! = 5 * 4 * 3 * 2 * 1 = 120
+        - Although there are 120 rankings of 5 constraints, chances are that some of these rankings will generate the same input-output mappings.
+ 
+# The architecture of an OT grammar
+- The lexicon: contains a list of URs
+- **GEN**: the function that generates candidates
+- **CON**: the set of universal constraints
+- A language-particular ranking of constraints from CON: sometimes written as **ℋ** for hierarchy
+- **EVAL**: the function that selects the optimal candidate(s) from the candidate set, based on the ranking of constraints
+- A full derivation looks like this:
+    + 1. Start with an input: /ab/
+    + 2. Generate the candidate set: GEN(/ab/)
+    + 3. Pick the output: EVAL(input, candidates, ℋ)
+    + This can be written as a single line: EVAL(/ab/, GEN(/ab/), ℋ)
+- Since ranking is the only language-particular part of the grammar, GEN, CON, and EVAL are the same for every language.
+
+# The lexicon
+- The lexicon contains all contrastive properties of morphemes, including phonological, morphological, syntactic, and semantic properties.
+- There are no language-particular restrictions on the phonological forms of URs.
+- This property is called **Richness of the Base**, and means the set of logically possible URs is the same for every language.
+
+# GEN: the generator function
+- The function that generates set of candidate outputs from the input. 
+- One way to think of it: apply all possible operations to the input, any number of times (deletion, insertion, feature changing, maybe changing order) 
+    - The resulting set of candidates is infinite (even if we assume a finite alphabet of symbols).
+    - The candidate set always contains a **faithful candidate**, an output candidate which is identical to the UR.
+- Candidates have an input portion (UR) and an output portion (SR), and nothing else. There are no intermediate forms as there are for SPE-style rules.
+- GEN(/ab/) = {[ab], [a], [b], [ba], [ ], [ta], [at], [ae], [diii], ...}
+- The property that GEN can generate any conceivable output candidate for some input is called **Freedom of Analysis**.
+    + That's not to say GEN can generate *anything*. Candidates must still be composed of elements from the universal vocabularies of linguistic representation.
+    + Whatever limits there are on GEN, those limits are universal.
+
+# CON: the constraint set
+- There are two kinds of constraints:
+    - **Markedness constraints** impose requirements on output candidates.
+        + \*[+voice] = don't have a voiced segment
+        + <span style="font-variant:small-caps;">Agree</span>(voice) = adjacent segments should agree in voicing
+    - **Faithfulness constraints** militate against deviating from the input.
+        - <span style="font-variant:small-caps;">Dep</span> = don't epenthesize
+        - <span style="font-variant:small-caps;">Max</span> = don't delete
+        - <span style="font-variant:small-caps;">Ident</span>([feature]) = don't change the value of [feature]
+- A markedness constraint can be treated as a function from a candidate output to a positive integer (the number of **violations**).
+    - Violations are like a penalty score: fewer violations is better.
+    - Constraints only assign violations. They never directly reward candidates.
+    - *CC([bak]) = 0
+    - *CC([tikpad]) = 1
+- A faithfulness constraint can be treated as a function from an input-output pair to a positive integer (the number of violations):
+    - <span style="font-variant:small-caps;">Max</span>(/bak/, [ba]) = 1
+    - <span style="font-variant:small-caps;">Max</span>(/bak/, [bak]) = 0
+- The best way to write constraints is to describe the function explicitly, starting with "Assign one violation for every…", and give it a descriptive name (often written in small caps and with a \*).
+    + \*[+voice] = Assign one violation for every segment that has the feature [+voice].
+    + <span style="font-variant:small-caps;">Agree</span>(voice) = Assign one violation for every sequence of two segments which do not have identical value for the [voice] feature.
+    + \*CC = assign one violation for every sequence of two consonants.
+    + <span style="font-variant:small-caps;">Max</span> = Assign one violation for every segment in the input that isn't in the output. 
+    + <span style="font-variant:small-caps;">Dep-V</span> = Assign one violation for every vowel in the output that isn't in the input.
+- Let's assess the violations of \*CC:
+    - \*CC([bakta]) = ?
+    - \*CC([abtako]) = ?
+    - \*CC([abitaki]) = ?
+    - \*CC([brabtakpi]) = ?
+
+# EVAL: the evaluator function
+- The function that selects the winner from the set of candidates.
+    - Function arguments: input, set of output candidates, ranking of constraints  
+    - Output of function: subset of the candidates that are optimal 
+    - EVAL(/input/, GEN(/input/), ranking) = {[output]}  
+- We can think of many ways that EVAL could work...
+    - **Strict domination** is the mechanism used in standard OT for adjudicating harmony disagreements among constraints. Satisfaction of a higher-ranked constraint takes *absolute priority* over the satisfaction of all lower-ranked constraints.
+- To find just the winners, if you have n constraints... 
+    - Find the candidates that tie for being "best" (fewest violations) on the top-ranked constraint C~1; discard the rest. 
+        + Because of strict domination, none of the lower-ranked constraints matter -- just the constraint currently under consideration.
+    - Of the remaining candidates, find those the next constraint, C~2, deems best; discard the rest.
+    - Repeat for C~3, ..., C~n, stopping if you have only one candidate left.
+    - As a slogan: "Take the best, ignore the rest."[^I've lifted "take the best, ignore the rest" from the Take-The-Best decision-making algorithm of Gigenrezer and Goldstein (1996), which uses strictly ranked cues to make binary decisions. The decisions they're interested in aren't phonological, e.g. "Which of these two cities has a higher population?", and the cues are things like "Does this city have a soccer team?" However, the mechanisms are very similar to OT. From the first lines of the paper's abstract: "Humans and animals make inferences about the world under limited time and knowledge. In contrast, many models of rational inference treat the mind as a Laplacean Demon, equipped with unlimited time, knowledge, and computational might. Following H. Simon's notion of satisficing, the authors have proposed a family of algorithms based on a simple psychological mechanism: one-reason decision making."]
+    - Whatever candidates are still left at the end are tied for being the winner.
+    - If you have enough constraints, there is normally just one winner.
+- Given how EVAL works, what a constraint *must* be able to do is identify the best candidate(s) out of a set of candidates.
+    + Treating constraints as functions that return positive integers simplifies this calculation.
+    + But we *could* in theory have a constraint like <span style="font-variant:small-caps;">AlphabeticalOrder</span>, which favors candidates that are earlier in alphabetical order. Since this constraint is able to pick the best candidates out of a set, it can get the job done.
+
+# An example
+- What does the grammar genarate for:
+    - Input: /ab/ 
+    - Ranking: \*ab ≫ <span style="font-variant:small-caps;">Max</span> ≫ \*a ≫ \*b
+- First, generate a candidate set: GEN(/ab/) = {[ab], [a], [b], []}
++ Pick the best candidate with EVAL: 
+    + EVAL(/ab/, {[ab], [a], [b], []}, ranking)
+    - For the remaining candidates, {[ab], [a], [b], []}</br>check the first constraint: **\*ab** ≫ <span style="font-variant:small-caps;">Max</span> ≫ \*a ≫ \*b
+        - \*ab: assign one violation for every [a] followed by [b] 
+        * \*ab([ab]) = 1
+        * \*ab([a]) = 0
+        * \*ab([b]) = 0
+        * \*ab([]) = 0
+        * Take the candidates that have the fewest violations and discard the rest.
+        * Remaining candidates: {[a], [b], []}
+        * Remaining constraints to check: <span style="font-variant:small-caps;">Max</span> ≫ \*a ≫ \*b
+        * Stop if either:
+            - There is a single remaining candidate. (Nope)
+            - There are no more constraints to check. (Nope)
+    + For the remaining candidates, {[a], [b], []},</br>check the next constraint: \*ab ≫ **<span style="font-variant:small-caps;">Max</span>** ≫ \*a ≫ \*b
+        + <span style="font-variant:small-caps;">Max</span>: assign one violation for every segment in the input that isn't in the output.
+        * <span style="font-variant:small-caps;">Max</span>(/ab/, [a]) = 1
+        * <span style="font-variant:small-caps;">Max</span>(/ab/, [b]) = 1
+        * <span style="font-variant:small-caps;">Max</span>(/ab/, []) = 2
+        * Take the best, ignore the rest.
+        * Remaining candidates: {[a], [b]}
+        * Remaining constraints to check: \*a ≫ \*b
+        * Stop if either:
+            - There is a single remaining candidate. (Nope)
+            - There are no more constraints to check. (Nope)
+    - For the remaining candidates, {[a], [b]},</br>check the next constraint: \*ab ≫ <span style="font-variant:small-caps;">Max</span> ≫ **\*a** ≫ \*b
+        - \*a: assign one violation for every [a].
+        + \*a([a]) = 1
+        + \*a([b]) = 0
+        * Take the best, ignore the rest.
+        * Remaining candidates: {[b]}
+        * Remaining constraints to check: \*b
+        * Stop if either:
+            - There is a single remaining candidate. (Yes! Stop!)
+            - There are no more constraints to check. (Nope)
+- Output: [b]
+- If we repeat this for different inputs, we get a set of mappings generated by the ranking.
+    - Mappings generated by \*ab ≫ <span style="font-variant:small-caps;">Max</span> ≫ \*a ≫ \*b:
+        -  /ab/ → [b]
+        -  /b/ → [b]
+        -  /a/ → [a]
+        -  /ba/ → [ba]
+        -  etc.
+    - A language is a set of mappings. Sometimes different rankings will produce the same mappings.
+- We considered only four candidates from the candidate set of /ab/. Is there a candidate for /ab/ that we didn't consider, which could've beaten [b]?
+
+# The OT tableau
+- The **tableau** (from French, pronounced [ˌtʰæˈblow] in English, plural tableaux [ˌtʰæˈblow] or [ˌtʰæˈblowz]) is a way to illustrate a fragment of this calculation. 
+- Not all candidates can be shown; not all constraints are shown, either.
+- The tableau is not a full calculation, but rather an illustrative device, like a derivation in rule-based analyses.
+- This tableau shows a **ranking argument** for *CC  ≫ <span style="font-variant:small-caps;">Dep-V</span>.
+
+<div class="tableau">
+
+|Candidates     |||             *\*CC*  |*Dep-V*  |
+|---    |:---   |---:           |:---:  |:---:  |
+|/at-ka/   |a.  |☞ [atəka]      |       | ✳︎     |
+|          |b.  |[atka]         |✳︎     |       |
+[Example of a tableau without shading or exclamation marks]
+
+</div>
+
+- Important parts of the tableau:
+    - /input/ -- sometimes this is in the upper lefthand corner
+    - [output] candidates -- which are usually lettered for reference
+    - pointing finger -- indicates winner (a rightward pointing arrow is also used)
+    - constraints -- the columns are in descending order of rank: higher-ranking constraints are on the left
+    - asterisks -- one for each constraint violation
+        + Numbers are now commonly used instead
+    - solid line between constraints -- represents a **crucial ranking**
+    - dashed line between constraints -- represents a non-crucial ranking
+
+
+- Below is a tableau with shading and exclamation marks added.
+    - exclamation marks -- suffixed to the asterisk that "kills" a candidate (the **fatal violation**)
+    - shading -- shows that a cell is not relevant, either because the winner has already been chosen, or because that candidate has already been ruled out.
+    - The pointing finger, exclamation marks, and shading are predictable from the asterisks, but they are helpful to the reader.
+
+<table class="tableau">
+<caption style="caption-side: bottom;" id="exampleofatableau">Example of a tableau with shading and exclamation marks</caption>
+<colgroup>
+<col />
+<col style="text-align:left;"/>
+<col style="text-align:right;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+    <th colspan="3">Candidates  </th>
+    <th style="text-align:center;">    <em>*CC</em> </th>
+    <th style="text-align:center;"><em>Dep&#8211;V</em> </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+    <td>/at-ka/ </td>
+    <td style="text-align:left;">a. </td>
+    <td style="text-align:right;">☞ [atəka]  </td>
+    <td style="text-align:center;">  </td>
+    <td class="shaded2", style="text-align:center;"> ✳︎  </td>
+</tr>
+<tr>
+    <td>   </td>
+    <td style="text-align:left;">b. </td>
+    <td style="text-align:right;">[atka]   </td>
+    <td style="text-align:center;">✳︎!  </td>
+    <td class = "shaded2", style="text-align:center;">  </td>
+</tr>
+</tbody>
+</table>
+
+- We can show multiple inputs in the same tableau, since all inputs in a language are subject to the same ranking of constraints.
+    + I've left out shading (as I usually will).
+    + I'm only going to use solid lines between constraints -- even when a ranking isn't crucial (for reasons that will become clear soon).
+
+<div class="tableau">
+
+|Candidates     |||             *\*CC*  |*Dep-V*  |
+|---    |:---   |---:           |:---:  |:---:  |
+|/at-ka/   |a.  |☞ [atəka]      |       | ✳︎     |
+|          |b.  |[atka]         |✳︎!     |       |
+
+|/at-a/   |a.  |[atəa]          |        | ✳︎!    |
+|          |b.  |☞[ata]         |        |       |
+[Example of a tableau with multiple inputs]
+</div>
+
+# Practice tableau
+- Let's make a tableau for the Dutch example from the last handout.
+- Recall the problem:
+    + Dutch inserts ʔ to avoid two adjacent vowels.
+    + But ʔ is only permitted before a stressed vowel.
+- Constraints for the tableau (poorly defined):
+    - <span style="font-variant:small-caps;">Max-V</span>: don't delete a vowel.
+    - <span style="font-variant:small-caps;">Ident</span>(stress): don't change a segment's value for the feature [stress].
+    - *VV: avoid two vowels in a row.
+    + <span style="font-variant:small-caps;">Dep-C</span>: don't insert a consonant.
+    + *ʔV: don't have a glottal stop before an unstressed vowel.
+- Mappings: 
+    - /aɔ́rta/ → [aʔɔ́rta]
+    - /xáɔs/ → [xáɔs]
+- Redefine these constraints so they aren't ambiguous, make tableaux for both inputs, and find a ranking that works.
+    + Once we have better definitions for constraiants, let's come up with a preliminary candidate set together.
+    - The best approach for ranking constraints is to put the constraints into a tableau in a random order and then reason from there about the ranking.
+
+# Recap of major ideas
+- Assumptions of OT
+    + a strict ranking of constraints
+        * domination
+        * the ≫ symbol
+        * the same ranking is used for all inputs in a language
+    + violable constraints
+    + very important idea: *all* systematic differences between languages come from differences in constraint ranking
+        + factorial typology
+        + rankings are language-particular
+        + GEN, CON, EVAL are universal
+        + Richness of the Base
+* GEN
+    - Freedom of Analysis
+    - the faithful candidate
+* CON
+    - constraints as violation-counting functions
+    - markedness
+    - faithfulness
+* EVAL
+    - "Take the best, ignore the rest"
+- The OT tableau
+    + ranking argument
+    - crucial ranking
+    + violation marks
+    + the pointy finger
+    + exclamation marks
+    + shading
+
