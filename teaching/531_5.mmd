@@ -127,7 +127,7 @@ CSS: bws.css
     - Indifferent constraints can be indicated with (e). 
     - Let's make a comparative tableau for Dutch.
 
-- Each row of Ws and Ls encodes certain ranking requirements, sometimes called **Elementary Ranking Condition** (ERC [ɚk]: Prince 2007)
+- Each row of Ws and Ls encodes certain ranking requirements, sometimes called **Elementary Ranking Condition** (ERC [ɚk]: Prince 2002)
     - For the desired winner to be optimal, **at least one** constraint assessing W (preferring the targeted optimum) must dominate **all** constraints assessing L (those preferring the targeted suboptimum).
         + **Every L in a row must have a W to (somewhere) to its left!**
         + Memorize this! Chant this! Write a song for this!
@@ -140,26 +140,38 @@ CSS: bws.css
 
 <div class="tableau">
 
-|:---|:---:| :---: | :---:| :---:|:---:|:---:|
-| Tableau 1|              | | *CON-X*    | *CON-Y*    |   *CON-Z* |
-| a. | cand-1 ~ cand-2    | | W         | L        |        |
-| b. | cand-1 ~ cand-3    | |           | W        | L     |
- 
-| Tableau 2 |               | |*CON-X   |  *CON-Y*  |   *CON-Z* |
-| a. |  cand-1 ~ cand-2   | | W         | W       | L       |
-| b. |  cand-1 ~ cand-3   | |           | L       | W       |
+| | |Winner ~ Loser      |*Con-X*    | *Con-Y*    |   *Con-Z* |
+|:---|:---| :---: | :---:| :---:|:---:|:---:|
+| | a. | cand-1 ~ cand-2    |  W         | L        |        |
+| | b. | cand-1 ~ cand-3    |           | W        | L     |
+[Tableau 1]
 
-| Tableau 3   |          | |   *CON-X    |    *CON-Y* |    *CON-Z* |
-| a. |  cand-1 ~ cand-2  | |   L        |  W        | L |
-| b. |  cand-1 ~ cand-3  | |            |           | W |
+| | |Winner ~ Loser |*Con-X*    | *Con-Y*    |   *Con-Z* |
+|:---|:---| :---: | :---:| :---:|:---:|:---:|
+| | a. |  cand-1 ~ cand-2   |  W         | W       | L       |
+| | b. |  cand-1 ~ cand-3   |           | L       | W       |
+[Tableau 2]
 
-| Tableau 4   |          | |  *CON-X    |   *CON-Y*  |   *CON-Z* |
-| a. |  cand-1 ~ cand-2  | |    W      | L        | L      |
-| b. |  cand-1 ~ cand-3  | |   L       | W        |       |    
 
-|  Tableau 5   |         | | *CON-X*      |  *CON-Y*  |   *CON-Z* |
-| a. |  cand-1 ~ cand-2  | |    W       | L       |         |
-| b. |  cand-1 ~ cand-3  | |            |         | W       |
+| | |Winner ~ Loser|*Con-X*    | *Con-Y*    |   *Con-Z* |
+|:---|:---| :---: | :---:| :---:|:---:|:---:|
+| | a. |  cand-1 ~ cand-2  |    L        |  W        | L |
+| | b. |  cand-1 ~ cand-3  |             |           | W |
+[Tableau 3]
+
+
+| | |Winner ~ Loser|*Con-X*    | *Con-Y*    |   *Con-Z* |
+|:---|:---| :---: | :---:| :---:|:---:|:---:|
+| | a. |  cand-1 ~ cand-2  |    W      | L        | L      |
+| | b. |  cand-1 ~ cand-3  |   L       | W        |       |    
+[Tableau 4]
+
+
+| | |Winner ~ Loser|*Con-X*    | *Con-Y*    |   *Con-Z* |
+|:---|:---| :---: | :---:| :---:|:---:|:---:|
+|  | a. |  cand-1 ~ cand-2  |    W       | L       |         |
+| | b. |  cand-1 ~ cand-3  |            |         | W       |
+[Tableau 5]
 
 </div>
 
@@ -175,7 +187,7 @@ CSS: bws.css
 
 |/at-a/   |a.  |[atəa]          |        | 1~W    |
 |          |b.  |☞[ata]         |        |       |
-[Example of a violation tableau]
+[Example of a hybrid tableau]
 </div>
 
 -   There are never Ws or Ls in the row containing the winner.
@@ -191,6 +203,7 @@ CSS: bws.css
     + ranking arguments
     + Hasse diagram
     - ERCs (Elementary Ranking Conditions)
+        + **Every** L need **at least one** W to its left
 - harmonic bounding
 
 
