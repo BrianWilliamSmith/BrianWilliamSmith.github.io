@@ -75,38 +75,6 @@ CSS: bws.css
     - There are ranking requirements that can be expressed with a Hasse diagram but not dashed and solid lines in a violation tableau.
 - Hasse diagrams cannot easily represent the *full* space of crucial rankings, as we'll discover [below](practicewithcrucialrankings), but there are some sets of crucial rankings that can accurately represented with Hasse diagrams. 
 
-# Harmonic Bounding
-- A candidate is **harmonically bounded** if it cannot win under *any* ranking of constraints.
-    + This means that the grammar simply **cannot** generate the harmonically bounded mapping.
- 
- <div class="tableau">
-    
-|Candidates     |||             *\*CC*  |*Dep-V*  |
-|---    |:---   |---:           |:---:  |:---:  |
-|/at-ka/   |a.  |[atəka]      |       | ✳︎     |
-|          |b.  |[atka]       |✳︎      |       |
-|          |c.  |[atəəka]     |       | ✳︎✳︎     |
-[Example of harmonic bounding: [atəəka] is harmonically bounded]
-</div>
-
-- You can often determine whether a candidate is harmonically bounded simply by looking at its violations.
--  Harmonic bounding is dependent on the constraint set and candidate set under consideration.
-    +  Let's add a third constraint (however nonsensical) that makes it so candidate c isn't harmonically bounded.
-- A more subtle type of harmonic bounding is **collective harmonic bounding**, in which a candidate cannot win because multiple other candidates prevent it from being the best on any constraint.
-    + In the tableau below, candidate b. isn't the worst on any constraint, but it's never the best either.
-
- <div class="tableau">
-
-|Candidates     |||                     *\*CC*  |*Dep-V*  |
-|---            |:---|---:              |:---:  |:---:  |
-|/at-kap-so/    |a.  |[atkapso]         |✳︎✳︎     |       |
-|               |b.  |[atkapəso]        |✳︎       | ✳︎      |
-|               |c.  |[atəkapəso]       |       | ✳︎✳︎     |
-[Example of collective harmonic bounding of [atkapəso]]
-</div>
-
-- How many harmonically bounded candidates are there for each of the inputs above? (If we considered the entire candidate set.)
-
 #  The comparative tableau
 - The **violation tableau** (with violation marks, exclamation marks, and shading) is a good way to illustrate the selection problem, but is not a good way to address the ranking problem.
 - The **comparative tableau** compares the winning candidate to different losing candidates, and is a good way to address the ranking problem.
@@ -266,7 +234,6 @@ CSS: bws.css
     + Hasse diagram
     - ERCs (Elementary Ranking Conditions)
         + **Every** L need **at least one** W to its left
-- harmonic bounding
 
 
 

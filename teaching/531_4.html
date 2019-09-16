@@ -35,6 +35,7 @@
 <li><a href="#anexample">An example</a></li>
 <li><a href="#theottableau">The OT tableau</a></li>
 <li><a href="#practicetableau">Practice tableau</a></li>
+<li><a href="#harmonicbounding">Harmonic Bounding</a></li>
 <li><a href="#recapofmajorideas">Recap of major ideas</a></li>
 </ul>
 </div>
@@ -573,6 +574,128 @@
 </ul></li>
 </ul>
 
+<h1 id="harmonicbounding">Harmonic Bounding</h1>
+
+<ul>
+<li>A candidate is <strong>harmonically bounded</strong> if it cannot win under <em>any</em> ranking of constraints.
+
+<ul>
+<li>This means that the grammar simply <strong>cannot</strong> generate the harmonically bounded mapping.</li>
+</ul></li>
+</ul>
+
+<p> <div class="tableau"></p>
+
+<table>
+<caption style="caption-side: bottom;" id="exampleofharmonicbounding:atəəkaisharmonicallybounded">Example of harmonic bounding: [atəəka] is harmonically bounded</caption>
+<colgroup>
+<col />
+<col style="text-align:left;"/>
+<col style="text-align:right;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th colspan="3">Candidates  </th>
+	<th style="text-align:center;">    <em>*CC</em> </th>
+	<th style="text-align:center;"><em>Dep&#8211;V</em> </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>/at-ka/ </td>
+	<td style="text-align:left;">a. </td>
+	<td style="text-align:right;">[atəka]  </td>
+	<td style="text-align:center;">  </td>
+	<td style="text-align:center;"> ✳︎  </td>
+</tr>
+<tr>
+	<td>   </td>
+	<td style="text-align:left;">b. </td>
+	<td style="text-align:right;">[atka]  </td>
+	<td style="text-align:center;">✳︎  </td>
+	<td style="text-align:center;">  </td>
+</tr>
+<tr>
+	<td>   </td>
+	<td style="text-align:left;">c. </td>
+	<td style="text-align:right;">[atəəka]  </td>
+	<td style="text-align:center;">  </td>
+	<td style="text-align:center;"> ✳︎✳︎  </td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<ul>
+<li>You can often determine whether a candidate is harmonically bounded simply by looking at its violations.</li>
+<li>Harmonic bounding is dependent on the constraint set and candidate set under consideration.
+
+<ul>
+<li>Let&#8217;s add a third constraint (however nonsensical) that makes it so candidate c isn&#8217;t harmonically bounded.</li>
+</ul></li>
+<li>A more subtle type of harmonic bounding is <strong>collective harmonic bounding</strong>, in which a candidate cannot win because multiple other candidates prevent it from being the best on any constraint.
+
+<ul>
+<li>In the tableau below, candidate b. isn&#8217;t the worst on any constraint, but it&#8217;s never the best either.</li>
+</ul></li>
+</ul>
+
+<p><div class="tableau"></p>
+
+<table>
+<caption style="caption-side: bottom;" id="exampleofcollectiveharmonicboundingofatkapəso">Example of collective harmonic bounding of [atkapəso]</caption>
+<colgroup>
+<col />
+<col style="text-align:left;"/>
+<col style="text-align:right;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th colspan="3">Candidates  </th>
+	<th style="text-align:center;">      <em>*CC</em> </th>
+	<th style="text-align:center;"><em>Dep&#8211;V</em> </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>/at-kap-so/ </td>
+	<td style="text-align:left;">a. </td>
+	<td style="text-align:right;">[atkapso]   </td>
+	<td style="text-align:center;">✳︎✳︎  </td>
+	<td style="text-align:center;">  </td>
+</tr>
+<tr>
+	<td>    </td>
+	<td style="text-align:left;">b. </td>
+	<td style="text-align:right;">[atkapəso]  </td>
+	<td style="text-align:center;">✳︎  </td>
+	<td style="text-align:center;"> ✳︎  </td>
+</tr>
+<tr>
+	<td>    </td>
+	<td style="text-align:left;">c. </td>
+	<td style="text-align:right;">[atəkapəso]  </td>
+	<td style="text-align:center;">  </td>
+	<td style="text-align:center;"> ✳︎✳︎  </td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<ul>
+<li>How many harmonically bounded candidates are there for each of the inputs above? (If we considered the entire candidate set.)</li>
+</ul>
+
 <h1 id="recapofmajorideas">Recap of major ideas</h1>
 
 <ul>
@@ -622,6 +745,7 @@
 <ul>
 <li>as a slogan: &#8220;take the best, ignore the rest&#8221;</li>
 <li>the strictness of strict domination</li>
+<li>harmonic bounding</li>
 </ul></li>
 <li>The OT tableau
 

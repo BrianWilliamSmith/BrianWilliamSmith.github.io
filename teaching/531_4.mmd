@@ -345,6 +345,38 @@ CSS: bws.css
     + Once we have better definitions for constraiants, let's come up with a preliminary candidate set together.
     - The best approach for ranking constraints is to put the constraints into a tableau in a random order and then reason from there about the ranking.
 
+# Harmonic Bounding
+- A candidate is **harmonically bounded** if it cannot win under *any* ranking of constraints.
+    + This means that the grammar simply **cannot** generate the harmonically bounded mapping.
+ 
+ <div class="tableau">
+    
+|Candidates     |||             *\*CC*  |*Dep-V*  |
+|---    |:---   |---:           |:---:  |:---:  |
+|/at-ka/   |a.  |[atəka]      |       | ✳︎     |
+|          |b.  |[atka]       |✳︎      |       |
+|          |c.  |[atəəka]     |       | ✳︎✳︎     |
+[Example of harmonic bounding: [atəəka] is harmonically bounded]
+</div>
+
+- You can often determine whether a candidate is harmonically bounded simply by looking at its violations.
+-  Harmonic bounding is dependent on the constraint set and candidate set under consideration.
+    +  Let's add a third constraint (however nonsensical) that makes it so candidate c isn't harmonically bounded.
+- A more subtle type of harmonic bounding is **collective harmonic bounding**, in which a candidate cannot win because multiple other candidates prevent it from being the best on any constraint.
+    + In the tableau below, candidate b. isn't the worst on any constraint, but it's never the best either.
+
+ <div class="tableau">
+
+|Candidates     |||                     *\*CC*  |*Dep-V*  |
+|---            |:---|---:              |:---:  |:---:  |
+|/at-kap-so/    |a.  |[atkapso]         |✳︎✳︎     |       |
+|               |b.  |[atkapəso]        |✳︎       | ✳︎      |
+|               |c.  |[atəkapəso]       |       | ✳︎✳︎     |
+[Example of collective harmonic bounding of [atkapəso]]
+</div>
+
+- How many harmonically bounded candidates are there for each of the inputs above? (If we considered the entire candidate set.)
+
 # Recap of major ideas
 - Assumptions of OT
     + a ranking of constraints
@@ -372,6 +404,7 @@ CSS: bws.css
 * EVAL
     - as a slogan: "take the best, ignore the rest"
     - the strictness of strict domination
+    - harmonic bounding
 - The OT tableau
     + ranking argument
     - crucial ranking
