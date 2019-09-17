@@ -35,9 +35,9 @@
 <li><a href="#problemswithrulesplusconstraints:overview">Problems with rules plus constraints: overview</a></li>
 <li><a href="#theduplicationproblem">The duplication problem</a></li>
 <li><a href="#ambiguoustriggering">Ambiguous triggering</a></li>
+<li><a href="#look-ahead">Look-ahead</a></li>
 <li><a href="#constraintviolability">Constraint violability</a></li>
 <li><a href="#constraintconflict">Constraint conflict</a></li>
-<li><a href="#look-ahead">Look-ahead</a></li>
 <li><a href="#theconceptualcrisis">The conceptual crisis</a></li>
 <li><a href="#optimalitytheory">Optimality Theory</a></li>
 </ul>
@@ -439,14 +439,18 @@
 <ul>
 <li>Previously, we discussed the first sentence of the quote at the top of this handout: &#8220;What is clear is that any serious theory of phonology must rely heavily on well-formedness constraints.&#8221;</li>
 <li>Next, we discuss the second sentence: &#8220;What remains in dispute, or in subformal obscurity, is the character of the interaction among the posited well-formedness constraints, as well as the relation between such constraints and whatever derivational rules they are meant to influence.&#8221;</li>
-<li>Five potential problems for rules plus constraints:
+<li>Potential problems for rules plus constraints:
 
 <ul>
 <li>The duplication problem</li>
-<li>Ambiguous triggering</li>
+<li>Ambiguous triggering
+-Lookahead</li>
+</ul></li>
+<li>Potential problems for inviolable constraints:
+
+<ul>
 <li>Constraint violability</li>
 <li>Constraint conflict</li>
-<li>Lookahead</li>
 </ul></li>
 </ul>
 
@@ -458,10 +462,10 @@
 <li> Hypothetical (but realistic) example from McCarthy (2002: 71)
 
 <ul>
-<li>Lexical redundancy rule
+<li>Morpheme structure constraints
 
 <ul>
-<li>[–back] ➔ [–round]		(if a sound is front it&#8217;s also unrounded)</li>
+<li>If [–back] then [–round]		(if a sound is front it&#8217;s also unrounded)</li>
 </ul></li>
 <li>A fronting process
 
@@ -499,6 +503,79 @@
 <li>How might we choose between them?</li>
 </ul></li>
 </ul>
+
+<h1 id="look-ahead">Look-ahead</h1>
+
+<ul>
+<li><p>Is look-ahead necessary when deciding whether to trigger a rule? How far?</p></li>
+<li><p>Hypothetical (and unrealistic, but simple) case.</p>
+
+<ul>
+<li>What happens to /tab/</li>
+</ul></li>
+</ul>
+
+<table>
+<colgroup>
+<col />
+<col />
+</colgroup>
+
+<thead>
+<tr>
+	<th> Constraint</th>
+	<th> Rules that could be triggered by the constraint</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>*C#	</td>
+	<td> C ➔ [–voice] </td>
+</tr>
+<tr>
+	<td>		</td>
+	<td> [–voice] ➔ Ø</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>An even more extreme example (also a bit silly): things get worse before they get better.
+
+<ul>
+<li>What happens to /omsi/?</li>
+</ul></li>
+</ul>
+
+<table>
+<colgroup>
+<col />
+<col />
+</colgroup>
+
+<thead>
+<tr>
+	<th>Constraint	</th>
+	<th> Rules that could be triggered by the constraint</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>	*CC		</td>
+	<td>Ø ➔ p / m＿C</td>
+</tr>
+<tr>
+	<td>			</td>
+	<td>m ➔ Ø / ＿[+lab]</td>
+</tr>
+<tr>
+	<td>			</td>
+	<td>p ➔ Ø / ＿ C</td>
+</tr>
+</tbody>
+</table>
 
 <h1 id="constraintviolability">Constraint violability</h1>
 
@@ -696,79 +773,6 @@
 <ul>
 <li>What&#8217;s the problem? How could we fix it?</li>
 </ul>
-
-<h1 id="look-ahead">Look-ahead</h1>
-
-<ul>
-<li><p>Is look-ahead necessary when deciding whether to trigger a rule? How far?</p></li>
-<li><p>Hypothetical (and unrealistic, but simple) case.</p>
-
-<ul>
-<li>What happens to /tab/</li>
-</ul></li>
-</ul>
-
-<table>
-<colgroup>
-<col />
-<col />
-</colgroup>
-
-<thead>
-<tr>
-	<th> Constraint</th>
-	<th> Rules that could be triggered by the constraint</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-	<td>*C#	</td>
-	<td> C ➔ [–voice] </td>
-</tr>
-<tr>
-	<td>		</td>
-	<td> [–voice] ➔ Ø</td>
-</tr>
-</tbody>
-</table>
-
-<ul>
-<li>An even more extreme example (also a bit silly): things get worse before they get better.
-
-<ul>
-<li>What happens to /omsi/?</li>
-</ul></li>
-</ul>
-
-<table>
-<colgroup>
-<col />
-<col />
-</colgroup>
-
-<thead>
-<tr>
-	<th>Constraint	</th>
-	<th> Rules that could be triggered by the constraint</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-	<td>	*CC		</td>
-	<td>Ø ➔ p / m＿C</td>
-</tr>
-<tr>
-	<td>			</td>
-	<td>m ➔ Ø / ＿[+lab]</td>
-</tr>
-<tr>
-	<td>			</td>
-	<td>p ➔ Ø / ＿ C</td>
-</tr>
-</tbody>
-</table>
 
 <h1 id="theconceptualcrisis">The conceptual crisis</h1>
 

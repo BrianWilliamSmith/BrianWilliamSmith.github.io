@@ -189,6 +189,8 @@
 <ul>
 <li>*[+voice] = don&#8217;t have a voiced segment</li>
 <li><span style="font-variant:small-caps;">Agree</span>(voice) = adjacent segments should agree in voicing</li>
+<li>*<span style="font-variant:small-caps;">Onset</span> = Syllables should have onsets</li>
+<li>*<span style="font-variant:small-caps;">NoCoda</span> = Syllables should not have codas</li>
 </ul></li>
 <li><strong>Faithfulness constraints</strong> militate against deviating from the input.
 
@@ -217,6 +219,8 @@
 
 <ul>
 <li>*[+voice] = Assign one violation for every segment in the output that has the feature [+voice].</li>
+<li>*<span style="font-variant:small-caps;">Onset</span> = Assign one violation for every syllable in the output without an onset.</li>
+<li>*<span style="font-variant:small-caps;">NoCoda</span> = Assign one violation for every syllable in the output with at least one coda consonant.</li>
 <li>*<span style="font-variant:small-caps;">Struc</span> = Assign one violation for every segment in the output.</li>
 <li><span style="font-variant:small-caps;">Agree</span>(voice) = Assign one violation for every sequence of two segments in the output which do not have identical value for the [voice] feature.</li>
 <li>*CC = assign one violation for every sequence of two consonants in the output..</li>
@@ -699,7 +703,7 @@
 <h1 id="recapofmajorideas">Recap of major ideas</h1>
 
 <ul>
-<li>Assumptions of OT
+<li>Main ideas of OT
 
 <ul>
 <li>a ranking of constraints

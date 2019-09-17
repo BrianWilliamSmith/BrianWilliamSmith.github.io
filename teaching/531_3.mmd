@@ -155,19 +155,20 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 # Problems with rules plus constraints: overview
 - Previously, we discussed the first sentence of the quote at the top of this handout: "What is clear is that any serious theory of phonology must rely heavily on well-formedness constraints."
 - Next, we discuss the second sentence: "What remains in dispute, or in subformal obscurity, is the character of the interaction among the posited well-formedness constraints, as well as the relation between such constraints and whatever derivational rules they are meant to influence."
-- Five potential problems for rules plus constraints:
+- Potential problems for rules plus constraints:
 	+ The duplication problem
 	- Ambiguous triggering
+	-Lookahead
+- Potential problems for inviolable constraints:
 	- Constraint violability
 	- Constraint conflict
-	- Lookahead
 
 # The duplication problem
 - Observation: dynamic processes (e.g., alternations, loanword adaptation) reiterate static restrictions (e.g. phonotactics, morpheme structure constraints)
 - This is a variant of the conspiracy problem, called the **duplication problem**.
  - Hypothetical (but realistic) example from McCarthy (2002: 71)
-	- Lexical redundancy rule
-		- [–back] ➔ [–round]		(if a sound is front it's also unrounded)
+	- Morpheme structure constraints
+		- If [–back] then [–round]		(if a sound is front it's also unrounded)
 	- A fronting process
 		- /put + i/ ➔ [piti]
 		- /kop + i/ ➔ [kepi]
@@ -184,6 +185,27 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 - Sometimes there are multiple ways a rule could be triggered by a constraint.
 -  What are the different ways the rule  Ø ➔ i / C _ could avoid a CCC sequence in /talbto/
 	-  How might we choose between them?
+
+
+# Look-ahead
+- Is look-ahead necessary when deciding whether to trigger a rule? How far?
+
+- Hypothetical (and unrealistic, but simple) case.
+	- What happens to /tab/
+	
+| Constraint| Rules that could be triggered by the constraint|
+| --- | ---|
+|*C#	| C ➔ [–voice] |
+|		| [–voice] ➔ Ø|
+
+-	An even more extreme example (also a bit silly): things get worse before they get better.
+	+ What happens to /omsi/?
+	
+|Constraint	| Rules that could be triggered by the constraint|
+| --- | ---|
+|	*CC		|Ø ➔ p / m＿C|
+|			|m ➔ Ø / ＿[+lab]|
+|			|p ➔ Ø / ＿ C|
 
 # Constraint violability
 - Sometimes a constraint is violated by SRs, even though it seems to have an effect in part of the langauge. 
@@ -231,26 +253,6 @@ HTML header:	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/M
 |fá.ra.o|fá.ra.o|'pharaoh'|
 
 - What's the problem? How could we fix it?
-
-# Look-ahead
-- Is look-ahead necessary when deciding whether to trigger a rule? How far?
-
-- Hypothetical (and unrealistic, but simple) case.
-	- What happens to /tab/
-	
-| Constraint| Rules that could be triggered by the constraint|
-| --- | ---|
-|*C#	| C ➔ [–voice] |
-|		| [–voice] ➔ Ø|
-
--	An even more extreme example (also a bit silly): things get worse before they get better.
-	+ What happens to /omsi/?
-	
-|Constraint	| Rules that could be triggered by the constraint|
-| --- | ---|
-|	*CC		|Ø ➔ p / m＿C|
-|			|m ➔ Ø / ＿[+lab]|
-|			|p ➔ Ø / ＿ C|
 
 # The conceptual crisis
 - Since Kisseberth (1970), constraints were taking on a bigger and bigger role. But there were open questions... 

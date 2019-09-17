@@ -99,6 +99,8 @@ CSS: bws.css
     - **Markedness constraints** impose requirements on output candidates.
         + \*[+voice] = don't have a voiced segment
         + <span style="font-variant:small-caps;">Agree</span>(voice) = adjacent segments should agree in voicing
+        + \*<span style="font-variant:small-caps;">Onset</span> = Syllables should have onsets
+        +  \*<span style="font-variant:small-caps;">NoCoda</span> = Syllables should not have codas
     - **Faithfulness constraints** militate against deviating from the input.
         - <span style="font-variant:small-caps;">Dep</span> = don't epenthesize
         - <span style="font-variant:small-caps;">Max</span> = don't delete
@@ -114,6 +116,8 @@ CSS: bws.css
 - The best way to write constraints is to describe the function explicitly, starting with "Assign one violation for every…", and give it a descriptive name (often written in small caps and/or with a \*).
 - Here are examples of constraints that have been proposed in the OT literature:
     + \*[+voice] = Assign one violation for every segment in the output that has the feature [+voice].
+    + \*<span style="font-variant:small-caps;">Onset</span> = Assign one violation for every syllable in the output without an onset.
+    +  \*<span style="font-variant:small-caps;">NoCoda</span> = Assign one violation for every syllable in the output with at least one coda consonant.
     + \*<span style="font-variant:small-caps;">Struc</span> = Assign one violation for every segment in the output.
     + <span style="font-variant:small-caps;">Agree</span>(voice) = Assign one violation for every sequence of two segments in the output which do not have identical value for the [voice] feature.
     + \*CC = assign one violation for every sequence of two consonants in the output..
@@ -378,7 +382,7 @@ CSS: bws.css
 - How many harmonically bounded candidates are there for each of the inputs above? (If we considered the entire candidate set.)
 
 # Recap of major ideas
-- Assumptions of OT
+- Main ideas of OT
     + a ranking of constraints
         * strict domination
         * the ≫ symbol
