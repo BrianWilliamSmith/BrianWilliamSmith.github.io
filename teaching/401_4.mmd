@@ -115,8 +115,8 @@ CSS: bws.css
 - The best way to write constraints is to describe the function explicitly, starting with "Assign one violation for every…", and give it a descriptive name (often written in small caps and/or with a \*).
 - Here are examples of constraints that have been proposed in the OT literature:
     + \*[+voice] = Assign one violation for every segment in the output that has the feature [+voice].
-    + \*<span style="font-variant:small-caps;">Onset</span> = Assign one violation for every syllable in the output without an onset.
-    +  \*<span style="font-variant:small-caps;">NoCoda</span> = Assign one violation for every syllable in the output with at least one coda consonant.
+    + <span style="font-variant:small-caps;">Onset</span> = Assign one violation for every syllable in the output without an onset.
+    +  <span style="font-variant:small-caps;">NoCoda</span> = Assign one violation for every syllable in the output with at least one coda consonant.
     + <span style="font-variant:small-caps;">Agree</span>(voice) = Assign one violation for every sequence of two segments in the output which do not have identical value for the [voice] feature.
     + \*CC = assign one violation for every sequence of two consonants in the output..
     + <span style="font-variant:small-caps;">Max</span> = Assign one violation for every segment in the input that isn't in the output. 
@@ -149,7 +149,7 @@ CSS: bws.css
     + But we *could* in theory have a constraint like <span style="font-variant:small-caps;">AlphabeticalOrder</span>, which favors candidates that are earlier in alphabetical order. Since this constraint is able to pick the best candidates out of a set, it can get the job done.
 
 # An example
-- What does output does the grammar genarate for:
+- What does output does the grammar generate for:
     - Input: /ab/ 
     - Ranking: \*ab ≫ <span style="font-variant:small-caps;">Max</span> ≫ \*a ≫ \*b
 - First, generate a candidate set: GEN(/ab/) = {[ab], [a], [b], []}
