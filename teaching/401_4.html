@@ -34,8 +34,8 @@
 <li><a href="#eval:theevaluatorfunction">EVAL: the evaluator function</a></li>
 <li><a href="#anexample">An example</a></li>
 <li><a href="#theottableau">The OT tableau</a></li>
-<li><a href="#practicetableau">Practice tableau</a></li>
 <li><a href="#harmonicbounding">Harmonic Bounding</a></li>
+<li><a href="#practicetableau">Practice tableau</a></li>
 <li><a href="#recapofmajorideas">Recap of major ideas</a></li>
 </ul>
 </div>
@@ -542,39 +542,6 @@
 </table>
 </div>
 
-<h1 id="practicetableau">Practice tableau</h1>
-
-<ul>
-<li>Let&#8217;s make a tableau for the Dutch example from the last handout.</li>
-<li>Recall the problem:
-
-<ul>
-<li>Dutch inserts ʔ to avoid two adjacent vowels.</li>
-<li>But ʔ is only permitted before a stressed vowel.</li>
-</ul></li>
-<li>Constraints for the tableau (poorly defined):
-
-<ul>
-<li><span style="font-variant:small-caps;">Max-V</span>: don&#8217;t delete a vowel.</li>
-<li><span style="font-variant:small-caps;">Ident</span>(stress): don&#8217;t change a segment&#8217;s value for the feature [stress].</li>
-<li>*VV: avoid two vowels in a row.</li>
-<li><span style="font-variant:small-caps;">Dep-C</span>: don&#8217;t insert a consonant.</li>
-<li>*ʔV: don&#8217;t have a glottal stop before an unstressed vowel.</li>
-</ul></li>
-<li>Mappings:
-
-<ul>
-<li>/aɔ́rta/ → [aʔɔ́rta]</li>
-<li>/xáɔs/ → [xáɔs]</li>
-</ul></li>
-<li>Redefine these constraints so they aren&#8217;t ambiguous, make tableaux for both inputs, and find a ranking that works.
-
-<ul>
-<li>Once we have better definitions for constraiants, let&#8217;s come up with a preliminary candidate set together.</li>
-<li>The best approach for ranking constraints is to put the constraints into a tableau in a random order and then reason from there about the ranking.</li>
-</ul></li>
-</ul>
-
 <h1 id="harmonicbounding">Harmonic Bounding</h1>
 
 <ul>
@@ -695,6 +662,39 @@
 
 <ul>
 <li>How many harmonically bounded candidates are there for each of the inputs above? (If we considered the entire candidate set.)</li>
+</ul>
+
+<h1 id="practicetableau">Practice tableau</h1>
+
+<ul>
+<li>Let&#8217;s make a tableau for the Dutch example from the last handout.</li>
+<li>Recall the problem:
+
+<ul>
+<li>Dutch inserts ʔ to avoid two adjacent vowels.</li>
+<li>But ʔ is only permitted before a stressed vowel.</li>
+</ul></li>
+<li>Constraints for the tableau (poorly defined):
+
+<ul>
+<li><span style="font-variant:small-caps;">Max-V</span>: don&#8217;t delete a vowel.</li>
+<li><span style="font-variant:small-caps;">Ident</span>(stress): don&#8217;t change a segment&#8217;s value for the feature [stress].</li>
+<li>*VV: avoid two vowels in a row.</li>
+<li><span style="font-variant:small-caps;">Dep-C</span>: don&#8217;t insert a consonant.</li>
+<li>*ʔV: don&#8217;t have a glottal stop before an unstressed vowel.</li>
+</ul></li>
+<li>Mappings:
+
+<ul>
+<li>/aɔ́rta/ → [aʔɔ́rta]</li>
+<li>/xáɔs/ → [xáɔs]</li>
+</ul></li>
+<li>Redefine these constraints so they aren&#8217;t ambiguous, make tableaux for both inputs, and find a ranking that works.
+
+<ul>
+<li>Once we have better definitions for constraiants, let&#8217;s come up with a preliminary candidate set together.</li>
+<li>The best approach for ranking constraints is to put the constraints into a tableau in a random order and then reason from there about the ranking.</li>
+</ul></li>
 </ul>
 
 <h1 id="recapofmajorideas">Recap of major ideas</h1>

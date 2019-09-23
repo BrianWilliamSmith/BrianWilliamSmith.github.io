@@ -329,24 +329,6 @@ CSS: bws.css
 </table>
 </div>
 
-# Practice tableau
-- Let's make a tableau for the Dutch example from the last handout.
-- Recall the problem:
-    + Dutch inserts ʔ to avoid two adjacent vowels.
-    + But ʔ is only permitted before a stressed vowel.
-- Constraints for the tableau (poorly defined):
-    - <span style="font-variant:small-caps;">Max-V</span>: don't delete a vowel.
-    - <span style="font-variant:small-caps;">Ident</span>(stress): don't change a segment's value for the feature [stress].
-    - *VV: avoid two vowels in a row.
-    + <span style="font-variant:small-caps;">Dep-C</span>: don't insert a consonant.
-    + *ʔV: don't have a glottal stop before an unstressed vowel.
-- Mappings: 
-    - /aɔ́rta/ → [aʔɔ́rta]
-    - /xáɔs/ → [xáɔs]
-- Redefine these constraints so they aren't ambiguous, make tableaux for both inputs, and find a ranking that works.
-    + Once we have better definitions for constraiants, let's come up with a preliminary candidate set together.
-    - The best approach for ranking constraints is to put the constraints into a tableau in a random order and then reason from there about the ranking.
-    
 # Harmonic Bounding
 - A candidate is **harmonically bounded** if it cannot win under *any* ranking of constraints.
     + This means that the grammar simply **cannot** generate the harmonically bounded mapping.
@@ -378,6 +360,24 @@ CSS: bws.css
 </div>
 
 - How many harmonically bounded candidates are there for each of the inputs above? (If we considered the entire candidate set.)
+
+# Practice tableau
+- Let's make a tableau for the Dutch example from the last handout.
+- Recall the problem:
+    + Dutch inserts ʔ to avoid two adjacent vowels.
+    + But ʔ is only permitted before a stressed vowel.
+- Constraints for the tableau (poorly defined):
+    - <span style="font-variant:small-caps;">Max-V</span>: don't delete a vowel.
+    - <span style="font-variant:small-caps;">Ident</span>(stress): don't change a segment's value for the feature [stress].
+    - *VV: avoid two vowels in a row.
+    + <span style="font-variant:small-caps;">Dep-C</span>: don't insert a consonant.
+    + *ʔV: don't have a glottal stop before an unstressed vowel.
+- Mappings: 
+    - /aɔ́rta/ → [aʔɔ́rta]
+    - /xáɔs/ → [xáɔs]
+- Redefine these constraints so they aren't ambiguous, make tableaux for both inputs, and find a ranking that works.
+    + Once we have better definitions for constraiants, let's come up with a preliminary candidate set together.
+    - The best approach for ranking constraints is to put the constraints into a tableau in a random order and then reason from there about the ranking.
 
 # Recap of major ideas
 - Main ideas of OT
