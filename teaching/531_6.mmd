@@ -1,0 +1,169 @@
+Title: Phonemes, allophones, and contrast in OT
+Author: Brian W. Smith
+Date: 9/15/2019
+CSS: bws.css
+
+<!-- Standard header. Change title in metadata -->
+
+[USC Graduate Phonology](531_guide.html) ✳︎ Fall 2019 ✳︎ Smith
+***
+
+<div class="title">
+
+[%title]
+
+</div>
+
+{{TOC}}
+
+***
+
+# The challenge
+- In rule-and-constraint based phonology, to describe a language you need…
+    - an ordered list of rules
+    - a list of URs (the lexicon)
+    - a phoneme inventory (Steriade 2007 calls this an "underlying alphabet")
+    - maybe restrictions on combinations of segments in URs (called Morpheme Structure Constraint (MSCs))
+    - maybe restrictions on the segments allowed in outputs or derivations
+        - called "Wellformedness constraints" or "Surface phonetic constraints"
+        - Steriade (2007) talks about this with respect **Structure preservation**
+- The fact that there are so restrictions above seem redundant has been called **the Duplication Problem**.
+- In OT, all you have is…
+    - a list of URs (the lexicon) 
+    - a ranked list of constraints
+    - The lack of an underlying alphabet -- or any constraints on the structure of URs -- is a property called **Richness of the Base**.
+- So how can we account for which sounds do and don't contrast, without stating the phoneme inventory?
+    + Especially given Richness of the Base…
+- Contrast in OT comes from faithfulness constraints, which preserve contrast in a certain environment.
+
+#  Possible patterns of contrast
+- No contrast
+     - How do we know it when we see it?
+- Full contrast
+    - How do we know it when we see it?
+- Contextually limited contrast
+    - How do we know it when we see it?
+    - How does this relate to positional neutralization?
+- No contrast - free variation
+    - How do we know it when we see it?
+
+# Complementary distribution between sounds (no contrast)
+- Imagine a language where p and b are allophones of a single phoneme. In rule terms,
+    /p/ → [b] / V__V    no phoneme /b/
+             → [p] elsewhere
+- Translate into OT using:
+	- *V[-voice]V     *[+voice,-son]      IDENT(voice)
+    probable real input /ap/ 'dog'          
+  a [ap]            
+b   [ab]            
+    probable real input  /ap+a/ 'dogs'          
+c   [apa]           
+  d [aba]           
+    hypothetical input /ab/ 'dog'           
+   e    [ap]            
+f   [ab]            
+    hypothetical input /ab+a/ 'dogs'            
+g   [apa]           
+   h    [aba]           
+-  /p/ and /b/ don't contrast, because the grammar won't let you have a minimal pair.
+- What is it about the ranking that makes that so?
+
+# Full contrast between sounds
+- Imagine a different language, where /p/ and /b/ are separate phonemes, with no voicing alternations. 
+- Same constraints
+	- *V[-voice]V
+	- *[+voice,-son]
+	- IDENT(voice)
+- Find the ranking:
+    /ap/ 'dog'          
+  a [ap]            
+b   [ab]            
+    /ap+a/ 'dogs'           
+  c [apa]           
+d   [aba]           
+    /ab/ 'cat'          
+e   [ap]            
+  f [ab]            
+    /ab+a/ 'cats'           
+g   [apa]           
+  h [aba]           
+- /p/ and /b/ contrast fully-you can get a minimal pair in any environment.
+- What is it about the ranking that makes that so?
+
+# Contextually limited contrast (positional neutralization)
+- Example: coda devoicing in German
+    + In onsets, obstruents contrast in voicing
+    + That contrast does not occur in coda position
+    + Results in both **positional neutralization** and **contextually-limited contrast**.
+- Two approaches in OT:
+    + Context-specific markedness constraints
+        * Cause neutralization in a particular environment
+        * Example: \*Coda-Voice
+    + Contextually-limited faithfulness constraints
+        * Preserve contrast in a particular environment
+        * Example: Ident(voice)-Onset
+
+# Context-specific markedness
+- Imagine language with a voicing contrast (phonemes /p/ and /b/), but also intervocalic voicing. In rule terms:
+    /p/ → [b] / V__V        /b/ → [b] everywhere
+         → [p] elsewhere    
+- Same constraints
+	- *V[-voice]V
+	- *[+voice,-son]
+	- IDENT(voice)
+    /ap/ 'dog'          
+  a [ap]            
+b   [ab]            
+    /ap+a/ 'dogs'           
+c   [apa]           
+  d [aba]           
+    /ab/ 'cat'          
+e   [ap]            
+  f [ab]            
+    /ab+a/ 'cats'           
+g   [apa]           
+  h [aba]           
+
+- /p/ & /b/ contrast in some environments-but in other environments, you get neutralization
+
+- What is it about the ranking that makes that so?
+
+- Have we missed any members of the factorial typology for these three constraints?
+
+# Contextually-limited contrast as contextual faithfulness
+- Beckman (1998) takes another approach to contextually limited contrast
+	- She proposes **positional faithfulness constraints**, now standard in OT analyses.
+	- Contrast is preserved in a context X because a faithfulness targets context 
+	- Common contexts where contrast is preserved: stressed syllables and initial syllables.
+- Preservation in initial syllables is captured by the constraint below (where F is replaced by some feature):                    (adapted from Beckman, emphasis added)
+
+IDENT-SYLL1(F)
+Let Y be an output segment in the root-initial syllable, and X its input correspondent.
+IF Y is [αF] then X must be [αF].
+
+- If  IDENT-SYLL1(F) >> MARKEDNESS >> IDENT(F), we get contextually limited contrast
+- Discussion questions and practice
+	- Beckman provides a functional motivation for protecting the first syllable. What is this argument?
+	- Let's look at the examples in table (4), and analyze one language with positional faithfulness
+	- Why won't positional faithfulness work for the example on the previous page?
+	- Why does Beckman propose this fixed ranking? Is it necessary?
+IDENT-SYLL1{F} >> IDENT {F}
+
+# Lexicon optimization
+- Does Richness of the Base mean anything can be in underlying representations?
+    + In theory, yes -- there are no hard limits on URs.
+    + For an actual language, no -- learners won't posit "weird" or "crazy" URs without evidence.
+- Prince & Smolensky (1993/2004) suggest a learning proceddure called **lexicon optimization**.
+    - Basically, the learner only posits URs that deviate from SRs when there is sufficient motivation (such as an alternation).
+    + In the absence of such evidence, the UR should match the SR.
+    + This runs contrary to the idea that we should minimize the number of underlying sounds in a language.
+- Steriade (2007): 
+"The idea is that non-alternating phonological properties - say the aspiration of initial [kʰ] in [kʰæt] - are always present in the lexical entry, for the following reason: the right grammar will guarantee the surface occurrence of [kʰ] in [kʰæt] no matter whether [kʰ] or [k] is present underlyingly, but the advantage of the identity mapping /kʰæt/ ➞ [kʰæt] over /kæt/ ➞ [kæt] is that the former avoids a faithfulness violation (Ident [aspiration]). Lexicon Optimization yields (approximately) opposite results on the issue of underlying specification compared to lexical minimality: non-alternating redundant information will always end up lexically listed."
+
+
+
+
+
+
+
+
