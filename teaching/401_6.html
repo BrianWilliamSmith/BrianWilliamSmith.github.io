@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Ranking constraints</title>
+	<meta name="author" content="Brian W. Smith"/>
+	<meta name="date" content="9/15/2019"/>
+	<link type="text/css" rel="stylesheet" href="bws.css"/>
+</head>
+<body>
+
+<!-- Standard header. Change title in metadata -->
+
+<p><a href="401_guide.html">USC Advanced Undergraduate Phonology</a> ✳︎ Fall 2019 ✳︎ Smith</p>
+
+<hr />
+
+<div class="title">
+
+<p>Ranking constraints</p>
+
+</div>
+
+<div class="TOC">
+
+<ul>
+<li><a href="#thechallenge">The challenge</a></li>
+<li><a href="#possiblepatternsofcontrast">Possible patterns of contrast</a></li>
+<li><a href="#complementarydistributionbetweensoundsnocontrast">Complementary distribution between sounds (no contrast)</a></li>
+<li><a href="#fullcontrastbetweensounds">Full contrast between sounds</a></li>
+<li><a href="#contextually-limitedcontrastpositionalneutralization">Contextually-limited contrast (positional neutralization)</a></li>
+<li><a href="#contextuallylimitedcontrasttwoways">Contextually limited contrast two ways</a></li>
+<li><a href="#contextually-limitedcontrastascontextualfaithfulness">Contextually-limited contrast as contextual faithfulness</a></li>
+<li><a href="#lexiconoptimization">Lexicon optimization</a></li>
+<li><a href="#recapofimportantideas">Recap of important ideas</a></li>
+</ul>
+</div>
+
+<hr />
+
+<h1 id="thechallenge">The challenge</h1>
+
+<ul>
+<li>In rule-and-constraint based phonology, to describe a language you need:
+
+<ul>
+<li>an ordered list of rules</li>
+<li>a list of URs (the lexicon)</li>
+<li>a phoneme inventory</li>
+<li>maybe restrictions on combinations of segments in URs (called Morpheme Structure Constraint (MSCs))</li>
+<li>maybe restrictions on the segments allowed in outputs or derivations
+
+<ul>
+<li>called &#8220;Wellformedness constraints&#8221; or &#8220;Surface phonetic constraints&#8221;</li>
+</ul></li>
+</ul></li>
+<li>Some of the restrictions above seem redundant: <strong>the Duplication Problem</strong>.</li>
+<li>In OT, all you have is…
+
+<ul>
+<li>a list of URs (the lexicon)</li>
+<li>a ranked list of constraints</li>
+<li>The lack of an underlying alphabet &#8211; or any constraints on the structure of URs &#8211; is a property called <strong>Richness of the Base</strong>.</li>
+</ul></li>
+<li>So how can we account for which sounds do and don&#8217;t contrast, without stating the phoneme inventory?
+
+<ul>
+<li>How do we state the inventory, generally?</li>
+<li>This seems potentially problematic given Richness of the Base…</li>
+</ul></li>
+<li>Probably not surprising: inventories and contrast come solely from constraint ranking.
+
+<ul>
+<li>Contrast in OT comes from faithfulness constraints, which preserve contrast in a certain environment.</li>
+<li>Markedness constraints militate against the faithful realization of inputs containing sounds illicit in a language.</li>
+</ul></li>
+</ul>
+
+<h1 id="possiblepatternsofcontrast">Possible patterns of contrast</h1>
+
+<ul>
+<li>No contrast
+
+<ul>
+<li>How do we know it when we see it?</li>
+</ul></li>
+<li>Full contrast
+
+<ul>
+<li>How do we know it when we see it?</li>
+</ul></li>
+<li>Contextually limited contrast
+
+<ul>
+<li>How do we know it when we see it?</li>
+<li>How does this relate to positional neutralization?</li>
+</ul></li>
+<li>No contrast - free variation
+
+<ul>
+<li>How do we know it when we see it?</li>
+<li>The version of OT we&#8217;re considering isn&#8217;t built to model it.</li>
+<li>EVAL results in a single optimal candidate, or multiple optimal candidates if they have identical violation profiles. <a href="#fn:1" id="fnref:1" title="see footnote" class="footnote"><sup>1</sup></a></li>
+</ul></li>
+</ul>
+
+<h1 id="complementarydistributionbetweensoundsnocontrast">Complementary distribution between sounds (no contrast)</h1>
+
+<ul>
+<li>Imagine a language where [p] and [b] are in complementary distribution, and allophones of a single phoneme.</li>
+<li>In rule terms:
+
+<ul>
+<li>/p/ → [b] / V__V no phoneme /b/</li>
+<li>/p/ → [p] elsewhere (since there&#8217;s no rule)</li>
+<li>Why is [b] only between vowels?</li>
+<li>Why is [p] everywhere else?</li>
+</ul></li>
+<li>Translate into OT using:
+
+<ul>
+<li>*V[-voice]V</li>
+<li>*[+voice,-son]</li>
+<li><span style="font-variant:small-caps;">Ident</span>([voice])</li>
+</ul></li>
+<li>Assume these inputs
+
+<ul>
+<li>/ap/ &#8216;dog&#8217; (real word)</li>
+<li>/ap+a/ &#8216;dogs&#8217; (real word)</li>
+<li>/ab/ &#8216;?&#8217; (hypothetical input)</li>
+<li>/ab+a/ &#8216;?(plural)&#8217; (hypothetical input)</li>
+</ul></li>
+<li>/p/ and /b/ don&#8217;t contrast, because the grammar won&#8217;t let you have a minimal pair.</li>
+<li>What is it about the ranking that makes that so?</li>
+</ul>
+
+<h1 id="fullcontrastbetweensounds">Full contrast between sounds</h1>
+
+<ul>
+<li>Imagine a different language, where /p/ and /b/ are separate phonemes, with no voicing alternations.</li>
+<li>Same constraints
+
+<ul>
+<li>*V[-voice]V</li>
+<li>*[+voice,-son]</li>
+<li><span style="font-variant:small-caps;">Ident</span>([voice])</li>
+</ul></li>
+<li>Find the ranking for:
+
+<ul>
+<li>/ap/ &#8216;dog&#8217;</li>
+<li>/ap+a/ &#8216;dogs&#8217;</li>
+<li>/ab/ &#8216;cat&#8217;</li>
+<li>/ab+a/ &#8216;cats&#8217;</li>
+</ul></li>
+<li>/p/ and /b/ contrast fully-you can get a minimal pair in any environment.</li>
+<li>What is it about the ranking that makes that so?</li>
+</ul>
+
+<h1 id="contextually-limitedcontrastpositionalneutralization">Contextually-limited contrast (positional neutralization)</h1>
+
+<ul>
+<li>Imagine language with a voicing contrast (phonemes /p/ and /b/), but also intervocalic voicing.</li>
+<li>In rule terms:
+
+<ul>
+<li>/p/ → [b] / V__V</li>
+<li>/p/ → [p] elsewhere</li>
+<li>/b/ → [b] everywhere</li>
+</ul></li>
+<li>Same constraints
+
+<ul>
+<li>*V[-voice]V</li>
+<li>*[+voice,-son]</li>
+<li><span style="font-variant:small-caps;">Ident</span>([voice])</li>
+</ul></li>
+<li>Find the ranking for:
+
+<ul>
+<li>/ap/ &#8216;dog&#8217;</li>
+<li>/ap+a/ &#8216;dogs&#8217;</li>
+<li>/ab/ &#8216;cat&#8217;</li>
+<li>/ab+a/ &#8216;cats&#8217;</li>
+</ul></li>
+<li>/p/ &amp; /b/ contrast in some environments &#8211; but in other environments, you get neutralization.</li>
+<li>What is it about the ranking that makes that so?</li>
+<li>Have we missed any members of the factorial typology for these three constraints?
+
+<ul>
+<li>There are 3! rankings &#8211; any other patterns?</li>
+</ul></li>
+</ul>
+
+<h1 id="contextuallylimitedcontrasttwoways">Contextually limited contrast two ways</h1>
+
+<ul>
+<li>Example: coda devoicing (German, Catalan, Russian, etc.)
+
+<ul>
+<li>In onsets, obstruents contrast in voicing.</li>
+<li>That contrast does not occur in coda position.</li>
+<li>Results in both <strong>positional neutralization</strong> and <strong>contextually-limited contrast</strong>.</li>
+</ul></li>
+<li>Two approaches in OT:
+
+<ul>
+<li>Context-specific markedness constraints
+
+<ul>
+<li>Cause neutralization in a particular environment</li>
+<li>Example: <span style="font-variant:small-caps;">*Coda-voice</span></li>
+</ul></li>
+<li>Contextually-limited faithfulness constraints
+
+<ul>
+<li>Preserve contrast in a particular environment</li>
+<li>Example: <span style="font-variant:small-caps;">Ident-onset</span>([voice])</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1 id="contextually-limitedcontrastascontextualfaithfulness">Contextually-limited contrast as contextual faithfulness</h1>
+
+<ul>
+<li>Beckman (1998) takes another approach to contextually limited contrast
+
+<ul>
+<li>She proposes <strong>positional faithfulness constraints</strong>, now standard in OT analyses.</li>
+<li>Contrast is preserved in a context X because a faithfulness constraint targets segments in that context.</li>
+<li>Common contexts where contrast is preserved: stressed syllables, initial syllables, onsets: all contexts that are perceptually salient.</li>
+</ul></li>
+<li>Preservation of voicing in onsets could be captured by the constraint below:
+
+<ul>
+<li><span style="font-variant:small-caps;">Ident-onset</span>-([voice]) </br> Let Y be an output segment in the onset, and X the corresponding input segment. Assign one violation if Y is [αvoice] and X is not [αvoice].</li>
+</ul></li>
+<li>Let&#8217;s work this out for some hypothetical inputs:
+
+<ul>
+<li>/bad/ → [bat]</li>
+<li>/bad-e/ → [bade]</li>
+<li>/gat/ → [gat]</li>
+<li>/gat-e/ → [gate]</li>
+<li>We can also pursue an alternative analysis using a context-specific markedness constraint like <span style="font-variant:small-caps;">*Coda-voice</span>.</li>
+</ul></li>
+<li>Could we use positional faithfulness for the case of neutralization in intervocalic voicing? Let&#8217;s sketch an analysis.</li>
+</ul>
+
+<h1 id="lexiconoptimization">Lexicon optimization</h1>
+
+<ul>
+<li>Does Richness of the Base mean anything can be in underlying representations?
+
+<ul>
+<li>In theory, yes &#8211; there are no hard limits on URs.</li>
+</ul></li>
+<li>Does Richness of the Base mean underlying representations in a language include everything?
+
+<ul>
+<li>For an actual language, no &#8211; learners won&#8217;t posit &#8220;weird&#8221; or &#8220;crazy&#8221; URs without evidence.</li>
+</ul></li>
+<li>Prince &amp; Smolensky (1993/2004) suggest a learning procedure called <strong>Lexicon Optimization</strong>.
+
+<ul>
+<li>For a given phonetic form, the chosen UR will be the one that maps onto the SR with the fewest violation of highest-ranked constraints.</li>
+<li>In the absence of aleternations, learners will pick a UR that gives a mapping minimizing the violation of faithfulness constraints: the UR matches the SR.</li>
+<li>This runs contrary to the idea that we should minimize the number of underlying sounds in a language, and it especially runs contrary to the usage of abstract phonemes to minimize the number of underlying sounds.</li>
+</ul></li>
+<li>An example: imagine a non-alternating phonological property &#8211; like the aspiration of initial [kʰ] in [kʰæt] in English.
+
+<ul>
+<li>The correct grammar for English will ensure the surface occurrence of [kʰ] in [kʰæt] no matter whether [kʰ] or [k] is present underlyingly.</li>
+<li>The advantage of the mapping /kʰæt/ ➞ [kʰæt] over /kæt/ ➞ [kæt] is that the former avoids a faithfulness violation, e.g. <span style="font-variant:small-caps;">Ident</span>([spread glottis]).</li>
+<li>So learners will posit the mapping /kʰæt/ ➞ [kʰæt].</li>
+<li>Non-alternating phonological properties will always be present in URs.</li>
+</ul></li>
+</ul>
+
+<h1 id="recapofimportantideas">Recap of important ideas</h1>
+
+<ul>
+<li>Capturing contrast in OT</li>
+<li>Richness of the Base</li>
+<li>Lexicon Optimization</li>
+<li>Contextually-limited contrast as…
+
+<ul>
+<li>Contextual markedness</li>
+<li>Positional faithfulness</li>
+</ul></li>
+</ul>
+
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn:1">
+<p> Very simplified descriptions of some possibilities (feel free to ask me about any of these privately): free variation comes from ties: obvious but difficult to work out, since constructing a tie often requires ignoring some active constraints; Partially Ordered Constraints (Anttila 1997 et seq): constraints are only partially ordered, and unordered constraints are randomly reordered at evaluation; Stochastic OT (Boersma 2000): constraints are partially ordered on a numerical scale, which is used to randomly generate a ranking at evaluation; MaxEnt Harmonic Grammar (Goldwater &amp; Johnson 2007): constraints are weighted, resulting in every candidate getting a numerical harmony score, which is converted into a probability; Noisy HG: like Stochastic OT, but with weighted constraints; Markedness suppression (Kaplan 2011): violations for designated constraints are ignored at random at evaluation. <a href="#fnref:1" title="return to body" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+</ol>
+</div>
+
+</body>
+</html>
+
