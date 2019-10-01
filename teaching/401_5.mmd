@@ -224,6 +224,19 @@ CSS: bws.css
     - Being able to read and write hybrid tableaux can be useful, but they're never the best tool for the job.
         - Whenever I see a VT in a paper or on a conference handout to argue for a particular ranking, I immediately annotate it with Ws and Ls to verify the author's claims.
 
+# ERC Fusion (Prince 2002)
+- **ERC fusion** is a way to combine two different ERCs, giving ranking information that entailed by the ERCs together.
+    + <W, L, W> ○ <e, W, L> = <W, L ,L>
+    - <W, L, e> ○ <W, W, W> = <W, L, W>
+    + <W, L, L> ○ <L, W, W> = <L, L, L>
+- ERCs can be combined using the following three rules:
+    - L dominance: W ○ L = L  
+    - e identity:  X ○ e = X 
+    - Self identity:  X ○ X = X
+- This is useful for:
+    - 1. Inconsistency detection (if fusion results in a W-less ERC)
+    - 2. Reasoning through disjunctive arguments
+
 # Recap of major ideas
 - selection problem
     + violation tableaux
@@ -234,6 +247,7 @@ CSS: bws.css
     + Hasse diagram
     - ERCs (Elementary Ranking Conditions)
         + For the ranking to be valid, **every** L requires **at least one** W to its left
+        + ERC fusion
 
 
 
