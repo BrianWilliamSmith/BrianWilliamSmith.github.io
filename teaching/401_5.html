@@ -31,6 +31,7 @@
 <li><a href="#thecomparativetableau">The comparative tableau</a></li>
 <li><a href="#practicewithcrucialrankings">Practice with crucial rankings</a></li>
 <li><a href="#hybridtableauxcombinationtableaux">Hybrid tableaux (combination tableaux)</a></li>
+<li><a href="#ercfusionprince2002">ERC Fusion (Prince 2002)</a></li>
 <li><a href="#recapofmajorideas">Recap of major ideas</a></li>
 </ul>
 </div>
@@ -669,6 +670,31 @@
 </ul></li>
 </ul>
 
+<h1 id="ercfusionprince2002">ERC Fusion (Prince 2002)</h1>
+
+<ul>
+<li><strong>ERC fusion</strong> is a way to combine two different ERCs, giving ranking information that entailed by the ERCs together.
+
+<ul>
+<li>&lt;W, L, W&gt; ○ &lt;e, W, L&gt; = &lt;W, L ,L&gt;</li>
+<li>&lt;W, L, e&gt; ○ &lt;W, W, W&gt; = &lt;W, L, W&gt;</li>
+<li>&lt;W, L, L&gt; ○ &lt;L, W, W&gt; = &lt;L, L, L&gt;</li>
+</ul></li>
+<li>ERCs can be combined using the following three rules:
+
+<ul>
+<li>L dominance: W ○ L = L</li>
+<li>e identity: X ○ e = X</li>
+<li>Self identity: X ○ X = X</li>
+</ul></li>
+<li>This is useful for:
+
+<ul>
+<li>1. Inconsistency detection (if fusion results in a W-less ERC)</li>
+<li>2. Reasoning through disjunctive arguments</li>
+</ul></li>
+</ul>
+
 <h1 id="recapofmajorideas">Recap of major ideas</h1>
 
 <ul>
@@ -688,6 +714,7 @@
 
 <ul>
 <li>For the ranking to be valid, <strong>every</strong> L requires <strong>at least one</strong> W to its left</li>
+<li>ERC fusion</li>
 </ul></li>
 </ul></li>
 </ul>
