@@ -1,0 +1,126 @@
+Title: Correspondence theory and positional faithfulness
+Author: Brian W. Smith
+Date: 10/13
+CSS: bws.css
+
+<!-- Standard header. Change title in metadata -->
+
+[USC Advanced Undergraduate Phonology](401_guide.html) ✳︎ Fall 2019 ✳︎ Smith
+***
+
+<div class="title">
+
+[%title]
+
+</div>
+
+{{TOC}}
+
+***
+
+<!-- Content starts below -->
+
+# Correspondence theory
+- Our current way of doing things isn't precise enough for handling feature changes.
+    - Does /tui/ → [ty] delete the /i/ or the /u/? 
+	- Does /tui/ → [ty] violate <span style="font-variant:small-caps;">Ident</span>(round) or <span style="font-variant:small-caps;">Ident</span>(back)? 
+- In the OT manuscript (Prince & Smolensky 1993/2004), an output candidate contains the input form -- you can see what's been inserted or deleted.
+    + /tui/ → [ty\<i\>] or /tui/ → [t\<u\>y]
+	- This is known as the containment approach (since the output contains the input).
+	- Changing features gets tricky, and metathesis is very hard.
+	- Constraints against deletion and epenthesis were called <span style="font-variant:small-caps;">Parse</span> and <span style="font-variant:small-caps;">Fill</span>, respectively.
+- Correspondence (McCarthy & Prince 1995) = Part-numbering
+    - Every segment in the input bears a unique index (and perhaps every unit of structure, including features, moras, syllables…), written as a subscript number.
+- The relation of correspondence between input and output segments is encoded by identical indices.
+
+<div class="tableau">
+
+|Candidates     |||            *Ident*(round)  |  *Ident*(back)|
+|---       |:---   |---:       |:---:  |:---: |
+| /t~1 u~2 i~3/   |a.  | [t~1 y~2]    | | ✳︎|
+|                 |b.  |[t~1 y~3]   |✳︎| | 
+
+</div>
+
+- /p~1 a~2 t~3 o~4 k~5/ → [p~1 a~2 t~3 o~4 k~5] means that Corr(/p~1/, [p~1]), Corr(/a~2/, [a~2]), etc. where Corr(x, y) means "x corresponds to y".
+- When x and y correspond, they are correspondents of one another.
+- These are also candidates: [p~5 a~1 t~4 o~2 k~3], [p~1 a~1 t~1 o~1 k~1], [p~6 a~7 t~8 o~9 k~10], but they're so outrageously bad that we don't usually bother including them in a tableau.
+- Tips for usage:
+	- When you see a candidate in a tableau without indices, you can assume that the correspondence relation is the obvious one (/p~1 a~2 t~3 o~4 k~5/ → [p~1 a~2 t~3 o~4 k~5]).
+	- Sometimes it's not clear what the obvious correspondence relation is; in that case, you should spell it out (as in the tableau above).
+
+
+# Good and bad correspondence relations
+- Correspondence is mapping between segments in the input and segments in the ouput.
+- Faithfulness constraints care about various aspects of this mapping (McCarthy & Prince 1995: 79-80)
+	- Contiguity of mapping
+	- Linearity of mapping
+	- Anchoring of edges
+	- Featural identity
+
+# The set of faithfulness constraints
+
+| --- | --- |
+<span style="font-variant:small-caps;">Ident(F)-IO</span>   | If an input segment and an output segment correspond, they must bear identical values for feature [F].
+<span style="font-variant:small-caps;">Max-C-IO</span> | Every consonant in input must have a correspondent in output.
+<span style="font-variant:small-caps;">Max-V-IO</span>  | Every vowel in input must have a correspondent in output.
+<span style="font-variant:small-caps;">Dep-C-IO</span> | Every consonant in output must have a correspondent in input.
+<span style="font-variant:small-caps;">Dep-V-IO</span> | Every vowel in output must have a correspondent in input.
+<span style="font-variant:small-caps;">Uniformity-IO</span> (don't coalesce) |  Nothing in the output can have more >1 correspondent in input.
+<span style="font-variant:small-caps;">Integrity-IO</span> (don't split)  | Nothing in the input can have >1 correspondent in the output.
+<span style="font-variant:small-caps;">Linearity-IO</span> (don't metathesize) | If A precedes B in input, and A and B both have correspondents in the output, then A's output correspondent must precede (but not necessarily immediately precede) B's output correspondent.
+<span style="font-variant:small-caps;">O-Contiguity-IO</span> (don't intrude) |   If A immediately precedes B in input, and A and B both have correspondents in the output, then A's output correspondent must immediately precede B's output correspondent.
+<span style="font-variant:small-caps;">I-Contiguity-IO</span> (don't skip) | If A immediately precedes B in the output, and A and B both have correspondents in the input, then A's input correspondent must immediately precede B's input correspondent.
+<span style="font-variant:small-caps;">Left-Anchor(X)-IO</span> |    If there is an input segment A at the left edge of X (X = word, stem, phrase, whatever) in the input, and an output segment B is at the left edge of X in the output, A must correspond to B.
+<span style="font-variant:small-caps;">Right-Anchor(X)-IO</span> |    If there is an input segment A at the right edge of X (X = word, stem, phrase, whatever) in the input, and an output segment B at the right edge of X in the output, A must correspond to B.
+[Here are the faithfulness constraints proposed by McCarthy & Prince. We add "IO" to specify that we're talking about input-output correspondence]
+
+- We can (and should) write these constraints in "Assign one violation" format, as is done in Doing OT.
+- Given the input /p~1 a~2 t~3 o~4 k~5/, devise, for each of the correspondence constraints above, an output candidate that violates it.
+    - <span style="font-variant:small-caps;">Ident(F)-IO </span>
+    - <span style="font-variant:small-caps;">Max-IO  </span>
+    - <span style="font-variant:small-caps;">Dep-IO  </span>
+    - <span style="font-variant:small-caps;">Uniformity-IO</span>
+    - <span style="font-variant:small-caps;">Integrity-IO</span>
+    - <span style="font-variant:small-caps;">Linearity-IO</span>
+    - <span style="font-variant:small-caps;">O-Contiguity-IO</span>
+    - <span style="font-variant:small-caps;">I-Contiguity-IO</span>
+    - <span style="font-variant:small-caps;">Left-Anchor(X)-IO</span>
+    - <span style="font-variant:small-caps;">Right-Anchor(X)-IO</span>
+- A master of faithfulness can provide…
+	- a candidate that violates <span style="font-variant:small-caps;">Dep but not <span style="font-variant:small-caps;">O-Contiguity</span>
+	- a candidate that violates <span style="font-variant:small-caps;">Max but not <span style="font-variant:small-caps;">I-Contiguity</span>
+	- a candidate that violates <span style="font-variant:small-caps;">Dep and <span style="font-variant:small-caps;">L-Anchor(Word)</span> in the same place
+	- a candidate that violates <span style="font-variant:small-caps;">Max</span> and <span style="font-variant:small-caps;">R-Anchor</span>(word) in the same place
+- Enforcing featural faithfulness is done by <span style="font-variant:small-caps;">Ident</span> constraints, but could also be done by <span style="font-variant:small-caps;">Dep</span> and <span style="font-variant:small-caps;">Max</span>.
+    - How do <span style="font-variant:small-caps;">Ident(F)</span> and <span style="font-variant:small-caps;">Max(F)/Dep(F)</span> differ in what they presuppose about features?
+
+# Positional faithfulness constraintsulnes
+- Beckman (1995) accounts for contextually limited contrast using **positional faithfulness constraints**, now standard in OT analyses.
+    - Contrast is preserved in a context X because a faithfulness constraint targets segments in that context.
+    - Common contexts where contrast is preserved: stressed syllables, initial syllables, onsets: all contexts that are perceptually salient.
+    - There are many languages that support positional <span style="font-variant:small-caps;">Ident</span> and <span style="font-variant:small-caps;">Max</span> for these salient contexts.
+- As done in the Lombardi (1999) reading, preservation of voicing in onsets can be captured by the constraint below:
+    - <span style="font-variant:small-caps;">Ident-onset</span>-([voice]) </br> Let Y be an output segment in the onset, and X the corresponding input segment. Assign one violation if Y is [αvoice] and X is not [αvoice].
+- Could we use positional faithfulness to account for neutralization in intervocalic voicing?
+    - Recall the hypothetical [pa], [ba], [ap], [ab], [aba], [aba] example.
+    - Let's sketch an analysis.
+
+# Correspondence that isn't IO
+- Agreement by correspondence (Rose & Walker 2000)
+    - Segments in the output are in correspondence with eachother.
+    - Correspondence relationships are evaluated by violable CORR constraints
+    - Used to model vowel and consonant harmony
+- Transderivational output-output faithfulness (Benua 1997)
+    - Different outputs are in correspondence with eachother (usually the outputs are in the same paradigm).
+    - Used to model some opaque phonology processes and truncation
+    - An asymmetrical correspondence relationship, usually between the base (e.g. cycle) and the derived form (e.g. cyclic, cyclical)
+- Base-reduplicant faithfulness (McCarthy & Prince 1995)
+    - The base and reduplicant portions of the output are in correspondence with eachother.
+    - Used to model reduplication
+
+# Recap of important ideas
+- Correspondence theory: why do we need? How does it work?
+- The commonly assumed set of universal faithfulness constraints
+- Positional faithfulness
+

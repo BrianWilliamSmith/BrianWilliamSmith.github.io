@@ -1,0 +1,46 @@
+
+
+# How to read a phonology article
+
+- Everyone has different strategies for effective reading and synthesis. Here are some of mine.
+	- Taken in part from an [excellent guide by Kie Zuraw](https://linguistics.ucla.edu/people/zuraw/200A/S00How2Read.pd)
+	- In my opinion, there are two longterm end goals for reading in classes.
+		- 1. Become a better writer by examining what works and what doesn't.
+			- Engage in *genre analysis*, learning norms for word choice, structuring, stats, presentation, etc.
+			- Create a mental list of writing exemplars.
+		- 2. Create a mental database entry for the paper, the level of detail of which depends on its relevance.
+			- If the paper is outside of your field, you should at least remember (10 years later): "Author (year) argues that …." in one sentence
+			- If the paper is related to your work, you should at least remember (10 years later): "Author (year) argues that…, using evidence from …, and the basic structure of the argument is…" in a few sentences.
+- Essentially, we want to fill in these database fields:
+	- Paper goals (as stated by author)
+	- General argument structure
+	- Evidence considered
+	- Best parts of paper
+	- Problems with paper
+- Step 1: preread -- build scaffolding
+	- Predict the content and argument based on the title.
+		- What is the contribution of this paper?
+		- How does this paper fit into the existing literature?
+	- Read the abstract and introduction carefully, again searching for the contribution and positioning the paper within existing literature.
+	- Skim the conconlusion, so you know how the paper is going to end.
+		- Many papers follow the 'say everything thrice method', and for these, the conclusion and the introduction should contain the same content.
+	- Look at the road map at the end of the introduction, flip through the paper and predict how each section is going to fit together and build (or relate to) the central argument.
+- Step 2: while reading, fill in details and actively engage. 
+	- Check the content against the expectations established in Step 1.
+	- When you are presented with data, sketch an analysis before reading the author's. Then see what the differenes are.
+	- After each example, subsection, section, and major discussion of related work, stop and ponder how it relates the the main contributions described in the abstract, introduction, and conclusion.
+	- Take notes and keep track of:
+		- whether the author does what they say they're going to do
+		- what's important
+		- what's surprising
+		- what's wrong
+		- words you don't know
+		- references you want to or need to read
+	- Examples for an OT article:
+		- I add Ws and Ls to all violation tableaux and check ranking arguments.
+		- I think of how the author's constraints relate to previous rule-based analyses.
+		- I pause after every tableau to think of missing candidates, inputs, and constraints (see Doing OT Chapter 2).
+		- I check constraint definitions against violations to make sure I understand how constraints are assessing violations.
+	- You might want to put your notes in a central place, so you can consult them many years later after you've forgotten what the paper is about.
+	- If it's tough, read it aloud.
+	- If it's tough, talk through the paper with someone. (Rubber duck debugging)
