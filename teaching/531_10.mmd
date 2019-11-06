@@ -36,6 +36,8 @@ CSS: bws.css
         * Maps phonological representations onto articulatory instructions
     + These two models are separate, but the phonological model feeds the phonetic model.
         * The interaction is "one-way" (feedforward with no feedback) -- phonology doesn't consider physical factors directly,  although phonological processes are possibly shaped (over time?) by functional considerations and phonetic "naturalness."
+
+# Definitely phonological rules (at least probably)
 - There are some processes that seem unambiguously phonological (see Kenstowicz & Kissberth 1978, Ch 2: The Nonphonetic Basis of Phonology for examples).
     + They refer to grammatical or lexical information.
         + For example, they refer to syntactic categories.
@@ -45,10 +47,43 @@ CSS: bws.css
         * Telescoping: multiple sound changes -- each of which is natural -- results in an phonetically unmotivated synchronic alternation.
         * Inversion: e.g., a phonetically natural rule of deletion is reanalyzed as a rule of epenthesis.
         * Paradigm leveling and analogy
-    - These assume phonetic rules don't refer to boundaries or lexical information, which now seems wrong, at with respect to prosodic boundaries and item-specific phonetics.
+    - These assume phonetic rules don't refer to boundaries or lexical information, which now seems wrong, at least with respect to prosodic boundaries and item-specific phonetics.
+
+# Crazy rules
+- Bach & Harms (1972) *How do languages get crazy rules?* addresses how this might happen. 
+    + This is a great paper to know and is a real classic.
+- One of their examples is Japanese palatalization.
+    + Here is the pattern:</br>/t/ ta tʃi tsu </br> /s/ sa ʃi su </br> /d/ da dʒi (zu) </br> /z/ za (dʒi) zu
+
+![A crazy rule](J.png)
+
++ Bach & Harms say: "Under any feature system we can think of the rule exhibits interconnections that do not seem have any particular phonetic or phonological plausibility" [^USC PhD candidate Hayeun Jang has a phonetic story for parts (but not all!) of the weirdness. See her recent talk at the ASA.]
+    + Affrication before [u] seems especially unnatural.
++ They suggest that this "crazy rule" arose via a series of simplifications and combinations of more plausible rules (see *telescoping* above).
++ For each step, let's write out the inventory.
+
+![Step 1 (this is a "quite plausible" rule)](J1.png)
+
+![Step 2 (This apparently corresponds to actual 17th century Japanese)](J2.png)
+
+![Step 3 (a new rule in addition to J2)](J3.png)
+
+![Step 4 (generalized from J4)](J4.png)
+
+![Step 5 ("they must all be collapsed into the unholy rule J")](J.png)
+
+- Why not three rules?
+    + Palatalization, affrication, neutralization of voiced strIdents
+    + All three processes target the same class of obstruents
+    + The three processes aren't inDependent: no dialect has affrication by itself.
+    + The three rules would never be reordered with respect to another, and no rule ever comes between. (They act as a unit in terms of rule ordering.)
+- Because of processes like these, the dream of a strictly innate universal constraint set probably won't be fulfilled. For crazy processes, we probably need a way for learners to posit crazy constraints.
+
+# Phonetic and phonological "doublets"
+- We've discussed what phonological processes can look like, now let's return to phonetics.
 - Both components -- phonetic and phonological -- can generate very similar looking processes.
     - Sometimes a phonetic process becomes **phonologized**, wherein the phonetic process becomes a phonological process.
-    - Here are some examples from Hyman (2013) of processes that can either be phonetic or phonological, depending on the language.
+    - Here are some examples from Hyman (2013) of processes that can either be phonetic or phonological, Depending on the language.
     + If the triggering environment disappears due to a sound change, the phonetic conditioning is lost, and the process is unambigously phonological (maybe even resulting in contrast).
 
 process |     subsequent developments | (incl. loss of trigger)
@@ -82,14 +117,14 @@ tonal bifurcation from onset: | /bá/ → [bǎ] | (> pǎ) |
     + A phonetic effect is exaggerated beyond what can be considered universal (e.g. duration increases more than we'd expect)
     + A ‘categorical’ rule of phonology refers to it. (e.g. a clearly phonological process refers to vowel length, than that length must be phonological)
 
-- Another view is that phonetics and phonology should not be treated in a simple feed-forward modular framework.
-    + Instead, phonology can *refer directly* to phonetic characteristics, beyond just features. Both take very seriously the idea of functionally motivated constraints.
-    + Two papers today:
-        * Hayes (1999): A feedforward model, except for the induction of phonological constraints. Learning constraints involves a tradeoff between increasing ease of articulation and minimizing complexity.
-        * Steriade (2001): Complicated typological patterns in assimilation can be explained by appealing to ease of perception and confusability.
+# Revisiting the strict divide between phonology and phonetics
+- If we assume that phonology can come from phonetics, an open question is how to connect them. 
++ Two papers today:
+    * Hayes (1999): A feedforward model, except for the induction of phonological constraints. Learning (phonologized) constraints involves a tradeoff between increasing ease of articulation and minimizing complexity.
+    * Steriade (2001): Complicated typological patterns in assimilation can be explained by appealing to ease of perception and confusability.
         - Both papers use maps of difficulty: one for articulation (Hayes) andd one for perception (Steriade).
 
-# Hayes (1999)
+# Hayes (1999): learning phonological constraints using phonetics
 - Questions for discussion:
     + What are the main goals of the paper?
     + What factors influence the ease of voicing in obstruents?
@@ -100,5 +135,86 @@ tonal bifurcation from onset: | /bá/ → [bǎ] | (> pǎ) |
     - Under Hayes' model, to what extent is CON universal?
     - Does Hayes' model address the too-many-repairs problem?
     - What constraints (if any) have we talked about that couldn't be induced under the algorithm presented here?
+
+# Steriade (2001): faithfulness constraints driven by perception
+- Why do so many languages have /an+pa/ → [ampa] but not /an+pa/ → [anta], /ap+na/ → [apma]?
+    - One possible answer à la Lombardi (1999): protect onsets
+    - Steriade's approach: in /an+pa/, /p/’s place is well cued (release burst, outgoing formant transition), while /n/’s isn’t.
+    - **Be faithful to the better-cued contrast.**
+    - Example of how different contexts for a stop have better and worse perceptual cues.
+
+![Best: V**C**V](ada.png)
+![Worse: V**C**](adba.png)
+![Worst: VC**C**CV](aldba.png)
+
+- Why this looks like a good idea: protecting onsets can't account for how place and manner of articulation affects the directionality of assimilation.
+    + The likelihood of a process being regressive Depends on what the two sounds are, in both place and manner.
+
+![Place effects](steriade_manner.png)
+
+![Manner effects](steriade_place.png)
+
+- Given the basic idea (preserve the better-cued constrast)
+    - …speculate why apicals are progressive while non-apicals are regressive
+    - …speculate why nasal+obstruent sequencess in apicals are regressive
+- The implemented model: speakers have a “P-map”
+    - implicit knowledge of perceptual distance ∆(X,Y) between any pair of sounds X, Y (potentially tagged for their contexts):
+
+![The P-map](pmap.png)
+
+
+- We'll consider a simplified example, where ∆(p/__V, t/__V) > ∆(n/__C, m/__C) (∆ for difference)
+- Faithfulness constraints can refer to details of their target and their surface context:
+    -  not just Ident(place) but Ident(place):[–son]/ __ V, Ident(place):[+nas]/ __ C
+    - not just Dep-V, but Dep-i, Dep-a, Dep-ə, Dep-V/s__t, Dep-V/t__r, ...
+- Constraints penalizing big changes should outrank constraints penalizing small changes:
+    - Ident(place): [–son] / __V >> Ident(place):[+nas] / __ C
+- Presumably these default rankings can be overturned by the learner in response to contradictory data, but they will be a drag on language change
+ 
+ 
+I→O | faith. violated | perceptual comparison | distance (fake values)
+---|---|---|---
+/an+pa/ → [ampa] | Ident(place): [+nas]/ __ C | (nas/__C, diff-place-nas/__C) | 6
+/an+pa/ → [anta] | Ident(place): [–son]/ __ V | (obstr/__V, diff-place-obstr/__V) | 8
+/an+pa/ → [apa] | Max-C/__C | (C/__C, Ø/__C) | 9
+/an+pa/ → [ana] | Max-C/__V | (C/__V, Ø/__V) | 10
+
+- No matter where we rank the markedness constraint in relation to the faithfulness hierarchy, winner is (b) or (a):
+ 
+/an+pa/    | Agree(place)   |   Max-C/__V |  Max-C/__C |  Ident(place): [–son]/ __ V | Ident(place): [+nas]/ __ C
+---|:---:|:---:|:--:|:--:|:--:
+a [anpa]    | ✳︎! |   |    | |  |
+b [ampa]    |   |   |   | | ✳︎!
+c [anta]    |   |   |   | ✳︎! | |
+d [ana]     |   | ✳︎! |     | | |
+e [apa]     |   |    | ✳︎! | | |
+ 
+ 
+# Some things to ponder about the P-map
+- Exactly what is being compared in ∆(X,Y), to give a faithfulness constraint its default ranking?
+    - Output vs. input? That’s kind of funny because the input isn’t a pronounced form, so its perceptual properties are hypothetical.
+    - Output vs. faithful output (candidate a in the above)?
+    - Output vs. related output? E.g., [rat] vs. [rad-im].
+        - Those are both real, pronounced forms, but it’s tricky because the target segments are in different contexts.
+        - Do we measure ∆(d/V__V, t/V__#)?
+- How well connected is the P-map?
+    - Can ∆(X,Y) be measured for absolutely any X,Y? Or only for close-enough pairs?
+    -  Does ∆(X,Y) really act like a number, so that we can always compare ∆(X,Y) and ∆(Z,W)?
+    - Or is the “greater than” relation sparser than that, so that some distances can’t be compared?
+
+# The “too-many-solutions” problem revisited
+- Some markedness constraints have a variety of “solutions”
+    - *NC̥, as we saw
+    - OCP-labial in various Western Austronesian languages (Zuraw & Lu 2009) 
+    - \*{ɪ,ʊ} in Romance metaphony (Walker 2005)
+    - *InitialGeminate (Kennedy 2005)
+- This is what we expect in OT
+    - But some don’t — that’s the “too-many-solutions problem”:
+        - *NC̥ never causes epenthesis
+        - *CC deletes C~1, not C~2 in VC~1 C~2 V (Wilson 2000; Wilson 2001)
+        - \*[–son, +voice]# causes final devoicing, but not deletion, epenthesis, etc.
+    - The lack of solutions for \*[–son, +voice]# is predicted, if the P-map imposes a difficult-to-overturn ranking: Max-C, Dep-V >> Ident(voice)/__#
+        + Deletion and epenthesis result in very perceptually salient differences, while devoicing doesn't.
+
 # Recap
 
